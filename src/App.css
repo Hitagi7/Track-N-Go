@@ -1,0 +1,15 @@
+.App {
+  height: 100%;
+  overflow-x: hidden;
+  place-items: center;
+}
+
+hr {
+  height: 2px;
+  flex-shrink: 0;
+  background: #2D3648;
+}
+
+/* * {
+  border: 1px solid red;
+} */

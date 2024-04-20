@@ -1,0 +1,20 @@
+.ButtonStack {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    
+}
+
+.Login {
+    border-radius: 6px;
+    border: 2px solid #2D3648;
+    padding: 12px 20px;
+}
+
+.Signup {
+    border-radius: 6px;
+    background: #DE5654;
+    padding: 12px 20px;
+    border: 2px solid #DE5654;
+    color: #FAFAFA;
+}
