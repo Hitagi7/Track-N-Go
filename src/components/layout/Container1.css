@@ -1,0 +1,33 @@
+.Container1 {
+    height: 724px;
+}
+
+.Resize-image {
+    width: 1244.9px;
+    height: 724px;
+    float: right;
+    padding-top: 56px;
+    padding-left: 15.1px;
+    margin-right: -10%;
+}
+
+.Text1 {
+    padding-left: 149px;
+    padding-top: 144px;
+}
+
+.Header1 {
+    width: 600px;
+    font-weight: 900;
+    font-size: 56px;
+    padding-bottom: 24px;
+    text-align: left;
+}
+
+.Description1 {
+    width: 683px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 33.88px;
+    text-align: justify;
+}
