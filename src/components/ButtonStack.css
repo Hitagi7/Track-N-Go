@@ -2,7 +2,10 @@
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    
+}
+
+.ButtonStack:hover {
+    cursor: pointer;
 }
 
 .Login {
@@ -17,4 +20,14 @@
     padding: 12px 20px;
     border: 2px solid #DE5654;
     color: #FAFAFA;
+}
+
+.Login:hover {
+    border: 2px solid hsl(220, 23%, 43%);
+    padding: 12px 20px;
+}
+
+.Signup:hover {
+    background: hsl(1, 68%, 65%);
+    border: 2px solid hsl(1, 68%, 65%);
 }

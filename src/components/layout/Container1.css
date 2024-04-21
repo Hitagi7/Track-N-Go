@@ -1,19 +1,21 @@
 .Container1 {
-    height: 724px;
+    height: auto;
+    width: 100%;
 }
 
 .Resize-image {
-    width: 1244.9px;
+    width: 1044.9px;
     height: 724px;
-    float: right;
-    padding-top: 56px;
-    padding-left: 15.1px;
-    margin-right: -10%;
+    right: 0px;
+    top: 154px;
+    max-width: 100%;
+    position: absolute;
 }
 
 .Text1 {
     padding-left: 149px;
     padding-top: 144px;
+    max-width: 100%;
 }
 
 .Header1 {
