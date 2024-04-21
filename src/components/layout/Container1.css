@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.Resize-image {
+.Resize-image1 {
     width: 1044.9px;
     height: 724px;
     right: 0px;
@@ -22,8 +22,7 @@
     width: 600px;
     font-weight: 900;
     font-size: 56px;
-    padding-bottom: 24px;
-    text-align: left;
+    padding-bottom: 21px;
 }
 
 .Description1 {
@@ -31,5 +30,54 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 33.88px;
-    text-align: justify;
+}
+
+.Input {
+    padding-top: 35px;
+}
+.InputSquare {
+    display: flex;
+    gap: 10px;
+}
+
+
+.InputTitle {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    padding-bottom: 8px;
+    width: 320px;
+    height: 16px;
+}
+
+.InputBox {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    width: 320px;
+    height: 46;
+    position: relative;
+    padding: 11px 12px;
+    gap: 4px;
+    border-radius: 6px;
+    border: 2px solid;
+    border-color: #CBD2E0;
+    color: black;
+}
+
+.Search {
+    width: 100px;
+    height: fixed(47px);
+    border-radius: 6px;
+    background-color: #DE5654;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+}
+
+.Search:hover {
+    cursor: pointer;
 }

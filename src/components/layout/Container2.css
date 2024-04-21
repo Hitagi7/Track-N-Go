@@ -1,0 +1,36 @@
+.Container2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: lef;
+}
+
+.Resize-image2 {
+    width: 1044.9px;
+    height: 724px;
+    left: 0px;
+    top: 154px;
+    max-width: 100%;
+}
+
+.Text2 {
+    padding-left: 149px;
+    padding-top: 144px;
+    max-width: 100%;
+}
+
+.Header2 {
+    width: 600px;
+    font-weight: 900;
+    font-size: 56px;
+    padding-bottom: 24px;
+    text-align: left;
+}
+
+.Description2 {
+    width: 683px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 33.88px;
+    text-align: justify;
+}
