@@ -5,7 +5,7 @@ function Container1() {
 
   return (
     <div className='Container1'>
-        <img src="/src/assets/Map Pin.png" alt="Map With Pin" id='image'className="Resize-image1"/>
+        <img src="/src/assets/Map Pin.png" alt="Map With Pin" className="Resize-image1"/>
         <div className="Text1">
             <div className="Header1">
               Effortlessly track your parcels
@@ -18,7 +18,10 @@ function Container1() {
                 Track your parcel below!
               </div>
               <div className="InputSquare">
-                <input type="text" className='InputBox'/>
+                <div className="Wrapper">
+                  <img src="/src/assets/icon-search.svg" alt="icon-search" className='icon'/>
+                  <input type="text" className="InputBox" placeholder="Enter tracking number"/>
+                </div>
                 <button className="Search">
                   Search
                 </button>
