@@ -2,15 +2,12 @@
     height: auto;
     width: 100%;
     display: flex;
-    justify-content: lef;
+    justify-content: flex-end;
 }
 
 .Resize-image2 {
     width: 1044.9px;
     height: 724px;
-    left: 0px;
-    top: 154px;
-    max-width: 100%;
 }
 
 .Text2 {
@@ -32,5 +29,4 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 33.88px;
-    text-align: justify;
 }

@@ -1,28 +1,28 @@
 .Container1 {
-    height: auto;
+    display: flex;
+    height: 824px;
     width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 105px;
 }
 
 .Resize-image1 {
-    width: 1044.9px;
     height: 724px;
-    right: 0px;
-    top: 154px;
-    max-width: 100%;
-    position: absolute;
+    flex-shrink: 0;
 }
 
 .Text1 {
-    padding-left: 149px;
-    padding-top: 144px;
-    max-width: 100%;
+
 }
 
 .Header1 {
-    width: 600px;
+    width: 507.287px;
     font-weight: 900;
     font-size: 56px;
     padding-bottom: 21px;
+    color: #2D3648;
+    font-family: Inter;
 }
 
 .Description1 {
