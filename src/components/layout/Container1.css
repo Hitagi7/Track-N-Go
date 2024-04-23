@@ -1,14 +1,13 @@
 .Container1 {
     display: flex;
     height: 826px;
-    width: 100%;
     align-items: center;
     justify-content: flex-end;
     gap: 105px;
 }
 
 .Resize-image1 {
-    height: 724px;
+    height: 600px;
     flex-shrink: 0;
 }
 
