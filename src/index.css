@@ -32,6 +32,118 @@
   padding: 0;
 }
 
+:root {
+  --color-orange: #F2A74F;
+  --color-green: #75C768;
+  --color-dark-blue: #2D4EA2;
+  --color-red: #DE5654;
+  --color-black: #2D3648;
+  --color-idle-gray: #717D96;
+  --color-secondary-gray: #9FAAC0;
+  --color-outline-gray: #CBD2E0;
+  --color-selected-gray: #EDF0F7;
+  --color-background-gray: #F5F5F5;
+  --color-background-white: #FAFAFA;
+  --color-overlay-white: #FEFEFE;
+}
+
+.font-12 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.font-13 {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+.font-14 {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.font-15 {
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+.font-16 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.font-17 {
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
+.font-18 {
+  font-size: 18px;
+  font-size: 1.125rem;
+
+}
+
+.font-19 {
+  font-size: 19px;
+  font-size: 1.1875rem;
+}
+
+.font-20 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.font-30 {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+.font-45 {
+  font-size: 45px;
+  font-size: 2.8125rem;
+}
+
+.font-56 {
+  font-size: 56px;
+  font-size: 3.5rem;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
