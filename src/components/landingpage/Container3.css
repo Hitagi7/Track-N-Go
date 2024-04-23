@@ -1,0 +1,81 @@
+.Container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+  height: 639px;
+}
+
+.Title3 {
+  color: #2D3648;
+  text-align: center;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.ImagePartners {
+  width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+
+.SPX {
+  height: 62px;
+  width: 172px;
+}
+
+.LZD {
+  height: 64px;
+  width: 271px;
+}
+
+.JNT {
+  height: 64px;
+  width: 182px;
+}
+
+.DHL {
+  height: 64px;
+  width: 259px;
+}
+
+.GRB {
+  height: 64px;
+  width: 192px;
+}
+
+.NJV {
+  height: 64px;
+  width: 156px;
+}
+
+.LMV {
+  height: 64px;
+  width: 227px;
+}
+
+.LBC {
+  width: 86px;
+  height: 86px;
+}
+
+.ENT {
+  height: 64px;
+  width: 322px;
+}
+
+.UPS {
+  width: 89px;
+  height: 95px;
+}
+
+.JRS {
+  height: 64px;
+  width: 149px;
+}

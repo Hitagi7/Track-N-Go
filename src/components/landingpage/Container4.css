@@ -1,0 +1,20 @@
+.Container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 615px;
+}
+
+.image {
+    flex-grow: 0;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    width: 977px;
+}
+
+.description {
+    width: 1617px;
+}

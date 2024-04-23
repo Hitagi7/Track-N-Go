@@ -1,0 +1,35 @@
+.Container2 {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Resize-image2 {
+    width: 1044.9px;
+    height: 724px;
+}
+
+.Text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
+    width: 683px;
+}
+
+.LoginBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.TitleLogin {
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: -0.14px;
+}

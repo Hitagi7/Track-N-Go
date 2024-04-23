@@ -1,0 +1,84 @@
+.Container1 {
+    display: flex;
+    height: 826px;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 105px;
+}
+
+.Resize-image1 {
+    height: 600px;
+    flex-shrink: 0;
+}
+
+.Text1 {
+    display: flex;
+    width: 683px;
+    height: 398px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Input {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: space-between;
+    gap: 8px;
+}
+
+.InputTitle {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    width: 320px;
+    height: 16px;
+}
+
+.icon {
+    position: absolute;
+    transform: translateY(30%) translateX(10%);
+    padding-left: 10px;
+    z-index: 3;
+}
+
+.InputBox {
+    background-color: #f9f9f9;
+    width: 498.978px;
+    padding: 11px 12px 11px 40px;
+    gap: 4px;
+    border-radius: 6px;
+    border: 2px solid;
+    border-color: #CBD2E0;
+    color: black;
+}
+
+button {
+    all: unset;
+}
+
+.Search {
+    border-radius: 6px;
+    background-color: #DE5654;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    padding: 0px 30px 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Search:hover {
+    cursor: pointer;
+    border-color: hsl(1, 68%, 65%);
+    background-color: hsl(1, 68%, 65%);
+}
+
+.Search:active {
+    border-color: hsl(1, 68%, 715%);
+    background-color: hsl(1, 68%, 75%);
+}
