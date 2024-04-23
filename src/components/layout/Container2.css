@@ -2,7 +2,7 @@
     height: auto;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 .Resize-image2 {
@@ -11,8 +11,10 @@
 }
 
 .Text2 {
-    padding-left: 149px;
-    padding-top: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
     max-width: 100%;
 }
 
@@ -20,13 +22,34 @@
     width: 600px;
     font-weight: 900;
     font-size: 56px;
-    padding-bottom: 24px;
     text-align: left;
 }
 
 .Description2 {
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 211.766%;
     width: 683px;
     font-size: 16px;
     font-weight: 400;
     line-height: 33.88px;
+}
+
+.LoginBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.TitleLogin {
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px; /* 114.286% */
+    letter-spacing: -0.14px;
 }

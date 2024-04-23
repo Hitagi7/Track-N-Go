@@ -12,6 +12,14 @@
     border-radius: 6px;
     border: 2px solid #2D3648;
     padding: 12px 20px;
+
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.16px;
 }
 
 .Signup {
@@ -19,15 +27,33 @@
     background: #DE5654;
     padding: 12px 20px;
     border: 2px solid #DE5654;
+    font-family: Inter;
     color: #FAFAFA;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.16px;
 }
 
 .Login:hover {
     border: 2px solid hsl(220, 23%, 43%);
     padding: 12px 20px;
+    color: hsl(220, 23%, 33%);
 }
 
 .Signup:hover {
     background: hsl(1, 68%, 65%);
     border: 2px solid hsl(1, 68%, 65%);
+}
+
+.Login:active {
+    border: 2px solid hsl(220, 23%, 53%);
+    padding: 12px 20px;
+    color: hsl(220, 23%, 43%);
+}
+
+.Signup:active {
+    background: hsl(1, 68%, 75%);
+    border: 2px solid hsl(1, 68%, 75%);
 }

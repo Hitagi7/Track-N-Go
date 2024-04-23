@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Container2.css'
+import ButtonStack from '../ButtonStack';
 
 function Container2() {
 
@@ -20,6 +21,12 @@ function Container2() {
           shipments effortlessly, saving time and eliminating stress. Bid
           farewell to lost packages and embrace hassle-free parcel management –
           explore our website now and experience the ease of staying in control.
+        </div>
+        <div className="LoginBox">
+          <div className="TitleLogin">
+            Sign in now and join the community!
+          </div>
+          <ButtonStack/>
         </div>
       </div>
     </div>

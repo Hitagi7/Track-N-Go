@@ -15,21 +15,19 @@ function Container1() {
         </div>
         <div className="Input">
           <div className="InputTitle">Track your parcel below!</div>
-          <div className="InputSquare">
-            <div className="Wrapper">
-              <img
-                src="/src/assets/icon-search.svg"
-                alt="icon-search"
-                className="icon"
-              />
-              <input
-                type="text"
-                className="InputBox"
-                placeholder="Enter tracking number"
-              />
-            </div>
-            <button className="Search">Search</button>
+          <div className="Wrapper">
+            <img
+              src="/src/assets/icon-search.svg"
+              alt="icon-search"
+              className="icon"
+            />
+            <input
+              type="text"
+              className="InputBox"
+              placeholder="Enter tracking number"
+            />
           </div>
+          <button className="Search">Search</button>
         </div>
       </div>
       <img

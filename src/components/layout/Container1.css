@@ -1,6 +1,6 @@
 .Container1 {
     display: flex;
-    height: 824px;
+    height: 826px;
     width: 100%;
     align-items: center;
     justify-content: flex-end;
@@ -12,20 +12,29 @@
     flex-shrink: 0;
 }
 
-/* .Text1 {
-
-} */
+.Text1 {
+    display: flex;
+    width: 683px;
+    height: 398px;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .Header1 {
     width: 507.287px;
     font-weight: 900;
     font-size: 56px;
-    padding-bottom: 21px;
     color: #2D3648;
     font-family: Inter;
 }
 
 .Description1 {
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 211.766%;
     width: 683px;
     font-size: 16px;
     font-weight: 400;
@@ -33,12 +42,10 @@
 }
 
 .Input {
-    padding-top: 35px;
-}
-
-.InputSquare {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-items: space-between;
+    gap: 8px;
 }
 
 .InputTitle {
@@ -47,13 +54,8 @@
     line-height: 16px;
     letter-spacing: -0.01em;
     text-align: left;
-    padding-bottom: 8px;
     width: 320px;
     height: 16px;
-}
-
-.Wrapper {
-    position: relative;
 }
 
 .icon {
@@ -64,11 +66,8 @@
 }
 
 .InputBox {
-    display: flex;
-    align-items: center;
     background-color: #f9f9f9;
     width: 498.978px;
-    position: relative;
     padding: 11px 12px 11px 40px;
     gap: 4px;
     border-radius: 6px;
@@ -89,15 +88,19 @@ button {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.01em;
+    padding: 0px 30px 0px 30px;
     display: flex;
-    width: 155.931px;
-    justify-content: center;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
 }
 
 .Search:hover {
     cursor: pointer;
-    border-color: hsl(1, 68%, 70%);
-    background-color: hsl(1, 68%, 70%);
+    border-color: hsl(1, 68%, 65%);
+    background-color: hsl(1, 68%, 65%);
+}
+
+.Search:active {
+    border-color: hsl(1, 68%, 715%);
+    background-color: hsl(1, 68%, 75%);
 }
