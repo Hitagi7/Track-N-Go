@@ -10,6 +10,20 @@ hr {
   background: #2D3648;
 }
 
-/* * {
+h1 {
+  width: 600px;
+  font-weight: 900;
+  font-size: 56px;
+  text-align: left;
+}
+
+p {
+  color: #2D3648;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 33.88px;
+}
+
+* {
   border: 1px solid red;
-} */
+}
