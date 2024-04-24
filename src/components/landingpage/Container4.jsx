@@ -5,7 +5,7 @@ function Container4() {
 
   return (
     <div className="Container4">
-        <div className="Text">
+        <div className="text">
             <h1 className='header'>
               Driven Students, Transforming Parcel Tracking in the Philippines
             </h1>
