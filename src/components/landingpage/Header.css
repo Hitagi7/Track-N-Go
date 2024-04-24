@@ -13,16 +13,21 @@
 
 .Nav {
     display: flex;
-    align-items: center;
     gap: 32px;
+    align-items: center;
     font-weight: bold;
 }
+
 
 a {
     all: unset;
 }
 
-a:hover {
+li {
+    all: unset;
+}
+
+li:hover {
     color: hsl(220, 23%, 43%);
     cursor: pointer;
 }

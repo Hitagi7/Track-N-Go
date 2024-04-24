@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import './Container1.css'
+import Header from './Header';
 
 function Container1() {
-
+  
   return (
     <div className="Container1">
       <div className="Text1">

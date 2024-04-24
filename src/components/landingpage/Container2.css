@@ -1,8 +1,9 @@
 .Container2 {
-    height: auto;
+    min-height: auto;
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    gap: 20.75px;
 }
 
 .Resize-image2 {
@@ -15,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 41px;
-    width: 683px;
+    width: 746px;
 }
 
 .LoginBox {

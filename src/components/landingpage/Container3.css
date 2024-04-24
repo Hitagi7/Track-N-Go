@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 66px;
-  height: 639px;
+  min-height: 70vh;
 }
 
 .Title3 {

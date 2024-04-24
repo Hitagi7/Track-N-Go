@@ -1,9 +1,8 @@
 .Container1 {
     display: flex;
-    height: 826px;
+    min-height: 70vh;
     align-items: center;
-    justify-content: flex-end;
-    gap: 105px;
+    justify-content: space-evenly;
 }
 
 .Resize-image1 {
@@ -76,6 +75,7 @@ button {
     cursor: pointer;
     border-color: hsl(1, 68%, 65%);
     background-color: hsl(1, 68%, 65%);
+    transition: all 0.1s;
 }
 
 .Search:active {
