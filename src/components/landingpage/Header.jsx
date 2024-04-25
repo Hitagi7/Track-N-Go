@@ -1,7 +1,7 @@
 import { useRef } from 'react'
-import { Link } from "react-router-dom";
 import './Header.css'
 import ButtonStack from '../ButtonStack'
+import { Link } from 'react-router-dom'
 import Container1 from './Container1'
 import Container2 from './Container2'
 import Container3 from './Container3'
@@ -34,7 +34,7 @@ function Header() {
               <li onClick={() => scrollToSection(partners)}>Partners</li>
               <li onClick={() => scrollToSection(aboutus)}>About Us</li>
               <li onClick={() => scrollToSection(contact)}>Contact</li>
-              <li><Link to="/parceltracker">Parcel Tracker</Link></li>
+              <li><Link to="/ParcelTracker">Parcel Tracker</Link></li>
             </ul>
             <ButtonStack />
         </div>
