@@ -22,7 +22,7 @@ function Header() {
 
   return (
     <div className='Header'>
-        <img src="/src/assets/Logo Text.png" alt="Logo Text" />
+        <img src="/src/assets/TNG Logo V2.png" alt="Logo Text" class="logo"/>
         <div className="Nav">
             <ul className="NavBar">
               <li onClick={() => scrollToSection(home)}><Link to="/">Home</Link></li>
