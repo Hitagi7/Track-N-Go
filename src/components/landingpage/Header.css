@@ -1,3 +1,8 @@
+.logo {
+    width: 15rem;
+    height: 2.9375rem;    
+}
+
 .Header{
     display: flex;
     align-items: center;

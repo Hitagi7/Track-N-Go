@@ -1,0 +1,309 @@
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    z-index: 1;
+}
+
+.overlay-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 32px;
+    background-image: url(images/Blurred\ TNG\ Icon.png);
+    background-position: bottom right;
+    background-size: 510px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 48px;
+}
+
+.signup.overlay {
+    width: 521px;
+    height: 659px;
+    display: none; 
+}
+
+.login.overlay{
+    width: 521px;
+    height: 577px;
+    /* display: none; */
+}
+
+.dimmed-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.overlay h3 {
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 33px;
+}
+
+.overlay p {
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.email-field::placeholder,
+.name-field::placeholder,
+.password-field::placeholder {
+    color: var(--color-idle-gray);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.email-field,
+.name-field,
+.password-field {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    padding-left: 48px;
+    align-items: flex-start;
+    border-radius: 10px;
+    border: 1px solid #CBD2E0;
+    background: #FEFEFE;
+}
+
+.password-field {
+    margin-bottom: 43px;
+}
+
+.mail-icon,
+.profile-icon,
+.password-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 17px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    color: var(--color-black);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.fbutton {
+    display: flex;
+    width: 100%;
+    padding: 26px 129px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    line-height: normal;
+    border: none;
+    font-style: normal;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fbutton:hover{
+    transform: scale(1.05);
+    filter: brightness(0.96);
+}
+
+.fbutton.primary {
+    background: #DE5654;
+    color: #FEFEFE;
+    font-weight: 700;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.fbutton.secondary {
+    color: #2D3648;
+    font-weight: 600;   
+    height: 49px;
+    background: #FEFEFE;
+    margin-bottom: 26px;
+}
+
+.hyperlink p {
+    color: var(--color-idle-gray);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+hyperlink p a {
+    color: var(--color-dark-blue);
+}
+
+:root {
+    --color-orange: #F2A74F;
+    --color-green: #75C768;
+    --color-dark-blue: #2D4EA2;
+    --color-red: #DE5654;
+    --color-black: #2D3648;
+    --color-idle-gray: #717D96;
+    --color-secondary-gray: #9FAAC0;
+    --color-outline-gray: #CBD2E0;
+    --color-selected-gray: #EDF0F7;
+    --color-background-gray: #F5F5F5;
+    --color-background-white: #FAFAFA;
+    --color-overlay-white: #FEFEFE;
+}
+
+.font-12 {
+    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+.font-13 {
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+.font-14 {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.font-15 {
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+.font-16 {
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.font-17 {
+    font-size: 17px;
+    font-size: 1.0625rem;
+}
+
+.font-18 {
+    font-size: 18px;
+    font-size: 1.125rem;
+
+}
+
+.font-19 {
+    font-size: 19px;
+    font-size: 1.1875rem;
+}
+
+.font-20 {
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+.font-30 {
+    font-size: 30px;
+    font-size: 1.875rem;
+}
+
+.font-45 {
+    font-size: 45px;
+    font-size: 2.8125rem;
+}
+
+.font-56 {
+    font-size: 56px;
+    font-size: 3.5rem;
+}
+
+.font-thin {
+    font-weight: 100;
+}
+
+.font-extralight {
+    font-weight: 200;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}

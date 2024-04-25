@@ -25,14 +25,7 @@
   --primary-alt: rgb(224, 190, 2);
   --secondary: #00f2ff;
   --tertiary: #77ed09;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
+  
   --color-orange: #F2A74F;
   --color-green: #75C768;
   --color-dark-blue: #2D4EA2;
@@ -45,6 +38,17 @@
   --color-background-gray: #F5F5F5;
   --color-background-white: #FAFAFA;
   --color-overlay-white: #FEFEFE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 .font-12 {
