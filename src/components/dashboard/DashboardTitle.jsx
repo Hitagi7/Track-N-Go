@@ -4,7 +4,7 @@ import './DashboardTitle.css'
 function DashboardTitle() {
   return (
     <div className="DashboardTitle">
-        <p className="font-20 font-semibold">Dashboard</p>
+        <p className="font-semibold">Dashboard</p>
     </div>
   )
 }

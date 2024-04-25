@@ -7,7 +7,7 @@ function DashboardPage() {
     <div className="DashboardPage">
         <Header/>
         <hr/>
-        <Dashboard />
+        <Dashboard/>
     </div>
   )
 }

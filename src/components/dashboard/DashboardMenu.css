@@ -1,34 +1,103 @@
 .DashboardMenu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     width: 20.8125rem;
-    height: 61.9375rem;
-    border-radius: 0.625rem;
+    min-height: 51rem;
+    height: 100%;
     background: #FEFEFE;
-    gap: 1.6rem;
+    gap: 0.62rem;
     padding: 1.5rem 1.25rem;
 }
 
-.logo {
-    width: 15rem;
-    height: 2.9375rem;
+.DashboardMenu .logo {
+    width: 17.75rem;
+    height: 3.4375rem;
 }
 
-.hr {
+.hr1 {
     width: 17.25rem;
     height: 0rem;
     stroke-width: 1px;
     stroke: #717D96;
 }
 
+.Frames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.69rem 0 0.75rem 0;
+}
+
 .Frame1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     gap: 0.5rem;
-    max-width: 100%; 
+    width: 100%;
     padding: 1.56rem 2.19rem; 
     box-sizing: border-box;
+}
+
+.icon1 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.Frame2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; 
+    padding: 1.56rem 2.19rem; 
+    box-sizing: border-box;
+}
+
+.icon2 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.Frame3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%; 
+    padding: 1.56rem 2.19rem; 
+    box-sizing: border-box;
+}
+
+.icon3 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hr2 {
+    width: 17.25rem;
+    height: 0rem;
+    stroke-width: 1px;
+    stroke: #717D96;
+}
+
+.icon4 {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.Frame4 {
+    display: flex;
+    justify-content: center;
+    gap: 1.06rem;
+    padding: 1rem 3.12rem 0.62rem 0rem;
+}
+
+.Frame5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
