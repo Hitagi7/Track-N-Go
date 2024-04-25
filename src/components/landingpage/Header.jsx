@@ -30,6 +30,8 @@ function Header() {
               <li onClick={() => scrollToSection(partners)}>Partners</li>
               <li onClick={() => scrollToSection(aboutus)}>About Us</li>
               <li onClick={() => scrollToSection(contact)}>Contact</li>
+              <li><Link to="/DashboardPage">Dashboard</Link></li>
+              
             </ul>
             <ButtonStack />
         </div>

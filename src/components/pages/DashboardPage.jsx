@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '../landingpage/Header'
+import Dashboard from '../dashboard/Dashboard'
 
-function ParcelTracker() {
+function DashboardPage() {
   return (
-    <div className="ParcelTracker">
+    <div className="DashboardPage">
         <Header/>
         <hr/>
-        <ParcelTrackerContainer/>
+        <Dashboard />
     </div>
   )
 }
 
-export default ParcelTracker
+export default DashboardPage

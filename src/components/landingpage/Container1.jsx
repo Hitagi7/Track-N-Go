@@ -28,7 +28,7 @@ function Container1() {
               placeholder="Enter tracking number"
             />
           </div>
-          <button className="Search"><Link to="/ParcelTracker">Search</Link></button>
+          <button className="Search"><Link to="/ParcelTrackerPage">Search</Link></button>
         </div>
       </div>
       <img
