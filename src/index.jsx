@@ -6,7 +6,8 @@ import {
   } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
-import ParcelTracker from './components/pages/ParcelTrackerPage.jsx';
+import ParcelTrackerPage from './components/pages/ParcelTrackerPage.jsx';
+import DashboardPage from './components/pages/DashboardPage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
         element: <App/>,
     },
     {
-        path: "/parceltracker",
-        element: <ParcelTracker />,
+        path: "/parceltrackerpage",
+        element: <ParcelTrackerPage />,
+    },
+    {
+      path: "/dashboardpage",
+      element: <DashboardPage />,
     },
   ]);
 
