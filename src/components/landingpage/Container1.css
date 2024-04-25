@@ -1,12 +1,13 @@
 .Container1 {
     display: flex;
     min-height: 70vh;
+    min-width: 50vh;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .Resize-image1 {
-    height: 600px;
+    height: 50vh;
     flex-shrink: 0;
 }
 
@@ -82,3 +83,6 @@ button {
     border-color: hsl(1, 68%, 715%);
     background-color: hsl(1, 68%, 75%);
 }
+
+
+

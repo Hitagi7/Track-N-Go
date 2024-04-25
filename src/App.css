@@ -24,6 +24,26 @@ p {
   line-height: 33.88px;
 }
 
+/*@media only screen and (max-width: 2000px){
+  .App {
+    height: 90%;
+  }
+  
+  hr {
+    height: 90%;
+  }
+  
+  h1 {
+    width: 90%;
+    font-size: 90%;
+  }
+  
+  p {
+    line-height: 90%;
+  }
+
+}
+
 /* * {
   border: 1px solid red;
 } */

@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 41px;
-    width: 746px;
+    gap: 2.563rem;
+    width: 46.625rem;
 }
 
 .LoginBox {
