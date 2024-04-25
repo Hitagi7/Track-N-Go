@@ -18,11 +18,12 @@
 }
 
 .ImagePartners {
-  width: 100vw;
+  width: 100%;
+  max-width: 80rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 80px;
+  gap: 40px;
 }
 
 .SPX {
