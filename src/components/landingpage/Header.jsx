@@ -34,7 +34,6 @@ function Header() {
               <li onClick={() => scrollToSection(partners)}>Partners</li>
               <li onClick={() => scrollToSection(aboutus)}>About Us</li>
               <li onClick={() => scrollToSection(contact)}>Contact</li>
-              <li><Link to="/ParcelTracker">Parcel Tracker</Link></li>
             </ul>
             <ButtonStack />
         </div>

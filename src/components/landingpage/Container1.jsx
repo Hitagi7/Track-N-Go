@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom';
 import './Container1.css'
 import Header from './Header';
 
@@ -28,7 +29,7 @@ function Container1() {
               placeholder="Enter tracking number"
             />
           </div>
-          <button className="Search">Search</button>
+          <button className="Search"><Link to="/ParcelTracker">Search</Link></button>
         </div>
       </div>
       <img

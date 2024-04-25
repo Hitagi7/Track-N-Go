@@ -5,6 +5,7 @@ function ParcelTracker() {
   return (
     <div >
         <Header/>
+        <hr/>
         <div>ParcelTracker</div>
     </div>
   )
