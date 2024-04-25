@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Container1.css'
-import Header from './Header';
 
 function Container1() {
   

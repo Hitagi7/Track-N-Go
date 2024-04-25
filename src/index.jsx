@@ -14,8 +14,8 @@ const router = createBrowserRouter([
         element: <App/>,
     },
     {
-        path: "/ParcelTracker",
-        element: <ParcelTracker/>,
+        path: "/parceltracker",
+        element: <ParcelTracker />,
     },
   ]);
 

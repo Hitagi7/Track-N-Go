@@ -2,10 +2,6 @@ import { useRef } from 'react'
 import './Header.css'
 import ButtonStack from '../ButtonStack'
 import { Link } from 'react-router-dom'
-import Container1 from './Container1'
-import Container2 from './Container2'
-import Container3 from './Container3'
-import Container4 from './Container4'
 
 
 function Header() {
