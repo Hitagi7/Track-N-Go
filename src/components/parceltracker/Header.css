@@ -1,0 +1,15 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 56px;
+}
+
+a {
+    all: unset;
+}
+
+a:hover {
+    color: hsl(220, 23%, 43%);
+    cursor: pointer;
+}

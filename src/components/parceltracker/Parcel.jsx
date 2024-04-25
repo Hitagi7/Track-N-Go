@@ -23,7 +23,7 @@ function Parcel() {
                 <p className="font-10">Size</p>
             </div>
             <div className="price">
-                <p className="font-14 font-semibold">₱567</p>
+                <p className="font-14 font-semibold">₱567.00</p>
                 <p className="font-10">Price</p>
             </div>
         </div>

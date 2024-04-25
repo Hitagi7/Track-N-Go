@@ -13,17 +13,17 @@
 .information {
     display: flex;
     flex-direction: column;
-    gap: 1.15rem;
     margin-left: 1.75rem;
     margin-top: 1.06rem;
+    gap: 1.15rem;
 }
 
 .status {
+    display: flex;
     padding: 0.0625rem 0.3125rem;
     width: fit-content;
     border-radius: 6px;
     background: #75C768;
-
 }
 
 .refnumber {
@@ -37,12 +37,28 @@
 
 .details {
     display: flex;
-    align-items: flex-end;
+    height: 100%;
+    align-items: center;
     justify-content: space-around;
+    margin-top: -0.4rem;
 }
 
-hr {
+.Parcel hr {
+    background: #9FAAC0;
+    border: none;
     height: 0.0625rem;
-    width: 100%;
-    background: #2D3648;
-  }
+}
+
+.font-14 { 
+    display: flex;
+}
+
+.font-10 { 
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+p {
+    all: unset;
+}
