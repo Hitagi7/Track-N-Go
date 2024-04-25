@@ -6,7 +6,7 @@ import {
   } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
-import ParcelTracker from './components/pages/ParcelTracker.jsx';
+import ParcelTracker from './components/pages/ParcelTrackerPage.jsx';
 
 const router = createBrowserRouter([
     {
