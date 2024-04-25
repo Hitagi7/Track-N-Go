@@ -1,0 +1,64 @@
+.ParcelTransit {
+    display: flex;
+    flex-direction: column;
+    width: 25.6875rem;
+    height: 10.0625rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    border: 1px solid #9FAAC0;
+    background: #FEFEFE;
+
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.75rem;
+    margin-top: 1.06rem;
+    gap: 1.15rem;
+}
+
+.ParcelTransit .status {
+    display: flex;
+    padding: 0.0625rem 0.3125rem;
+    width: fit-content;
+    border-radius: 6px;
+    background: #F2A74F;
+}
+
+.refnumber {
+    color: #2D3648;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 1.19rem;
+}
+
+.details {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: -0.4rem;
+}
+
+.Parcel hr {
+    background: #9FAAC0;
+    border: none;
+    height: 0.0625rem;
+}
+
+.font-14 { 
+    display: flex;
+}
+
+.font-10 { 
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+}
+
+p {
+    all: unset;
+}

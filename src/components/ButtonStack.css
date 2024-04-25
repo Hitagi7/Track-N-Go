@@ -9,16 +9,13 @@
 }
 
 .Login {
+    padding: 0.75rem 1.25rem;
     border-radius: 6px;
     border: 2px solid #2D3648;
-    padding: 12px 20px;
     color: #2D3648;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 24px;
     letter-spacing: -0.16px;
+    font-weight: 700;
 }
 
 .Signup {

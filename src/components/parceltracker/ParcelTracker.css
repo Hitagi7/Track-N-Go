@@ -2,5 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    gap: 2.5rem;
+    height: fit-content;
+    padding: 2.06rem 0rem 4.38rem 0rem;
 }

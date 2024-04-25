@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './Header.css'
 import ButtonStack from '../ButtonStack'
+import { Link } from 'react-router-dom'
 
 function Header() {
 
   return (
     <div className='Header'>
-        <img src="/src/assets/Logo Text.png" alt="Logo Text" />
+        <Link to="/"><img src="/src/assets/TNG Logo V2.png" alt="Logo" className="logo"/></Link>
         <ButtonStack />
     </div>
   )
