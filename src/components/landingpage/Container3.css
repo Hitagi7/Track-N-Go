@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 66px;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .Title3 {
@@ -15,6 +15,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+  animation: fade-right 1.5s;
 }
 
 .ImagePartners {
@@ -23,7 +24,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 50px;
+  animation: fade-right 2s;
 }
 
 .SPX {
@@ -79,4 +81,21 @@
 .JRS {
   height: 64px;
   width: 149px;
+}
+
+@keyframes fade-right {
+  0% {
+      opacity: 0;
+      transform: translateX(40px) scale(1);
+  }
+
+  20% {
+      opacity: 0;
+      transform: translateX(20px) scale(1);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0px) scale(1);
+  }
 }
