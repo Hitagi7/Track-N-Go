@@ -11,7 +11,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    display: none;
 }
 
 .overlay {
@@ -35,7 +34,6 @@ body {
 .signup.overlay {
     width: 521px;
     height: 659px;
-    /* display: none;  */
     width: 32.5625rem;
     height: 41.1875rem;
 }
@@ -43,7 +41,6 @@ body {
 .login.overlay{
     width: 521px;
     height: 577px;
-    display: none;
 }
 
 .dimmed-background {
@@ -137,8 +134,6 @@ input[type="password"] {
 .fbutton {
     display: flex;
     width: 100%;
-    /* padding: 1.625rem 8.0625rem;     */
-    /* padding right; */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -188,4 +183,10 @@ input[type="password"] {
 
 .hyperlink {
     color: var(--color-dark-blue);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 }
