@@ -12,6 +12,9 @@ function ParcelTrackerBody() {
         </div>
         <div className="refNumber">SPEPH043036716934</div>
       </div>
+      <div className="frame2">
+        
+      </div>
     </div>
   );
 }

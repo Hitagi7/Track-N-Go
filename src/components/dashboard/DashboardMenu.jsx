@@ -1,10 +1,11 @@
 import React from 'react'
 import './DashboardMenu.css'
+import { Link } from 'react-router-dom'
 
 function DashboardMenu() {
   return (
     <div className="DashboardMenu">
-        <img src="/src/assets/TNG Logo V2.png" alt="Logo Text" class="logo"/>
+        <Link to='/'><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" class="logo"/></Link>
         <hr class="hr1"/>
         <div className="Frames">
           <div className="Frame1">
