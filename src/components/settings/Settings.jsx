@@ -4,7 +4,7 @@ import SideNavigation from './SideNavigation'
 
 function Settings() {
     return (
-        <div className="settings">
+        <div className="Settings">
             <p>Test</p>
         </div>
     )

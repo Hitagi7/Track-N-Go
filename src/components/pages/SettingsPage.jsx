@@ -4,7 +4,7 @@ import Settings from '../settings/Settings'
 
 function SettingsPage() {
     return (
-        <div className="settings-page">
+        <div className="SettingsPage">
             <Header />
             <hr />
             <Settings />
