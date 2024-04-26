@@ -6,3 +6,7 @@
     height: fit-content;
     padding: 2.06rem 0rem 4.38rem 0rem;
 }
+
+.ParcelTracker hr {
+    all: unset
+}

@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -36,11 +35,13 @@ body {
     height: 659px;
     width: 32.5625rem;
     height: 41.1875rem;
+    border-radius: 1rem;
 }
 
 .login.overlay{
     width: 521px;
     height: 577px;
+    border-radius: 1rem;
 }
 
 .dimmed-background {
