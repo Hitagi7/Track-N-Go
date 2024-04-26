@@ -190,3 +190,7 @@ input[type="password"] {
     line-height: normal;
     text-align: center;
 }
+
+.hyperlink a:hover {
+    text-decoration: underline;
+}
