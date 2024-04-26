@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../parceltracker/Header'
+import ParcelTrackerHeader from '../parceltracker/ParcelTrackerHeader'
 import ParcelTracker from '../parceltracker/ParcelTracker'
 
 function ParcelTrackerPage() {
   return (
     <div className="ParcelTrackerPage">
-        <Header />
+        <ParcelTrackerHeader />         
         <hr />
         <ParcelTracker />
     </div>
