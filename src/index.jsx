@@ -8,6 +8,7 @@ import App from './App.jsx'
 import './index.css'
 import ParcelTrackerPage from './components/pages/ParcelTrackerPage.jsx';
 import DashboardPage from './components/pages/DashboardPage.jsx';
+import SettingsPage from './components/pages/SettingsPage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       path: "/dashboardpage",
       element: <DashboardPage />,
     },
+    {
+      path: "/settings",
+      element: <SettingsPage />,
+    }
   ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
