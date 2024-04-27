@@ -1,12 +1,14 @@
 .Profile {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     background-color: #F5F5F5;
     width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
+}
+
+.Profile .SideNavigation {
+    height: 81rem;
 }
 
 .Profile1 {
@@ -19,16 +21,23 @@
 .Profile2 {
     display: flex;
     flex-direction: column;
-    gap: 3.13rem;
     width: 99.1875rem;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 .Profile3 {
+    margin-top: -9.75rem;
     display: flex;
     width: 100%;
     justify-content: center;
+}
+
+.profile-header {
+    width: 100%;
+    height: 16.9375rem;
+    flex-shrink: 0;
+    background: url(/src/assets/photo-profile-header.jpg) lightgray 50% / cover no-repeat;
 }
 
 .Profile .SideNavigation  .Frame2 {

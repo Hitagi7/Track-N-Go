@@ -1,0 +1,128 @@
+.PublicProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 77.5rem;
+    height: 64.9375rem;
+    flex-shrink: 0;
+    border-radius: 1.25rem;
+    background: #FEFEFE;
+}
+
+.profile-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 69.25rem;
+    height: 58.688rem;
+}
+
+.title {
+    display: flex;
+    align-self: flex-start;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2.63rem;
+}
+
+.profile-picture {
+    display: flex;
+    align-items: flex-end;
+}
+
+.profile-placeholder {
+    width: 9.53125rem;
+    height: 9.47919rem;
+}
+
+.button-camera {
+    /* transform: translateX(-100%); */
+    width: 3.1875rem;
+    height: 3.1875rem;
+    position: absolute;
+    transform: translateX(200%)
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.88rem;
+    width: 44.375rem;
+    gap: 1.88rem;
+    margin-bottom: 5.88rem;
+}
+
+.first-name,
+.last-name,
+.username,
+.email-address {
+    display: flex;
+    flex-direction: column;
+    gap: 0.62rem;
+}
+
+.input-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.input-box {
+    display: flex;
+    padding: 0.625rem 1.3125rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    align-self: stretch;
+    border-radius: 0.625rem;
+    border: 1px solid #CBD2E0;
+    background: #FEFEFE;
+    width: 100%;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.38rem;
+    width: 100%;
+}
+
+.save-changes-profile {
+    display: flex;
+    height: 3.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+    border-radius: 0.625rem;
+    background: #DE5654;
+    color: #FEFEFE;
+    font-size: 1rem;
+    font-weight: 600;
+    }
+
+.cancel-profile {
+    display: flex;
+    height: 3.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+    border-radius: 0.625rem;
+    background: #F5F5F5;
+    color: #2D3648;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.save-changes-profile:hover,
+.cancel-profile:hover {
+    cursor: pointer;
+}
+
+.cancel-profile:hover {
+    background: hsl(0, 0%, 86%);
+}
+
+.save-changes-profile:hover {
+    background: hsl(1, 68%, 50%);
+}
