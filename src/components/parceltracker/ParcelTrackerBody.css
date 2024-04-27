@@ -35,7 +35,7 @@
 .frame2 {
     margin-top: 1.94rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 55.409rem;
     height: 4.4375rem;
@@ -85,4 +85,79 @@
 
 .frame2 .line-status-idle {
     background: #9FAAC0;
+}
+
+/* Frame 3 */
+.frame3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.75rem;
+    width: 55.409rem;
+    gap: 0.94rem;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2.97rem;
+}
+
+.container-placeholder-1,
+.container-placeholder-2,
+.container-placeholder-3,
+.container-placeholder-4 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 2.97rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.date,
+.time
+.description {
+    font-size: 1rem;
+}
+
+.date {
+    font-weight: 600;
+}
+
+.time {
+    color: #717D96;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.69rem;
+}
+
+.vertical-line {
+    width: 0.125rem;
+    height: 3.5625rem;
+    background: #9FAAC0;
+}
+
+.right {
+    width: 35.95356rem;
+}
+
+.description {
+    font-weight: 600;
+}
+
+.description-1,
+.description-2,
+.description-3,
+.description-4 {
+    font-weight: normal;
 }
