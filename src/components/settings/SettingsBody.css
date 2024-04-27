@@ -1,0 +1,21 @@
+
+
+.settings-body {
+    width: 56.0625rem;
+    height: 131.75rem; 
+    border-radius: 1.25rem;
+    background: #FEFEFE;  
+    align-self: center;    
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-notification {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-toggle {
+    display: flex;
+    flex-direction: column;
+}

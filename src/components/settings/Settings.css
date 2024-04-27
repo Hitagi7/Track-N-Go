@@ -1,36 +1,11 @@
-.Settings {
+.side-navigation {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #F5F5F5;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    flex-direction: row;
 }
 
-.Settings1 {
-    display: flex;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.Settings2 {
+.settings-pane {
     display: flex;
     flex-direction: column;
-    gap: 3.13rem;
-    width: 99.1875rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.Settings3 {
-    display: flex;
     width: 100%;
-    justify-content: center;
-}
-
-.Settings .SideNavigation  .Frame3 {
-    background: #EDF0F7;
+    background-color: #f5f5f5;
 }

@@ -8,7 +8,7 @@ function Container1() {
     <div className="Container1">
       <div className="Text1">
         <h1>Effortlessly track your parcels</h1>
-        <p>
+        <p className="paragraph-text">
           Stay connected with your shipments every step of the way with Track N'
           Go. Track your packages in real-time, receive timely updates on
           delivery status, and enjoy peace of mind knowing exactly where your

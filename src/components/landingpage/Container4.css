@@ -32,6 +32,9 @@
 .description {
     width: 100%; 
     max-width: 95rem; 
+    line-height: 211.766%; /* 2.11763rem */
+    font-weight: 400;
+    
 }
 
 @media screen and (max-width: 1536px){

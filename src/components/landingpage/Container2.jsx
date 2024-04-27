@@ -14,7 +14,7 @@ function Container2() {
       />
       <div className="Text2">
         <h1>Why use Track N' Go?</h1>
-        <p>
+        <p className="paragraph-text">
           With our intuitive platform, you can stay updated on your parcels'
           whereabouts in real-time, ensuring you're always in the loop. Receive
           instant notifications and enjoy seamless navigation as you track your
