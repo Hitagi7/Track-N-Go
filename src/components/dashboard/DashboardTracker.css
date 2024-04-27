@@ -1,0 +1,57 @@
+.DashboardTracker {
+    width: 40.37869rem;
+    height: 20.125rem;
+    border-radius: 1.25rem;
+    background: url(./src/assets/SearchParcelBackground.png) lightgray 50% / cover no-repeat;
+    /* background: linear-gradient(180deg, #DE5654 0%, rgba(222, 86, 84, 0.00) 100%), url(./src/assets/others/pattern.png) lightgray 0% 0% / 100px 100px repeat, #DE5654;    */
+    padding: 6.06rem 2.88rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.31rem;
+}
+
+.tracknum {
+    color: #FDFDFD;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 16.0625rem;
+}
+
+.InputTrackNum {
+    display: flex;
+    padding: 0.4375rem 0.5625rem 0.4375rem 1.0625rem;
+    align-items: center;
+    gap: 0.625rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 0.625rem;
+    background: #FDFDFD;
+    border: #FDFDFD;
+    width: 100%;
+    /* height: 2.6875rem; */
+}
+
+.SearchBar {
+    display: flex;
+    gap: 1.19rem;
+    height: 2.6875rem;
+}
+
+.Submit {
+    border-radius: 0.625rem;
+    background: #8D2F2D;
+    width: 5.375rem;
+    /* padding: 0.5rem 0.9375rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FDFDFD;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    gap: 0.625rem;
+    height: 100%;
+}

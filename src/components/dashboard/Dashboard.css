@@ -19,16 +19,18 @@
 .Dashboard2 {
     display: flex;
     flex-direction: column;
-    gap: 3.13rem;
-    width: 99.1875rem;
-    justify-content: flex-start;
-    align-items: flex-start;
+    /* width: 99.1875rem; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .Dashboard3 {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding: 3.12rem;
+    gap: 2.04rem;
 }
 
 .Dashboard .SideNavigation  .Frame1 {

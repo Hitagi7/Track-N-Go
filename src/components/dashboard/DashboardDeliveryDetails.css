@@ -1,8 +1,91 @@
 .DashboardDeliveryDetails {
     display: flex;
+    flex-direction: column;
     width: 39.6445rem;
-    height: 40rem;
-    box-sizing: border-box;
+    height: 20.125rem;
+    border-radius: 1.25rem;
     background: #FEFEFE;
+    gap: 0.56rem;
+}
 
+.Frame6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12.06rem;
+    padding: 2.06rem 2.71rem 0rem 2.56rem;
+    width: 39.6445rem;
+    /* height: 20.125rem; */
+}
+
+.Frame7 {
+    display: flex;
+    justify-content: center;
+    width: 29.875rem;
+}
+
+.Frame8{
+    display: flex;
+    align-items: center;
+    gap: 1.19rem;
+}
+
+.font-bold {
+    font-size: 6.08869rem;
+    color: #2D3648;
+}
+
+.truck {
+    width: 7.0625rem;
+    height: 5.29688rem;
+    flex-shrink: 0;
+}
+
+.delivery {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #2D3648;
+}
+
+.DeliveryNumber {
+    font-size: 1rem;
+    font-family: 400;
+    color: #717D96;
+}
+
+.Frame9 {
+    display: flex;
+    gap: 1.22rem;
+    padding: 2.57rem 11.01rem 2.88rem 3.34rem;
+}
+
+.SeeHistory {
+    border-radius: 0.9375rem;
+    background: #DE5654;
+    color: #FEFEFE;
+    font-weight: 500;
+    line-height: normal;
+    width: 10.35975rem;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ManageSettings {
+    border-radius: 0.9375rem;
+    background: #FEFEFE;
+    color: #DE5654;
+    font-weight: 500;
+    line-height: normal;
+    width: 10.35975rem;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.6px solid #DE5654;
+}
+
+button {
+    all: unset;
 }
