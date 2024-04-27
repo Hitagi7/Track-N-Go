@@ -10,6 +10,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 .overlay {
@@ -28,6 +29,7 @@ body {
     padding-left: 3.75rem;
     padding-right: 3.75rem;
     padding-top: 3rem;
+    animation: fade-in 1s;
 }
 
 .signup.overlay {
@@ -52,6 +54,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
+    animation: fade-in 1s;
 }
 
 .overlay h3 {
@@ -194,4 +197,14 @@ input[type="password"] {
 
 .hyperlink a:hover {
     text-decoration: underline;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
