@@ -4,6 +4,7 @@ import DashboardTitle from './DashboardTitle'
 import SideNavigation from '../SideNavigation'
 import DashboardDeliveryDetails from './DashboardDeliveryDetails'
 import DashboardTracker from './DashboardTracker'
+import DashboardHistory from './DashboardHistory'
 
 function Dashboard() {
   return (
@@ -18,6 +19,7 @@ function Dashboard() {
               <DashboardDeliveryDetails />
               <DashboardTracker />
             </div>
+            <DashboardHistory />
           </div>
         </div>
     </div>

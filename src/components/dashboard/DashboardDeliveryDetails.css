@@ -15,7 +15,7 @@
     gap: 12.06rem;
     padding: 2.06rem 2.71rem 0rem 2.56rem;
     width: 39.6445rem;
-    /* height: 20.125rem; */
+    border-radius: 1.25rem;
 }
 
 .Frame7 {
@@ -56,7 +56,7 @@
 .Frame9 {
     display: flex;
     gap: 1.22rem;
-    padding: 2.57rem 11.01rem 2.88rem 3.34rem;
+    padding: 2.57rem 11.01rem 0 3.34rem;
 }
 
 .SeeHistory {
