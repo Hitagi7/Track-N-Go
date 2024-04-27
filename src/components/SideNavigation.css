@@ -16,6 +16,10 @@
     height: 3.4375rem;
 }
 
+.SideNavigation .logo:hover {
+        cursor: pointer;
+}
+
 .hr1 {
     width: 17.25rem;
     height: 0rem;
