@@ -1,4 +1,4 @@
-.DashboardMenu {
+.SideNavigation {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -11,7 +11,7 @@
     padding: 1.5rem 1.25rem;
 }
 
-.DashboardMenu .logo {
+.SideNavigation .logo {
     width: 17.75rem;
     height: 3.4375rem;
 }
@@ -39,7 +39,6 @@
     width: 100%;
     padding: 1.56rem 2.19rem; 
     box-sizing: border-box;
-    background: #EDF0F7;
 }
 
 .icon1 {

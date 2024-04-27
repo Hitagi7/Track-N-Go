@@ -5,7 +5,6 @@ import Dashboard from '../dashboard/Dashboard'
 function DashboardPage() {
   return (
     <div className="DashboardPage">
-        <hr/>
         <Dashboard/>
     </div>
   )

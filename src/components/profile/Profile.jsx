@@ -1,13 +1,13 @@
 import React from 'react'
-import './Settings.css'
+import './Profile.css'
 import SideNavigation from '../SideNavigation'
 
-function Settings() {
+function Profile() {
     return (
-        <div className="Settings">
+        <div className="Profile">
             <SideNavigation />
         </div>
     )
 }
 
-export default Settings
+export default Profile

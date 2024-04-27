@@ -9,6 +9,7 @@ import './index.css'
 import ParcelTrackerPage from './components/pages/ParcelTrackerPage.jsx';
 import DashboardPage from './components/pages/DashboardPage.jsx';
 import SettingsPage from './components/pages/SettingsPage.jsx';
+import ProfilePage from './components/pages/ProfilePage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
       path: "/settingspage",
       element: <SettingsPage />,
+    },
+    {
+      path: "/profilepage",
+      element: <ProfilePage />,
     }
   ]);
 
