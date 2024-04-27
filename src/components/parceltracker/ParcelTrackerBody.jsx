@@ -7,9 +7,9 @@ function ParcelTrackerBody() {
       {/* FRAME 1 */}
       <div className="frame1">
         <div className="city">
-          <p className="font-24 font-bold">VALENZUELA CITY</p>
+          <p >VALENZUELA CITY</p>
           <img src="/src/assets/icons/icon-arrow-right.svg" alt="Arrow" />
-          <p className="font-24 font-bold">TOLEDO CITY</p>
+          <p >TOLEDO CITY</p>
         </div>
         <div className="refNumber">SPEPH043036716934</div>
       </div>
