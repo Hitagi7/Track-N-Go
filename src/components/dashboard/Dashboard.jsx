@@ -7,15 +7,18 @@ import DashboardDeliveryDetails from './DashboardDeliveryDetails'
 function Dashboard() {
   return (
     <div className="Dashboard">
-      <DashboardMenu />
-      <DashboardTitle />
-        {/* <div className="Dashboard1">
+      {/* <DashboardMenu /> */}
+      {/* <DashboardTitle /> */}
+        <div className="Dashboard1">
         <DashboardMenu />
         </div>
+        {/* <DashboardTitle /> */}
         <div className="Dashboard2">
-        <DashboardTitle />
-        <DashboardDeliveryDetails />
-        </div> */}
+          <DashboardTitle />
+          <div className="Dashboard3">
+            <DashboardDeliveryDetails />
+          </div>
+        </div>
     </div>
   )
 }

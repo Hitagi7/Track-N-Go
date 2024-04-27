@@ -1,5 +1,7 @@
 .Dashboard {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: #F5F5F5;
     width: 100%;
     height: 100%;
@@ -7,9 +9,8 @@
     margin: 0;
 }
 
-/* .Dashboard1 {
+.Dashboard1 {
     display: flex;
-    width: 100%;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -17,6 +18,15 @@
 
 .Dashboard2 {
     display: flex;
+    flex-direction: column;
+    gap: 3.13rem;
+    width: 99.1875rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Dashboard3 {
+    display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-} */
+}
