@@ -4,12 +4,6 @@
   place-items: center;
 }
 
-hr {
-  height: 2px;
-  flex-shrink: 0;
-  background: #2D3648;
-}
-
 h1 {
   width: 600px;
   font-weight: 900;

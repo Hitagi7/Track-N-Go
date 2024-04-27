@@ -40,4 +40,4 @@ function Container1() {
   );
 }
 
-export default Container1
+export default Container1;

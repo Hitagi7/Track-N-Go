@@ -3,6 +3,10 @@
     height: 2.9385rem;
 }
 
+.ParcelTrackerLogo:hover {
+    cursor: pointer;
+}
+
 .ParcelTrackerHeader {
     display: flex;
     align-items: center;
