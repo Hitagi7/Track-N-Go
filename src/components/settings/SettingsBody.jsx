@@ -13,7 +13,7 @@ function SettingsBody() {
                 <section className="notification-description">
 
                     <section className="notification-text">
-                        <p className="text-label">
+                        <p className="settings-text-label">
                             Enable in-app notifications
                         </p>
                         <p className="font-12 font-light">
@@ -33,7 +33,7 @@ function SettingsBody() {
                 </p>
 
                 <section className="account-fields">
-                    <p>Change password</p>
+                    <p class="settings-text-label">Change password</p>
                     <div class="settings-text-field">
                         <p>Enter current password</p>
                         <form action="#">

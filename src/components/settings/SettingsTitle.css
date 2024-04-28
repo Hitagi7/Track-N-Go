@@ -14,3 +14,8 @@
     font-size: 1.25rem;
     color: #2D3648;
 }
+
+.settings-text-label {
+    font-size: 16px;
+    font-weight: 600;
+}
