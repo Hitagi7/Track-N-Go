@@ -83,6 +83,12 @@
   width: 149px;
 }
 
+@media screen and (max-width: 1536px){
+  .Container3 {
+    margin-top: 6rem;
+  }
+}
+
 @keyframes fade-right {
   0% {
       opacity: 0;
