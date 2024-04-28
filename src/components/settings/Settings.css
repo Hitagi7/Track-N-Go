@@ -1,26 +1,23 @@
 .side-navigation {
     display: flex;
     flex-direction: row;
-}
-
-<<<<<<< Updated upstream
-.settings-pane {
-=======
-.Settings .SideNavigation {
     height: 145.125rem;
 }
 
-.Settings1 {
+.settings-body {
     display: flex;
     height: 100%;
     padding: 0;
     margin: 0;
 }
 
-.Settings2 {
->>>>>>> Stashed changes
+.settings-pane {
     display: flex;
     flex-direction: column;
     width: 100%;
     background-color: #f5f5f5;
+}
+
+.Settings .SideNavigation  .Frame3 {
+    background: #EDF0F7;
 }

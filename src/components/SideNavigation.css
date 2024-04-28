@@ -4,17 +4,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 20.8125rem;
-<<<<<<< Updated upstream
+    /* width: 20.8125rem; */
     min-height: 58rem;
     height: 100%;
     background: #FEFEFE;
-=======
-    background: hsl(0, 0%, 100%);
->>>>>>> Stashed changes
     gap: 0.62rem;
     padding: 1.5rem 1.25rem;
-    min-height: 58rem;
 }
 
 .SideNavigation .logo {
@@ -23,7 +18,7 @@
 }
 
 .SideNavigation .logo:hover {
-        cursor: pointer;
+    cursor: pointer;
 }
 
 .hr1 {
