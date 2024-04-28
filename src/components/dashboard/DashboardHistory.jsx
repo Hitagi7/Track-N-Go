@@ -23,7 +23,7 @@ function DashboardHistory() {
                 <div className="Frame13">
                     <p className="status2">IN TRANSIT</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt;</p>
             </div>
             <hr className='hr11' />
             <div className="Frame12">
@@ -34,7 +34,7 @@ function DashboardHistory() {
                 <div className="Frame14">
                     <p className="status3">DELIVERED</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt; </p>
             </div>
             <hr className='hr11' />
             <div className="Frame12">
@@ -45,7 +45,7 @@ function DashboardHistory() {
                 <div className="Frame14">
                     <p className="status3">DELIVERED</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt; </p>
             </div>
             <hr className='hr11' />
             <div className="Frame12">
@@ -56,7 +56,7 @@ function DashboardHistory() {
                 <div className="Frame14">
                     <p className="status3">DELIVERED</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt; </p>
             </div>
             <hr className='hr11' />
             <div className="Frame12">
@@ -67,7 +67,7 @@ function DashboardHistory() {
                 <div className="Frame14">
                     <p className="status3">DELIVERED</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt; </p>
             </div>
             <hr className='hr11' />
             <div className="Frame12">
@@ -78,7 +78,7 @@ function DashboardHistory() {
                 <div className="Frame14">
                     <p className="status3">DELIVERED</p>
                 </div>
-                <p className="details2">View Details </p>
+                <p className="details2">View Details &gt; </p>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 .settings-body {
     width: 72.125rem;
-    height: 131.75rem; 
+    height: 110rem; 
     border-radius: 1.25rem;
     background: #FEFEFE;  
     align-self: center;    
@@ -90,4 +90,75 @@
 .settings-fbutton:hover{
     transform: scale(1.03);
     filter: brightness(0.96);
+}
+
+.faq-question {
+    font-weight: 700;
+}
+
+.faq-title {
+    margin-top: 4.19rem;
+    margin-bottom: 1.25rem;
+}
+
+.faq-paragraph {
+    line-height: 1.5rem;
+}
+
+.about-us-title {
+    margin-top: 4.19rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-us-description {
+    line-height: 211.766%;
+    margin-bottom: 1.25rem;
+}
+
+.about-us-icon-label {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-top: 10px;
+}
+
+.about-us-icon-label .about-us-icon::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 0.30rem;
+}
+
+.about-us-label {
+    margin-left: 10px;
+}
+
+.about-us-icon-label .about-us-label {
+    display: inline-block; /* Ensure label and icon are on the same line */
+}
+
+.fb-label {
+    background-image: url('src/assets/icons/icon-facebook.svg'); /* Specify the icon */
+}
+
+.insta-label {
+    background-image: url('src/assets/icons/icon-instagram.svg'); /* Specify the icon */
+}
+
+.linkedin-label {
+    background-image: url('src/assets/icons/icon-linkedin.svg'); /* Specify the icon */
+}
+
+.sign-out-description {
+    line-height: 1.5rem;
+}
+
+.logout-button {
+    width: 24.2025rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
+    margin-top: 1rem;
 }
