@@ -29,7 +29,25 @@
     font-weight: bold;
 }
 
+.scroll-to-top {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    border: 1px solid #2D3648;
+    background-color: white;
+    color: white;
+    width: 0.038rem;
+    height: 0.625rem;
+    padding: 0.625rem 0.938rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
 
+.scroll-to-top:hover {
+    opacity: 80%;
+}
 a {
     all: unset;
 }

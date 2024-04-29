@@ -84,6 +84,11 @@
     line-height: normal;
     justify-content: flex-start;
     padding: 0 0 0 6rem;
+    cursor: pointer;
+}
+
+.details2:hover {
+    opacity: 80%;
 }
 
 .Frame13 {

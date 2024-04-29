@@ -25,12 +25,12 @@ function SideNavigation() {
         </div>
         <hr class="hr2"/>
         <div className="Frame4">
-            <img src="/src/assets/icons/profile-placeholder.svg" alt="Profile Placeholder Icon" class="icon4"/>
-            <div className="Frame5">
+          <img src="/src/assets/icons/profile-placeholder.svg" alt="Profile Placeholder Icon" class="icon4"/>
+          <div className="profile-display">
             <p className="font-18 font-semibold">Lorem Ipsum</p>
             <p className="font-15 font-extralight">Basic Account</p>
           </div>
-          </div>
+        </div>
     </div>
   )
 }

@@ -9,6 +9,10 @@ function scrollTo(sectionId) {
   element.scrollIntoView({ behavior: 'smooth' });
 }
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function Header() {
 
   return (
@@ -25,6 +29,7 @@ function Header() {
             </ul>
             <ButtonStack />
             <hr />
+            <button className="scroll-to-top" onClick={scrollToTop}><img src="/src/assets//icons/up-arrow.svg" alt="up-arrow" /></button>
         </div>
     </div>
   )

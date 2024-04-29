@@ -70,6 +70,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .ManageSettings {
@@ -84,6 +85,16 @@
     align-items: center;
     justify-content: center;
     border: 0.6px solid #DE5654;
+    cursor: pointer;
+}
+
+.SeeHistory:hover {
+    opacity: 90%;
+}
+
+.ManageSettings:hover {
+    border-color:hsl(1, 68%, 50%);
+    color: hsl(1, 68%, 50%);
 }
 
 button {

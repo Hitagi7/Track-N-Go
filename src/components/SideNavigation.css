@@ -95,11 +95,12 @@
 .Frame4 {
     display: flex;
     justify-content: center;
+    width: 100%;
     gap: 1.06rem;
     padding: 1rem 3.12rem 0.62rem 0rem;
 }
 
-.Frame5 {
+.profile-display {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +108,8 @@
 
 .Frame1:hover,
 .Frame2:hover,
-.Frame3:hover {
+.Frame3:hover,
+.Frame4:hover {
     cursor: pointer;
     background: hsl(0, 0%, 90%);
 }
