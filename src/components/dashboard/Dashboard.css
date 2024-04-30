@@ -10,7 +10,7 @@
 }
 
 .Dashboard .SideNavigation {
-    height: 61.9375rem;
+    height: 65.2275rem;
 }
 
 .Dashboard1 {
@@ -47,4 +47,5 @@
     justify-content: center;
     align-items: center;
     gap: 1.56rem;
+    padding-bottom: 3.05rem;
 }

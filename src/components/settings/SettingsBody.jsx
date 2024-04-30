@@ -115,7 +115,7 @@ function SettingsBody() {
                     </p>
                 </div>
                 <div className="logout-button">
-                    <button class="settings-fbutton logout-button">Save changes</button>
+                    <button class="settings-fbutton logout-button">Sign Out</button>
                 </div>
             </section>
 

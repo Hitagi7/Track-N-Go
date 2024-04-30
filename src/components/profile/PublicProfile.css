@@ -39,9 +39,14 @@
 .button-camera {
     /* transform: translateX(-100%); */
     width: 3.1875rem;
+    cursor: pointer;
     height: 3.1875rem;
     position: absolute;
     transform: translateX(200%)
+}
+
+.button-camera:hover {
+    opacity: 95%;
 }
 
 .input-fields {
