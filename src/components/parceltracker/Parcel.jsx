@@ -15,16 +15,16 @@ function Parcel() {
         <hr />
         <div className="details">
             <div className="weight">
-                <p className="font-14 font-semibold">14.6 kg</p>
-                <p className="font-10">Weight</p>
+                <p className="detail-number">14.6 kg</p>
+                <p className="detail-name">Weight</p>
             </div>
             <div className="size">
-                <p className="font-14 font-semibold">21 x 60 cm</p>
-                <p className="font-10">Size</p>
+                <p className="detail-number">21 x 60 cm</p>
+                <p className="detail-name">Size</p>
             </div>
             <div className="price">
-                <p className="font-14 font-semibold">₱567.00</p>
-                <p className="font-10">Price</p>
+                <p className="detail-number">₱567.00</p>
+                <p className="detail-name">Price</p>
             </div>
         </div>
     </div>

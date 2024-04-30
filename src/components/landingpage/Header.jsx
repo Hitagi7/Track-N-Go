@@ -29,7 +29,7 @@ function Header() {
             </ul>
             <ButtonStack />
             <hr />
-            <button className="scroll-to-top" onClick={scrollToTop}><img src="/src/assets//icons/up-arrow.svg" alt="up-arrow" /></button>
+            <button className="scroll-to-top" onClick={scrollToTop}><img src="/src/assets/icons/up-arrow.svg" alt="up-arrow" /></button>
         </div>
     </div>
   )

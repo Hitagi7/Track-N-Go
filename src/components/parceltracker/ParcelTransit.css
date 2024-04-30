@@ -49,14 +49,16 @@
     height: 0.0625rem;
 }
 
-.font-14 { 
+.detail-number { 
     display: flex;
+    font-size: 0.875rem;
+    font-weight: 600;
 }
 
-.font-10 { 
+.detail-name { 
     display: flex;
     justify-content: center;
-    font-weight: 500;
+    font-size: 0.625rem;
 }
 
 p {

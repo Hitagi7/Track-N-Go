@@ -17,7 +17,7 @@ function DashboardDeliveryDetails() {
           <p className="DeliveryNumber">There are currently no parcels out for delivery today.</p>
         </div>
         <div className="Frame9">
-          <button className="SeeHistory">See History</button>
+          <Link to="/ParcelHistoryPage"><button className="SeeHistory">See History</button></Link>
           <Link to="/SettingsPage"><button className="ManageSettings">Manage Settings</button></Link>
         </div>
     </div>
