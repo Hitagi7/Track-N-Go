@@ -1,0 +1,74 @@
+.a-side-navigation {
+    width: 20.8125rem;
+    height: 61.9375rem;
+    flex-shrink: 0; 
+    background: #FEFEFE;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.a-navigation {
+    display: flex;
+    flex-direction: column;
+    width: 18.3rem;
+    margin-top: 3.5rem;
+}
+
+.a-navigation-item {
+    padding: 1.5625rem 4.1875rem;
+    border-radius: 1.4375rem;
+}
+
+.a-selected-navigation-item {
+    background: #FECDCD; 
+}
+
+.a-profile-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 34.5rem;
+    padding-top: 2rem;
+    padding-right: 4.5rem;
+    padding-bottom:2rem;
+    height: 2.75rem;
+}
+
+.a-profile-label {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.06rem;
+}
+
+.a-users {
+    background-image: url("src/assets/icons/icon-profile.svg");
+    background-repeat: no-repeat;
+    background-position: 2.19rem;
+    background-size: 1.5rem 1.5rem;
+}
+
+.a-parcels {
+    background-image: url("src/assets/icons/icon-parcel.svg");
+    background-repeat: no-repeat;
+    background-position: 2.19rem;
+    background-size: 1.5rem 1.5rem;
+}
+
+.a-tracking {
+    background-image: url("src/assets/icons/icon-pin.svg");
+    background-repeat: no-repeat;
+    background-position: 2.19rem;
+    background-size: 1.5rem 1.5rem;
+}
+
+.a-tng-logo {
+    width: 17.75rem;
+    height: 3.4375rem;
+    margin-top: 1.5rem;    
+}
+
+.a-profile-placeholder {
+    width: 3rem;
+    height: 3rem;
+}

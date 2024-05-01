@@ -1,26 +1,26 @@
 import React from 'react'
-// import './Dashboard.css'
+import './AdminSideBar.css'
 
 function AdminSideBar() {
     return (
-        <div className="admin-side-navigation">
-            <img src="src/assets/TNG Logo V2.png" alt="" />
+        <div className="a-side-navigation">
+            <img src="src/assets/TNG Logo V2.png" alt="" class="a-tng-logo"/>
             <div className="a-navigation">
-                <button className="a-users">
+                <button className="a-users a-navigation-item a-selected-navigation-item">
                     <p class="font-16 font-semibold">Users</p>
                 </button>
-                <button className="a-parcels">
-                    <p>Parcels</p>
+                <button className="a-parcels a-navigation-item">
+                    <p class="font-16 font-semibold">Parcels</p>
                 </button>
-                <button className="a-tracking">
-                    <p>Tracking</p>
+                <button className="a-tracking a-navigation-item">
+                    <p class="font-16 font-semibold">Tracking</p>
                 </button>
             </div>
             <div className="a-profile-button">
-                <img src="src/assets/icons/profile-placeholder.svg" alt="" />
-                <div className="profile-label">
-                    <p>Admin</p>
-                    <p>Admin Account</p>
+                <img src="src/assets/icons/profile-placeholder.svg" alt="" class="a-profile-placeholder" />
+                <div className="a-profile-label">
+                    <p class="font-16 font-semibold">Admin</p>
+                    <p class="font-14 font-light">Admin Account</p>
                 </div>
             </div>
 
