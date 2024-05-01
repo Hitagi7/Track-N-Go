@@ -4,7 +4,7 @@ import './ProfileTitle.css'
 function ProfileTitle() {
   return (
     <div className="ProfileTitle">
-        <p className="font-semibold">Profile</p>
+        <p className="t-font-semibold">Profile</p>
     </div>
   )
 }

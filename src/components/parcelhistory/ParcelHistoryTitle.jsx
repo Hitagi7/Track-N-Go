@@ -5,7 +5,7 @@ function ParcelHistoryTitle() {
 
   return (
     <div className="ParcelHistoryTitle">
-        <p className="font-semibold">Parcel History</p>
+        <p className="t-font-semibold">Parcel History</p>
     </div>
   )
 }
