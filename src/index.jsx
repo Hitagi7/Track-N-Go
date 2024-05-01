@@ -11,6 +11,7 @@ import DashboardPage from './components/pages/DashboardPage.jsx';
 import SettingsPage from './components/pages/SettingsPage.jsx';
 import ProfilePage from './components/pages/ProfilePage.jsx';
 import ParcelHistoryPage from './components/pages/ParcelHistoryPage.jsx';
+import AdminPage from './components/pages/AdminPage.jsx';
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     {
       path: "/parcelhistorypage",
       element: <ParcelHistoryPage />,
+    },
+    {
+      path: "/adminpage",
+      element: <AdminPage />,
     }
   ]);
 

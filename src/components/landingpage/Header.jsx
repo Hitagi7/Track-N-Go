@@ -26,6 +26,7 @@ function Header() {
               <li onClick={() => scrollTo('about-us')}>About Us</li>
               <li onClick={() => scrollTo('contact')}>Contact</li>
               <li><Link to="/DashboardPage">Dashboard</Link></li>
+              <li><Link to="/AdminPage">Admin</Link></li>
             </ul>
             <ButtonStack />
             <hr />
