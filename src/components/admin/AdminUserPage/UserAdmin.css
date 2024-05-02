@@ -1,0 +1,11 @@
+.admin-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.a-user-title {
+    font-size: 30px;
+    font-weight: 700;    
+    margin-top: 6.44rem;
+    margin-left: 7.25rem;
+}

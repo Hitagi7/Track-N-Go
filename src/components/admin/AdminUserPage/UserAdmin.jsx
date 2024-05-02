@@ -7,11 +7,14 @@ import AdminUserBody from '../AdminUserPage/AdminUserBody.jsx'
 function UserAdmin() {
     return (
         <div className="admin-homepage">
-            <div className="admin-side-navigation admin-user-side-navigation">
+            <div className="admin-side-navigation">
                 <AdminSideBar />
             </div>
-            <div className="admin-user-body">
-                <AdminUserBody />
+            <div className="admin-right">
+                <p className="a-user-title">Users - Admin View</p>
+                <div className="admin-body">
+                    <AdminUserBody />
+                </div>
             </div>
         </div>
     );

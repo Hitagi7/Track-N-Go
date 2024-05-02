@@ -20,6 +20,12 @@
     border-radius: 1.4375rem;
 }
 
+.a-navigation-item:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 90%);
+    width: 9.8rem;
+}
+
 .a-selected-navigation-item {
     background: #FECDCD; 
 }
