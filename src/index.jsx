@@ -11,10 +11,12 @@ import DashboardPage from './components/pages/DashboardPage.jsx';
 import SettingsPage from './components/pages/SettingsPage.jsx';
 import ProfilePage from './components/pages/ProfilePage.jsx';
 import ParcelHistoryPage from './components/pages/ParcelHistoryPage.jsx';
-import AdminUserPage from './components/pages/AdminUserPage.jsx';
+import AdminHomePage from './components/pages/AdminHomePage.jsx';
+import ParcelsAdmin from './components/admin/AdminParcelsPage/ParcelsAdmin.jsx';
+import TrackingAdmin from './components/admin/AdminTrackingPage/TrackingAdmin.jsx';
 
 const router = createBrowserRouter([
-    {
+    { 
         path: "/",
         element: <App/>,
     },
@@ -39,9 +41,17 @@ const router = createBrowserRouter([
       element: <ParcelHistoryPage />,
     },
     {
-      path: "/adminuserpage",
-      element: <AdminUserPage />,
-    }
+      path: "/adminhomepage",
+      element: <AdminHomePage />,
+    },
+    {
+      path: "/parcelsadmin",
+      element: <ParcelsAdmin />,
+    },
+    {
+      path: "/trackingadmin",
+      element: <TrackingAdmin />,
+    },
   ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

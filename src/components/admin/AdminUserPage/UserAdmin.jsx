@@ -1,8 +1,8 @@
 import React from 'react'
 import './UserAdmin.css'
-import './AdminPage.css'
+import '../AdminPage.css'
 import AdminSideBar from '../AdminSideBar.jsx'
-import AdminUserBody from './AdminUserBody.jsx'
+import AdminUserBody from '../AdminUserPage/AdminUserBody.jsx'
 
 function UserAdmin() {
     return (
