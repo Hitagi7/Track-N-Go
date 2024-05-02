@@ -17,7 +17,7 @@ function Profile() {
   const [user, setUser] = useState(placeholderUser);
 
   const updateUser = (userUpdate) => {
-    setUser({ userUpdate });
+    setUser({ ...userUpdate });
   };
 
   return (
