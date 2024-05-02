@@ -1,12 +1,13 @@
 import React from 'react'
 import './AdminSideBar.css'
+import './AdminUserPage/AdminUserPage.css'
 
 function AdminSideBar() {
     return (
         <div className="a-side-navigation">
             <img src="src/assets/TNG Logo V2.png" alt="" class="a-tng-logo"/>
             <div className="a-navigation">
-                <button className="a-users a-navigation-item a-selected-navigation-item">
+                <button className="a-users a-navigation-item">
                     <p class="font-16 font-semibold">Users</p>
                 </button>
                 <button className="a-parcels a-navigation-item">

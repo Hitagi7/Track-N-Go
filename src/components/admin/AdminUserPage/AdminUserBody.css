@@ -1,0 +1,9 @@
+.a-user-body {
+    display: flex;
+    width: 83.25rem;
+    padding: 8.5625rem 4.5625rem 3.9375rem 4.5625rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    background: #FEFEFE;        
+}
