@@ -39,6 +39,7 @@
 .Wrapper {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .InputTitle {
@@ -53,8 +54,8 @@
 
 .icon {
     position: absolute;
-    transform: translateY(30%) translateX(10%);
-    padding-left: 10px;
+    margin-left: 10px;
+    height: 1.5rem;
     z-index: 3;    
 }
 

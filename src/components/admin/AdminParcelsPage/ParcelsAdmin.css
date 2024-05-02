@@ -1,0 +1,26 @@
+.AdminBodySideNavigation {
+    z-index: 1;
+}
+
+.AdminParcelBody {
+    display: flex;
+    /* width: 99.1875rem; */
+    width: max-content;
+    flex-shrink: 0;
+    align-self: stretch;
+    flex-direction: column;
+    padding-top: 6.44rem;
+    padding-left: 7.25rem;
+    padding-right: 7rem;
+
+}
+
+.ParcelAdminHeader {
+    color: #2D3648;
+    font-family: Inter;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; /* 80% */
+    letter-spacing: -0.01875rem;
+}

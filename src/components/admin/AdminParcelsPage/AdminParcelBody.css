@@ -1,0 +1,192 @@
+.AdminParcelBody .admin-body {
+    display: flex;
+    justify-content: space-between;
+    width: 83.25rem;
+    padding: 2.5625rem 4.5625rem 3.9375rem 4.5625rem;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    background: #FEFEFE;
+    margin-left: 0%;
+    margin-top: 3.06rem;
+    gap: 3.06rem;
+}
+
+.AdminParcelSearchFrame {
+    display: flex;
+    gap: 1.01rem;
+    align-items: center;
+}
+
+.AdminParcelSearchFrame .ParcelSearchIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    z-index: 3;
+    margin-left: 0.75rem;
+}
+
+.AdminParcelSearchInput {
+    display: flex;
+    width: 31.18613rem;
+    height: 2.9375rem;
+    padding-left: 2.75rem;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    border: 2px solid #CBD2E0;
+    /* text */
+    flex: 1 0 0;
+    color: #717D96;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.01rem;
+    background: #FDFDFD;
+}
+
+.AdminParcelSearchBtn {
+    display: flex;
+    height: 2.9375rem;
+    width: 9.74566rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    background: #DE5654;
+    /* text */
+    color: #FAFAFA;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5rem; /* 150% */
+    letter-spacing: -0.01rem;
+}
+
+button {
+    all: unset;
+}
+
+.AddParcelFrame {
+    display: inline-flex;
+    height: 2.9375rem;
+    padding: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.375rem;
+    border: 2px solid #CBD2E0;
+    margin-left: 21.62rem;
+}
+
+.AddParcelText {
+    color: var(--WF-Base-800, #2D3648);
+    font-feature-settings: 'calt' off;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+}
+
+.AdminParcelTableFrame {
+    display: flex;
+    width: 74.125rem;
+    height: 32.1875rem;
+    margin: 0.125rem 0rem 28.5rem 0rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    border: 2px solid #CBD2E0;
+
+}
+
+.AdminParcelTableContent {
+    border-collapse: collapse;
+    width: 73.9rem;
+    height: 3.5625rem;
+    flex-shrink: 0;
+}
+
+.AdminParcelHeader {
+    height: 3.5625rem;
+    background: #EDF0F7;
+    width: 73.5rem;
+}
+
+.AdminParcelTable { 
+    width: 73.8rem;
+}
+
+.AdminParcelTableFrame th {
+    color: #717D96;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: ellipsis;
+}
+
+th:first-of-type {
+    border-top-left-radius: 0.375rem;
+}
+
+th:last-of-type {
+    border-top-right-radius: 0.375rem;
+}
+
+.ParcelEditIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.AdminParcelTableFrame td {
+    white-space: nowrap;
+    padding-top: 1.06rem;    
+}
+
+.AdminParcelTableFrame td:nth-child(1) {
+    padding-left: 1.9rem;
+}
+
+.AdminParcelTableFrame th:nth-child(1) {
+    padding-left: 5rem;
+}
+
+.AdminParcelTableFrame th:nth-child(2) {
+    padding-right: 5.9rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(3) {
+    padding-right: 4.05rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(4) {
+    padding-right: 10.23rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(5) {
+    padding-right: 5.59rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(6) {
+    padding-right: 9.44rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(7) {
+    padding-right: 4.85rem;
+    text-align: left;
+}
+
+.AdminParcelTableFrame th:nth-child(8) {
+    padding-right: 3.1rem;
+    text-align: left;
+}
