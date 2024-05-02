@@ -13,7 +13,7 @@ function AdminParcelBody() {
                 <input
                 type="text"
                 className="AdminParcelSearchInput"
-                placeholder="Search Parcel"
+                placeholder="Search parcels"
                 />
                 <button className="AdminParcelSearchBtn">Search</button>
                 <div className='AddParcelFrame'>
