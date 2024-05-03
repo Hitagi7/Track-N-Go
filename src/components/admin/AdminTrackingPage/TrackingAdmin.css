@@ -2,7 +2,7 @@
     z-index: 1;
 }
 
-.AdminParcelBody {
+.AdminTrackingBody {
     display: flex;
     width: max-content;
     flex-shrink: 0;
@@ -14,7 +14,7 @@
 
 }
 
-.ParcelAdminHeader {
+.TrackingAdminHeader {
     color: #2D3648;
     font-family: Inter;
     font-size: 1.875rem;

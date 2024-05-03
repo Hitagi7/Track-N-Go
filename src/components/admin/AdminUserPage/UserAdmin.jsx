@@ -12,9 +12,7 @@ function UserAdmin() {
             </div>
             <div className="admin-right">
                 <p className="a-user-title">Users - Admin View</p>
-                <div className="admin-body">
-                    <AdminUserBody />
-                </div>
+                <AdminUserBody />
             </div>
         </div>
     );

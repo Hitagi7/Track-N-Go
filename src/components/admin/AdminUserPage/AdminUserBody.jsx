@@ -3,12 +3,10 @@ import './AdminUserBody.css'
 
 function AdminUserBody() {
     return (
-        <div className="a-user-body">
+        <div className="admin-body">
             <div class="a-text-field">
-                <form action="#">
-                    <img src="src/assets/icons/icon-search.svg" alt="" class="a-search-icon" />
-                    <input type="text" placeholder="Search users" class="a-search-field" />
-                </form>
+                <img src="src/assets/icons/icon-search.svg" alt="" class="a-search-icon" />
+                <input type="text" placeholder="Search users" class="a-search-field" />
                 <button class="a-search-button">
                     <p class="a-search-label">Search</p>
                 </button>

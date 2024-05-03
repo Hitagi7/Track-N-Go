@@ -1,11 +1,18 @@
 .admin-right {
     display: flex;
     flex-direction: column;
+    padding-top: 6.44rem;
+    padding-left: 7.25rem;
+    padding-right: 7rem;
+    width: max-content;
+    flex-shrink: 0;
+    align-self: stretch;
 }
 
 .a-user-title {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;    
-    margin-top: 6.44rem;
-    margin-left: 7.25rem;
+    color: #2D3648;
+    line-height: 1.5rem;
+    letter-spacing: -0.01875rem;
 }
