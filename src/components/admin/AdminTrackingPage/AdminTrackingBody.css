@@ -10,6 +10,7 @@
     display: flex;
     gap: 1.01rem;
     align-items: center;
+    margin-right: 4.56rem;
 }
 
 .AdminTrackingSearchFrame .TrackingSearchIcon {
@@ -83,4 +84,99 @@ button {
     font-weight: 500;
     line-height: 1.5rem;
     letter-spacing: -0.01rem;
+}
+
+.AdminTrackingTableFrame {
+    display: flex;
+    width: 74.125rem;
+    height: 32.1875rem;
+    margin: 0 0rem 28.5rem 0rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 0.375rem;
+    border: 2px solid #CBD2E0;
+
+}
+
+.AdminTrackingTableContent {
+    border-collapse: collapse;
+    width: 73.9rem;
+    height: 3.5625rem;
+    flex-shrink: 0;
+}
+
+.AdminTrackingHeader {
+    height: 3.5625rem;
+    background: #EDF0F7;
+    width: 73.5rem;
+}
+
+.AdminTrackingTable { 
+    width: 73.8rem;
+}
+
+.AdminTrackingTableFrame th {
+    color: #717D96;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: ellipsis;
+}
+
+th:first-of-type {
+    border-top-left-radius: 0.375rem;
+}
+
+th:last-of-type {
+    border-top-right-radius: 0.375rem;
+}
+
+.TrackingEditIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.AdminTrackingTableFrame td {
+    white-space: nowrap;
+    padding-top: 1.06rem;    
+}
+
+.AdminTrackingTableFrame td:nth-child(1) {
+    padding-left: 1.9rem;
+}
+
+.AdminTrackingTableFrame th:nth-child(1) {
+    padding-left: 4.9rem;
+}
+
+.AdminTrackingTableFrame th:nth-child(2) {
+    padding-right: 5.9rem;
+    text-align: left;
+}
+
+.AdminTrackingTableFrame th:nth-child(3) {
+    padding-right: 2.87rem;
+    text-align: left;
+}
+
+.AdminTrackingTableFrame th:nth-child(4) {
+    padding-right: 3.6rem;
+    text-align: left;
+}
+
+.AdminTrackingTableFrame th:nth-child(5) {
+    padding-right: 6.77rem;
+    text-align: left;
+}
+
+.AdminTrackingTableFrame th:nth-child(6) {
+    padding-right: 6.6rem;
+    text-align: left;
+}
+
+.AdminTrackingTableFrame th:nth-child(7) {
+    padding-right: 5rem;
+    text-align: left;
 }
