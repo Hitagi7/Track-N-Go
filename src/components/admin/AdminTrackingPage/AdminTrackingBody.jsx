@@ -1,7 +1,15 @@
+import { useState } from 'react';
 import React from 'react'
 import './AdminTrackingBody.css'
+import AdminOverlay from '../AdminOverlay'
 
 function AdminTrackingBody() {
+    const [overlayVisible, setOverlayVisible] = useState(false);
+
+    const toggleOverlay = () => {
+        setOverlayVisible(!overlayVisible);
+    };
+
     return (
         <div className="admin-body">
             <div className='AdminTrackingSearchFrame'>
@@ -16,10 +24,11 @@ function AdminTrackingBody() {
                 placeholder="Search parcels"
                 />
                 <button className="AdminTrackingSearchBtn">Search</button>
-                <div className='AddTrackingFrame'>
+                <div className='AddTrackingFrame' onClick={toggleOverlay}>
                     <img src="/src/assets/icons/icon-plus.svg" alt="Plus Icon" class="TrackingPlusIcon"/> 
                     <p className='AddTrackingText'>Add new Parcel</p>
                 </div>
+                <AdminOverlay visible={overlayVisible} toggleVisible={toggleOverlay} />
             </div>
             <div className='AdminTrackingTableFrame'>
                 <table class="AdminTrackingTableContent">

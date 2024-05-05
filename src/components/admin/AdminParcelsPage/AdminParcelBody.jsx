@@ -1,14 +1,22 @@
+import { useState } from 'react';
 import React from 'react'
 import './AdminParcelBody.css'
+import AdminOverlay from '../AdminOverlay'
 
 function AdminParcelBody() {
+    const [overlayVisible, setOverlayVisible] = useState(false);
+
+    const toggleOverlay = () => {
+        setOverlayVisible(!overlayVisible);
+    };
+    
     return (
         <div className="admin-body">
             <div className='AdminParcelSearchFrame'>
                 <img
-                src="/src/assets/icons/icon-search.svg"
-                alt="icon-search"
-                className="ParcelSearchIcon"
+                    src="/src/assets/icons/icon-search.svg"
+                    alt="icon-search"
+                    className="ParcelSearchIcon"
                 />
                 <input
                 type="text"
@@ -16,10 +24,11 @@ function AdminParcelBody() {
                 placeholder="Search parcels"
                 />
                 <button className="AdminParcelSearchBtn">Search</button>
-                <div className='AddParcelFrame'>
+                <div className='AddParcelFrame' onClick={toggleOverlay}>
                     <img src="/src/assets/icons/icon-plus.svg" alt="Plus Icon" class="ParcelPlusIcon"/> 
                     <p className='AddParcelText'>Add new Parcel</p>
                 </div>
+                <AdminOverlay visible={overlayVisible} toggleVisible={toggleOverlay} />
             </div>
             <div className='AdminParcelTableFrame'>
                 <table class="AdminParcelTableContent">
