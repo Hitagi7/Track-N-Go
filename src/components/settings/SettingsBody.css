@@ -121,6 +121,11 @@
     margin-top: 10px;
 }
 
+.about-us-icon-label:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
 .about-us-icon-label .about-us-icon::before {
     content: "";
     display: inline-block;

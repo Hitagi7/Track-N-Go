@@ -38,7 +38,7 @@ function SettingsBody() {
                         <p>Enter current password</p>
                         <form action="#">
                             <img src="src/assets/icons/icon-password.svg" alt="" class="settings-password-icon" />
-                            <input type="password" placeholder="john_doe@email.com" class="settings-password-field" />
+                            <input type="password" placeholder="Should be 8 characters and above" class="settings-password-field" />
                         </form>
                     </div>
                     <div class="settings-text-field">

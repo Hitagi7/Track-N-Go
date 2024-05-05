@@ -45,6 +45,7 @@ function PublicProfile({ user, updateUser }) {
 
   // Cancel changes
   const onCancel = (e) => {
+    e.preventDefault();
     setFirstNameBuffer("");
     setLastNameBuffer("");
     setUserNameBuffer("");

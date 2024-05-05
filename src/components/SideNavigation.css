@@ -108,8 +108,7 @@
 
 .Frame1:hover,
 .Frame2:hover,
-.Frame3:hover,
-.Frame4:hover {
+.Frame3:hover {
     cursor: pointer;
     background: hsl(0, 0%, 90%);
 }
