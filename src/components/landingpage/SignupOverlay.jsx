@@ -1,8 +1,93 @@
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react';
+import { auth } from '../../firebase';
 import { Link } from 'react-router-dom';
 import './Overlay.css'
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-function SignupOverlay({ visible, toggleVisible, toggleLoginSignup }) {
+const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [errorMessage, setErrorMessage] = useState(null); // State for error message
+  const [signupSuccess, setSignupSuccess] = useState(false); // State for signup success
+  const [redirectedAfterSignup, setRedirectedAfterSignup] = useState(false); // Flag for redirection
+
+    const validatePassword = (password) => {
+      if (password.length < 8) {
+        setErrorMessage("Password must be at least 8 characters long.");
+        return false;
+      }
+      return true;
+    };
+
+    const validateFields = () => {
+        let error = null;
+    
+        if (!email) {
+          error = "Please enter your email address.";
+        } else if (!password) {
+          error = "Please enter a password.";
+        } else if (!fullName) {
+          error = "Please enter your full name.";
+        }
+    
+        setErrorMessage(error);
+        return !error; // Return true if no errors, false if there are errors
+      };
+  
+      const handleSignUp = async (e) => {
+        e.preventDefault();
+    
+        if (!validateFields()) {
+          return; // Prevent creating user with empty fields
+        }
+    
+        const isValidPassword = validatePassword(password);
+        if (!isValidPassword) {
+          return; // Prevent creating user with invalid password
+        }
+  
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        console.log("User created successfully!");
+        setErrorMessage(null);
+        setSignupSuccess(true); // Set signup success flag
+      } catch (error) {
+
+        // Handle specific errors
+        let message;
+        switch (error.code) {
+          case "auth/email-already-in-use":
+            message = "Email already exists. Please try signing in or using a different email.";
+            break;
+          case "auth/weak-password": // For more granular password validation
+            message = "Password is too weak. Please choose a stronger password.";
+            break;
+          default:
+            message = "An error occurred during sign up. Please try again.";
+        }
+        setErrorMessage(message);
+      }
+    };
+
+      // Handle signup success message and redirection after 3 seconds
+  useEffect(() => {
+    if (signupSuccess && !redirectedAfterSignup) {
+      // Show success message immediately
+      const successMessageTimeoutId = setTimeout(() => {}, 0); // Set immediate timeout
+      clearTimeout(successMessageTimeoutId); // Clear immediate timeout (to show message)
+
+      const redirectionTimeoutId = setTimeout(() => {
+        toggleLoginSignup(); // Redirect to Login Overlay after delay
+        setRedirectedAfterSignup(true); // Set redirection flag to prevent loop
+      }, 3000); // 3 seconds delay
+
+      return () => {
+        clearTimeout(successMessageTimeoutId);
+        clearTimeout(redirectionTimeoutId); // Cleanup on unmount
+      };
+    }
+  }, [signupSuccess, redirectedAfterSignup, toggleLoginSignup]);
 
     return (
         visible && (
@@ -14,27 +99,58 @@ function SignupOverlay({ visible, toggleVisible, toggleLoginSignup }) {
                         <h3>Sign up to Track N' Go</h3>
                         <div class="text-field">
                             <p>Email</p>
-                            <form action="#">
+                            <form onSubmit={handleSignUp}>
                                 <img src="src/assets/icons/icon-mail.svg" alt="" class="mail-icon" />
-                                <input type="email" placeholder="john_doe@email.com" class="email-field" />
-                            </form>
-                        </div>
-                        <div class="text-field">
+                                <input 
+                                    type="email" 
+                                    placeholder="john_doe@email.com" 
+                                    class="email-field"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                
+                                ></input>
                             <p>Full Name</p>
-                            <form action="#">
                                 <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
-                                <input type="text" placeholder="John Doe" class="name-field" />
-                            </form>
-                        </div>
-                        <div class="text-field">
+                                <input
+                                    type="text" 
+                                        placeholder="John Doe" 
+                                        class="name-field"
+                                        value={fullName}
+                                        onChange={(e) => setFullName(e.target.value)}
+
+                                ></input>
                             <p>Password</p>
-                            <form action="#">
                                 <img src="src/assets/icons/icon-password.svg" class="password-icon" alt="" />
-                                <input type="password" placeholder="Should be 8 characters and above" class="password-field" />
+                                <input 
+                                    type="password" 
+                                    placeholder="Should be 8 characters and above" 
+                                    class="password-field"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                
+                                ></input>
+                                {errorMessage && (
+                                    <div className={`error-message-container animate`}>{errorMessage}</div>
+                                )}
+                                {signupSuccess && (
+                                    <div className="success-message-container">
+                                      <p>Sign Up Successful! Redirecting to Login...</p>
+                                    </div>
+                                )}
+                                <button type="submit" class="fbutton primary">Create Account</button>
                             </form>
+                        
                         </div>
-                        <button class="fbutton primary">Create Account</button>
-                        <button class="fbutton secondary" onClick={toggleVisible}>Cancel</button>
+                        
+                        
+                        <button class="fbutton secondary" onClick={() => {
+                            setErrorMessage(null);
+                            setEmail('');
+                            setPassword('');
+                            setFullName('');
+                            toggleVisible();
+                        }}>Cancel</button>
+                        
                         <div class="hyperlink">
                             <p>Already have an account? </p> 
                             <a href="#" class="hyperlink" onClick={toggleLoginSignup}>Log in.</a> 
