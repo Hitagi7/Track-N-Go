@@ -5,19 +5,109 @@ import { Link } from "react-router-dom";
 import { onSnapshot } from "firebase/firestore";
 
 function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
+  // Parcel
   const id = generateID;
-  // const prize
   const [weight, setWeight] = useState();
+  const [price, setPrice] = useState("-");
   const [length, setLength] = useState();
   const [width, setWidth] = useState();
   const [height, setHeight] = useState();
   const [shipper, setShipper] = useState("");
   const [courier, setCourier] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("-");
+
+  // Tracking
+  const [shippedMonth, setShippedMonth] = useState("");
+  const [shippedDay, setShippedDay] = useState("");
+  const [shippedYear, setShippedYear] = useState("");
+  const [deliveryMonth, setDeliveryMonth] = useState("");
+  const [deliveryDay, setDeliveryDay] = useState("");
+  const [deliveryYear, setDeliveryYear] = useState("");
+  const [deliveredFrom, setDeliveredFrom] = useState("");
+  const [deliveredTo, setDeliveredTo] = useState("");
+
+  // Calculate Price
+  const calculatePrice = () => {
+    if (!width || !height || !length || !weight) {
+      setPrice("-");
+      return;
+    }
+
+    const result = (width * height * length) / weight;
+    setPrice(result.toFixed(2).toString());
+  };
 
   // Save Changes
   const onSubmit = () => {
-    addParcel({ id, weight, length, width, height });
+    // Check if all fields are filled
+    if (!weight) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (!length) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (!width) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (!height) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (!shipper) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (!courier) {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    if (status === "-") {
+      alert("Please fill up the required fields");
+      return;
+    }
+
+    addParcel({
+      id,
+      weight,
+      length,
+      width,
+      height,
+      price,
+      shipper,
+      courier,
+      status,
+    });
+
+    setWeight();
+    setLength();
+    setWidth();
+    setHeight();
+    setPrice("-");
+    setShipper("");
+    setCourier("");
+    setStatus("-");
+    toggleVisible();
+  };
+
+  // Cancel Changes
+  const onCancel = () => {
+    setWeight();
+    setLength();
+    setWidth();
+    setHeight();
+    setPrice("-");
+    setShipper("");
+    setCourier("");
+    setStatus("-");
   };
   return (
     visible && (
@@ -48,7 +138,10 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       type="number"
                       placeholder="2.1"
                       class="o-text-field"
-                      onChange={(e) => setWeight(e.target.value)}
+                      onChange={(e) => {
+                        setWeight(e.target.value);
+                        calculatePrice();
+                      }}
                     />
                   </form>
                 </div>
@@ -58,7 +151,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <form class="o-form" action="#">
                     <input
                       type="number"
-                      placeholder="100.0"
+                      placeholder={price}
                       class="o-text-field"
                       disabled
                     />
@@ -74,7 +167,10 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       type="number"
                       placeholder="Length"
                       class="o-text-field"
-                      onChange={(e) => setLength(e.target.value)}
+                      onChange={(e) => {
+                        setLength(e.target.value);
+                        calculatePrice();
+                      }}
                     />
                   </form>
                   <img
@@ -87,7 +183,10 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       type="number"
                       placeholder="Width"
                       class="o-text-field"
-                      onChange={(e) => setWidth(e.target.value)}
+                      onChange={(e) => {
+                        setWidth(e.target.value);
+                        calculatePrice();
+                      }}
                     />
                   </form>
                   <img
@@ -100,7 +199,10 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       type="number"
                       placeholder="Height"
                       class="o-text-field"
-                      onChange={(e) => setHeight(e.target.value)}
+                      onChange={(e) => {
+                        setHeight(e.target.value);
+                        calculatePrice();
+                      }}
                     />
                   </form>
                 </div>
@@ -113,6 +215,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     type="text"
                     placeholder="Nat'l Bookstore"
                     class="o-text-field"
+                    onChange={(e) => setShipper(e.target.value)}
                   />
                 </form>
               </div>
@@ -120,7 +223,12 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
               <div class="o-courier-field">
                 <p class="o-form-label">Courier</p>
                 <form class="o-form" action="#">
-                  <input type="text" placeholder="J&T" class="o-text-field" />
+                  <input
+                    type="text"
+                    placeholder="J&T"
+                    class="o-text-field"
+                    onChange={(e) => setCourier(e.target.value)}
+                  />
                 </form>
               </div>
             </div>
@@ -133,7 +241,12 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <div className="o-month-dropdown o-dropdown">
                     <ul className="o-month-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">January</a>
+                        <a
+                          href="#"
+                          // onClick={set('January')}
+                        >
+                          January
+                        </a>
                       </li>
                       <li>
                         <a href="#">February</a>
@@ -590,22 +703,38 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                 <div className="o-status-dropdown o-dropdown">
                   <ul className="o-month-dropdown-content o-dropdown-content">
                     <li>
-                      <a href="#">[1] Order Created</a>
+                      <a
+                        href="#"
+                        onClick={() => setStatus("[1] Order Created")}
+                      >
+                        [1] Order Created
+                      </a>
                     </li>
                     <li>
-                      <a href="#">[2] Picked Up</a>
+                      <a href="#" onClick={() => setStatus("[2] Picked Up")}>
+                        [2] Picked Up
+                      </a>
                     </li>
                     <li>
-                      <a href="#">[3] Sorting</a>
+                      <a href="#" onClick={() => setStatus("[3] Sorting")}>
+                        [3] Sorting
+                      </a>
                     </li>
                     <li>
-                      <a href="#">[4] Courier Delivery</a>
+                      <a
+                        href="#"
+                        onClick={() => setStatus("[4] Courier Delivery")}
+                      >
+                        [4] Courier Delivery
+                      </a>
                     </li>
                     <li>
-                      <a href="#">[5] Delivered</a>
+                      <a href="#" onClick={() => setStatus("[5] Delivered")}>
+                        [5] Delivered
+                      </a>
                     </li>
                   </ul>
-                  <p className="o-dropdown-placeholder">[4] Courier Delivery</p>
+                  <p className="o-dropdown-placeholder">{status}</p>
                   <button class="o-status-dropdown-trigger o-dropdown-button">
                     <img src="src/assets/icons/icon-chevron-down.svg" alt="" />
                   </button>
@@ -617,13 +746,18 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
           <div className="o-buttons">
             <button
               className="o-add-parcel-confirm o-button"
-              onClick={onSubmit}
+              onClick={() => {
+                onSubmit();
+              }}
             >
               Add new parcel
             </button>
             <button
               className="o-cancel-button o-button"
-              onClick={toggleVisible}
+              onClick={() => {
+                toggleVisible();
+                onCancel();
+              }}
             >
               Cancel
             </button>
