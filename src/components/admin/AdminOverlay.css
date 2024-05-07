@@ -55,6 +55,7 @@
 .o-buttons {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .o-form-label {
@@ -122,6 +123,7 @@ input[type="text"],
 .o-x-icon {
   width: 0.9375rem;
   height: 0.9375rem;
+  margin-top: 1.3rem;
 }
 
 .o-dropdown {
@@ -195,6 +197,7 @@ input[type="text"],
 }
 
 .o-button {
+  cursor: pointer;
   display: flex;
   height: 3.625rem;
   align-items: center;
@@ -202,7 +205,7 @@ input[type="text"],
   border-radius: 0.625rem;
   font-size: 16px;
   font-weight: 600;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 }
 
 .o-button:hover {

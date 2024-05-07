@@ -4,16 +4,16 @@ import './AdminUserBody.css'
 function AdminUserBody() {
     return (
         <div className="admin-body">
-            <div class="a-text-field">
-                <img src="src/assets/icons/icon-search.svg" alt="" class="a-search-icon" />
-                <input type="text" placeholder="Search users" class="a-search-field" />
-                <button class="a-search-button">
-                    <p class="a-search-label">Search</p>
+            <div className="a-text-field">
+                <img src="src/assets/icons/icon-search.svg" alt="" className="a-search-icon" />
+                <input type="text" placeholder="Search users" className="a-search-field" />
+                <button className="a-search-button">
+                    <p className="a-search-label">Search</p>
                 </button>
             </div>
             <div className="a-user-table">
-                <table class="a-user-table-content">
-                    <tr class="a-user-table-header">
+                <table className="a-user-table-content">
+                    <tr className="a-user-table-header">
                         <th> </th>
                         <th>ID</th>
                         <th>USERNAME</th>
@@ -31,7 +31,7 @@ function AdminUserBody() {
                         <td>Gil</td>
                         <td>22102740@usc.edu.ph</td>
                         <td>dsdsb23456re</td>
-                        <td><img src="src/assets/icons/icon-trash.svg" alt="" class="a-icon-trash"/></td>                        
+                        <td><img src="src/assets/icons/icon-trash.svg" alt="" className="a-icon-trash"/></td>                        
                     </tr>
                 </table>
             </div>

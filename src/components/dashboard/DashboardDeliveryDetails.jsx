@@ -11,7 +11,7 @@ function DashboardDeliveryDetails() {
             <p className="font-bold">0</p>
             <p className="delivery">in delivery today</p>
           </div>
-          <img src="/src/assets/icons/truck.svg" alt="Delivery Truck" class="truck"/>
+          <img src="/src/assets/icons/truck.svg" alt="Delivery Truck" className="truck"/>
         </div>
         <div className="Frame7">
           <p className="DeliveryNumber">There are currently no parcels out for delivery today.</p>

@@ -91,40 +91,40 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
 
     return (
         visible && (
-            <div class="overlay-container"> 
-                <div class="dimmed-background">
+            <div className="overlay-container"> 
+                <div className="dimmed-background">
                 </div>
-                <div class="overlay">
-                    <div class="signup overlay">
+                <div className="overlay">
+                    <div className="signup overlay">
                         <h3>Sign up to Track N' Go</h3>
-                        <div class="text-field">
+                        <div className="text-field">
                             <p>Email</p>
                             <form onSubmit={handleSignUp}>
-                                <img src="src/assets/icons/icon-mail.svg" alt="" class="mail-icon" />
+                                <img src="src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
                                 <input 
                                     type="email" 
                                     placeholder="john_doe@email.com" 
-                                    class="email-field"
+                                    className="email-field"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 
                                 ></input>
                             <p>Full Name</p>
-                                <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
+                                <img src="src/assets/icons/icon-profile.svg" className="profile-icon" alt="" />
                                 <input
                                     type="text" 
                                         placeholder="John Doe" 
-                                        class="name-field"
+                                        className="name-field"
                                         value={fullName}
                                         onChange={(e) => setFullName(e.target.value)}
 
                                 ></input>
                             <p>Password</p>
-                                <img src="src/assets/icons/icon-password.svg" class="password-icon" alt="" />
+                                <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
                                 <input 
                                     type="password" 
                                     placeholder="Should be 8 characters and above" 
-                                    class="password-field"
+                                    className="password-field"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                 
@@ -137,13 +137,13 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                                       <p>Sign Up Successful! Redirecting to Login...</p>
                                     </div>
                                 )}
-                                <button type="submit" class="fbutton primary">Create Account</button>
+                                <button type="submit" className="fbutton primary">Create Account</button>
                             </form>
                         
                         </div>
                         
                         
-                        <button class="fbutton secondary" onClick={() => {
+                        <button className="fbutton secondary" onClick={() => {
                             setErrorMessage(null);
                             setEmail('');
                             setPassword('');
@@ -151,9 +151,9 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                             toggleVisible();
                         }}>Cancel</button>
                         
-                        <div class="hyperlink">
+                        <div className="hyperlink">
                             <p>Already have an account? </p> 
-                            <a href="#" class="hyperlink" onClick={toggleLoginSignup}>Log in.</a> 
+                            <a href="#" className="hyperlink" onClick={toggleLoginSignup}>Log in.</a> 
                         </div>
                     </div>
                 </div>

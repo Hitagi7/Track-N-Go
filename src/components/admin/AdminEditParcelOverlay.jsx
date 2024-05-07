@@ -118,33 +118,33 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
             <div className="o-title-block">
                 <p className="a-overlay-title">Edit parcel</p>
                 <button className="o-delete-parcel-button">
-                        <img src="src/assets/icons/icon-trash.svg" class="o-trash-icon"/>
-                        <p class="font-medium">Delete parcel</p>
+                        <img src="src/assets/icons/icon-trash.svg" className="o-trash-icon"/>
+                        <p className="font-medium">Delete parcel</p>
                 </button>
             </div>
 
             <div className="o-input-fields">
                 <div className="o-left-fields">
-                <div class="o-tracking-id-field o-field">
-                    <p class="o-form-label">Tracking ID</p>
-                    <form class="o-form" action="#">
+                <div className="o-tracking-id-field o-field">
+                    <p className="o-form-label">Tracking ID</p>
+                    <form className="o-form" action="#">
                     <input
                         type="text"
                         placeholder={generateID}
-                        class="o-text-field"
+                        className="o-text-field"
                         disabled
                     />
                     </form>
                 </div>
 
                 <div className="o-weight-price-field o-field">
-                    <div class="o-weight-field">
-                    <p class="o-form-label">Weight</p>
-                    <form class="o-form" action="#">
+                    <div className="o-weight-field">
+                    <p className="o-form-label">Weight</p>
+                    <form className="o-form" action="#">
                         <input
                         type="number"
                         placeholder="2.1"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => {
                             setWeight(e.target.value);
                             calculatePrice();
@@ -153,27 +153,27 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </form>
                     </div>
 
-                    <div class="o-price-field">
-                    <p class="o-form-label">Price</p>
-                    <form class="o-form" action="#">
+                    <div className="o-price-field">
+                    <p className="o-form-label">Price</p>
+                    <form className="o-form" action="#">
                         <input
                         type="number"
                         placeholder={price}
-                        class="o-text-field"
+                        className="o-text-field"
                         disabled
                         />
                     </form>
                     </div>
                 </div>
 
-                <div class="o-size-field o-field">
-                    <p class="o-form-label">Size</p>
+                <div className="o-size-field o-field">
+                    <p className="o-form-label">Size</p>
                     <div className="o-size-individual-field">
-                    <form class="o-form" action="#">
+                    <form className="o-form" action="#">
                         <input
                         type="number"
                         placeholder="Length"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => {
                             setLength(e.target.value);
                             calculatePrice();
@@ -182,14 +182,14 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </form>
                     <img
                         src="src/assets/icons/icon-x.svg"
-                        class="o-x-icon"
+                        className="o-x-icon"
                         alt=""
                     />
-                    <form class="o-form" action="#">
+                    <form className="o-form" action="#">
                         <input
                         type="number"
                         placeholder="Width"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => {
                             setWidth(e.target.value);
                             calculatePrice();
@@ -198,14 +198,14 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </form>
                     <img
                         src="src/assets/icons/icon-x.svg"
-                        class="o-x-icon"
+                        className="o-x-icon"
                         alt=""
                     />
-                    <form class="o-form" action="#">
+                    <form className="o-form" action="#">
                         <input
                         type="number"
                         placeholder="Height"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => {
                             setHeight(e.target.value);
                             calculatePrice();
@@ -215,25 +215,25 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </div>
                 </div>
 
-                <div class="o-shipper-field o-field">
-                    <p class="o-form-label">Shipper</p>
-                    <form class="o-form" action="#">
+                <div className="o-shipper-field o-field">
+                    <p className="o-form-label">Shipper</p>
+                    <form className="o-form" action="#">
                     <input
                         type="text"
                         placeholder="Nat'l Bookstore"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => setShipper(e.target.value)}
                     />
                     </form>
                 </div>
 
-                <div class="o-courier-field">
-                    <p class="o-form-label">Courier</p>
-                    <form class="o-form" action="#">
+                <div className="o-courier-field">
+                    <p className="o-form-label">Courier</p>
+                    <form className="o-form" action="#">
                     <input
                         type="text"
                         placeholder="J&T"
-                        class="o-text-field"
+                        className="o-text-field"
                         onChange={(e) => setCourier(e.target.value)}
                     />
                     </form>
@@ -241,8 +241,8 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                 </div>
 
                 <div className="o-right-fields">
-                <div class="o-shipped-out-field">
-                    <p class="o-form-label">Shipped out</p>
+                <div className="o-shipped-out-field">
+                    <p className="o-form-label">Shipped out</p>
 
                     <div className="o-dropdown-fields">
                     <div className="o-month-dropdown o-dropdown">
@@ -290,7 +290,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">September</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -401,7 +401,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">1</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -454,7 +454,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">2000</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -464,8 +464,8 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </div>
                 </div>
 
-                <div class="o-delivery-date-field">
-                    <p class="o-form-label">Delivery Date</p>
+                <div className="o-delivery-date-field">
+                    <p className="o-form-label">Delivery Date</p>
 
                     <div className="o-dropdown-fields">
                     <div className="o-month-dropdown o-dropdown">
@@ -508,7 +508,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">September</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -619,7 +619,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">1</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -672,7 +672,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                         </ul>
                         <p className="o-dropdown-placeholder">2000</p>
-                        <button class="o-dropdown-button">
+                        <button className="o-dropdown-button">
                         <img
                             src="src/assets/icons/icon-chevron-down.svg"
                             alt=""
@@ -682,30 +682,30 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                     </div>
                 </div>
 
-                <div class="o-delivered-from-field o-field">
-                    <p class="o-form-label">Delivered From</p>
-                    <form class="o-form" action="#">
+                <div className="o-delivered-from-field o-field">
+                    <p className="o-form-label">Delivered From</p>
+                    <form className="o-form" action="#">
                     <input
                         type="text"
                         placeholder="Laguna Del Norte, PH"
-                        class="o-text-field"
+                        className="o-text-field"
                     />
                     </form>
                 </div>
 
-                <div class="o-delivered-to-field o-field">
-                    <p class="o-form-label">Delivered To</p>
-                    <form class="o-form" action="#">
+                <div className="o-delivered-to-field o-field">
+                    <p className="o-form-label">Delivered To</p>
+                    <form className="o-form" action="#">
                     <input
                         type="text"
                         placeholder="Cebu City, PH"
-                        class="o-text-field"
+                        className="o-text-field"
                     />
                     </form>
                 </div>
 
-                <div class="o-status-field">
-                    <p class="o-form-label">Status</p>
+                <div className="o-status-field">
+                    <p className="o-form-label">Status</p>
 
                     <div className="o-status-dropdown o-dropdown">
                     <ul className="o-month-dropdown-content o-dropdown-content">
@@ -742,7 +742,7 @@ function AdminEditParcelOverlay({ visible, toggleVisible, addParcel, generateID 
                         </li>
                     </ul>
                     <p className="o-dropdown-placeholder">{status}</p>
-                    <button class="o-status-dropdown-trigger o-dropdown-button">
+                    <button className="o-status-dropdown-trigger o-dropdown-button">
                         <img src="src/assets/icons/icon-chevron-down.svg" alt="" />
                     </button>
                     </div>

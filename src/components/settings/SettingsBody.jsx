@@ -33,22 +33,22 @@ function SettingsBody() {
                 </p>
 
                 <section className="account-fields">
-                    <p class="settings-text-label">Change password</p>
-                    <div class="settings-text-field">
+                    <p className="settings-text-label">Change password</p>
+                    <div className="settings-text-field">
                         <p>Enter current password</p>
                         <form action="#">
-                            <img src="src/assets/icons/icon-password.svg" alt="" class="settings-password-icon" />
-                            <input type="password" placeholder="Should be 8 characters and above" class="settings-password-field" />
+                            <img src="src/assets/icons/icon-password.svg" alt="" className="settings-password-icon" />
+                            <input type="password" placeholder="Should be 8 characters and above" className="settings-password-field" />
                         </form>
                     </div>
-                    <div class="settings-text-field">
+                    <div className="settings-text-field">
                         <p>Enter new password</p>
                         <form action="#">
-                            <img src="src/assets/icons/icon-password.svg" class="settings-password-icon" alt="" />
-                            <input type="password" placeholder="Should be 8 characters and above" class="settings-password-field" />
+                            <img src="src/assets/icons/icon-password.svg" className="settings-password-icon" alt="" />
+                            <input type="password" placeholder="Should be 8 characters and above" className="settings-password-field" />
                         </form>
                     </div>
-                    <button class="settings-fbutton">Save changes</button>
+                    <button className="settings-fbutton">Save changes</button>
                 </section>
 
             </section>
@@ -88,19 +88,19 @@ function SettingsBody() {
                     </p>
                 </div>
 
-                <div class="about-us-icon-label">
-                    <span class="about-us-icon fb-label"></span>
-                    <span class="about-us-label">Track N' Go</span>
+                <div className="about-us-icon-label">
+                    <span className="about-us-icon fb-label"></span>
+                    <span className="about-us-label">Track N' Go</span>
                 </div>
 
-                <div class="about-us-icon-label">
-                    <span class="about-us-icon insta-label"></span>
-                    <span class="about-us-label">@tng_TrackAndGo</span>
+                <div className="about-us-icon-label">
+                    <span className="about-us-icon insta-label"></span>
+                    <span className="about-us-label">@tng_TrackAndGo</span>
                 </div>
 
-                <div class="about-us-icon-label">
-                    <span class="about-us-icon linkedin-label"></span>
-                    <span class="about-us-label">BNC Wayfinders</span>
+                <div className="about-us-icon-label">
+                    <span className="about-us-icon linkedin-label"></span>
+                    <span className="about-us-label">BNC Wayfinders</span>
                 </div>
 
             </section>
@@ -115,7 +115,7 @@ function SettingsBody() {
                     </p>
                 </div>
                 <div className="logout-button">
-                    <button class="settings-fbutton logout-button">Sign Out</button>
+                    <button className="settings-fbutton logout-button">Sign Out</button>
                 </div>
             </section>
 

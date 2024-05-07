@@ -9,24 +9,24 @@ function AdminSideBar() {
         <img
             src="src/assets/TNG Logo V2.png"
             alt=""
-            class="a-tng-logo"
+            className="a-tng-logo"
             style={{ cursor: "pointer" }}
         />
         </Link>
         <div className="a-navigation">
         <Link to="/AdminHomePage">
             <button className="a-users a-navigation-item">
-            <p class="font-16 font-semibold">Users</p>
+            <p className="font-16 font-semibold">Users</p>
             </button>
         </Link>
         <Link to="/ParcelsAdmin">
             <button className="a-parcels a-navigation-item">
-            <p class="font-16 font-semibold">Parcels</p>
+            <p className="font-16 font-semibold">Parcels</p>
             </button>
         </Link>
         <Link to="/TrackingAdmin">
             <button className="a-tracking a-navigation-item">
-            <p class="font-16 font-semibold">Tracking</p>
+            <p className="font-16 font-semibold">Tracking</p>
             </button>
         </Link>
         </div>
@@ -34,11 +34,11 @@ function AdminSideBar() {
         <img
             src="src/assets/icons/profile-placeholder.svg"
             alt=""
-            class="a-profile-placeholder"
+            className="a-profile-placeholder"
         />
         <div className="a-profile-label">
-            <p class="font-16 font-semibold">Admin</p>
-            <p class="font-14 font-light">Admin Account</p>
+            <p className="font-16 font-semibold">Admin</p>
+            <p className="font-14 font-light">Admin Account</p>
         </div>
         </div>
     </div>

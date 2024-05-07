@@ -31,14 +31,14 @@ function AdminTrackingBody() {
                 />
                 <button className="AdminTrackingSearchBtn">Search</button>
                 <div className='AddTrackingFrame' onClick={toggleOverlay}>
-                    <img src="/src/assets/icons/icon-plus.svg" alt="Plus Icon" class="TrackingPlusIcon"/> 
+                    <img src="/src/assets/icons/icon-plus.svg" alt="Plus Icon" className="TrackingPlusIcon"/> 
                     <p className='AddTrackingText'>Add new Parcel</p>
                 </div>
                 <AdminOverlay visible={overlayVisible} toggleVisible={toggleOverlay} />
             </div>
             <div className='AdminTrackingTableFrame'>
-                <table class="AdminTrackingTableContent">
-                    <tr class="AdminTrackingHeader">
+                <table className="AdminTrackingTableContent">
+                    <tr className="AdminTrackingHeader">
                         <th> </th>
                         <th>TRACKING ID</th>
                         <th>SHIPPED OUT</th>
@@ -47,10 +47,10 @@ function AdminTrackingBody() {
                         <th>DELIVERED TO</th>
                         <th>STATUS</th>
                     </tr>
-                    <tr class="AdminTrackingTable">
+                    <tr className="AdminTrackingTable">
                         <td>
-                            <button class="a-edit-parcel-button" onClick={toggleEditOverlay}>
-                                <img src="src/assets/icons/icon-edit.svg" alt="edit" class="ParcelEditIcon "/>
+                            <button className="a-edit-parcel-button" onClick={toggleEditOverlay}>
+                                <img src="src/assets/icons/icon-edit.svg" alt="edit" className="ParcelEditIcon "/>
                             </button>
                             <AdminEditParcelOverlay visible={editOverlayVisible} toggleVisible={toggleEditOverlay} />   
                         </td>

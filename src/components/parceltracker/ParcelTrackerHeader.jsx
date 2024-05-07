@@ -7,7 +7,7 @@ function ParcelTrackerHeader() {
 
   return (
     <div className='ParcelTrackerHeader'>
-        <Link to="/"><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" class="ParcelTrackerLogo"/></Link>
+        <Link to="/"><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" className="ParcelTrackerLogo"/></Link>
         <div className="Navi">
             <ButtonStack />
         </div>

@@ -4,7 +4,7 @@ import ParcelHistory from '../parcelhistory/ParcelHistory'
 function ParcelHistoryPage() {
 
   return (
-    <div class="ParcelHistoryPage">
+    <div className="ParcelHistoryPage">
       <ParcelHistory />
     </div>
   )

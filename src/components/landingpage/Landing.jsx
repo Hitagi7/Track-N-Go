@@ -12,7 +12,7 @@ import './Landing.css'
 function Landing() {
 
   return (
-    <div class="Landing">
+    <div className="Landing">
       <Header />
       <hr />
       <section className='home' id="home">

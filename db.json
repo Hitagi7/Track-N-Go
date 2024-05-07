@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "password": "hashed_password",
+      "createdDate": "2024-05-03"
+    },
+    {
+      "id": "2",
+      "username": "jane_smith",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "hashed_password",
+      "createdDate": "2024-05-02"
+    }
+  ],
+  "parcels": [
+    {
+      "id": "1",
+      "parcelName": "Electronics",
+      "trackingId": "ABC123XYZ",
+      "weight": "2.5",
+      "height": "2",
+      "width": "2",
+      "length": "2",
+      "price": "100",
+      "status": "In Transit",
+      "shipper": "Amazon",
+      "courier": "UPS",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "parcelName": "Clothing",
+      "trackingId": "DEF456UVW",
+      "weight": "1.8",
+      "height": "2",
+      "width": "2",
+      "length": "2",
+      "price": "50",
+      "status": "Delivered",
+      "shipper": "eBay",
+      "courier": "FedEx",
+      "userId": "2"
+    },
+    {
+      "id": "MLC0VIYR8LN7EY",
+      "weight": "123123",
+      "length": "123",
+      "width": "123",
+      "height": "123",
+      "price": "1.47",
+      "shipper": "123",
+      "courier": "123",
+      "status": "[2] Picked Up"
+    },
+    {
+      "id": "62R6HOJL8RVK4D",
+      "weight": "3123123",
+      "length": "121",
+      "width": "12",
+      "height": "12",
+      "price": "0.00",
+      "shipper": "Nino Shipping Lines Inc.",
+      "courier": "Pidgeotto",
+      "status": "[1] Order Created"
+    }
+  ],
+  "tracking": [
+    {
+      "id": "1",
+      "trackingId": "ABC123XYZ",
+      "location": "Warehouse A",
+      "status": "In Transit",
+      "estimatedDelivery": "2024-05-10",
+      "lastUpdated": "2024-05-05T10:00:00Z",
+      "parcelId": "1"
+    },
+    {
+      "id": "2",
+      "trackingId": "DEF456UVW",
+      "location": "Recipient's Address",
+      "status": "Delivered",
+      "estimatedDelivery": "2024-05-05",
+      "lastUpdated": "2024-05-05T12:00:00Z",
+      "parcelId": "2"
+    }
+  ]
+}

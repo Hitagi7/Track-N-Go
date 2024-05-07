@@ -5,59 +5,59 @@
 // function Overlay() {
 
 //     return (
-//         <div class="overlay-container"> 
-//             <div class="dimmed-background">
+//         <div className="overlay-container"> 
+//             <div className="dimmed-background">
 //             </div>
-//             <div class="overlay">
-//                 <div class="signup overlay">
+//             <div className="overlay">
+//                 <div className="signup overlay">
 //                     <h3>Sign up to Track N' Go</h3>
-//                     <div class="text-field">
+//                     <div className="text-field">
 //                         <p>Email</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-mail.svg" alt="" class="mail-icon" />
-//                             <input type="email" placeholder="john_doe@email.com" class="email-field" />
+//                             <img src="src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
+//                             <input type="email" placeholder="john_doe@email.com" className="email-field" />
 //                         </form>
 //                     </div>
-//                     <div class="text-field">
+//                     <div className="text-field">
 //                         <p>Full Name</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
-//                             <input type="text" placeholder="John Doe" class="name-field" />
+//                             <img src="src/assets/icons/icon-profile.svg" className="profile-icon" alt="" />
+//                             <input type="text" placeholder="John Doe" className="name-field" />
 //                         </form>
 //                     </div>
-//                     <div class="text-field">
+//                     <div className="text-field">
 //                         <p>Password</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-password.svg" class="password-icon" alt="" />
-//                             <input type="password" placeholder="Should be 8 characters and above" class="password-field" />
+//                             <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
+//                             <input type="password" placeholder="Should be 8 characters and above" className="password-field" />
 //                         </form>
 //                     </div>
-//                     <button class="fbutton primary">Create Account</button>
-//                     <button class="fbutton secondary">Cancel</button>
-//                     <div class="hyperlink">
-//                         <p>Already have an account? <a href="#" class="hyperlink">Log in.</a> </p>
+//                     <button className="fbutton primary">Create Account</button>
+//                     <button className="fbutton secondary">Cancel</button>
+//                     <div className="hyperlink">
+//                         <p>Already have an account? <a href="#" className="hyperlink">Log in.</a> </p>
 //                     </div>
 //                 </div>
-//                 <div class="login overlay">
+//                 <div className="login overlay">
 //                     <h3>Log in to Track N' Go</h3>
-//                     <div class="text-field">
+//                     <div className="text-field">
 //                         <p>Email</p>
 //                         <form action="#">
-//                             <img src="src/asset/icons/icon-mail.svg" alt="" class="mail-icon" />
-//                             <input type="email" placeholder="john_doe@email.com" class="email-field" />
+//                             <img src="src/asset/icons/icon-mail.svg" alt="" className="mail-icon" />
+//                             <input type="email" placeholder="john_doe@email.com" className="email-field" />
 //                         </form>
 //                     </div>
-//                     <div class="text-field">
+//                     <div className="text-field">
 //                         <p>Password</p>
 //                         <form action="#">
-//                             <img src="src/asset/icons/icon-password.svg" class="password-icon" alt="" />
-//                             <input type="password" placeholder="Should be 8 characters and above" class="password-field" />
+//                             <img src="src/asset/icons/icon-password.svg" className="password-icon" alt="" />
+//                             <input type="password" placeholder="Should be 8 characters and above" className="password-field" />
 //                         </form>
 //                     </div>
-//                     <button class="fbutton primary">Log in</button>
-//                     <button class="fbutton secondary">Cancel</button>
-//                     <div class="hyperlink">
-//                         <p>Need an account? <a href="#" class="hyperlink">Create an account.</a> </p>
+//                     <button className="fbutton primary">Log in</button>
+//                     <button className="fbutton secondary">Cancel</button>
+//                     <div className="hyperlink">
+//                         <p>Need an account? <a href="#" className="hyperlink">Create an account.</a> </p>
 //                     </div>
 //                 </div>
 //             </div>
