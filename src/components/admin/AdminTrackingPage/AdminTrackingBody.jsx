@@ -2,12 +2,18 @@ import { useState } from 'react';
 import React from 'react'
 import './AdminTrackingBody.css'
 import AdminOverlay from '../AdminOverlay'
+import AdminEditParcelOverlay from '../AdminEditParcelOverlay'
 
 function AdminTrackingBody() {
     const [overlayVisible, setOverlayVisible] = useState(false);
+    const [editOverlayVisible, setEditOverlayVisible] = useState(false);
 
     const toggleOverlay = () => {
         setOverlayVisible(!overlayVisible);
+    };
+
+    const toggleEditOverlay = () => {
+        setEditOverlayVisible(!editOverlayVisible);
     };
 
     return (
@@ -42,7 +48,12 @@ function AdminTrackingBody() {
                         <th>STATUS</th>
                     </tr>
                     <tr class="AdminTrackingTable">
-                        <td><img src="src/assets/icons/icon-edit.svg" alt="edit" class="ParcelEditIcon"/></td>
+                        <td>
+                            <button class="a-edit-parcel-button" onClick={toggleEditOverlay}>
+                                <img src="src/assets/icons/icon-edit.svg" alt="edit" class="ParcelEditIcon "/>
+                            </button>
+                            <AdminEditParcelOverlay visible={editOverlayVisible} toggleVisible={toggleEditOverlay} />   
+                        </td>
                         <td>NDJ297ADM1EL</td>
                         <td>2024/03/14</td>
                         <td>2024/03/21</td>

@@ -144,6 +144,15 @@ th:last-of-type {
     flex-shrink: 0;
 }
 
+.a-edit-parcel-button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.a-edit-parcel-button:hover {
+    transform: scale(1.15);
+    filter: brightness(0.96);
+}
+
 .AdminTrackingTableFrame td {
     white-space: nowrap;
     padding-top: 1.06rem;    
