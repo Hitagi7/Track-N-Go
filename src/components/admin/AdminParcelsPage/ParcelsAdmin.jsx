@@ -2,12 +2,15 @@ import "./ParcelsAdmin.css";
 import AdminSideBar from "../AdminSideBar";
 import AdminParcelBody from "./AdminParcelBody";
 import { useState, useEffect } from "react";
-import { getParcels, createParcel, updateParcel, deleteParcel } from './../AdminService';
+import {
+  getParcels,
+  createParcel,
+  updateParcel,
+  deleteParcel,
+} from "./../AdminService";
 
 const ParcelsAdmin = () => {
-  // Add another file to store the parcel details, so that both parcel and tracking can access the data
   const [parcels, setParcels] = useState([]);
-  // const [newParcel, setNewParcel] = useState({});
 
   // Add parcel
   const addParcel = (newParcel) => {
@@ -16,8 +19,8 @@ const ParcelsAdmin = () => {
   };
 
   useEffect(() => {
-    getParcels().then(data => setParcels(data));
-  }, [])
+    getParcels().then((data) => setParcels(data));
+  }, []);
 
   return (
     <div className="admin-homepage">

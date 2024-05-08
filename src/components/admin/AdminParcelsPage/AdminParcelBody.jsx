@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./AdminParcelBody.css";
 import AdminOverlay from "../AdminOverlay";
+import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 
 function AdminParcelBody({ parcelDetails, addParcel }) {
   const [overlayVisible, setOverlayVisible] = useState(false);
+  const [editOverlayVisible, setEditOverlayVisible] = useState(false);
 
   // Generate Parcel ID
   function generateID() {
@@ -19,6 +21,10 @@ function AdminParcelBody({ parcelDetails, addParcel }) {
 
   const toggleOverlay = () => {
     setOverlayVisible(!overlayVisible);
+  };
+
+  const toggleEditOverlay = () => {
+    setEditOverlayVisible(!editOverlayVisible);
   };
 
   return (
@@ -56,54 +62,63 @@ function AdminParcelBody({ parcelDetails, addParcel }) {
       </div>
       <div className="AdminParcelTableFrame">
         <table className="AdminParcelTableContent">
-            <tbody>
+          <tbody>
             <tr className="AdminParcelHeader">
-                <th> </th>
-                <th>TRACKING ID</th>
-                <th>WEIGHT</th>
-                <th>SIZE</th>
-                <th>PRICE</th>
-                <th>SHIPPER</th>
-                <th>COURIER</th>
-                <th>STATUS</th>
+              <th> </th>
+              <th>TRACKING ID</th>
+              <th>WEIGHT</th>
+              <th>SIZE</th>
+              <th>PRICE</th>
+              <th>SHIPPER</th>
+              <th>COURIER</th>
+              <th>STATUS</th>
             </tr>
             {parcelDetails && ( // Check if parcel exists
-                <>
+              <>
                 {parcelDetails.map((parcelDetails) => {
-                    return (
+                  return (
                     <tr className="AdminParcelTable" key={parcelDetails.id}>
-                        <td>
-                        <img
+                      <td>
+                        <button
+                          className="a-edit-parcel-button"
+                          onClick={toggleEditOverlay}
+                        >
+                          <img
                             src="src/assets/icons/icon-edit.svg"
                             alt="edit"
                             className="ParcelEditIcon"
+                          />
+                        </button>
+                        <AdminEditParcelOverlay
+                          visible={editOverlayVisible}
+                          toggleVisible={toggleEditOverlay}
                         />
-                        </td>
-                        <td>{parcelDetails.id}</td>
-                        <td>{parcelDetails.weight} kg</td>
-                        <td>
+                      </td>
+                      <td>{parcelDetails.id}</td>
+                      <td>{parcelDetails.weight} kg</td>
+                      <td>
                         {parcelDetails.length}
                         <img
-                            src="src/assets/icons/icon-x.svg"
-                            className="x-icon"
-                            alt=""
+                          src="src/assets/icons/icon-x.svg"
+                          className="x-icon"
+                          alt=""
                         />
                         {parcelDetails.width}
                         <img
-                            src="src/assets/icons/icon-x.svg"
-                            className="x-icon"
-                            alt=""
+                          src="src/assets/icons/icon-x.svg"
+                          className="x-icon"
+                          alt=""
                         />
                         {parcelDetails.height} cm
-                        </td>
-                        <td>₱{parcelDetails.price}</td>
-                        <td>{parcelDetails.shipper}</td>
-                        <td>{parcelDetails.courier}</td>
-                        <td>{parcelDetails.status}</td>
+                      </td>
+                      <td>₱{parcelDetails.price}</td>
+                      <td>{parcelDetails.shipper}</td>
+                      <td>{parcelDetails.courier}</td>
+                      <td>{parcelDetails.status}</td>
                     </tr>
-                    );
+                  );
                 })}
-                </>
+              </>
             )}
           </tbody>
         </table>
