@@ -1,16 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AdminTrackingBody.css";
 import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 import ParcelsAdmin from "../AdminParcelsPage/ParcelsAdmin";
+import { getParcels } from "../AdminService";
 
-function AdminTrackingBody({ parcelDetails }) {
-  const [overlayVisible, setOverlayVisible] = useState(false);
+function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
-
-  const toggleOverlay = () => {
-    setOverlayVisible(!overlayVisible);
-  };
 
   const toggleEditOverlay = () => {
     setEditOverlayVisible(!editOverlayVisible);
@@ -33,53 +29,59 @@ function AdminTrackingBody({ parcelDetails }) {
       </div>
       <div className="AdminTrackingTableFrame">
         <table className="AdminTrackingTableContent">
-          <tr className="AdminTrackingHeader">
-            <th> </th>
-            <th>TRACKING ID</th>
-            <th>SHIPPED OUT</th>
-            <th>DELIVERY DATE</th>
-            <th>DELIVERED FROM</th>
-            <th>DELIVERED TO</th>
-            <th>STATUS</th>
-          </tr>
-          {parcelDetails && ( // Check if parcel exists
-            <>
-              {parcelDetails.map((parcelDetails) => {
-                return (
-                  <tr className="AdminParcelTable" key={parcelDetails.id}>
-                    <td>
-                      <button
-                        className="a-edit-parcel-button"
-                        onClick={toggleEditOverlay}
-                      >
-                        <img
-                          src="src/assets/icons/icon-edit.svg"
-                          alt="edit"
-                          className="ParcelEditIcon"
+          <tbody>
+            <tr className="AdminTrackingHeader">
+              <th> </th>
+              <th>TRACKING ID</th>
+              <th>SHIPPED OUT</th>
+              <th>DELIVERY DATE</th>
+              <th>DELIVERED FROM</th>
+              <th>DELIVERED TO</th>
+              <th>STATUS</th>
+            </tr>
+            {parcelDetails && ( // Check if parcel exists
+              <>
+                {parcelDetails.map((parcelDetails) => {
+                  return (
+                    <tr className="AdminParcelTable" key={parcelDetails.id}>
+                      <td>
+                        <button
+                          className="a-edit-parcel-button"
+                          onClick={toggleEditOverlay}
+                        >
+                          <img
+                            src="src/assets/icons/icon-edit.svg"
+                            alt="edit"
+                            className="ParcelEditIcon"
+                          />
+                        </button>
+                        <AdminEditParcelOverlay
+                          visible={editOverlayVisible}
+                          toggleVisible={toggleEditOverlay}
+                          parcelDetails={parcelDetails}
+                          editParcel={editParcel}
+                          deleteParcel={deleteParcel}
                         />
-                      </button>
-                      <AdminEditParcelOverlay
-                        visible={editOverlayVisible}
-                        toggleVisible={toggleEditOverlay}
-                      />
-                    </td>
-                    <td>{parcelDetails.id}</td>
-                    <td>
-                      {parcelDetails.shippedMonth} {parcelDetails.shippedDay},{" "}
-                      {parcelDetails.shippedYear}
-                    </td>
-                    <td>
-                      {parcelDetails.deliveryMonth} {parcelDetails.deliveryDay},{" "}
-                      {parcelDetails.deliveryYear}
-                    </td>
-                    <td>{parcelDetails.deliveredFrom}</td>
-                    <td>{parcelDetails.deliveredTo}</td>
-                    <td>{parcelDetails.status}</td>
-                  </tr>
-                );
-              })}
-            </>
-          )}
+                      </td>
+                      <td>{parcelDetails.id}</td>
+                      <td>
+                        {parcelDetails.shippedMonth} {parcelDetails.shippedDay},{" "}
+                        {parcelDetails.shippedYear}
+                      </td>
+                      <td>
+                        {parcelDetails.deliveryMonth}{" "}
+                        {parcelDetails.deliveryDay},{" "}
+                        {parcelDetails.deliveryYear}
+                      </td>
+                      <td>{parcelDetails.deliveredFrom}</td>
+                      <td>{parcelDetails.deliveredTo}</td>
+                      <td>{parcelDetails.status}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            )}
+          </tbody>
         </table>
       </div>
     </div>

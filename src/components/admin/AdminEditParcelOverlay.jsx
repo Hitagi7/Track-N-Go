@@ -1,35 +1,40 @@
 import React from "react";
 import "./AdminOverlay.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { onSnapshot } from "firebase/firestore";
 
 function AdminEditParcelOverlay({
   visible,
   toggleVisible,
-  addParcel,
-  generateID,
+  parcelDetails,
+  editParcel,
+  deleteParcel,
 }) {
   // Parcel
-  const id = generateID;
-  const [weight, setWeight] = useState();
-  const [price, setPrice] = useState("-");
-  const [length, setLength] = useState();
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
-  const [shipper, setShipper] = useState("");
-  const [courier, setCourier] = useState("");
-  const [status, setStatus] = useState("-");
+  const id = parcelDetails.id;
+  const [weight, setWeight] = useState(parcelDetails.weight);
+  const [price, setPrice] = useState(parcelDetails.price);
+  const [length, setLength] = useState(parcelDetails.length);
+  const [width, setWidth] = useState(parcelDetails.width);
+  const [height, setHeight] = useState(parcelDetails.height);
+  const [shipper, setShipper] = useState(parcelDetails.shipper);
+  const [courier, setCourier] = useState(parcelDetails.courier);
+  const [status, setStatus] = useState(parcelDetails.status);
 
   // Tracking
-  const [shippedMonth, setShippedMonth] = useState("");
-  const [shippedDay, setShippedDay] = useState("");
-  const [shippedYear, setShippedYear] = useState("");
-  const [deliveryMonth, setDeliveryMonth] = useState("");
-  const [deliveryDay, setDeliveryDay] = useState("");
-  const [deliveryYear, setDeliveryYear] = useState("");
-  const [deliveredFrom, setDeliveredFrom] = useState("");
-  const [deliveredTo, setDeliveredTo] = useState("");
+  const [shippedMonth, setShippedMonth] = useState(parcelDetails.shippedMonth);
+  const [shippedDay, setShippedDay] = useState(parcelDetails.shippedDay);
+  const [shippedYear, setShippedYear] = useState(parcelDetails.shippedYear);
+  const [deliveryMonth, setDeliveryMonth] = useState(
+    parcelDetails.deliveryMonth
+  );
+  const [deliveryDay, setDeliveryDay] = useState(parcelDetails.deliveryDay);
+  const [deliveryYear, setDeliveryYear] = useState(parcelDetails.deliveryYear);
+  const [deliveredFrom, setDeliveredFrom] = useState(
+    parcelDetails.deliveredFrom
+  );
+  const [deliveredTo, setDeliveredTo] = useState(parcelDetails.deliveredTo);
 
   // Calculate Price
   const calculatePrice = () => {
@@ -80,7 +85,7 @@ function AdminEditParcelOverlay({
       return;
     }
 
-    addParcel({
+    editParcel(id, {
       id,
       weight,
       length,
@@ -90,30 +95,24 @@ function AdminEditParcelOverlay({
       shipper,
       courier,
       status,
+      shippedMonth,
+      shippedYear,
+      shippedDay,
+      deliveryYear,
+      deliveryMonth,
+      deliveryDay,
+      deliveredFrom,
+      deliveredTo,
     });
 
-    setWeight();
-    setLength();
-    setWidth();
-    setHeight();
-    setPrice("-");
-    setShipper("");
-    setCourier("");
-    setStatus("-");
     toggleVisible();
   };
 
-  // Cancel Changes
-  const onCancel = () => {
-    setWeight();
-    setLength();
-    setWidth();
-    setHeight();
-    setPrice("-");
-    setShipper("");
-    setCourier("");
-    setStatus("-");
+  const onDelete = () => {
+    deleteParcel(id);
+    toggleVisible();
   };
+
   return (
     visible && (
       <div className="admin-overlay">
@@ -121,7 +120,10 @@ function AdminEditParcelOverlay({
         <div className="a-overlay">
           <div className="o-title-block">
             <p className="a-overlay-title">Edit parcel</p>
-            <button className="o-delete-parcel-button">
+            <button
+              className="o-delete-parcel-button"
+              onClick={() => onDelete()}
+            >
               <img
                 src="src/assets/icons/icon-trash.svg"
                 className="o-trash-icon"
@@ -137,7 +139,7 @@ function AdminEditParcelOverlay({
                 <form className="o-form" action="#">
                   <input
                     type="text"
-                    placeholder={generateID}
+                    placeholder={id}
                     className="o-text-field"
                     disabled
                   />
@@ -151,6 +153,7 @@ function AdminEditParcelOverlay({
                     <input
                       type="number"
                       placeholder="2.1"
+                      value={weight}
                       className="o-text-field"
                       onChange={(e) => {
                         setWeight(e.target.value);
@@ -181,6 +184,7 @@ function AdminEditParcelOverlay({
                       type="number"
                       placeholder="Length"
                       className="o-text-field"
+                      value={length}
                       onChange={(e) => {
                         setLength(e.target.value);
                         calculatePrice();
@@ -197,6 +201,7 @@ function AdminEditParcelOverlay({
                       type="number"
                       placeholder="Width"
                       className="o-text-field"
+                      value={width}
                       onChange={(e) => {
                         setWidth(e.target.value);
                         calculatePrice();
@@ -213,6 +218,7 @@ function AdminEditParcelOverlay({
                       type="number"
                       placeholder="Height"
                       className="o-text-field"
+                      value={height}
                       onChange={(e) => {
                         setHeight(e.target.value);
                         calculatePrice();
@@ -229,6 +235,7 @@ function AdminEditParcelOverlay({
                     type="text"
                     placeholder="Nat'l Bookstore"
                     className="o-text-field"
+                    value={shipper}
                     onChange={(e) => setShipper(e.target.value)}
                   />
                 </form>
@@ -241,6 +248,7 @@ function AdminEditParcelOverlay({
                     type="text"
                     placeholder="J&T"
                     className="o-text-field"
+                    value={courier}
                     onChange={(e) => setCourier(e.target.value)}
                   />
                 </form>
@@ -250,53 +258,74 @@ function AdminEditParcelOverlay({
             <div className="o-right-fields">
               <div className="o-shipped-out-field">
                 <p className="o-form-label">Shipped out</p>
-
                 <div className="o-dropdown-fields">
                   <div className="o-month-dropdown o-dropdown">
                     <ul className="o-month-dropdown-content o-dropdown-content">
                       <li>
-                        <a
-                          href="#"
-                          // onClick={set('January')}
-                        >
+                        <a href="#" onClick={() => setShippedMonth("January")}>
                           January
                         </a>
                       </li>
                       <li>
-                        <a href="#">February</a>
+                        <a href="#" onClick={() => setShippedMonth("February")}>
+                          February
+                        </a>
                       </li>
                       <li>
-                        <a href="#">March</a>
+                        <a href="#" onClick={() => setShippedMonth("March")}>
+                          March
+                        </a>
                       </li>
                       <li>
-                        <a href="#">April</a>
+                        <a href="#" onClick={() => setShippedMonth("April")}>
+                          April
+                        </a>
                       </li>
                       <li>
-                        <a href="#">May</a>
+                        <a href="#" onClick={() => setShippedMonth("May")}>
+                          May
+                        </a>
                       </li>
                       <li>
-                        <a href="#">June</a>
+                        <a href="#" onClick={() => setShippedMonth("June")}>
+                          June
+                        </a>
                       </li>
                       <li>
-                        <a href="#">July</a>
+                        <a href="#" onClick={() => setShippedMonth("July")}>
+                          July
+                        </a>
                       </li>
                       <li>
-                        <a href="#">August</a>
+                        <a href="#" onClick={() => setShippedMonth("August")}>
+                          August
+                        </a>
                       </li>
                       <li>
-                        <a href="#">September</a>
+                        <a
+                          href="#"
+                          onClick={() => setShippedMonth("September")}
+                        >
+                          September
+                        </a>
                       </li>
                       <li>
-                        <a href="#">October</a>
+                        <a href="#" onClick={() => setShippedMonth("October")}>
+                          October
+                        </a>
                       </li>
                       <li>
-                        <a href="#">November</a>
+                        <a href="#" onClick={() => setShippedMonth("November")}>
+                          November
+                        </a>
                       </li>
                       <li>
-                        <a href="#">December</a>
+                        <a href="#" onClick={() => setShippedMonth("December")}>
+                          December
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">September</p>
+                    <p className="o-dropdown-placeholder">{shippedMonth}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -308,106 +337,168 @@ function AdminEditParcelOverlay({
                   <div className="o-day-dropdown o-dropdown">
                     <ul className="o-day-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">1</a>
+                        <a href="#" onClick={() => setShippedDay("1")}>
+                          1
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2</a>
+                        <a href="#" onClick={() => setShippedDay("2")}>
+                          2
+                        </a>
                       </li>
                       <li>
-                        <a href="#">3</a>
+                        <a href="#" onClick={() => setShippedDay("3")}>
+                          3
+                        </a>
                       </li>
                       <li>
-                        <a href="#">4</a>
+                        <a href="#" onClick={() => setShippedDay("4")}>
+                          4
+                        </a>
                       </li>
                       <li>
-                        <a href="#">5</a>
-                      </li>
-
-                      <li>
-                        <a href="#">6</a>
-                      </li>
-                      <li>
-                        <a href="#">7</a>
-                      </li>
-                      <li>
-                        <a href="#">8</a>
-                      </li>
-                      <li>
-                        <a href="#">9</a>
-                      </li>
-                      <li>
-                        <a href="#">10</a>
+                        <a href="#" onClick={() => setShippedDay("5")}>
+                          5
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">11</a>
+                        <a href="#" onClick={() => setShippedDay("6")}>
+                          6
+                        </a>
                       </li>
                       <li>
-                        <a href="#">12</a>
+                        <a href="#" onClick={() => setShippedDay("7")}>
+                          7
+                        </a>
                       </li>
                       <li>
-                        <a href="#">13</a>
+                        <a href="#" onClick={() => setShippedDay("8")}>
+                          8
+                        </a>
                       </li>
                       <li>
-                        <a href="#">14</a>
+                        <a href="#" onClick={() => setShippedDay("9")}>
+                          9
+                        </a>
                       </li>
                       <li>
-                        <a href="#">15</a>
-                      </li>
-
-                      <li>
-                        <a href="#">16</a>
-                      </li>
-                      <li>
-                        <a href="#">17</a>
-                      </li>
-                      <li>
-                        <a href="#">18</a>
-                      </li>
-                      <li>
-                        <a href="#">19</a>
-                      </li>
-                      <li>
-                        <a href="#">20</a>
+                        <a href="#" onClick={() => setShippedDay("10")}>
+                          10
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">21</a>
+                        <a href="#" onClick={() => setShippedDay("11")}>
+                          11
+                        </a>
                       </li>
                       <li>
-                        <a href="#">22</a>
+                        <a href="#" onClick={() => setShippedDay("12")}>
+                          12
+                        </a>
                       </li>
                       <li>
-                        <a href="#">23</a>
+                        <a href="#" onClick={() => setShippedDay("13")}>
+                          13
+                        </a>
                       </li>
                       <li>
-                        <a href="#">24</a>
+                        <a href="#" onClick={() => setShippedDay("14")}>
+                          14
+                        </a>
                       </li>
                       <li>
-                        <a href="#">25</a>
-                      </li>
-
-                      <li>
-                        <a href="#">26</a>
-                      </li>
-                      <li>
-                        <a href="#">27</a>
-                      </li>
-                      <li>
-                        <a href="#">28</a>
-                      </li>
-                      <li>
-                        <a href="#">29</a>
-                      </li>
-                      <li>
-                        <a href="#">30</a>
+                        <a href="#" onClick={() => setShippedDay("15")}>
+                          15
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">31</a>
+                        <a href="#" onClick={() => setShippedDay("16")}>
+                          16
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("17")}>
+                          17
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("18")}>
+                          18
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("19")}>
+                          19
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("20")}>
+                          20
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("21")}>
+                          21
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("22")}>
+                          22
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("23")}>
+                          23
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("24")}>
+                          24
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("25")}>
+                          25
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("26")}>
+                          26
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("27")}>
+                          27
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("28")}>
+                          28
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("29")}>
+                          29
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("30")}>
+                          30
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setShippedDay("31")}>
+                          31
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">1</p>
+                    <p className="o-dropdown-placeholder">{shippedDay}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -419,48 +510,74 @@ function AdminEditParcelOverlay({
                   <div className="o-year-dropdown o-dropdown">
                     <ul className="o-year-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">2015</a>
+                        <a href="#" onClick={() => setShippedYear("2015")}>
+                          2015
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2016</a>
+                        <a href="#" onClick={() => setShippedYear("2016")}>
+                          2016
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2017</a>
+                        <a href="#" onClick={() => setShippedYear("2017")}>
+                          2017
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2018</a>
+                        <a href="#" onClick={() => setShippedYear("2018")}>
+                          2018
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2019</a>
-                      </li>
-
-                      <li>
-                        <a href="#">2020</a>
-                      </li>
-                      <li>
-                        <a href="#">2021</a>
-                      </li>
-                      <li>
-                        <a href="#">2022</a>
-                      </li>
-                      <li>
-                        <a href="#">2023</a>
-                      </li>
-                      <li>
-                        <a href="#">2024</a>
+                        <a href="#" onClick={() => setShippedYear("2019")}>
+                          2019
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">2025</a>
+                        <a href="#" onClick={() => setShippedYear("2020")}>
+                          2020
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2026</a>
+                        <a href="#" onClick={() => setShippedYear("2021")}>
+                          2021
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2027</a>
+                        <a href="#" onClick={() => setShippedYear("2022")}>
+                          2022
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedYear("2023")}>
+                          2023
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedYear("2024")}>
+                          2024
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setShippedYear("2025")}>
+                          2025
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedYear("2026")}>
+                          2026
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setShippedYear("2027")}>
+                          2027
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">2000</p>
+                    <p className="o-dropdown-placeholder">{shippedYear}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -473,48 +590,83 @@ function AdminEditParcelOverlay({
 
               <div className="o-delivery-date-field">
                 <p className="o-form-label">Delivery Date</p>
-
                 <div className="o-dropdown-fields">
                   <div className="o-month-dropdown o-dropdown">
                     <ul className="o-month-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">January</a>
+                        <a href="#" onClick={() => setDeliveryMonth("January")}>
+                          January
+                        </a>
                       </li>
                       <li>
-                        <a href="#">February</a>
+                        <a
+                          href="#"
+                          onClick={() => setDeliveryMonth("February")}
+                        >
+                          February
+                        </a>
                       </li>
                       <li>
-                        <a href="#">March</a>
+                        <a href="#" onClick={() => setDeliveryMonth("March")}>
+                          March
+                        </a>
                       </li>
                       <li>
-                        <a href="#">April</a>
+                        <a href="#" onClick={() => setDeliveryMonth("April")}>
+                          April
+                        </a>
                       </li>
                       <li>
-                        <a href="#">May</a>
+                        <a href="#" onClick={() => setDeliveryMonth("May")}>
+                          May
+                        </a>
                       </li>
                       <li>
-                        <a href="#">June</a>
+                        <a href="#" onClick={() => setDeliveryMonth("June")}>
+                          June
+                        </a>
                       </li>
                       <li>
-                        <a href="#">July</a>
+                        <a href="#" onClick={() => setDeliveryMonth("July")}>
+                          July
+                        </a>
                       </li>
                       <li>
-                        <a href="#">August</a>
+                        <a href="#" onClick={() => setDeliveryMonth("August")}>
+                          August
+                        </a>
                       </li>
                       <li>
-                        <a href="#">September</a>
+                        <a
+                          href="#"
+                          onClick={() => setDeliveryMonth("September")}
+                        >
+                          September
+                        </a>
                       </li>
                       <li>
-                        <a href="#">October</a>
+                        <a href="#" onClick={() => setDeliveryMonth("October")}>
+                          October
+                        </a>
                       </li>
                       <li>
-                        <a href="#">November</a>
+                        <a
+                          href="#"
+                          onClick={() => setDeliveryMonth("November")}
+                        >
+                          November
+                        </a>
                       </li>
                       <li>
-                        <a href="#">December</a>
+                        <a
+                          href="#"
+                          onClick={() => setDeliveryMonth("December")}
+                        >
+                          December
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">September</p>
+                    <p className="o-dropdown-placeholder">{deliveryMonth}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -526,106 +678,168 @@ function AdminEditParcelOverlay({
                   <div className="o-day-dropdown o-dropdown">
                     <ul className="o-day-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">1</a>
+                        <a href="#" onClick={() => setDeliveryDay("1")}>
+                          1
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2</a>
+                        <a href="#" onClick={() => setDeliveryDay("2")}>
+                          2
+                        </a>
                       </li>
                       <li>
-                        <a href="#">3</a>
+                        <a href="#" onClick={() => setDeliveryDay("3")}>
+                          3
+                        </a>
                       </li>
                       <li>
-                        <a href="#">4</a>
+                        <a href="#" onClick={() => setDeliveryDay("4")}>
+                          4
+                        </a>
                       </li>
                       <li>
-                        <a href="#">5</a>
-                      </li>
-
-                      <li>
-                        <a href="#">6</a>
-                      </li>
-                      <li>
-                        <a href="#">7</a>
-                      </li>
-                      <li>
-                        <a href="#">8</a>
-                      </li>
-                      <li>
-                        <a href="#">9</a>
-                      </li>
-                      <li>
-                        <a href="#">10</a>
+                        <a href="#" onClick={() => setDeliveryDay("5")}>
+                          5
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">11</a>
+                        <a href="#" onClick={() => setDeliveryDay("6")}>
+                          6
+                        </a>
                       </li>
                       <li>
-                        <a href="#">12</a>
+                        <a href="#" onClick={() => setDeliveryDay("7")}>
+                          7
+                        </a>
                       </li>
                       <li>
-                        <a href="#">13</a>
+                        <a href="#" onClick={() => setDeliveryDay("8")}>
+                          8
+                        </a>
                       </li>
                       <li>
-                        <a href="#">14</a>
+                        <a href="#" onClick={() => setDeliveryDay("9")}>
+                          9
+                        </a>
                       </li>
                       <li>
-                        <a href="#">15</a>
-                      </li>
-
-                      <li>
-                        <a href="#">16</a>
-                      </li>
-                      <li>
-                        <a href="#">17</a>
-                      </li>
-                      <li>
-                        <a href="#">18</a>
-                      </li>
-                      <li>
-                        <a href="#">19</a>
-                      </li>
-                      <li>
-                        <a href="#">20</a>
+                        <a href="#" onClick={() => setDeliveryDay("10")}>
+                          10
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">21</a>
+                        <a href="#" onClick={() => setDeliveryDay("11")}>
+                          11
+                        </a>
                       </li>
                       <li>
-                        <a href="#">22</a>
+                        <a href="#" onClick={() => setDeliveryDay("12")}>
+                          12
+                        </a>
                       </li>
                       <li>
-                        <a href="#">23</a>
+                        <a href="#" onClick={() => setDeliveryDay("13")}>
+                          13
+                        </a>
                       </li>
                       <li>
-                        <a href="#">24</a>
+                        <a href="#" onClick={() => setDeliveryDay("14")}>
+                          14
+                        </a>
                       </li>
                       <li>
-                        <a href="#">25</a>
-                      </li>
-
-                      <li>
-                        <a href="#">26</a>
-                      </li>
-                      <li>
-                        <a href="#">27</a>
-                      </li>
-                      <li>
-                        <a href="#">28</a>
-                      </li>
-                      <li>
-                        <a href="#">29</a>
-                      </li>
-                      <li>
-                        <a href="#">30</a>
+                        <a href="#" onClick={() => setDeliveryDay("15")}>
+                          15
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">31</a>
+                        <a href="#" onClick={() => setDeliveryDay("16")}>
+                          16
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("17")}>
+                          17
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("18")}>
+                          18
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("19")}>
+                          19
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("20")}>
+                          20
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("21")}>
+                          21
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("22")}>
+                          22
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("23")}>
+                          23
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("24")}>
+                          24
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("25")}>
+                          25
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("26")}>
+                          26
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("27")}>
+                          27
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("28")}>
+                          28
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("29")}>
+                          29
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("30")}>
+                          30
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("31")}>
+                          31
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">1</p>
+                    <p className="o-dropdown-placeholder">{deliveryDay}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -637,48 +851,74 @@ function AdminEditParcelOverlay({
                   <div className="o-year-dropdown o-dropdown">
                     <ul className="o-year-dropdown-content o-dropdown-content">
                       <li>
-                        <a href="#">2015</a>
+                        <a href="#" onClick={() => setDeliveryYear("2015")}>
+                          2015
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2016</a>
+                        <a href="#" onClick={() => setDeliveryYear("2016")}>
+                          2016
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2017</a>
+                        <a href="#" onClick={() => setDeliveryYear("2017")}>
+                          2017
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2018</a>
+                        <a href="#" onClick={() => setDeliveryYear("2018")}>
+                          2018
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2019</a>
-                      </li>
-
-                      <li>
-                        <a href="#">2020</a>
-                      </li>
-                      <li>
-                        <a href="#">2021</a>
-                      </li>
-                      <li>
-                        <a href="#">2022</a>
-                      </li>
-                      <li>
-                        <a href="#">2023</a>
-                      </li>
-                      <li>
-                        <a href="#">2024</a>
+                        <a href="#" onClick={() => setDeliveryYear("2019")}>
+                          2019
+                        </a>
                       </li>
 
                       <li>
-                        <a href="#">2025</a>
+                        <a href="#" onClick={() => setDeliveryYear("2020")}>
+                          2020
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2026</a>
+                        <a href="#" onClick={() => setDeliveryYear("2021")}>
+                          2021
+                        </a>
                       </li>
                       <li>
-                        <a href="#">2027</a>
+                        <a href="#" onClick={() => setDeliveryYear("2022")}>
+                          2022
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryYear("2023")}>
+                          2023
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryYear("2024")}>
+                          2024
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#" onClick={() => setDeliveryYear("2025")}>
+                          2025
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryYear("2026")}>
+                          2026
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" onClick={() => setDeliveryYear("2027")}>
+                          2027
+                        </a>
                       </li>
                     </ul>
-                    <p className="o-dropdown-placeholder">2000</p>
+                    <p className="o-dropdown-placeholder">{deliveryYear}</p>
                     <button className="o-dropdown-button">
                       <img
                         src="src/assets/icons/icon-chevron-down.svg"
@@ -691,24 +931,24 @@ function AdminEditParcelOverlay({
 
               <div className="o-delivered-from-field o-field">
                 <p className="o-form-label">Delivered From</p>
-                <form className="o-form" action="#">
-                  <input
-                    type="text"
-                    placeholder="Laguna Del Norte, PH"
-                    className="o-text-field"
-                  />
-                </form>
+                <input
+                  type="text"
+                  placeholder="Laguna Del Norte, PH"
+                  className="o-text-field"
+                  value={deliveredFrom}
+                  onChange={(e) => setDeliveredFrom(e.target.value)}
+                />
               </div>
 
               <div className="o-delivered-to-field o-field">
                 <p className="o-form-label">Delivered To</p>
-                <form className="o-form" action="#">
-                  <input
-                    type="text"
-                    placeholder="Cebu City, PH"
-                    className="o-text-field"
-                  />
-                </form>
+                <input
+                  type="text"
+                  placeholder="Cebu City, PH"
+                  value={deliveredTo}
+                  className="o-text-field"
+                  onChange={(e) => setDeliveredTo(e.target.value)}
+                />
               </div>
 
               <div className="o-status-field">
@@ -770,7 +1010,6 @@ function AdminEditParcelOverlay({
               className="o-cancel-button o-button"
               onClick={() => {
                 toggleVisible();
-                onCancel();
               }}
             >
               Cancel

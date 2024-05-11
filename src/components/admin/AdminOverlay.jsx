@@ -1,6 +1,6 @@
 import React from "react";
 import "./AdminOverlay.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { onSnapshot } from "firebase/firestore";
 
@@ -22,7 +22,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
   // });
 
   // Parcel
-  const id = generateID;
+  let id = generateID;
   const [weight, setWeight] = useState();
   const [price, setPrice] = useState("-");
   const [length, setLength] = useState();
@@ -151,7 +151,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <p className="o-form-label">Tracking ID</p>
                   <input
                     type="text"
-                    placeholder={generateID}
+                    placeholder={id}
                     className="o-text-field"
                     disabled
                   />

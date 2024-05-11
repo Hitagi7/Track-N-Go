@@ -18,6 +18,18 @@ const ParcelsAdmin = () => {
     createParcel(newParcel);
   };
 
+  const editParcel = (parcelId, updatedParcel) => {
+    updateParcel(parcelId, updatedParcel);
+    setParcels(
+      parcels.map((parcel) => (parcel.id === parcelId ? updatedParcel : parcel))
+    );
+  };
+
+  const removeParcel = (parcelId) => {
+    deleteParcel(parcelId);
+    setParcels(parcels.filter((parcel) => parcel.id !== parcelId));
+  };
+
   useEffect(() => {
     getParcels().then((data) => setParcels(data));
   }, []);
@@ -29,7 +41,12 @@ const ParcelsAdmin = () => {
       </div>
       <div className="AdminParcelBody">
         <p className="ParcelAdminHeader">Parcels - Admin View</p>
-        <AdminParcelBody parcelDetails={parcels} addParcel={addParcel} />
+        <AdminParcelBody
+          parcelDetails={parcels}
+          addParcel={addParcel}
+          editParcel={editParcel}
+          deleteParcel={removeParcel}
+        />
       </div>
     </div>
   );

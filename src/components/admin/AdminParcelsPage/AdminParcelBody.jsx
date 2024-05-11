@@ -3,12 +3,25 @@ import "./AdminParcelBody.css";
 import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 
-function AdminParcelBody({ parcelDetails, addParcel }) {
+function AdminParcelBody({
+  parcelDetails,
+  addParcel,
+  editParcel,
+  deleteParcel,
+}) {
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
 
+  const toggleOverlay = () => {
+    setOverlayVisible(!overlayVisible);
+  };
+
+  const toggleEditOverlay = () => {
+    setEditOverlayVisible(!editOverlayVisible);
+  };
+
   // Generate Parcel ID
-  function generateID() {
+  const generateID = () => {
     let result = "";
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     for (var i = 0; i <= 13; i++) {
@@ -17,14 +30,6 @@ function AdminParcelBody({ parcelDetails, addParcel }) {
       );
     }
     return result;
-  }
-
-  const toggleOverlay = () => {
-    setOverlayVisible(!overlayVisible);
-  };
-
-  const toggleEditOverlay = () => {
-    setEditOverlayVisible(!editOverlayVisible);
   };
 
   return (
@@ -92,6 +97,9 @@ function AdminParcelBody({ parcelDetails, addParcel }) {
                         <AdminEditParcelOverlay
                           visible={editOverlayVisible}
                           toggleVisible={toggleEditOverlay}
+                          parcelDetails={parcelDetails}
+                          editParcel={editParcel}
+                          deleteParcel={deleteParcel}
                         />
                       </td>
                       <td>{parcelDetails.id}</td>
