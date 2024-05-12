@@ -7,6 +7,7 @@ import { getParcels } from "../AdminService";
 
 function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
+  const [currentId, setCurrentId] = useState("");
 
   const toggleEditOverlay = () => {
     setEditOverlayVisible(!editOverlayVisible);
@@ -47,7 +48,10 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                       <td>
                         <button
                           className="a-edit-parcel-button"
-                          onClick={toggleEditOverlay}
+                          onClick={() => {
+                            toggleEditOverlay();
+                            setCurrentId(parcelDetails.id);
+                          }}
                         >
                           <img
                             src="src/assets/icons/icon-edit.svg"
@@ -55,23 +59,24 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                             className="ParcelEditIcon"
                           />
                         </button>
-                        <AdminEditParcelOverlay
-                          visible={editOverlayVisible}
-                          toggleVisible={toggleEditOverlay}
-                          parcelDetails={parcelDetails}
-                          editParcel={editParcel}
-                          deleteParcel={deleteParcel}
-                        />
+                        {currentId === parcelDetails.id && (
+                          <AdminEditParcelOverlay
+                            visible={editOverlayVisible}
+                            toggleVisible={toggleEditOverlay}
+                            parcelDetails={parcelDetails}
+                            editParcel={editParcel}
+                            deleteParcel={deleteParcel}
+                          />
+                        )}
                       </td>
                       <td>{parcelDetails.id}</td>
                       <td>
-                        {parcelDetails.shippedMonth} {parcelDetails.shippedDay},{" "}
+                        {parcelDetails.shippedMonth} {parcelDetails.shippedDay}{" "}
                         {parcelDetails.shippedYear}
                       </td>
                       <td>
                         {parcelDetails.deliveryMonth}{" "}
-                        {parcelDetails.deliveryDay},{" "}
-                        {parcelDetails.deliveryYear}
+                        {parcelDetails.deliveryDay} {parcelDetails.deliveryYear}
                       </td>
                       <td>{parcelDetails.deliveredFrom}</td>
                       <td>{parcelDetails.deliveredTo}</td>

@@ -62,7 +62,9 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
       !weight ||
       !price ||
       !shipper ||
-      !courier
+      !courier ||
+      !deliveredFrom ||
+      !deliveredTo
     )
       return;
 
@@ -70,10 +72,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
       status == "-" ||
       shippedDay == "-" ||
       shippedMonth == "-" ||
-      shippedYear == "-" ||
-      deliveryDay == "-" ||
-      deliveryMonth == "-" ||
-      deliveryYear == "-"
+      shippedYear == "-"
     ) {
       alert("Please select from dropdown options.");
       return;
@@ -957,6 +956,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     placeholder="Laguna Del Norte, PH"
                     className="o-text-field"
                     onChange={(e) => setDeliveredFrom(e.target.value)}
+                    required
                   />
                 </div>
 
@@ -967,6 +967,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     placeholder="Cebu City, PH"
                     className="o-text-field"
                     onChange={(e) => setDeliveredTo(e.target.value)}
+                    required
                   />
                 </div>
 

@@ -12,7 +12,7 @@ function AdminEditParcelOverlay({
   deleteParcel,
 }) {
   // Parcel
-  const id = parcelDetails.id;
+  const [id, setId] = useState(parcelDetails.id);
   const [weight, setWeight] = useState(parcelDetails.weight);
   const [price, setPrice] = useState(parcelDetails.price);
   const [length, setLength] = useState(parcelDetails.length);
@@ -50,38 +50,26 @@ function AdminEditParcelOverlay({
   // Save Changes
   const onSubmit = () => {
     // Check if all fields are filled
-    if (!weight) {
-      alert("Please fill up the required fields");
+    if (
+      !width ||
+      !height ||
+      !length ||
+      !weight ||
+      !price ||
+      !shipper ||
+      !courier ||
+      !deliveredFrom ||
+      !deliveredTo
+    )
       return;
-    }
 
-    if (!length) {
-      alert("Please fill up the required fields");
-      return;
-    }
-
-    if (!width) {
-      alert("Please fill up the required fields");
-      return;
-    }
-
-    if (!height) {
-      alert("Please fill up the required fields");
-      return;
-    }
-
-    if (!shipper) {
-      alert("Please fill up the required fields");
-      return;
-    }
-
-    if (!courier) {
-      alert("Please fill up the required fields");
-      return;
-    }
-
-    if (status === "-") {
-      alert("Please fill up the required fields");
+    if (
+      status == "-" ||
+      shippedDay == "-" ||
+      shippedMonth == "-" ||
+      shippedYear == "-"
+    ) {
+      alert("Please select from dropdown options.");
       return;
     }
 
@@ -116,13 +104,14 @@ function AdminEditParcelOverlay({
   return (
     visible && (
       <div className="admin-overlay">
-        <div className="a-dimmed-background"></div>
+        <div className="a-dimmed-background-edit"></div>
         <div className="a-overlay">
           <div className="o-title-block">
             <p className="a-overlay-title">Edit parcel</p>
             <button
               className="o-delete-parcel-button"
               onClick={() => onDelete()}
+              style={{ cursor: "pointer" }}
             >
               <img
                 src="src/assets/icons/icon-trash.svg"
@@ -594,6 +583,11 @@ function AdminEditParcelOverlay({
                   <div className="o-month-dropdown o-dropdown">
                     <ul className="o-month-dropdown-content o-dropdown-content">
                       <li>
+                        <a href="#" onClick={() => setDeliveryMonth("-")}>
+                          -
+                        </a>
+                      </li>
+                      <li>
                         <a href="#" onClick={() => setDeliveryMonth("January")}>
                           January
                         </a>
@@ -677,6 +671,11 @@ function AdminEditParcelOverlay({
 
                   <div className="o-day-dropdown o-dropdown">
                     <ul className="o-day-dropdown-content o-dropdown-content">
+                      <li>
+                        <a href="#" onClick={() => setDeliveryDay("-")}>
+                          -
+                        </a>
+                      </li>
                       <li>
                         <a href="#" onClick={() => setDeliveryDay("1")}>
                           1
@@ -851,6 +850,11 @@ function AdminEditParcelOverlay({
                   <div className="o-year-dropdown o-dropdown">
                     <ul className="o-year-dropdown-content o-dropdown-content">
                       <li>
+                        <a href="#" onClick={() => setDeliveryYear("-")}>
+                          -
+                        </a>
+                      </li>
+                      <li>
                         <a href="#" onClick={() => setDeliveryYear("2015")}>
                           2015
                         </a>
@@ -937,6 +941,7 @@ function AdminEditParcelOverlay({
                   className="o-text-field"
                   value={deliveredFrom}
                   onChange={(e) => setDeliveredFrom(e.target.value)}
+                  required
                 />
               </div>
 
@@ -948,6 +953,7 @@ function AdminEditParcelOverlay({
                   value={deliveredTo}
                   className="o-text-field"
                   onChange={(e) => setDeliveredTo(e.target.value)}
+                  required
                 />
               </div>
 
@@ -1010,6 +1016,7 @@ function AdminEditParcelOverlay({
               className="o-cancel-button o-button"
               onClick={() => {
                 toggleVisible();
+                console.log(parcelDetails.id);
               }}
             >
               Cancel

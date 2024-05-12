@@ -11,6 +11,7 @@ function AdminParcelBody({
 }) {
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
+  const [currentId, setCurrentId] = useState("");
 
   const toggleOverlay = () => {
     setOverlayVisible(!overlayVisible);
@@ -86,7 +87,10 @@ function AdminParcelBody({
                       <td>
                         <button
                           className="a-edit-parcel-button"
-                          onClick={toggleEditOverlay}
+                          onClick={() => {
+                            toggleEditOverlay();
+                            setCurrentId(parcelDetails.id);
+                          }}
                         >
                           <img
                             src="src/assets/icons/icon-edit.svg"
@@ -94,13 +98,15 @@ function AdminParcelBody({
                             className="ParcelEditIcon"
                           />
                         </button>
-                        <AdminEditParcelOverlay
-                          visible={editOverlayVisible}
-                          toggleVisible={toggleEditOverlay}
-                          parcelDetails={parcelDetails}
-                          editParcel={editParcel}
-                          deleteParcel={deleteParcel}
-                        />
+                        {currentId === parcelDetails.id && (
+                          <AdminEditParcelOverlay
+                            visible={editOverlayVisible}
+                            toggleVisible={toggleEditOverlay}
+                            parcelDetails={parcelDetails}
+                            editParcel={editParcel}
+                            deleteParcel={deleteParcel}
+                          />
+                        )}
                       </td>
                       <td>{parcelDetails.id}</td>
                       <td>{parcelDetails.weight} kg</td>

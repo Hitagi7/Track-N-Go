@@ -142,6 +142,10 @@ th:last-of-type {
   flex-shrink: 0;
 }
 
+.ParcelEditIcon:hover {
+  cursor: pointer;
+}
+
 .AdminParcelTableFrame td {
   white-space: nowrap;
   padding-top: 1.06rem;
