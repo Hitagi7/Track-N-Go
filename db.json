@@ -33,9 +33,9 @@
       "shippedMonth": "March",
       "shippedYear": "2024",
       "shippedDay": "8",
-      "deliveryYear": "2024",
-      "deliveryMonth": "August",
-      "deliveryDay": "7",
+      "deliveryYear": "-",
+      "deliveryMonth": "-",
+      "deliveryDay": "-",
       "deliveredFrom": "Pitogo, Consolacion",
       "deliveredTo": "Cabancalan, Mandaue"
     },
@@ -55,8 +55,8 @@
       "deliveryYear": "-",
       "deliveryMonth": "-",
       "deliveryDay": "-",
-      "deliveredFrom": "Here",
-      "deliveredTo": "There"
+      "deliveredFrom": "Biliran-Biliran, Leyte",
+      "deliveredTo": "Ormoc City, Leyte"
     },
     {
       "id": "QHA5RGFMGS9F6H",
@@ -79,22 +79,22 @@
     },
     {
       "id": "ZEF5Q685UZWDGS",
-      "weight": "12313",
-      "length": "3",
-      "width": "3223",
-      "height": "32",
-      "price": "2.36",
-      "shipper": "4",
-      "courier": "223",
+      "weight": "12",
+      "length": "10",
+      "width": "20",
+      "height": "10",
+      "price": "16.67",
+      "shipper": "Toppokiman",
+      "courier": "J&T",
       "status": "[1] Order Created",
-      "shippedMonth": "January",
-      "shippedYear": "2015",
-      "shippedDay": "1",
+      "shippedMonth": "May",
+      "shippedYear": "2024",
+      "shippedDay": "7",
       "deliveryYear": "-",
       "deliveryMonth": "-",
       "deliveryDay": "-",
-      "deliveredFrom": "213",
-      "deliveredTo": "23"
+      "deliveredFrom": "Compostela, Cebu",
+      "deliveredTo": "Mandaue, Cebu"
     }
   ],
   "tracking": [
