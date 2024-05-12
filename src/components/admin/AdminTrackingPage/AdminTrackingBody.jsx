@@ -13,6 +13,29 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
     setEditOverlayVisible(!editOverlayVisible);
   };
 
+  function getMonthNumber(monthName) {
+    const monthMap = {
+      january: "01",
+      february: "02",
+      march: "03",
+      april: "04",
+      may: "05",
+      june: "06",
+      july: "07",
+      august: "08",
+      september: "09",
+      october: "10",
+      november: "11",
+      december: "12",
+    };
+
+    return monthMap[monthName.toLowerCase()] || monthName; // Handle invalid month names
+  }
+
+  function addLeadingZero(number) {
+    return number < 10 ? "0" + number : number.toString();
+  }
+
   return (
     <div className="admin-body">
       <div className="AdminTrackingSearchFrame">
@@ -71,12 +94,14 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                       </td>
                       <td>{parcelDetails.id}</td>
                       <td>
-                        {parcelDetails.shippedMonth} {parcelDetails.shippedDay}{" "}
-                        {parcelDetails.shippedYear}
+                        {parcelDetails.shippedYear}/
+                        {getMonthNumber(parcelDetails.shippedMonth)}/
+                        {addLeadingZero(parcelDetails.shippedDay)}
                       </td>
                       <td>
-                        {parcelDetails.deliveryMonth}{" "}
-                        {parcelDetails.deliveryDay} {parcelDetails.deliveryYear}
+                        {parcelDetails.deliveryYear}/
+                        {getMonthNumber(parcelDetails.deliveryMonth)}/
+                        {addLeadingZero(parcelDetails.deliveryDay)}
                       </td>
                       <td>{parcelDetails.deliveredFrom}</td>
                       <td>{parcelDetails.deliveredTo}</td>

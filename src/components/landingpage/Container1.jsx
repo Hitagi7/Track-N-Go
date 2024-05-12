@@ -1,9 +1,8 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom';
-import './Container1.css'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Container1.css";
 
 function Container1() {
-  
   return (
     <div className="Container1">
       <div className="Text1">
@@ -27,15 +26,15 @@ function Container1() {
               className="InputBox"
               placeholder="Enter tracking number"
             />
-            <Link to="/ParcelTrackerPage"><button className="Search">Search</button></Link>
+            <button className="Search">Search</button>
           </div>
         </div>
       </div>
       <img
-          src="/src/assets/Map With Pin.png"
-          alt="Map With Pin"
-          className="Resize-image1"
-        />
+        src="/src/assets/Map With Pin.png"
+        alt="Map With Pin"
+        className="Resize-image1"
+      />
     </div>
   );
 }

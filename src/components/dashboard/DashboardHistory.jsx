@@ -1,88 +1,95 @@
-import React from 'react'
-import './DashboardHistory.css'
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./DashboardHistory.css";
+import { Link } from "react-router-dom";
 
-function DashboardHistory() {
+function DashboardHistory({ parcels }) {
+  const inDelivery = (parcelStatus) => {
+    if (parcelStatus !== "[5] Delivered") {
+      return "IN TRANSIT";
+    } else {
+      return "DELIVERED";
+    }
+  };
+
+  function addLeadingZero(number) {
+    return number < 10 ? "0" + number : number.toString();
+  }
+
+  function getMonthNumber(monthName) {
+    const monthMap = {
+      january: "01",
+      february: "02",
+      march: "03",
+      april: "04",
+      may: "05",
+      june: "06",
+      july: "07",
+      august: "08",
+      september: "09",
+      october: "10",
+      november: "11",
+      december: "12",
+    };
+
+    return monthMap[monthName.toLowerCase()] || monthName; // Handle invalid month names
+  }
+
   return (
     <div className="DashboardHistory">
-        <p className="history">Your recent deliveries</p>
-        <div className="DeliveryInfo">
-            <div className="Frame11">
-                <p className="deliverydate">Delivery Date</p>
-                <p className="shipper1">Shipper</p>
-                <p className="courier1">Courier</p>
-                <p className="parcelnum">Parcel Number</p>
-                <p className="status1">Status</p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.29</p>
-                <p className="shipper2">Nat'l Book Store</p>
-                <p className="courier2">J&T</p>
-                <p className="parcelnum2">NDJ297ADM1EL</p>
-                <div className="Frame13">
-                    <p className="status2">IN TRANSIT</p>
-                </div>
-                <p className="details2">View Details &gt;</p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.28</p>
-                <p className="shipper2">Keeban Supplies</p>
-                <p className="courier2">SPX</p>
-                <p className="parcelnum2">VNJ2JVI30S033</p>
-                <div className="Frame14">
-                    <p className="status3">DELIVERED</p>
-                </div>
-                <p className="details2">View Details &gt; </p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.27</p>
-                <p className="shipper2">Tinong's</p>
-                <p className="courier2">SPX</p>
-                <p className="parcelnum2">NJSVD920N01A</p>
-                <div className="Frame14">
-                    <p className="status3">DELIVERED</p>
-                </div>
-                <p className="details2">View Details &gt; </p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.27</p>
-                <p className="shipper2">Lovito</p>
-                <p className="courier2">SPX</p>
-                <p className="parcelnum2">D2CJKN3L1KVB3</p>
-                <div className="Frame14">
-                    <p className="status3">DELIVERED</p>
-                </div>
-                <p className="details2">View Details &gt; </p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.27</p>
-                <p className="shipper2">Rhat’s Shop</p>
-                <p className="courier2">Amazon</p>
-                <p className="parcelnum2">US2N4JL3NCML</p>
-                <div className="Frame14">
-                    <p className="status3">DELIVERED</p>
-                </div>
-                <p className="details2">View Details &gt; </p>
-            </div>
-            <hr className='hr11' />
-            <div className="Frame12">
-                <p className="deliverydate2">2024.03.27</p>
-                <p className="shipper2">No Brand</p>
-                <p className="courier2">J&T</p>
-                <p className="parcelnum2">NJDKF1L3L0S98</p>
-                <div className="Frame14">
-                    <p className="status3">DELIVERED</p>
-                </div>
-                <p className="details2">View Details &gt; </p>
-            </div>
+      <p className="history">Your recent deliveries</p>
+      <div className="DeliveryInfo">
+        <div className="Frame11">
+          <p className="deliverydate">Delivery Date</p>
+          <p className="shipper1">Shipper</p>
+          <p className="courier1">Courier</p>
+          <p className="parcelnum">Parcel Number</p>
+          <p className="status1">Status</p>
         </div>
+        {parcels.length !== 0 ? (
+          <>
+            {parcels.map((parcel) => (
+              <>
+                <hr className="hr11" />
+                <div className="Frame12" key={parcel.id}>
+                  <p className="deliverydate2">
+                    {parcel.shippedYear}/{getMonthNumber(parcel.shippedMonth)}/
+                    {addLeadingZero(parcel.shippedDay)}
+                  </p>
+                  <p className="shipper2">{parcel.shipper}</p>
+                  <p className="courier2">{parcel.courier}</p>
+                  <p className="parcelnum2">{parcel.id}</p>
+                  <div
+                    className={
+                      inDelivery(parcel.status) === "DELIVERED"
+                        ? "Frame14"
+                        : "Frame13"
+                    }
+                  >
+                    <p
+                      className={
+                        inDelivery(parcel.status) === "DELIVERED"
+                          ? "status3"
+                          : "status2"
+                      }
+                    >
+                      {inDelivery(parcel.status)}
+                    </p>
+                  </div>
+                  <Link to="/ParcelTrackerPage">
+                    <p className="details2">View Details &gt;</p>
+                  </Link>
+                </div>
+              </>
+            ))}
+          </>
+        ) : (
+          <div className="Frame12">
+            <p className="deliverydate2">No Tracked Parcels</p>
+          </div>
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
-export default DashboardHistory
+export default DashboardHistory;

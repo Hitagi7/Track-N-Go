@@ -1,143 +1,143 @@
 .DashboardHistory {
-    display: flex;
-    width: 82rem;
-    padding: 1.5625rem 2.75rem;
-    border-radius: 1.25rem;
-    background: #FEFEFE;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5625rem;
+  display: flex;
+  width: 82rem;
+  padding: 1.5625rem 2.75rem;
+  border-radius: 1.25rem;
+  background: #fefefe;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5625rem;
 }
 
 .history {
-    color: #717D96;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: #717d96;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .Frame11 {
-    display: flex;
-    color: #2D3648;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    width: 76.4375rem;
+  display: flex;
+  color: #2d3648;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 76.4375rem;
 }
 
 .deliverydate,
 .shipper1,
 .courier1,
 .status1 {
-    display: flex;
-    width: 14rem;
-    justify-content: flex-start;
+  display: flex;
+  width: 14rem;
+  justify-content: flex-start;
 }
 
 .parcelnum {
-    width: 16rem;
-    display: flex;
-    justify-content: flex-start;
+  width: 16rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .hr11 {
-    height: 0rem;
-    align-self: stretch;
-    stroke-width: 1px;
-    stroke: #CBD2E0;
+  height: 0rem;
+  align-self: stretch;
+  stroke-width: 1px;
+  stroke: #cbd2e0;
 }
 
 .DeliveryInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 1.19rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.19rem;
 }
 
 .Frame12 {
-    display: flex;
-    color: #2D3648;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 76.4375rem;
-    align-items: center;
+  display: flex;
+  color: #2d3648;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 76.4375rem;
+  align-items: center;
 }
 
 .deliverydate2,
 .shipper2,
 .courier2 {
-    display: flex;
-    width: 14rem;
-    justify-content: flex-start;
+  display: flex;
+  width: 14rem;
+  justify-content: flex-start;
 }
 
 .details2 {
-    display: flex;
-    color: #DE5654;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    justify-content: flex-start;
-    padding: 0 0 0 6rem;
-    cursor: pointer;
+  display: flex;
+  color: #de5654;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  justify-content: flex-start;
+  padding: 0 0 0 6rem;
+  cursor: pointer;
 }
 
 .details2:hover {
-    opacity: 80%;
+  opacity: 80%;
 }
 
 .Frame13 {
-    display: flex;
-    width: 7.82694rem;
-    padding: 0.25rem 0.4375rem;
-    align-items: flex-start;
-    gap: 1.25rem;
-    border-radius: 0.75rem;
-    background: #FFE0C3;
+  display: flex;
+  width: 7.82694rem;
+  padding: 0.25rem 0.4375rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border-radius: 0.75rem;
+  background: #ffe0c3;
 }
 
 .status2 {
-    display: flex;
-    color: #78502B;
-    font-family: Inter;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 6.875rem;
-    flex-shrink: 0; 
-    justify-content: center;
+  display: flex;
+  color: #78502b;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 6.875rem;
+  flex-shrink: 0;
+  justify-content: center;
 }
 
 .parcelnum2 {
-    width: 13.86rem;
+  width: 13.86rem;
 }
 
 .status3 {
-    display: flex;
-    color: #076030;
-    font-family: Inter;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 6.875rem;
-    flex-shrink: 0; 
-    justify-content: center;
+  display: flex;
+  color: #076030;
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 6.875rem;
+  flex-shrink: 0;
+  justify-content: center;
 }
 
 .Frame14 {
-    display: flex;
-    width: 7.82694rem;
-    padding: 0.25rem 0.4375rem;
-    align-items: flex-start;
-    gap: 1.25rem;
-    border-radius: 0.75rem;
-    background: #DBEBCE;
+  display: flex;
+  width: 7.82694rem;
+  padding: 0.25rem 0.4375rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border-radius: 0.75rem;
+  background: #dbebce;
 }
