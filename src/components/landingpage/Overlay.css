@@ -1,280 +1,280 @@
 body {
-    margin: 0;
-    font-family: "Inter", sans-serif;
-    z-index: 1;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  z-index: 1;
 }
 
 .overlay-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .overlay {
-    position: absolute;
-    background-color: transparent;
-    z-index: 3;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-bottom: 2rem;
-    background-image: url(/src/assets/Blurred\ TNG\ Icon.png);
-    background-position: bottom right;
-    background-size: 510px;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
-    padding-left: 3.75rem;
-    padding-right: 3.75rem;
-    padding-top: 3rem;
+  position: absolute;
+  background-color: transparent;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 2rem;
+  background-image: url(/src/assets/Blurred\ TNG\ Icon.png);
+  background-position: bottom right;
+  background-size: 510px;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  padding-top: 3rem;
 }
 
 .success-message-container {
-    background-color: #dff0f4; /* Light green background */
-    border: 1px solid #ccecec; /* Light border */
-    padding: 5px;
-    border-radius: 4px; /* Rounded corners */
-    margin-bottom: 15px; /* Add some space below the message */
-    display: flex; /* Allow for aligning content inside */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    font-size: 13px;
-  }
-  
-  .success-message-container p {
-    color: #333; /* Darker text color */
-    font-weight: bold; /* Bold text */
-    margin: 0; /* Remove default margins */
-  }
+  background-color: #dff0f4; /* Light green background */
+  border: 1px solid #ccecec; /* Light border */
+  padding: 5px;
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 15px; /* Add some space below the message */
+  display: flex; /* Allow for aligning content inside */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  font-size: 13px;
+}
+
+.success-message-container p {
+  color: #333; /* Darker text color */
+  font-weight: bold; /* Bold text */
+  margin: 0; /* Remove default margins */
+}
 
 .error-message-container {
-    color: red !important;
-    font-size: 13px;
-    border-radius: 5px;
-    margin-top: -15px; /* Adjust margin as needed */
-    margin-bottom: 10px;
-    animation: shake .13s 3;
+  color: red !important;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 10px;
+  animation: shake 0.13s 3;
 }
 
 .signup.overlay {
-    background-color: #FAFAFA;
-    width: 521px;
-    height: 659px;
-    width: 32.5625rem;
-    height: 41.1875rem;
-    border-radius: 1rem;
-    animation: fade-in 1s;
+  background-color: #fafafa;
+  width: 521px;
+  height: 659px;
+  width: 32.5625rem;
+  height: 41.1875rem;
+  border-radius: 1rem;
+  animation: fade-in 1s;
 }
 
-.login.overlay{
-    background-color: #FAFAFA;
-    width: 521px;
-    height: 577px;
-    border-radius: 1rem;
-    animation: fade-in 1s;
+.login.overlay {
+  background-color: #fafafa;
+  width: 521px;
+  height: 577px;
+  border-radius: 1rem;
+  animation: fade-in 1s;
 }
 
 .dimmed-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    animation: fade-in 1s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  animation: fade-in 1s;
 }
 
 .overlay h3 {
-    color: var(--color-black);
-    font-family: Inter;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 0;
-    margin-bottom: 33px;
+  color: var(--color-black);
+  font-family: Inter;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 33px;
 }
 
 .overlay p {
-    color: var(--color-black);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin-top: -15px;
-    margin-bottom: 15px;
+  color: var(--color-black);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: -15px;
+  margin-bottom: 15px;
 }
 
 .text-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 .email-field::placeholder,
 .name-field::placeholder,
 .password-field::placeholder {
-    color: var(--color-idle-gray);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--color-idle-gray);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .email-field,
 .name-field,
 .password-field {
-    width: 100%;
-    display: flex;
-    padding: 10px;
-    padding-left: 48px;
-    align-items: flex-start;
-    border-radius: 10px;
-    border: 1px solid #CBD2E0;
-    background: #FEFEFE;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  padding-left: 48px;
+  align-items: flex-start;
+  border-radius: 10px;
+  border: 1px solid #cbd2e0;
+  background: #fefefe;
 }
 
 .email-field {
-    margin-bottom: 10px;
-    margin-top: -20px;
+  margin-bottom: 10px;
+  margin-top: -20px;
 }
 
 .name-field {
-    margin-bottom: 25px;
-    margin-top: 8px;
+  margin-bottom: 25px;
+  margin-top: 8px;
 }
 
 .password-field {
-    margin-bottom: 20px;
-    margin-top: 8px;
+  margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 .mail-icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: -8px;
-    margin-left: 17px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -8px;
+  margin-left: 17px;
 }
 
 .profile-icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: 36px;
-    margin-left: -68px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 36px;
+  margin-left: -68px;
 }
 
-.password-icon{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: 36px;
-    margin-left: -60px;
+.password-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 36px;
+  margin-left: -60px;
 }
 
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-    color: var(--color-black);
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--color-black);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .fbutton {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    text-align: center;
-    font-family: Inter;
-    font-size: 18px;
-    line-height: normal;
-    border: none;
-    font-style: normal;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  line-height: normal;
+  border: none;
+  font-style: normal;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
-.fbutton:hover{
-    transform: scale(1.05);
-    filter: brightness(0.96);
+.fbutton:hover {
+  transform: scale(1.05);
+  filter: brightness(0.96);
 }
 
 .fbutton.primary {
-    background: #DE5654;
-    color: #FEFEFE;
-    font-weight: 700;
-    margin-bottom: 1px;
-    cursor: pointer;
-    height: 4.625rem;
-    margin-top: 10px;
+  background: #de5654;
+  color: #fefefe;
+  font-weight: 700;
+  margin-bottom: 1px;
+  cursor: pointer;
+  height: 4.625rem;
+  margin-top: 10px;
 }
 
 .fbutton.secondary {
-    color: #2D3648;
-    font-weight: 600;   
-    height: 3.0625rem;
-    background: #FEFEFE;
-    /* margin-bottom: 26px; */
-    margin-top: -5px;
-    margin-bottom: 15px;
+  color: #2d3648;
+  font-weight: 600;
+  height: 3.0625rem;
+  background: #fefefe;
+  /* margin-bottom: 26px; */
+  margin-top: -5px;
+  margin-bottom: 15px;
 }
 
 .hyperlink p {
-    color: var(--color-idle-gray);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
+  color: var(--color-idle-gray);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
 }
 
 .hyperlink {
-    color: var(--color-dark-blue);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
+  color: var(--color-dark-blue);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
 }
 
 .hyperlink a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-    40% {
-        transform: translateX(10px);
-    }
-    100%{
-        transform: translateX(-10px);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
 }
