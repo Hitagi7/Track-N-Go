@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import { useAuth } from 
 import { auth } from '../../firebase';
 import { Link } from 'react-router-dom';
 import './Overlay.css'
@@ -7,7 +8,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [fullName, setFullName] = useState('');
+  const [firstName, setFirstName] = useState(''); // New state for first name
+  const [lastName, setLastName] = useState('');
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
   const [signupSuccess, setSignupSuccess] = useState(false); // State for signup success
   const [redirectedAfterSignup, setRedirectedAfterSignup] = useState(false); // Flag for redirection
@@ -21,19 +23,21 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
     };
 
     const validateFields = () => {
-        let error = null;
-    
-        if (!email) {
-          error = "Please enter your email address.";
-        } else if (!password) {
-          error = "Please enter a password.";
-        } else if (!fullName) {
-          error = "Please enter your full name.";
-        }
-    
-        setErrorMessage(error);
-        return !error; // Return true if no errors, false if there are errors
-      };
+      let error = null;
+  
+      if (!email) {
+        error = "Please enter your email address.";
+      } else if (!password) {
+        error = "Please enter a password.";
+      } else if (!firstName) {
+        error = "Please enter your first name.";
+      } else if (!lastName) {
+        error = "Please enter your last name.";
+      }
+  
+      setErrorMessage(error);
+      return !error; // Return true if no errors, false if there are errors
+    };
   
       const handleSignUp = async (e) => {
         e.preventDefault();
@@ -109,15 +113,25 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                                     onChange={(e) => setEmail(e.target.value)}
                                 
                                 ></input>
-                            <p>Full Name</p>
-                                <img src="src/assets/icons/icon-profile.svg" className="profile-icon" alt="" />
+                            <p>First Name</p>
+                                <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
                                 <input
-                                    type="text" 
-                                        placeholder="John Doe" 
-                                        className="name-field"
-                                        value={fullName}
-                                        onChange={(e) => setFullName(e.target.value)}
+                                  type="text"
+                                  placeholder="John"
+                                  class="name-field"
+                                  value={firstName}
+                                  onChange={(e) => setFirstName(e.target.value)}
 
+                                ></input>
+                            <p>Last Name</p>
+                                <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
+                                <input
+                                  type="text"
+                                  placeholder="Doe"
+                                  class="name-field"
+                                  value={lastName}
+                                  onChange={(e) => setLastName(e.target.value)}
+                                
                                 ></input>
                             <p>Password</p>
                                 <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
@@ -147,7 +161,8 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                             setErrorMessage(null);
                             setEmail('');
                             setPassword('');
-                            setFullName('');
+                            setFirstName('');
+                            setLastName('');
                             toggleVisible();
                         }}>Cancel</button>
                         
