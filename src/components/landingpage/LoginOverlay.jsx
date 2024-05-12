@@ -20,9 +20,8 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
           console.log("User logged in successfully!");
     
           // Redirect to the dashboard after successful login
-          navigate('/DashboardPage'); // Replace '/dashboard' with your actual dashboard route
+          navigate('/DashboardPage');
     
-          // Optional: Close the overlay after successful login
           toggleVisible();
         } catch (error) {
           let message;
@@ -80,8 +79,13 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                             </form>
                         </div>
                         
-                        <button className="fbutton secondary" onClick={toggleVisible}>Cancel</button>
-                        <div className="hyperlink">
+                        <button class="fbutton secondary" onClick={() => {
+                            setErrorMessage(null);
+                            setEmail('');
+                            setPassword('');
+                            toggleVisible();
+                        }}>Cancel</button>
+                        <div class="hyperlink">
                             <p>Need an account? </p> 
                             <a href="#" className="hyperlink" onClick={toggleLoginSignup}>Create an account.</a>
                         </div>
