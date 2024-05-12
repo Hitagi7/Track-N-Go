@@ -32,6 +32,7 @@ body {
 }
 
 .success-message-container {
+<<<<<<< Updated upstream
   background-color: #dff0f4; /* Light green background */
   border: 1px solid #ccecec; /* Light border */
   padding: 5px;
@@ -48,6 +49,14 @@ body {
   font-weight: bold; /* Bold text */
   margin: 0; /* Remove default margins */
 }
+=======
+    color: green !important;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top: -15px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+  }
+>>>>>>> Stashed changes
 
 .error-message-container {
   color: red !important;
