@@ -74,7 +74,7 @@ function PublicProfile({ user, updateUser }) {
             <input
               type="text"
               value={firstNameBuffer}
-              placeholder={firstName || user.firstName}
+              placeholder={user.firstName}
               onChange={(e) => setFirstNameBuffer(e.target.value)}
               className="input-box"
             />

@@ -11,11 +11,11 @@ function DashboardHistory({ parcels }) {
     }
   };
 
-  function addLeadingZero(number) {
+  const addLeadingZero = (number) => {
     return number < 10 ? "0" + number : number.toString();
-  }
+  };
 
-  function getMonthNumber(monthName) {
+  const getMonthNumber = (monthName) => {
     const monthMap = {
       january: "01",
       february: "02",
@@ -32,7 +32,7 @@ function DashboardHistory({ parcels }) {
     };
 
     return monthMap[monthName.toLowerCase()] || monthName; // Handle invalid month names
-  }
+  };
 
   return (
     <div className="DashboardHistory">

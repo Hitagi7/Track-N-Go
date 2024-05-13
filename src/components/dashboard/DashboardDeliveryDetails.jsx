@@ -31,7 +31,7 @@ function DashboardDeliveryDetails({ parcels }) {
         </p>
       </div>
       <div className="Frame9">
-        <Link to="/ParcelHistoryPage">
+        <Link to={"/ParcelHistoryPage"} state={parcels}>
           <button className="SeeHistory">See History</button>
         </Link>
         <Link to="/SettingsPage">
