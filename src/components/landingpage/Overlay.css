@@ -47,6 +47,11 @@ body {
   color: #333; /* Darker text color */
   font-weight: bold; /* Bold text */
   margin: 0; /* Remove default margins */
+  color: green !important;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 10px;
 }
 
 .error-message-container {

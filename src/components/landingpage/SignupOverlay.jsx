@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 // import { useAuth } from 
-import { auth } from '../../firebase';
+import { auth, db } from '../../firebase';
 import { Link } from 'react-router-dom';
 import './Overlay.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import { setDoc,doc } from 'firebase/firestore';
+
 
 const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
   const [email, setEmail] = useState('');
@@ -11,6 +13,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
   const [firstName, setFirstName] = useState(''); // New state for first name
   const [lastName, setLastName] = useState('');
   const [errorMessage, setErrorMessage] = useState(null); // State for error message
+  const [successMessage, setSuccessMessage] = useState(null);
   const [signupSuccess, setSignupSuccess] = useState(false); // State for signup success
   const [redirectedAfterSignup, setRedirectedAfterSignup] = useState(false); // Flag for redirection
 
@@ -53,7 +56,16 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
   
       try {
         await createUserWithEmailAndPassword(auth, email, password);
+        const user = auth.currentUser;  // Gets the current user's details and stores it in user
         console.log("User created successfully!");
+        setSuccessMessage("Sign Up Successful! Redirecting to Login...");
+        if (user){
+          await setDoc(doc(db,"TNG Users", user.uid), {
+            email: user.email,
+            firstName: firstName,
+            lastName: lastName,
+          });
+        }
         setErrorMessage(null);
         setSignupSuccess(true); // Set signup success flag
       } catch (error) {
@@ -72,11 +84,13 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
         }
         setErrorMessage(message);
       }
+
     };
 
       // Handle signup success message and redirection after 3 seconds
   useEffect(() => {
     if (signupSuccess && !redirectedAfterSignup) {
+
       // Show success message immediately
       const successMessageTimeoutId = setTimeout(() => {}, 0); // Set immediate timeout
       clearTimeout(successMessageTimeoutId); // Clear immediate timeout (to show message)
@@ -84,6 +98,12 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
       const redirectionTimeoutId = setTimeout(() => {
         toggleLoginSignup(); // Redirect to Login Overlay after delay
         setRedirectedAfterSignup(true); // Set redirection flag to prevent loop
+        setErrorMessage(null);
+        setSuccessMessage(null);
+        setEmail('');
+        setPassword('');
+        setFirstName('');
+        setLastName('');
       }, 3000); // 3 seconds delay
 
       return () => {
@@ -147,9 +167,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                                     <div className={`error-message-container animate`}>{errorMessage}</div>
                                 )}
                                 {signupSuccess && (
-                                    <div className="success-message-container">
-                                      <p>Sign Up Successful! Redirecting to Login...</p>
-                                    </div>
+                                    <div className={`success-message-container`}>{successMessage}</div>
                                 )}
                                 <button type="submit" className="fbutton primary">Create Account</button>
                             </form>
