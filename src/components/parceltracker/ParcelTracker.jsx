@@ -1,15 +1,15 @@
-import React from 'react'
-import './ParcelTracker.css'
-import TrackedParcel from './TrackedParcel'
-import ParcelTrackerBody from './ParcelTrackerBody'
+import React from "react";
+import "./ParcelTracker.css";
+import TrackedParcel from "./TrackedParcel";
+import ParcelTrackerBody from "./ParcelTrackerBody";
 
-function ParcelTracker() {
+function ParcelTracker({ parcel }) {
   return (
     <div className="ParcelTracker">
-        <TrackedParcel />
-        <ParcelTrackerBody />
+      <TrackedParcel parcel={parcel} />
+      <ParcelTrackerBody parcel={parcel} />
     </div>
-  )
+  );
 }
 
-export default ParcelTracker
+export default ParcelTracker;

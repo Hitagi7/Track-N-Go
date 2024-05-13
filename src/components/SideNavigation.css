@@ -1,114 +1,112 @@
 .SideNavigation {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    /* width: 20.8125rem; */
-    min-height: 58rem;
-    height: 100%;
-    background: #FEFEFE;
-    gap: 0.62rem;
-    padding: 1.5rem 1.25rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  background: #fefefe;
+  gap: 0.62rem;
+  padding: 1.5rem 1.25rem;
 }
 
 .SideNavigation .logo {
-    width: 17.75rem;
-    height: 3.4375rem;
+  width: 17.75rem;
+  height: 3.4375rem;
 }
 
 .SideNavigation .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .hr1 {
-    width: 17.25rem;
-    height: 0rem;
-    stroke-width: 1px;
-    stroke: #717D96;
+  width: 17.25rem;
+  height: 0rem;
+  stroke-width: 1px;
+  stroke: #717d96;
 }
 
 .Frames {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0.69rem 0 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.69rem 0 0.75rem 0;
 }
 
 .Frame1 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-    padding: 1.56rem 2.19rem; 
-    box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.56rem 2.19rem;
+  box-sizing: border-box;
 }
 
 .icon1 {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .Frame2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%; 
-    padding: 1.56rem 2.19rem; 
-    box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.56rem 2.19rem;
+  box-sizing: border-box;
 }
 
 .icon2 {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .Frame3 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%; 
-    padding: 1.56rem 2.19rem; 
-    box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.56rem 2.19rem;
+  box-sizing: border-box;
 }
 
 .icon3 {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .hr2 {
-    width: 17.25rem;
-    height: 0rem;
-    stroke-width: 1px;
-    stroke: #717D96;
+  width: 17.25rem;
+  height: 0rem;
+  stroke-width: 1px;
+  stroke: #717d96;
 }
 
 .icon4 {
-    width: 3.5rem;
-    height: 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .Frame4 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 1.06rem;
-    padding: 1rem 3.12rem 0.62rem 0rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1.06rem;
+  padding: 1rem 3.12rem 0.62rem 0rem;
 }
 
 .profile-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Frame1:hover,
 .Frame2:hover,
 .Frame3:hover {
-    cursor: pointer;
-    background: hsl(0, 0%, 90%);
+  cursor: pointer;
+  background: hsl(0, 0%, 90%);
 }

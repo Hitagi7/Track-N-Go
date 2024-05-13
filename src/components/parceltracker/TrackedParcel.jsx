@@ -1,14 +1,14 @@
-import React from 'react'
-import './TrackedParcel.css'
-import ParcelTransit from './ParcelTransit'
+import React from "react";
+import "./TrackedParcel.css";
+import ParcelTransit from "./ParcelTransit";
 
-function TrackedParcel() {
+function TrackedParcel({ parcel }) {
   return (
     <div className="TrackedParcel">
       <p className="font-20 font-semibold">Tracked Parcel</p>
-      <ParcelTransit />
+      <ParcelTransit parcel={parcel} />
     </div>
-  )
+  );
 }
 
-export default TrackedParcel
+export default TrackedParcel;

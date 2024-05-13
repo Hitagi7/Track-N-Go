@@ -75,7 +75,7 @@ function DashboardHistory({ parcels }) {
                       {inDelivery(parcel.status)}
                     </p>
                   </div>
-                  <Link to="/ParcelTrackerPage">
+                  <Link to={"/ParcelTrackerPage"} state={parcel}>
                     <p className="details2">View Details &gt;</p>
                   </Link>
                 </div>
