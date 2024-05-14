@@ -12,6 +12,7 @@ function AdminParcelBody({
   const [overlayVisible, setOverlayVisible] = useState(false);
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
   const [currentId, setCurrentId] = useState("");
+  const [searchParcel, setSearchParcel] = useState("");
 
   const toggleOverlay = () => {
     setOverlayVisible(!overlayVisible);
@@ -33,6 +34,10 @@ function AdminParcelBody({
     return result;
   };
 
+  const scrollToParcel = () => {
+    setSearchParcel("");
+  };
+
   return (
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">
@@ -45,8 +50,11 @@ function AdminParcelBody({
           type="text"
           className="AdminParcelSearchInput"
           placeholder="Search parcels"
+          onChange={(e) => setSearchParcel(e.target.value)}
         />
-        <button className="AdminParcelSearchBtn">Search</button>
+        <button className="AdminParcelSearchBtn" onClick={scrollToParcel}>
+          Search
+        </button>
         <div
           className="AddParcelFrame"
           onClick={toggleOverlay}

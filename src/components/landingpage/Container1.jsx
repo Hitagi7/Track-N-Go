@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { getParcels } from "../admin/AdminService";
 import "./Container1.css";
 
 function Container1() {
+  const [parcels, setParcels] = useState([]);
+  const [parcelSearch, setParcelSearch] = useState("");
+
+  useEffect(() => {
+    getParcels().then((data) => setParcels(data));
+  }, []);
   return (
     <div className="Container1">
       <div className="Text1">
@@ -25,8 +32,21 @@ function Container1() {
               type="text"
               className="InputBox"
               placeholder="Enter tracking number"
+              onChange={(e) => {
+                setParcelSearch(e.target.value);
+              }}
             />
-            <button className="Search">Search</button>
+
+            {parcels.map((parcel) => (
+              <Link key={parcel.id} to={"/ParcelTrackerPage"} state={parcel}>
+                {parcel.id === parcelSearch && (
+                  <button className="Search">Search</button>
+                )}
+              </Link>
+            ))}
+            <button className="Search-Unselect" disabled>
+              Search
+            </button>
           </div>
         </div>
       </div>

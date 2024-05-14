@@ -1,12 +1,16 @@
 .DashboardHistory {
   display: flex;
   width: 82rem;
+  height: 31.25rem;
   padding: 1.5625rem 2.75rem;
   border-radius: 1.25rem;
   background: #fefefe;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5625rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .history {

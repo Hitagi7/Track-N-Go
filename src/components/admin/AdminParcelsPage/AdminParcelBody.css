@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+.AdminParcelSearchBtn:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
 .AdminParcelSearchFrame .ParcelSearchIcon {
   width: 1.5rem;
   height: 1.5rem;
@@ -101,6 +106,8 @@ button {
   flex-shrink: 0;
   border-radius: 0.375rem;
   border: 2px solid #cbd2e0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .AdminParcelTableContent {

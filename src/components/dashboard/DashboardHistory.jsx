@@ -2,7 +2,7 @@ import React from "react";
 import "./DashboardHistory.css";
 import { Link } from "react-router-dom";
 
-function DashboardHistory({ parcels }) {
+function DashboardHistory({ trackedParcels }) {
   const inDelivery = (parcelStatus) => {
     if (parcelStatus !== "[5] Delivered") {
       return "IN TRANSIT";
@@ -45,9 +45,9 @@ function DashboardHistory({ parcels }) {
           <p className="parcelnum">Parcel Number</p>
           <p className="status1">Status</p>
         </div>
-        {parcels.length !== 0 ? (
+        {trackedParcels.length !== 0 ? (
           <>
-            {parcels.map((parcel) => (
+            {trackedParcels.map((parcel) => (
               <>
                 <hr className="hr11" />
                 <div className="Frame12" key={parcel.id}>

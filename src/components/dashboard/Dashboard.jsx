@@ -7,17 +7,29 @@ import DashboardTracker from "./DashboardTracker";
 import DashboardHistory from "./DashboardHistory";
 import {
   getParcels,
-  createParcel,
-  updateParcel,
-  deleteParcel,
+  getUserParcels,
+  createUserParcel,
 } from "../admin/AdminService";
 
 function Dashboard() {
   const [parcels, setParcels] = useState([]);
+  const [trackedParcels, setTrackedParcels] = useState([]);
+  const user = "Louise";
 
+  // User Tracked Parcels
+  useEffect(() => {
+    getUserParcels(user).then((data) => setTrackedParcels(data));
+  });
+
+  // Parcels
   useEffect(() => {
     getParcels().then((data) => setParcels(data));
   }, []);
+
+  const addTrackedParcels = (searchedParcel) => {
+    setTrackedParcels([...trackedParcels, searchedParcel]);
+    createUserParcel(searchedParcel, user);
+  };
 
   return (
     <div className="Dashboard">
@@ -28,10 +40,17 @@ function Dashboard() {
         <DashboardTitle />
         <div className="Dashboard4">
           <div className="Dashboard3">
-            <DashboardDeliveryDetails parcels={parcels} />
-            <DashboardTracker />
+            <DashboardDeliveryDetails
+              parcels={parcels}
+              trackedParcels={trackedParcels}
+            />
+            <DashboardTracker
+              parcels={parcels}
+              addTrackedParcels={addTrackedParcels}
+              trackedParcels={trackedParcels}
+            />
           </div>
-          <DashboardHistory parcels={parcels} />
+          <DashboardHistory trackedParcels={trackedParcels} />
         </div>
       </div>
     </div>

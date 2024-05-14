@@ -2,10 +2,10 @@ import React from "react";
 import "./DashboardDeliveryDetails.css";
 import { Link } from "react-router-dom";
 
-function DashboardDeliveryDetails({ parcels }) {
+function DashboardDeliveryDetails({ trackedParcels }) {
   const inDelivery = () => {
     let total = 0;
-    parcels.map((parcel) => {
+    trackedParcels.map((parcel) => {
       if (parcel.status !== "[5] Delivered") {
         total++;
       }
@@ -31,7 +31,7 @@ function DashboardDeliveryDetails({ parcels }) {
         </p>
       </div>
       <div className="Frame9">
-        <Link to={"/ParcelHistoryPage"} state={parcels}>
+        <Link to={"/ParcelHistoryPage"} state={trackedParcels}>
           <button className="SeeHistory">See History</button>
         </Link>
         <Link to="/SettingsPage">

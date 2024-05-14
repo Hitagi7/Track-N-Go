@@ -41,6 +41,11 @@
   background: #fdfdfd;
 }
 
+.AdminTrackingSearchBtn:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
 .AdminTrackingSearchBtn {
   display: flex;
   height: 2.9375rem;
@@ -103,6 +108,8 @@ button {
   flex-shrink: 0;
   border-radius: 0.375rem;
   border: 2px solid #cbd2e0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .AdminTrackingTableContent {
