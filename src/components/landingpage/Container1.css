@@ -38,7 +38,7 @@
 
 .Wrapper {
   display: flex;
-  gap: 0.3rem;
+  gap: 1.1rem;
   align-items: center;
 }
 
@@ -76,7 +76,7 @@ button {
 
 .Search {
   border-radius: 6px;
-  background-color: #de5654;
+  background-color: hsl(1, 68%, 60%);
   color: #fafafa;
   font-weight: 700;
   line-height: 24px;
@@ -90,8 +90,7 @@ button {
 
 .Search-Unselect {
   border-radius: 6px;
-  background-color: hsl(1, 68%, 60%);
-  opacity: 0%;
+  background-color: hsl(1, 68%, 70%);
   color: #fafafa;
   font-weight: 700;
   line-height: 24px;

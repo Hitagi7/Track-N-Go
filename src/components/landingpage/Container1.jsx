@@ -32,21 +32,24 @@ function Container1() {
               type="text"
               className="InputBox"
               placeholder="Enter tracking number"
-              onChange={(e) => {
-                setParcelSearch(e.target.value);
-              }}
+              onChange={(e) => setParcelSearch(e.target.value)}
             />
-
-            {parcels.map((parcel) => (
-              <Link key={parcel.id} to={"/ParcelTrackerPage"} state={parcel}>
-                {parcel.id === parcelSearch && (
-                  <button className="Search">Search</button>
-                )}
-              </Link>
-            ))}
-            <button className="Search-Unselect" disabled>
-              Search
-            </button>
+            <Link
+              key={parcels.find((parcel) => parcel.id === parcelSearch)?.id}
+              to={"/ParcelTrackerPage"}
+              state={parcels.find((parcel) => parcel.id === parcelSearch)}
+            >
+              <button
+                className={
+                  parcels.find((parcel) => parcel.id === parcelSearch)
+                    ? "Search"
+                    : "Search-Unselect"
+                }
+                disabled={!parcels.find((parcel) => parcel.id === parcelSearch)}
+              >
+                Search
+              </button>
+            </Link>
           </div>
         </div>
       </div>
