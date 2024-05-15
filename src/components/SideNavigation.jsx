@@ -5,7 +5,8 @@ import "./SideNavigation.css";
 import { Link } from "react-router-dom";
 
 function SideNavigation() {
-  const [userDetails, setUserDetails] = useState(null);
+  const [userDetails, setUserDetails] = useState({});
+  const [loading, setLoading] = useState(true)
 
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
@@ -16,6 +17,7 @@ function SideNavigation() {
       if (docSnap.exists()) {
         setUserDetails(docSnap.data());
       }
+      setLoading(false);
     });
   };
 
@@ -25,6 +27,7 @@ function SideNavigation() {
 
   return (
     <div className="SideNavigation">
+<<<<<<< Updated upstream
       {userDetails ? (
         <>
           <Link to="/">
@@ -35,6 +38,14 @@ function SideNavigation() {
             />
           </Link>
           <hr className="hr1" />
+=======
+      {loading ? (
+          <p className="loading-text">Loading...</p>
+        ) : (
+          <>
+          <Link to='/'><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
+          <hr className="hr1"/>
+>>>>>>> Stashed changes
           <div className="Frames">
             <Link to="/DashboardPage">
               <div className="Frame1">
@@ -83,10 +94,15 @@ function SideNavigation() {
               <p className="font-15 font-extralight">Basic Account</p>
             </div>
           </div>
+<<<<<<< Updated upstream
         </>
       ) : (
         <p className="font-18 font-semibold">Loading...</p>
       )}
+=======
+          </>
+        )}
+>>>>>>> Stashed changes
     </div>
   );
 }

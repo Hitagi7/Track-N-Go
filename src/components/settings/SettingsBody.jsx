@@ -1,7 +1,76 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './SettingsBody.css'
+import { auth } from './../../firebase.js';
+import { reauthenticateWithCredential, EmailAuthProvider, updatePassword } from 'firebase/auth';
 
 function SettingsBody() {
+    const [currentPassword, setCurrentPassword] = useState('');
+    const [newPassword, setNewPassword] = useState('');
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null);
+
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => {
+                setSuccess(null);
+            }, 3000); // Change duration as needed (3000ms = 3 seconds)
+
+            return () => clearTimeout(timer);
+        }
+    }, [success]);
+
+    const handleChangePassword = async (e) => {
+        e.preventDefault();
+
+        if (!currentPassword || !newPassword) {
+            setError('Please fill in all fields');
+            return;
+          }
+        
+          console.log('User logged in:', !!auth.currentUser, auth.currentUser?.uid, auth.currentUser?.email); // Checks if the user is logged in
+          console.log(currentPassword, newPassword)
+          
+          
+
+        if (auth.currentUser) {
+            try {
+                const credential = EmailAuthProvider.credential(
+                    auth.currentUser.email, currentPassword
+                );
+                
+                await reauthenticateWithCredential(auth.currentUser, credential);
+
+                console.log(credential)
+
+                // User re-authenticated successfully
+                await updatePassword(auth.currentUser, newPassword);
+                setSuccess('Password changed successfully!');
+                setCurrentPassword('');
+                setNewPassword('');
+                setError(null);
+              } catch (error) {
+                console.error('Error changing password:', error);
+                setError('Failed to change password');
+                setSuccess(null);
+              }
+        } else {
+            setError('You must be signed in to change your password');
+            setSuccess(null);
+            }
+    };
+
+    const handleSignOut = async () => {
+        try {
+          await auth.signOut();
+          console.log('User signed out successfully');
+          window.location.href = '/';
+
+        } catch (error) {
+          console.error('Error signing out:', error);
+          // Handle errors appropriately, like displaying an error message to the user
+        }
+      };
+
     return (
         <div className="settings-body">
             <section className="notification-section">
@@ -36,19 +105,41 @@ function SettingsBody() {
                     <p className="settings-text-label">Change password</p>
                     <div className="settings-text-field">
                         <p>Enter current password</p>
-                        <form action="#">
-                            <img src="src/assets/icons/icon-password.svg" alt="" className="settings-password-icon" />
-                            <input type="password" placeholder="Should be 8 characters and above" className="settings-password-field" />
+                        <form onSubmit={handleChangePassword}>
+                            <img
+                                src="src/assets/icons/icon-password.svg"
+                                alt=""
+                                className="settings-password-icon"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Current Password"
+                                className="settings-password-field"
+                                value={currentPassword}
+                                onChange={(e) => setCurrentPassword(e.target.value)}
+                            />
                         </form>
                     </div>
                     <div className="settings-text-field">
                         <p>Enter new password</p>
-                        <form action="#">
-                            <img src="src/assets/icons/icon-password.svg" className="settings-password-icon" alt="" />
-                            <input type="password" placeholder="Should be 8 characters and above" className="settings-password-field" />
+                        <form onSubmit={handleChangePassword}>
+                            <img
+                                src="src/assets/icons/icon-password.svg"
+                                alt=""
+                                className="settings-password-icon"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Should be 8 characters and above"
+                                className="settings-password-field"
+                                value={newPassword}
+                                onChange={(e) => setNewPassword(e.target.value)}
+                            />
                         </form>
                     </div>
-                    <button className="settings-fbutton">Save changes</button>
+                    {error && (<div className="error-message">{error}</div>)}
+                    {success && (<div className="success-message">{success}</div>)}
+                    <button className="settings-fbutton" onClick={handleChangePassword}>Save changes</button>
                 </section>
 
             </section>
@@ -115,7 +206,7 @@ function SettingsBody() {
                     </p>
                 </div>
                 <div className="logout-button">
-                    <button className="settings-fbutton logout-button">Sign Out</button>
+                    <button className="settings-fbutton logout-button" onClick={handleSignOut}>Sign Out</button>
                 </div>
             </section>
 

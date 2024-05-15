@@ -1,4 +1,5 @@
 .SideNavigation {
+<<<<<<< Updated upstream
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -8,6 +9,20 @@
   background: #fefefe;
   gap: 0.62rem;
   padding: 1.5rem 1.25rem;
+=======
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* width: 20.8125rem; */
+    min-height: 58rem;
+    height: 100%;
+    background: #FEFEFE;
+    gap: 0.62rem;
+    padding: 1.5rem 1.25rem;
+    animation: fade-left 0.6s;
+>>>>>>> Stashed changes
 }
 
 .SideNavigation .logo {
@@ -104,9 +119,46 @@
   justify-content: center;
 }
 
+.loading-text {
+    font-size: 18px; 
+    font-weight: 600; 
+    color: #ccc; 
+    text-align: center;
+    animation: pop-up 0.2s;
+  }
+
 .Frame1:hover,
 .Frame2:hover,
 .Frame3:hover {
   cursor: pointer;
   background: hsl(0, 0%, 90%);
 }
+
+@keyframes pop-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px) scale(1);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(-20px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+  

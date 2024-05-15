@@ -9,8 +9,27 @@
     padding-left: 5.69rem;
     padding-right: 5.69rem;
     padding-top: 2rem;
-    
 }
+
+.error-message {
+    color: red !important;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: -15px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+    animation: shake 0.13s 3;
+  }
+
+  .success-message {
+    color: green !important;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: -15px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+    animation: pop-up 0.5s;
+  }
 
 .notification-section {
     display: flex;
@@ -167,3 +186,26 @@
     margin: 0 auto;
     margin-top: 1rem;
 }
+
+@keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  
+  @keyframes pop-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

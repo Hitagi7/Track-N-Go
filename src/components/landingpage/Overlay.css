@@ -32,6 +32,7 @@ body {
 }
 
 .success-message-container {
+<<<<<<< Updated upstream
   background-color: #dff0f4; /* Light green background */
   border: 1px solid #ccecec; /* Light border */
   padding: 5px;
@@ -53,6 +54,15 @@ body {
   margin-top: -15px; /* Adjust margin as needed */
   margin-bottom: 10px;
 }
+=======
+    color: green !important;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top: -15px; /* Adjust margin as needed */
+    margin-bottom: 10px;
+    animation: pop-up 0.5s;
+  }
+>>>>>>> Stashed changes
 
 .error-message-container {
   color: red !important;
@@ -281,5 +291,16 @@ input[type="password"] {
   }
   100% {
     transform: translateX(-10px);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

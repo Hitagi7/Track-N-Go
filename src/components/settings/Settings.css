@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     height: 145.125rem;
+    animation: fade-left 2.1s;
 }
 
 .settings-body {
@@ -20,4 +21,21 @@
 
 .Settings .SideNavigation  .Frame3 {
     background: #EDF0F7;
+}
+
+@keyframes fade-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-40px) scale(1);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(-20px) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
 }
