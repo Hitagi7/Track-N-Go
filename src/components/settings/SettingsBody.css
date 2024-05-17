@@ -13,7 +13,7 @@
 
 .error-message {
     color: red !important;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
     margin-top: -15px; /* Adjust margin as needed */
@@ -23,7 +23,7 @@
 
   .success-message {
     color: green !important;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 5px;
     margin-top: -15px; /* Adjust margin as needed */

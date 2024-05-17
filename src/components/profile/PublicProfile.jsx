@@ -1,55 +1,64 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./PublicProfile.css";
+import { auth, db } from "../../firebase";
+import { doc, updateDoc } from "firebase/firestore";
 
-function PublicProfile({ user, updateUser }) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [userName, setUserName] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
+function PublicProfile({ user }) {
   const [firstNameBuffer, setFirstNameBuffer] = useState("");
   const [lastNameBuffer, setLastNameBuffer] = useState("");
-  const [userNameBuffer, setUserNameBuffer] = useState("");
-  const [emailAddressBuffer, setEmailAddressBuffer] = useState("");
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const userFirstName = user.firstName;
+  const userLastName = user.lastName;
+
+  useEffect(() => {
+    if (success) {
+        const timer = setTimeout(() => {
+            setSuccess(null);
+        }, 3000); // Change duration as needed (3000ms = 3 seconds)
+
+        return () => clearTimeout(timer);
+    }
+}, [success]);
 
   // Save changes
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
-    if (
-      !firstNameBuffer &&
-      !lastNameBuffer &&
-      !userNameBuffer &&
-      !emailAddressBuffer
-    ) {
-      alert("Please input changes");
+    if (!firstNameBuffer && !lastNameBuffer) {
+      setError("Please input changes");
+      setSuccess(null);
+      return;
+    }
+    else if (userFirstName === firstNameBuffer && userLastName === lastNameBuffer) {
+      setError("Names already in use!");
+      setSuccess(null);
       return;
     }
 
-    const updatedUser = {
-      firstName: firstNameBuffer || user.firstName,
-      lastName: lastNameBuffer || user.lastName,
-      userName: userNameBuffer || user.userName,
-      emailAddress: emailAddressBuffer || user.emailAddress,
-    };
-
-    updateUser(updatedUser);
-
-    setFirstNameBuffer("");
-    setLastNameBuffer("");
-    setUserNameBuffer("");
-    setEmailAddressBuffer("");
-
-    console.log(user);
+    try {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        const userDocRef = doc(db, "TNG Users", currentUser.uid);
+        await updateDoc(userDocRef, {
+          firstName: firstNameBuffer,
+          lastName: lastNameBuffer,
+        });
+        setSuccess("Profile Updated Successfully!");
+        setError(null);
+      }
+    } catch (error) {
+      console.error("Error updating profile: ", error);
+      setError("Error updating profile");
+      setSuccess(null);
+    }
   };
 
-  // Cancel changes
   const onCancel = (e) => {
     e.preventDefault();
     setFirstNameBuffer("");
     setLastNameBuffer("");
-    setUserNameBuffer("");
-    setEmailAddressBuffer("");
   };
 
   return (
@@ -74,7 +83,7 @@ function PublicProfile({ user, updateUser }) {
             <input
               type="text"
               value={firstNameBuffer}
-              placeholder={user.firstName}
+              placeholder={userFirstName}
               onChange={(e) => setFirstNameBuffer(e.target.value)}
               className="input-box"
             />
@@ -84,37 +93,15 @@ function PublicProfile({ user, updateUser }) {
             <input
               type="text"
               value={lastNameBuffer}
-              placeholder={lastName || user.lastName}
+              placeholder={userLastName}
               onChange={(e) => setLastNameBuffer(e.target.value)}
-              className="input-box"
-            />
-          </div>
-          <div className="username">
-            <div className="input-title">Username</div>
-            <input
-              type="text"
-              value={userNameBuffer}
-              placeholder={
-                user.userName !== ""
-                  ? `@${user.userName}`
-                  : "@username" || userName
-              }
-              onChange={(e) => setUserNameBuffer(e.target.value)}
-              className="input-box"
-            />
-          </div>
-          <div className="email-address">
-            <div className="input-title">Email Address</div>
-            <input
-              type="text"
-              value={emailAddressBuffer}
-              placeholder={emailAddress || user.emailAddress}
-              onChange={(e) => setEmailAddressBuffer(e.target.value)}
               className="input-box"
             />
           </div>
         </div>
         <div className="profile-buttons">
+        {error && (<div className="error-message">{error}</div>)}
+        {success && (<div className="success-message">{success}</div>)}
           <button className="save-changes-profile" onClick={onSubmit}>
             Save changes
           </button>

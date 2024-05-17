@@ -1,23 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Profile.css";
-import { useState } from "react";
+import { auth, db } from "../../firebase";
+import { doc, getDoc } from "firebase/firestore";
 import SideNavigation from "../SideNavigation";
 import ProfileTitle from "./ProfileTitle";
 import PublicProfile from "./PublicProfile";
 
 // Placeholder User
 const placeholderUser = {
-  firstName: "Marc",
-  lastName: "BNC",
-  userName: "I<3BNCS",
-  emailAddress: "BNC@gmail.com",
+  firstName: "",
+  lastName: "",
 };
 
 function Profile() {
   const [user, setUser] = useState(placeholderUser);
 
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        const userDocRef = doc(db, "TNG Users", currentUser.uid);
+        const userDoc = await getDoc(userDocRef);
+        if (userDoc.exists()) {
+          setUser(userDoc.data());
+        }
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
   const updateUser = (userUpdate) => {
-    setUser({ ...userUpdate });
+    setUser((prevUser) => ({
+      ...prevUser,
+      ...userUpdate,
+    }));
   };
 
   return (
