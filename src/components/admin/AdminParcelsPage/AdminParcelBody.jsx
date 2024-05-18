@@ -34,10 +34,6 @@ function AdminParcelBody({
     return result;
   };
 
-  const scrollToParcel = () => {
-    setSearchParcel("");
-  };
-
   return (
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">
@@ -52,9 +48,7 @@ function AdminParcelBody({
           placeholder="Search parcels"
           onChange={(e) => setSearchParcel(e.target.value)}
         />
-        <button className="AdminParcelSearchBtn" onClick={scrollToParcel}>
-          Search
-        </button>
+        <button className="AdminParcelSearchBtn">Search</button>
         <div
           className="AddParcelFrame"
           onClick={toggleOverlay}
@@ -89,8 +83,12 @@ function AdminParcelBody({
             </tr>
             {parcelDetails && ( // Check if parcel exists
               <>
-                {parcelDetails.map((parcelDetails) => {
-                  return (
+                {parcelDetails
+                  .filter((parcel) => {
+                    const searchText = searchParcel.toLowerCase();
+                    return parcel.id.toLowerCase().includes(searchText);
+                  })
+                  .map((parcelDetails) => (
                     <tr className="AdminParcelTable" key={parcelDetails.id}>
                       <td>
                         <button
@@ -138,8 +136,7 @@ function AdminParcelBody({
                       <td>{parcelDetails.courier}</td>
                       <td>{parcelDetails.status}</td>
                     </tr>
-                  );
-                })}
+                  ))}
               </>
             )}
           </tbody>

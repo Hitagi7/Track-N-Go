@@ -1,48 +1,47 @@
 .ParcelTrackerBody {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 48.25rem;
-    width: 64.125rem;
-    border-radius: 0.625rem;
-    background: #FEFEFE;
-    box-shadow: 0px 4px 9.8px -4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 48.25rem;
+  width: 64.125rem;
+  border-radius: 0.625rem;
+  background: #fefefe;
+  box-shadow: 0px 4px 9.8px -4px rgba(0, 0, 0, 0.25);
 }
 
 /* Frame 1 */
 .frame1 {
-    margin-top: 2.38rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.62rem;
+  margin-top: 2.38rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.62rem;
 }
 
 .city {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.62rem;
-    font-size: 1.5rem;
-    font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.62rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .refNumber {
-    color: #717D96;
-    font-size: 1.125rem;
+  color: #717d96;
+  font-size: 1.125rem;
 }
-
 
 /* Frame 2 */
 .frame2 {
-    margin-top: 1.94rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 55.409rem;
-    height: 4.4375rem;
-    gap: 1.47rem;
-    flex-shrink: 0;
+  margin-top: 1.94rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55.409rem;
+  height: 4.4375rem;
+  gap: 1.47rem;
+  flex-shrink: 0;
 }
 
 .order,
@@ -50,116 +49,109 @@
 .sorting,
 .courier,
 .delivered {
-    gap: 0.44rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  gap: 0.44rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconstatus {
-    width: 3.25rem;
-    height: 3.25rem;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
-.active  {
-    color: #75C768;
-    font-size: 0.625rem;
-    font-weight: 700;
+.active {
+  color: #75c768;
+  font-size: 0.625rem;
+  font-weight: 700;
 }
 
 .idle {
-    color: #717D96;
-    font-size: 0.625rem;
-    font-weight: 700;
+  color: #717d96;
+  font-size: 0.625rem;
+  font-weight: 700;
 }
 
-.ParcelTrackerBody  hr {
-    margin-bottom: 1.63rem;
-    width: 5.1865rem;
-    height: 0.125rem;
+.ParcelTrackerBody hr {
+  margin-bottom: 1.63rem;
+  width: 5.1865rem;
+  height: 0.125rem;
 }
-
 
 .frame2 .line-status-active {
-    background: #75C768;
+  background: #75c768;
 }
 
 .frame2 .line-status-idle {
-    background: #9FAAC0;
+  background: #9faac0;
 }
 
 /* Frame 3 */
 .frame3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3.75rem;
-    width: 55.409rem;
-    gap: 0.94rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+  margin-bottom: 4.31rem;
+
+  padding-bottom: 1rem;
+  width: 55.409rem;
+  gap: 0.69rem;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 2.97rem;
-}
-
-.container-placeholder-1,
-.container-placeholder-2,
-.container-placeholder-3,
-.container-placeholder-4 {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    gap: 2.97rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 2.97rem;
 }
 
 .left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .date,
-.time
-.description {
-    font-size: 1rem;
+.time .description {
+  font-size: 1rem;
 }
 
 .date {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .time {
-    color: #717D96;
+  color: #717d96;
 }
 
 .middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.69rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.69rem;
 }
 
 .vertical-line {
-    width: 0.125rem;
-    height: 3.5625rem;
-    background: #9FAAC0;
+  width: 0.125rem;
+  height: 3.5625rem;
+  background: #9faac0;
 }
 
 .right {
-    width: 35.95356rem;
+  width: 35.95356rem;
 }
 
 .description {
-    font-weight: 600;
+  line-height: normal;
 }
 
 .description-1,
 .description-2,
 .description-3,
 .description-4 {
-    font-weight: normal;
+  font-weight: normal;
 }

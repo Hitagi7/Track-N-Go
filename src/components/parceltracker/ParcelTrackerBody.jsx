@@ -2,6 +2,225 @@ import React from "react";
 import "./ParcelTrackerBody.css";
 
 function ParcelTrackerBody({ parcel }) {
+  const addLeadingZero = (number) => {
+    return number < 10 ? "0" + number : number.toString();
+  };
+
+  const deliveredParcel2 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 8)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={"/src/assets/icons/icon-circle-check.svg"}
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">Your Parcel Has Been Delivered</div>
+        </div>
+      </div>
+    );
+  };
+
+  const deliveredParcel1 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 8)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={"/src/assets/icons/icon-circle.svg"}
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">Your Parcel Is In Transit</div>
+        </div>
+      </div>
+    );
+  };
+
+  const courierDeliveryParcel2 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 6)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={
+              parcel.status !== "[1] Order Created" &&
+              parcel.status !== "[2] Picked Up" &&
+              parcel.status !== "[3] Sorting" &&
+              parcel.status === "[4] Courier Delivery"
+                ? "/src/assets/icons/icon-circle-check.svg"
+                : "/src/assets/icons/icon-circle.svg"
+            }
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [SOC 4] Your parcel is being transported to [SOC 5]
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const courierDeliveryParcel1 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 6)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={"/src/assets/icons/icon-circle.svg"}
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [SOC 4] Your parcel has been received by sorting center
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const sortingParcel2 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 4)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={
+              parcel.status !== "[1] Order Created" &&
+              parcel.status !== "[2] Picked Up" &&
+              parcel.status === "[3] Sorting"
+                ? "/src/assets/icons/icon-circle-check.svg"
+                : "/src/assets/icons/icon-circle.svg"
+            }
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [SOC 4] Your parcel is being transported to [SOC 5]
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const sortingParcel1 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 4)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={"/src/assets/icons/icon-circle.svg"}
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [SOC 4] Your parcel has been received by sorting center
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const pickedUpParcel2 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 2)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={
+              parcel.status !== "[1] Order Created" &&
+              parcel.status === "[2] Picked Up"
+                ? "/src/assets/icons/icon-circle-check.svg"
+                : "/src/assets/icons/icon-circle.svg"
+            }
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [{parcel.deliveredFrom} DC] Your parcel has been picked up
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const pickedUpParcel1 = () => {
+    return (
+      <div className="container">
+        <div className="left">
+          <div className="date">
+            {addLeadingZero(parseInt(parcel.shippedDay) + 2)}{" "}
+            {parcel.shippedMonth} {parcel.shippedYear}
+          </div>
+        </div>
+        <div className="middle">
+          <img
+            src={"/src/assets/icons/icon-circle.svg"}
+            alt="icon-circle-check"
+          />
+          <div className="vertical-line"></div>
+        </div>
+        <div className="right">
+          <div className="description">
+            [CDROP - EXPRESSPAY - WBUNDANG BILLS PAYMENT AND REMITTANCE
+            CENTER]Your parcel has been received by drop off point
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="ParcelTrackerBody">
       {/* FRAME 1 */}
@@ -154,87 +373,73 @@ function ParcelTrackerBody({ parcel }) {
         </div>
       </div>
 
+      {/*Might be Similar to the one on top */}
       {/* FRAME 3 */}
       <div className="frame3">
+        {/* Delivered */}
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" &&
+          parcel.status !== "[3] Sorting" &&
+          parcel.status !== "[4] Courier Delivery" && (
+            <div className="container">{deliveredParcel2()}</div>
+          )}
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" &&
+          parcel.status !== "[3] Sorting" &&
+          parcel.status !== "[4] Courier Delivery" && (
+            <div className="container">{deliveredParcel1()}</div>
+          )}
+
+        {/* Courier Delivery */}
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" &&
+          parcel.status !== "[3] Sorting" && (
+            <div className="container">{courierDeliveryParcel2()}</div>
+          )}
+
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" &&
+          parcel.status !== "[3] Sorting" && (
+            <div className="container">{courierDeliveryParcel1()}</div>
+          )}
+
+        {/* Sorting */}
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" && (
+            <div className="container">{sortingParcel2()}</div>
+          )}
+        {parcel.status !== "[1] Order Created" &&
+          parcel.status !== "[2] Picked Up" && (
+            <div className="container">{sortingParcel1()}</div>
+          )}
+        {/* Picked Up */}
+        {parcel.status !== "[1] Order Created" && (
+          <div className="container">{pickedUpParcel2()}</div>
+        )}
+        {parcel.status !== "[1] Order Created" && (
+          <div className="container">{pickedUpParcel1()}</div>
+        )}
+
+        {/* Order Created */}
         <div className="container">
           <div className="left">
-            <div className="date">09 April 2024</div>
-            <div className="time">09:33</div>
+            <div className="date">
+              {addLeadingZero(parcel.shippedDay)} {parcel.shippedMonth}{" "}
+              {parcel.shippedYear}
+            </div>
           </div>
           <div className="middle">
             <img
-              src="/src/assets/icons/icon-circle-check.svg"
+              src={
+                parcel.status !== "[1] Order Created"
+                  ? "/src/assets/icons/icon-circle.svg"
+                  : "/src/assets/icons/icon-circle-check.svg"
+              }
               alt="icon-circle-check"
             />
-            <div className="vertical-line"></div>
           </div>
           <div className="right">
-            <div className="description">
-              [SOC 4] Your parcel is being transported to [SOC 5]
-            </div>
-          </div>
-        </div>
-
-        <div className="container-placeholder-1">
-          <div className="left">
-            <div className="date">09 April 2024</div>
-            <div className="time">01:47</div>
-          </div>
-          <div className="middle">
-            <img src="/src/assets/icons/icon-circle.svg" alt="icon-circle" />
-            <div className="vertical-line"></div>
-          </div>
-          <div className="right">
-            <div className="description-1">
-              [SOC 4] Your parcel has been received by sorting center
-            </div>
-          </div>
-        </div>
-
-        <div className="container-placeholder-2">
-          <div className="left">
-            <div className="date">08 April 2024</div>
-            <div className="time">18:34</div>
-          </div>
-          <div className="middle">
-            <img src="/src/assets/icons/icon-circle.svg" alt="icon-circle" />
-            <div className="vertical-line"></div>
-          </div>
-          <div className="right">
-            <div className="description-2">
-              [Paranaque DC] Your parcel has been picked up
-            </div>
-          </div>
-        </div>
-
-        <div className="container-placeholder-3">
-          <div className="left">
-            <div className="date">08 April 2024</div>
-            <div className="time">18:09</div>
-          </div>
-          <div className="middle">
-            <img src="/src/assets/icons/icon-circle.svg" alt="icon-circle" />
-            <div className="vertical-line"></div>
-          </div>
-          <div className="right">
-            <div className="description-3">
-              [SOC 4] Your parcel has been received by sorting center
-            </div>
-          </div>
-        </div>
-
-        <div className="container-placeholder-4">
-          <div className="left">
-            <div className="date">07 April 2024</div>
-            <div className="time">22:59</div>
-          </div>
-          <div className="middle">
-            <img src="/src/assets/icons/icon-circle.svg" alt="icon-circle" />
-          </div>
-          <div className="right">
-            <div className="description-4">
-              [SOC 4] Your parcel has been received by sorting center
-            </div>
+            <div className="description">Order has been created</div>
           </div>
         </div>
       </div>

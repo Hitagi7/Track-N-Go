@@ -30,7 +30,6 @@ function DashboardHistory({ trackedParcels }) {
       november: "11",
       december: "12",
     };
-
     return monthMap[monthName.toLowerCase()] || monthName; // Handle invalid month names
   };
 

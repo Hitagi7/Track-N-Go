@@ -8,6 +8,7 @@ import { getParcels } from "../AdminService";
 function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
   const [currentId, setCurrentId] = useState("");
+  const [searchParcel, setSearchParcel] = useState("");
 
   const toggleEditOverlay = () => {
     setEditOverlayVisible(!editOverlayVisible);
@@ -48,6 +49,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
           type="text"
           className="AdminTrackingSearchInput"
           placeholder="Search parcels"
+          onChange={(e) => setSearchParcel(e.target.value)}
         />
         <button className="AdminTrackingSearchBtn">Search</button>
       </div>
@@ -65,8 +67,12 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
             </tr>
             {parcelDetails && ( // Check if parcel exists
               <>
-                {parcelDetails.map((parcelDetails) => {
-                  return (
+                {parcelDetails
+                  .filter((parcel) => {
+                    const searchText = searchParcel.toLowerCase();
+                    return parcel.id.toLowerCase().includes(searchText);
+                  })
+                  .map((parcelDetails) => (
                     <tr className="AdminParcelTable" key={parcelDetails.id}>
                       <td>
                         <button
@@ -107,8 +113,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                       <td>{parcelDetails.deliveredTo}</td>
                       <td>{parcelDetails.status}</td>
                     </tr>
-                  );
-                })}
+                  ))}
               </>
             )}
           </tbody>

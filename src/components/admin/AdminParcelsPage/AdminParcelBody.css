@@ -12,11 +12,6 @@
   align-items: center;
 }
 
-.AdminParcelSearchBtn:hover {
-  cursor: pointer;
-  opacity: 90%;
-}
-
 .AdminParcelSearchFrame .ParcelSearchIcon {
   width: 1.5rem;
   height: 1.5rem;
@@ -61,6 +56,7 @@
   line-height: 1.5rem;
   letter-spacing: -0.01rem;
   margin-right: 20.35rem;
+  opacity: 0%;
 }
 
 button {

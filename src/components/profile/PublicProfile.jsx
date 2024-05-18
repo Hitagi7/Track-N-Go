@@ -16,13 +16,13 @@ function PublicProfile({ user }) {
 
   useEffect(() => {
     if (success) {
-        const timer = setTimeout(() => {
-            setSuccess(null);
-        }, 3000); // Change duration as needed (3000ms = 3 seconds)
+      const timer = setTimeout(() => {
+        setSuccess(null);
+      }, 3000); // Change duration as needed (3000ms = 3 seconds)
 
-        return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
     }
-}, [success]);
+  }, [success]);
 
   // Save changes
   const onSubmit = async (e) => {
@@ -32,8 +32,11 @@ function PublicProfile({ user }) {
       setError("Please input changes");
       setSuccess(null);
       return;
-    }
-    else if (userFirstName === firstNameBuffer && userLastName === lastNameBuffer && userUsername === usernameBuffer) {
+    } else if (
+      userFirstName === firstNameBuffer &&
+      userLastName === lastNameBuffer &&
+      userUsername === usernameBuffer
+    ) {
       setError("Names already in use!");
       setSuccess(null);
       return;
@@ -46,7 +49,7 @@ function PublicProfile({ user }) {
         await updateDoc(userDocRef, {
           firstName: firstNameBuffer,
           lastName: lastNameBuffer,
-          username: usernameBuffer
+          username: usernameBuffer,
         });
         setSuccess("Profile Updated Successfully!");
         setError(null);
@@ -101,21 +104,21 @@ function PublicProfile({ user }) {
               onChange={(e) => setLastNameBuffer(e.target.value)}
               className="input-box"
             />
-          <div className="username">
-            <div className="input-title">Username</div>
-            <input
-              type="text"
-              value={usernameBuffer}
-              placeholder={`@${userUsername}`}
-              onChange={(e) => setUsernameBuffer(e.target.value)}
-              className="input-box"
-            />
-          </div>
+            <div className="username">
+              <div className="input-title">Username</div>
+              <input
+                type="text"
+                value={usernameBuffer}
+                placeholder={`@${userUsername}`}
+                onChange={(e) => setUsernameBuffer(e.target.value)}
+                className="input-box"
+              />
+            </div>
           </div>
         </div>
         <div className="profile-buttons">
-        {error && (<div className="error-message">{error}</div>)}
-        {success && (<div className="success-message">{success}</div>)}
+          {error && <div className="error-message">{error}</div>}
+          {success && <div className="success-message">{success}</div>}
           <button className="save-changes-profile" onClick={onSubmit}>
             Save changes
           </button>

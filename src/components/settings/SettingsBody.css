@@ -1,211 +1,211 @@
 .settings-body {
-    width: 72.125rem;
-    height: 110rem; 
-    border-radius: 1.25rem;
-    background: #FEFEFE;  
-    align-self: center;    
-    display: flex;
-    flex-direction: column;
-    padding-left: 5.69rem;
-    padding-right: 5.69rem;
-    padding-top: 2rem;
+  width: 72.125rem;
+  height: 110rem;
+  border-radius: 1.25rem;
+  background: #fefefe;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5.69rem;
+  padding-right: 5.69rem;
+  padding-top: 2rem;
 }
 
 .error-message {
-    color: red !important;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: -15px; /* Adjust margin as needed */
-    margin-bottom: 10px;
-    animation: shake 0.13s 3;
-  }
+  color: red !important;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 10px;
+  animation: shake 0.13s 3;
+}
 
-  .success-message {
-    color: green !important;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: -15px; /* Adjust margin as needed */
-    margin-bottom: 10px;
-    animation: pop-up 0.5s;
-  }
+.success-message {
+  color: green !important;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 10px;
+  animation: pop-up 0.5s;
+}
 
 .notification-section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3.13rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.13rem;
 }
 
 .notification-title {
-    margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .notification-description {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .notification-text {
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .toggle-button {
-    display: flex;
-    width: 3.5rem;
-    align-items: center;
-    gap: 0.75rem;    
+  display: flex;
+  width: 3.5rem;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .account-fields {
-    margin-top: 1.65rem;
+  margin-top: 1.65rem;
 }
 
 .settings-text-field p {
-    font-weight: 400;
-    display: block;
-    margin-bottom: 0.63rem;
-    
+  font-weight: 400;
+  display: block;
+  margin-bottom: 0.63rem;
 }
 
 .settings-text-field {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .settings-password-field {
-    width: 100%;
-    display: flex;
-    padding: 10px;
-    padding-left: 48px;
-    align-items: flex-start;
-    border-radius: 10px;
-    border: 1px solid #CBD2E0;
-    background: #FEFEFE;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  padding-left: 48px;
+  align-items: flex-start;
+  border-radius: 10px;
+  border: 1px solid #cbd2e0;
+  background: #fefefe;
 }
 
 .settings-password-icon {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 17px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 17px;
 }
 
 .settings-fbutton {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    color: #FEFEFE;
-    text-align: center;
-    font-weight: 600;
-    background: #DE5654;
-    height: 2.4375rem;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  color: #fefefe;
+  text-align: center;
+  font-weight: 600;
+  background: #de5654;
+  height: 2.4375rem;
 }
 
-.settings-fbutton:hover{
-    transform: scale(1.03);
-    filter: brightness(0.96);
+.settings-fbutton:hover {
+  transform: scale(1.03);
+  filter: brightness(0.96);
+  cursor: pointer;
+  opacity: 90%;
 }
 
 .faq-question {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .faq-title {
-    margin-top: 4.19rem;
-    margin-bottom: 1.25rem;
+  margin-top: 4.19rem;
+  margin-bottom: 1.25rem;
 }
 
 .faq-paragraph {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .about-us-title {
-    margin-top: 4.19rem;
-    margin-bottom: 1.25rem;
+  margin-top: 4.19rem;
+  margin-bottom: 1.25rem;
 }
 
 .about-us-description {
-    line-height: 211.766%;
-    margin-bottom: 1.25rem;
+  line-height: 211.766%;
+  margin-bottom: 1.25rem;
 }
 
 .about-us-icon-label {
-    display: flex;
-    align-items: center; /* Center items vertically */
-    margin-top: 10px;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-top: 10px;
 }
 
 .about-us-icon-label:hover {
-    cursor: pointer;
-    opacity: 90%;
+  cursor: pointer;
+  opacity: 90%;
 }
 
 .about-us-icon-label .about-us-icon::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-size: cover;
-    margin-right: 0.30rem;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  margin-right: 0.3rem;
 }
 
 .about-us-label {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .about-us-icon-label .about-us-label {
-    display: inline-block; /* Ensure label and icon are on the same line */
+  display: inline-block; /* Ensure label and icon are on the same line */
 }
 
 .fb-label {
-    background-image: url('src/assets/icons/icon-facebook.svg'); /* Specify the icon */
+  background-image: url("src/assets/icons/icon-facebook.svg"); /* Specify the icon */
 }
 
 .insta-label {
-    background-image: url('src/assets/icons/icon-instagram.svg'); /* Specify the icon */
+  background-image: url("src/assets/icons/icon-instagram.svg"); /* Specify the icon */
 }
 
 .linkedin-label {
-    background-image: url('src/assets/icons/icon-linkedin.svg'); /* Specify the icon */
+  background-image: url("src/assets/icons/icon-linkedin.svg"); /* Specify the icon */
 }
 
 .sign-out-description {
-    line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .logout-button {
-    width: 24.2025rem;
-    /* display: flex;
+  width: 24.2025rem;
+  /* display: flex;
     justify-content: center;
     align-items: center; */
-    margin: 0 auto;
-    margin-top: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 @keyframes shake {
-    0% {
-      transform: translateX(0);
-    }
-    40% {
-      transform: translateX(10px);
-    }
-    100% {
-      transform: translateX(-10px);
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  @keyframes pop-up {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  40% {
+    transform: translateX(10px);
   }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
