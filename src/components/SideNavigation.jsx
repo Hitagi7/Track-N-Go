@@ -78,6 +78,7 @@ function SideNavigation() {
               <p className="font-18 font-semibold">
                 {userDetails.firstName} {userDetails.lastName}
               </p>
+              <p className="font-15 font-extralight">{userDetails.username ? `@${userDetails.username}` : ""}</p>
               <p className="font-15 font-extralight">Basic Account</p>
             </div>
           </div>

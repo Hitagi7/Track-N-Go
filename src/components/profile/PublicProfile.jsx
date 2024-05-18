@@ -6,11 +6,13 @@ import { doc, updateDoc } from "firebase/firestore";
 function PublicProfile({ user }) {
   const [firstNameBuffer, setFirstNameBuffer] = useState("");
   const [lastNameBuffer, setLastNameBuffer] = useState("");
+  const [usernameBuffer, setUsernameBuffer] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
   const userFirstName = user.firstName;
   const userLastName = user.lastName;
+  const userUsername = user.username;
 
   useEffect(() => {
     if (success) {
@@ -26,12 +28,12 @@ function PublicProfile({ user }) {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    if (!firstNameBuffer && !lastNameBuffer) {
+    if (!firstNameBuffer && !lastNameBuffer && !usernameBuffer) {
       setError("Please input changes");
       setSuccess(null);
       return;
     }
-    else if (userFirstName === firstNameBuffer && userLastName === lastNameBuffer) {
+    else if (userFirstName === firstNameBuffer && userLastName === lastNameBuffer && userUsername === usernameBuffer) {
       setError("Names already in use!");
       setSuccess(null);
       return;
@@ -44,6 +46,7 @@ function PublicProfile({ user }) {
         await updateDoc(userDocRef, {
           firstName: firstNameBuffer,
           lastName: lastNameBuffer,
+          username: usernameBuffer
         });
         setSuccess("Profile Updated Successfully!");
         setError(null);
@@ -59,6 +62,7 @@ function PublicProfile({ user }) {
     e.preventDefault();
     setFirstNameBuffer("");
     setLastNameBuffer("");
+    setUsernameBuffer("");
   };
 
   return (
@@ -97,6 +101,16 @@ function PublicProfile({ user }) {
               onChange={(e) => setLastNameBuffer(e.target.value)}
               className="input-box"
             />
+          <div className="username">
+            <div className="input-title">Username</div>
+            <input
+              type="text"
+              value={usernameBuffer}
+              placeholder={`@${userUsername}`}
+              onChange={(e) => setUsernameBuffer(e.target.value)}
+              className="input-box"
+            />
+          </div>
           </div>
         </div>
         <div className="profile-buttons">

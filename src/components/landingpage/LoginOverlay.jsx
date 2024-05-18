@@ -36,7 +36,7 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
               message = "Please enter a valid email address.";
               break;
             default:
-              message = "An error occurred during login. Please try again.";
+              message = "An error occurred. Please enter the correct email or password";
           }
           setErrorMessage(message);
         }

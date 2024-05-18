@@ -5,6 +5,15 @@ import './Overlay.css'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc,doc } from 'firebase/firestore';
 
+const generateUserId = () => {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let result = '';
+  for (let i = 0; i < 5; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+};
+
 
 const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
   const [email, setEmail] = useState('');
@@ -56,13 +65,16 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
       try {
         await createUserWithEmailAndPassword(auth, email, password);
         const user = auth.currentUser;  // Gets the current user's details and stores it in user
+        const randomUserId = generateUserId();
         console.log("User created successfully!");
         setSuccessMessage("Sign Up Successful! Redirecting to Login...");
         if (user){
           await setDoc(doc(db,"TNG Users", user.uid), {
+            userId: randomUserId,
             email: user.email,
             firstName: firstName,
             lastName: lastName,
+            username: ""
           });
         }
         setErrorMessage(null);
