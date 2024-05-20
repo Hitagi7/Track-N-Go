@@ -34,6 +34,7 @@ function Dashboard() {
   return (
     <div className="Dashboard">
       <div className="Dashboard1">
+      <div className = "SideNavSpace"></div>
         <SideNavigation />
       </div>
       <div className="Dashboard2">

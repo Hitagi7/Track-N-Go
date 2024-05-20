@@ -10,6 +10,11 @@
 
 .Profile .SideNavigation {
     height: 81rem;
+    position: fixed;
+}
+
+.SideNavSpace2 {
+    width: 20.26rem;
 }
 
 .Profile1 {

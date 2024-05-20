@@ -11,7 +11,8 @@
 }
 
 .Dashboard .SideNavigation {
-  height: 65.2275rem;
+  height: 100%;
+  position: fixed;
 }
 
 .Dashboard1 {
@@ -19,6 +20,7 @@
   height: 100%;
   padding: 0;
   margin: 0;
+  /* width: 20.8125rem; */
 }
 
 .Dashboard2 {
@@ -66,4 +68,8 @@
         opacity: 1;
         transform: translateX(0px) scale(1);
     }
+}
+
+.SideNavSpace {
+  width: 20.2rem;
 }
