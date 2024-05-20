@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { auth, onAuthStateChanged } from "../../firebase";
 import "./Dashboard.css";
 import DashboardTitle from "./DashboardTitle";
 import SideNavigation from "../SideNavigation";
@@ -6,20 +7,34 @@ import DashboardDeliveryDetails from "./DashboardDeliveryDetails";
 import DashboardTracker from "./DashboardTracker";
 import DashboardHistory from "./DashboardHistory";
 import {
-  // getParcels,
-  // getUserParcels,
-  // createUserParcel,
+  getParcels,
+  getUserParcels,
+  createUserParcel,
 } from "../admin/AdminService";
 
 function Dashboard() {
   const [parcels, setParcels] = useState([]);
   const [trackedParcels, setTrackedParcels] = useState([]);
-  const user = "Louise";
+  // const user = "Louise";
+  const [user, setUser] = useState(null);
 
-  // User Tracked Parcels
+  // // User Tracked Parcels
+  // useEffect(() => {
+  //   getUserParcels(user).then((data) => setTrackedParcels(data));
+  // });
+
   useEffect(() => {
-    getUserParcels(user).then((data) => setTrackedParcels(data));
-  });
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+        getUserParcels(currentUser.uid).then((data) => setTrackedParcels(data));
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   // Parcels
   useEffect(() => {
@@ -27,8 +42,12 @@ function Dashboard() {
   }, []);
 
   const addTrackedParcels = (searchedParcel) => {
-    setTrackedParcels([...trackedParcels, searchedParcel]);
-    createUserParcel(searchedParcel, user);
+    if (user) {
+      setTrackedParcels([...trackedParcels, searchedParcel]);
+      createUserParcel(searchedParcel, user.uid);
+    } else {
+      console.error("No user is logged in.");
+    }
   };
 
   return (

@@ -93,48 +93,49 @@ export const deleteParcel = async (parcelId) => {
   }
 };
 
-// export const getUserParcels = async (user) => {
-//   try {
-//     const response = await axios.get(`http://localhost:3001/${user}`);
-//     return response.data;
-//   } catch (error) {
-//     console.error("Error fetching parcels:", error);
-//     throw error;
-//   }
-// };
+export const getUserParcels = async (userId) => {
+  try {
+    const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
+    const querySnapshot = await getDocs(userParcelsRef);
+    return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  } catch (error) {
+    console.error("Error fetching user parcels:", error);
+    throw error;
+  }
+};
 
-// export const createUserParcel = async (newParcel, user) => {
-//   try {
-//     await axios.post(`http://localhost:3001/${user}`, newParcel);
-//     // Refresh parcels after creating a new one
-//     return getUserParcels(user);
-//   } catch (error) {
-//     console.error("Error creating parcel:", error);
-//     throw error;
-//   }
-// };
+export const createUserParcel = async (newParcel, userId) => {
+  try {
+    const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
+    await setDoc(doc(userParcelsRef, newParcel.id), newParcel);
+    return getUserParcels(userId);
+  } catch (error) {
+    console.error("Error creating user parcel:", error);
+    throw error;
+  }
+};
 
-// export const updateUserParcel = async (parcelId, updatedParcelData, user) => {
-//   try {
-//     await axios.put(
-//       `http://localhost:3001/${user}/${parcelId}`,
-//       updatedParcelData
-//     );
-//     // Refresh parcels after updating
-//     return getUserParcels(user);
-//   } catch (error) {
-//     console.error("Error updating parcel:", error);
-//     throw error;
-//   }
-// };
+export const updateUserParcel = async (parcelId, updatedParcelData, user) => {
+  try {
+    await axios.put(
+      `http://localhost:3001/${user}/${parcelId}`,
+      updatedParcelData
+    );
+    // Refresh parcels after updating
+    return getUserParcels(user);
+  } catch (error) {
+    console.error("Error updating parcel:", error);
+    throw error;
+  }
+};
 
-// export const deleteUserParcel = async (parcelId, user) => {
-//   try {
-//     await axios.delete(`http://localhost:3001${user}/${parcelId}`);
-//     // Refresh parcels after deleting
-//     return getUserParcels(user);
-//   } catch (error) {
-//     console.error("Error deleting parcel:", error);
-//     throw error;
-//   }
-// };
+export const deleteUserParcel = async (parcelId, user) => {
+  try {
+    await axios.delete(`http://localhost:3001${user}/${parcelId}`);
+    // Refresh parcels after deleting
+    return getUserParcels(user);
+  } catch (error) {
+    console.error("Error deleting parcel:", error);
+    throw error;
+  }
+};

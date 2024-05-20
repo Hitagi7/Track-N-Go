@@ -25,7 +25,7 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup, loginType = "
             console.log("User logged in successfully!");
       
             // Redirect to the appropriate dashboard after successful login
-            if (loginType === "admin") {
+            if (email === "admin@tng.com") {
               navigate('/AdminHomePage'); 
             } else {
               navigate('/DashboardPage');
