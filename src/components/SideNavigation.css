@@ -3,14 +3,14 @@
     flex: 1;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    /* width: 20.8125rem; */
+    align-items: flex-start;
+    width: 20.2rem;
     min-height: 58rem;
     height: 100%;
     background: #FEFEFE;
     gap: 0.62rem;
     padding: 1.5rem 1.25rem;
-    animation: fade-left 0.7s;
+    animation: fade-left 0.5s;
 }
 
 .SideNavigation .logo {

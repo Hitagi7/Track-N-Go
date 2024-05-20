@@ -1,8 +1,8 @@
 .side-navigation {
     display: flex;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+    flex-direction: row;
+    height: 145.125rem;
+    animation: fade-left 1s;
 }
 
 .Settings .SideNavigation {
@@ -47,4 +47,6 @@
 
 .SideNavSpace3 {
     width: 24.4rem;
+    background-color: #F5F5F5;
+
 }
