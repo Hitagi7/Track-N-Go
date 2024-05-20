@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-import "./AdminSideBar.css";
-import { Link } from "react-router-dom";
-
-function AdminSideBar() {
-  return (
-=======
 import React from 'react'
 import './AdminSideBar.css'
 import { Link, useNavigate } from 'react-router-dom';
@@ -26,7 +18,6 @@ function AdminSideBar() {
     };
 
     return (
->>>>>>> Stashed changes
     <div className="a-side-navigation">
       <Link to="/">
         <img
@@ -52,16 +43,11 @@ function AdminSideBar() {
             <p className="font-16 font-semibold">Tracking</p>
           </button>
         </Link>
-<<<<<<< Updated upstream
-      </div>
-      <div className="a-profile-button">
-=======
         </div>
-        <button className="a-logout" onClick={handleLogout}>
+        <button className="a-logout a-navigation-item" onClick={handleLogout}>
           Log Out
         </button>
         <div className="a-profile-button">
->>>>>>> Stashed changes
         <img
           src="src/assets/icons/profile-placeholder.svg"
           alt=""
