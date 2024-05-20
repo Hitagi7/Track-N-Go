@@ -3,23 +3,18 @@ import "./PublicProfile.css";
 import { auth, db } from "../../firebase";
 import { doc, updateDoc } from "firebase/firestore";
 
-function PublicProfile({ user }) {
+function PublicProfile({ user, updateUser }) {
   const [firstNameBuffer, setFirstNameBuffer] = useState("");
   const [lastNameBuffer, setLastNameBuffer] = useState("");
   const [usernameBuffer, setUsernameBuffer] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
 
-  const userFirstName = user.firstName;
-  const userLastName = user.lastName;
-  const userUsername = user.username;
-
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {
         setSuccess(null);
       }, 3000); // Change duration as needed (3000ms = 3 seconds)
-
       return () => clearTimeout(timer);
     }
   }, [success]);
@@ -28,14 +23,20 @@ function PublicProfile({ user }) {
   const onSubmit = async (e) => {
     e.preventDefault();
 
+    const updatedUser = {
+      firstName: firstNameBuffer || user.firstName,
+      lastName: lastNameBuffer || user.lastName,
+      username: usernameBuffer || user.username,
+    };
+
     if (!firstNameBuffer && !lastNameBuffer && !usernameBuffer) {
       setError("Please input changes");
       setSuccess(null);
       return;
     } else if (
-      userFirstName === firstNameBuffer &&
-      userLastName === lastNameBuffer &&
-      userUsername === usernameBuffer
+      user.firstName === firstNameBuffer &&
+      user.lastName === lastNameBuffer &&
+      user.username === usernameBuffer
     ) {
       setError("Names already in use!");
       setSuccess(null);
@@ -47,10 +48,14 @@ function PublicProfile({ user }) {
       if (currentUser) {
         const userDocRef = doc(db, "TNG Users", currentUser.uid);
         await updateDoc(userDocRef, {
-          firstName: firstNameBuffer,
-          lastName: lastNameBuffer,
-          username: usernameBuffer,
+          firstName: firstNameBuffer || user.firstName,
+          lastName: lastNameBuffer || user.lastName,
+          username: usernameBuffer || user.username,
         });
+        setFirstNameBuffer("");
+        setLastNameBuffer("");
+        setUsernameBuffer("");
+        updateUser(updatedUser);
         setSuccess("Profile Updated Successfully!");
         setError(null);
       }
@@ -90,7 +95,7 @@ function PublicProfile({ user }) {
             <input
               type="text"
               value={firstNameBuffer}
-              placeholder={userFirstName}
+              placeholder={user.firstName}
               onChange={(e) => setFirstNameBuffer(e.target.value)}
               className="input-box"
             />
@@ -100,7 +105,7 @@ function PublicProfile({ user }) {
             <input
               type="text"
               value={lastNameBuffer}
-              placeholder={userLastName}
+              placeholder={user.lastName}
               onChange={(e) => setLastNameBuffer(e.target.value)}
               className="input-box"
             />
@@ -109,7 +114,7 @@ function PublicProfile({ user }) {
               <input
                 type="text"
                 value={usernameBuffer}
-                placeholder={`@${userUsername}`}
+                placeholder={`@${user.username}`}
                 onChange={(e) => setUsernameBuffer(e.target.value)}
                 className="input-box"
               />

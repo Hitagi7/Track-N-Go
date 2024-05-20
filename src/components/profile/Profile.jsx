@@ -40,7 +40,7 @@ function Profile() {
   return (
     <div className="Profile">
       <div className="Profile1">
-      <div className = "SideNavSpace2"></div>
+        <div className="SideNavSpace2"></div>
         <SideNavigation />
       </div>
       <div className="Profile2">
