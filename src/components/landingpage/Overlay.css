@@ -20,15 +20,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding-bottom: 2rem;
   background-image: url(/src/assets/Blurred\ TNG\ Icon.png);
   background-position: bottom right;
   background-size: 510px;
   background-repeat: no-repeat;
-  flex-shrink: 0;
   padding-left: 3.75rem;
   padding-right: 3.75rem;
   padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
 .success-message-container {
@@ -41,20 +40,18 @@ body {
   }
 
 .error-message-container {
-  color: red !important;
-  font-size: 13px;
-  border-radius: 5px;
-  margin-top: -15px; /* Adjust margin as needed */
-  margin-bottom: 10px;
+  position: absolute;
+  color: var(--color-red) !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -0.6rem;
   animation: shake 0.13s 3;
 }
 
 .signup.overlay {
   background-color: #fafafa;
-  width: 521px;
-  height: 659px;
   width: 32.5625rem;
-  height: 41.1875rem;
+  height: 44.5rem;
   border-radius: 1rem;
   animation: fade-in 1s;
 }
@@ -80,101 +77,62 @@ body {
 
 .overlay h3 {
   color: var(--color-black);
-  font-family: Inter;
   font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  margin-top: 0;
-  margin-bottom: 33px;
 }
 
 .overlay p {
   color: var(--color-black);
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  margin-top: -15px;
-  margin-bottom: 15px;
+}
+
+.text-fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.06rem;
+  gap: 100px;
+}
+
+.input-field {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.62rem;
+  margin-bottom: 0.94rem;
 }
 
 .text-field {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 25px;
+  width: 100%;
+  padding: 0.625rem 1.3125rem;
+  padding-left: 3.19rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #cbd2e0;
+  background: #fefefe;
 }
 
-.email-field::placeholder,
-.name-field::placeholder,
-.password-field::placeholder {
+.field-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.31rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 1.25rem;
+  height: 1.25rem;  
+}
+
+.text-field::placeholder {
   color: var(--color-idle-gray);
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
-.email-field,
-.name-field,
-.password-field {
-  width: 100%;
-  display: flex;
-  padding: 10px;
-  padding-left: 48px;
-  align-items: flex-start;
-  border-radius: 10px;
-  border: 1px solid #cbd2e0;
-  background: #fefefe;
-}
-
-.email-field {
-  margin-bottom: 10px;
-  margin-top: -20px;
-}
-
-.name-field {
-  margin-bottom: 25px;
-  margin-top: 8px;
-}
-
-.password-field {
-  margin-bottom: 20px;
-  margin-top: 8px;
-}
-
-.mail-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: -8px;
-  margin-left: 17px;
-}
-
-.profile-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: 36px;
-  margin-left: -68px;
-}
-
-.password-icon {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  margin-top: 36px;
-  margin-left: -60px;
-}
-
 input[type="email"],
 input[type="text"],
 input[type="password"] {
   color: var(--color-black);
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -207,11 +165,9 @@ input[type="password"] {
 .fbutton.primary {
   background: #de5654;
   color: #fefefe;
-  font-weight: 700;
-  margin-bottom: 1px;
   cursor: pointer;
   height: 4.625rem;
-  margin-top: 10px;
+  margin-top: 2.62rem;
 }
 
 .fbutton.secondary {
@@ -219,29 +175,21 @@ input[type="password"] {
   font-weight: 600;
   height: 3.0625rem;
   background: #fefefe;
-  /* margin-bottom: 26px; */
-  margin-top: -5px;
-  margin-bottom: 15px;
+  margin-top: 1.38rem;
 }
 
 .hyperlink p {
   color: var(--color-idle-gray);
-  font-family: Inter;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  text-align: center;
 }
 
 .hyperlink {
   color: var(--color-dark-blue);
-  font-family: Inter;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: center;
+  margin-top: 1.62rem;
 }
 
 .hyperlink a:hover {

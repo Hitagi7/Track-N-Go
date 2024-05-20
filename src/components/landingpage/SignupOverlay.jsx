@@ -132,55 +132,72 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                 <div className="overlay">
                     <div className="signup overlay">
                         <h3>Sign up to Track N' Go</h3>
-                        <div className="text-field">
-                            <p>Email</p>
+                        <div className="text-fields">
                             <form onSubmit={handleSignUp}>
-                                <img src="src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
-                                <input 
-                                    type="email" 
-                                    placeholder="john_doe@email.com" 
-                                    className="email-field"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                
-                                ></input>
-                            <p>First Name</p>
-                                <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
-                                <input
-                                  type="text"
-                                  placeholder="John"
-                                  class="name-field"
-                                  value={firstName}
-                                  onChange={(e) => setFirstName(e.target.value)}
 
-                                ></input>
-                            <p>Last Name</p>
-                                <img src="src/assets/icons/icon-profile.svg" class="profile-icon" alt="" />
-                                <input
-                                  type="text"
-                                  placeholder="Doe"
-                                  class="name-field"
-                                  value={lastName}
-                                  onChange={(e) => setLastName(e.target.value)}
-                                
-                                ></input>
-                            <p>Password</p>
-                                <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
-                                <input 
-                                    type="password" 
-                                    placeholder="Should be 8 characters and above" 
-                                    className="password-field"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                
-                                ></input>
-                                {errorMessage && (
-                                    <div className={`error-message-container animate`}>{errorMessage}</div>
-                                )}
-                                {signupSuccess && (
-                                    <div className={`success-message-container`}>{successMessage}</div>
-                                )}
-                                <button type="submit" className="fbutton primary">Create Account</button>
+                              <section className="email-wrapper">
+                                <p>Email</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-mail.svg" alt="" className="field-icon" />
+                                  <input 
+                                      type="email" 
+                                      placeholder="john_doe@email.com" 
+                                      className="text-field"
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
+
+                              <section className="first-name-wrapper">
+                                <p>First Name</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
+                                  <input
+                                    type="text"
+                                    placeholder="John"
+                                    class="text-field"
+                                    value={firstName}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
+
+                              <section className="last-name-wrapper">
+                                <p>Last Name</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
+                                  <input
+                                    type="text"
+                                    placeholder="Doe"
+                                    class="text-field"
+                                    value={lastName}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
+
+                              <section className="password-wrapper"> 
+                                <p>Password</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-password.svg" className="field-icon" alt="" />
+                                  <input 
+                                      type="password" 
+                                      placeholder="Should be 8 characters and above" 
+                                      className="text-field"
+                                      value={password}
+                                      onChange={(e) => setPassword(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
+
+                              {errorMessage && (
+                                  <div className={`error-message-container animate`}>{errorMessage}</div>
+                              )}
+                              {signupSuccess && (
+                                  <div className={`success-message-container`}>{successMessage}</div>
+                              )}
+                              <button type="submit" className="fbutton primary">Create Account</button>
                             </form>
                         
                         </div>

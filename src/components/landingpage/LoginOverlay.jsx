@@ -58,29 +58,39 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup, loginType = "
                 </div>
                 <div className="overlay">
                     <div className="login overlay">
+                        
                         <h3>{loginType === "admin" ? "Log in to Admin Panel" : "Log in to Track N' Go"}</h3>
-                        <div className="text-field">
-                            <p>Email</p>
+                        
+                        <div className="text-fields">
                             <form onSubmit={signIn}>
-                                <img src="src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
-                                <input 
-                                    type="email"
-                                    placeholder="john_doe@email.com" 
-                                    className="email-field" 
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
 
-                                ></input>
-                            <p>Password</p>
-                                <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
-                                <input 
-                                    type="password" 
-                                    placeholder="Should be 8 characters and above" 
-                                    className="password-field"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
+                              <section className="email-wrapper">
+                                <p>Email</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-mail.svg" alt="" className="field-icon" />
+                                  <input 
+                                      type="email"
+                                      placeholder="john_doe@email.com" 
+                                      className="text-field" 
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
 
-                                ></input>
+                              <section className="password-wrapper">
+                                <p>Password</p>
+                                <div className="input-field">
+                                  <img src="src/assets/icons/icon-password.svg" className="field-icon" alt="" />
+                                  <input 
+                                      type="password" 
+                                      placeholder="Should be 8 characters and above" 
+                                      className="text-field"
+                                      value={password}
+                                      onChange={(e) => setPassword(e.target.value)}
+                                  ></input>
+                                </div>
+                              </section>
                                 {errorMessage && (
                                     <div className={`error-message-container animate`}>{errorMessage}</div>
                                 )}
