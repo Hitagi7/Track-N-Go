@@ -140,34 +140,23 @@ input[type="password"] {
 }
 
 .fbutton {
-  display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   text-align: center;
-  font-family: Inter;
   font-size: 18px;
-  line-height: normal;
-  border: none;
-  font-style: normal;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.fbutton:hover {
-  transform: scale(1.05);
-  filter: brightness(0.96);
 }
 
 .fbutton.primary {
   background: #de5654;
   color: #fefefe;
-  cursor: pointer;
   height: 4.625rem;
   margin-top: 2.62rem;
+}
+
+.fbutton.primary:hover {
+  filter: brightness(1.05);  
 }
 
 .fbutton.secondary {
@@ -176,6 +165,10 @@ input[type="password"] {
   height: 3.0625rem;
   background: #fefefe;
   margin-top: 1.38rem;
+}
+
+.fbutton.secondary:hover {
+  filter: brightness(0.95);  
 }
 
 .hyperlink p {
