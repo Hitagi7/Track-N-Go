@@ -14,20 +14,21 @@ const ParcelsAdmin = () => {
 
   // Add parcel
   const addParcel = (newParcel) => {
-    setParcels([...parcels, newParcel]);
-    createParcel(newParcel);
+    createParcel(newParcel).then((updatedParcels) => {
+      setParcels(updatedParcels);
+    });
   };
 
   const editParcel = (parcelId, updatedParcel) => {
-    updateParcel(parcelId, updatedParcel);
-    setParcels(
-      parcels.map((parcel) => (parcel.id === parcelId ? updatedParcel : parcel))
-    );
+    updateParcel(parcelId, updatedParcel).then((updatedParcels) => {
+      setParcels(updatedParcels);
+    });
   };
 
   const removeParcel = (parcelId) => {
-    deleteParcel(parcelId);
-    setParcels(parcels.filter((parcel) => parcel.id !== parcelId));
+    deleteParcel(parcelId).then((updatedParcels) => {
+      setParcels(updatedParcels);
+    });
   };
 
   useEffect(() => {

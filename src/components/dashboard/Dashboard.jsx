@@ -6,9 +6,9 @@ import DashboardDeliveryDetails from "./DashboardDeliveryDetails";
 import DashboardTracker from "./DashboardTracker";
 import DashboardHistory from "./DashboardHistory";
 import {
-  getParcels,
-  getUserParcels,
-  createUserParcel,
+  // getParcels,
+  // getUserParcels,
+  // createUserParcel,
 } from "../admin/AdminService";
 
 function Dashboard() {
