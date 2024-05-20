@@ -213,8 +213,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [CDROP - EXPRESSPAY - WBUNDANG BILLS PAYMENT AND REMITTANCE
-            CENTER]Your parcel has been received by drop off point
+              Your parcel has been picked up by our courier. The package has been collected from the sender's location by our designated courier and is en route to the first sorting facility.
           </div>
         </div>
       </div>
@@ -439,7 +438,9 @@ function ParcelTrackerBody({ parcel }) {
             />
           </div>
           <div className="right">
-            <div className="description">Order has been created</div>
+            <div className="description">
+              Order created successfully. Your order details are currently being reviewed. The parcel shipment will be prepared shortly.
+            </div>
           </div>
         </div>
       </div>
