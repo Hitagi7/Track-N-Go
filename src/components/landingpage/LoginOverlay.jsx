@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Overlay.css'
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
+const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup, loginType = "user" }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState(null); // State for error message
@@ -14,15 +14,24 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
     const signIn = async (e) => {
         e.preventDefault();
         setErrorMessage(null); // Clear any previous error message
+
+        if (loginType === "admin" && email !== "admin@tng.com") {
+            setErrorMessage("Unauthorized access. Admin only.");
+            return; // Prevent further execution if email is not "admin@tng.com" for admin login
+          }
     
         try {
-          await signInWithEmailAndPassword(auth, email, password);
-          console.log("User logged in successfully!");
-    
-          // Redirect to the dashboard after successful login
-          navigate('/DashboardPage');
-    
-          toggleVisible();
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log("User logged in successfully!");
+      
+            // Redirect to the appropriate dashboard after successful login
+            if (loginType === "admin") {
+              navigate('/AdminHomePage'); 
+            } else {
+              navigate('/DashboardPage');
+            }
+      
+            toggleVisible();
         } catch (error) {
           let message;
           switch (error.code) {
@@ -49,7 +58,7 @@ const LoginOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                 </div>
                 <div className="overlay">
                     <div className="login overlay">
-                        <h3>Log in to Track N' Go</h3>
+                        <h3>{loginType === "admin" ? "Log in to Admin Panel" : "Log in to Track N' Go"}</h3>
                         <div className="text-field">
                             <p>Email</p>
                             <form onSubmit={signIn}>

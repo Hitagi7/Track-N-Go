@@ -1,7 +1,8 @@
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
 import './Header.css'
 import ButtonStack from '../ButtonStack'
 import { Link } from 'react-router-dom'
+import LoginOverlay from './LoginOverlay'
 
 
 function scrollTo(sectionId) {
@@ -14,6 +15,12 @@ const scrollToTop = () => {
 }
 
 function Header() {
+  const [openLogin, setOpenLogin] = useState(false);
+
+  const handleAdminButtonClick = () => {
+    // Handle optional admin button logic (e.g., basic authentication check)
+    setOpenLogin(true);
+  };
 
   return (
     <div className='Header'>
@@ -26,14 +33,21 @@ function Header() {
               <li onClick={() => scrollTo('about-us')}>About Us</li>
               <li onClick={() => scrollTo('contact')}>Contact</li>
               <li><Link to="/DashboardPage">Dashboard</Link></li>
-              <li><Link to="/AdminHomePage">Admin</Link></li>
+              <li><button onClick={handleAdminButtonClick}>Admin</button></li>
             </ul>
             <ButtonStack />
             <hr />
             <button className="scroll-to-top" onClick={scrollToTop}><img src="/src/assets/icons/up-arrow.svg" alt="up-arrow" /></button>
         </div>
+        {openLogin && (
+        <LoginOverlay
+          visible={openLogin}
+          toggleVisible={() => setOpenLogin(false)}
+          loginType="admin"
+        />
+      )}
     </div>
-  )
+  );
 }
 
 export default Header

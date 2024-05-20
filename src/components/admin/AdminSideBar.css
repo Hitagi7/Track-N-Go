@@ -71,6 +71,28 @@
 }
 
 .a-profile-placeholder {
+<<<<<<< Updated upstream
   width: 3rem;
   height: 3rem;
 }
+=======
+    width: 3rem;
+    height: 3rem;
+}
+
+.a-logout {
+    background: none; /* Remove default button styling */
+    border: none; /* Remove default button border */
+    color: #333; /* Text color */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Set cursor to pointer on hover */
+    padding: 0 1rem; /* Add some padding */
+    margin: 0; /* Remove default button margins */
+    position: relative; /* Enable relative positioning for layering */
+    top: -0.5rem; /* Shift the button slightly upwards for alignment */
+  }
+  
+  .a-logout:hover {
+    color: #007bff; /* Change text color on hover */
+  }
+>>>>>>> Stashed changes
