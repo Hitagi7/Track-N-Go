@@ -31,9 +31,9 @@ const LoginOverlay = ({
 
       // Redirect to the appropriate dashboard after successful login
       if (email === "admin@tng.com") {
-        navigate("/AdminHomePage");
+        navigate("/track-n-go/AdminHomePage");
       } else {
-        navigate("/DashboardPage");
+        navigate("/track-n-go/DashboardPage");
       }
 
       toggleVisible();

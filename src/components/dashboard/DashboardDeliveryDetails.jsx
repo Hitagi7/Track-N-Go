@@ -31,10 +31,10 @@ function DashboardDeliveryDetails({ trackedParcels }) {
         </p>
       </div>
       <div className="Frame9">
-        <Link to={"/ParcelHistoryPage"} state={trackedParcels}>
+        <Link to={"/track-n-go/ParcelHistoryPage"} state={trackedParcels}>
           <button className="SeeHistory">See History</button>
         </Link>
-        <Link to="/SettingsPage">
+        <Link to="/track-n-go/SettingsPage">
           <button className="ManageSettings">Manage Settings</button>
         </Link>
       </div>

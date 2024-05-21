@@ -21,35 +21,35 @@ const router = createBrowserRouter([
         element: <App/>,
     },
     {
-        path: "/parceltrackerpage",
+        path: "/track-n-go/parceltrackerpage",
         element: <ParcelTrackerPage />,
     },
     {
-      path: "/dashboardpage",
+      path: "/track-n-go/dashboardpage",
       element: <DashboardPage />,
     },
     {
-      path: "/settingspage",
+      path: "/track-n-go/settingspage",
       element: <SettingsPage />,
     },
     {
-      path: "/profilepage",
+      path: "/track-n-go/profilepage",
       element: <ProfilePage />,
     },
     {
-      path: "/parcelhistorypage",
+      path: "/track-n-go/parcelhistorypage",
       element: <ParcelHistoryPage />,
     },
     {
-      path: "/adminhomepage",
+      path: "/track-n-go/adminhomepage",
       element: <AdminHomePage />,
     },
     {
-      path: "/parcelsadmin",
+      path: "/track-n-go/parcelsadmin",
       element: <ParcelsAdmin />,
     },
     {
-      path: "/trackingadmin",
+      path: "/track-n-go/trackingadmin",
       element: <TrackingAdmin />,
     },
   ]);

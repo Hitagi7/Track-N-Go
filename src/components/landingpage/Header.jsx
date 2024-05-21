@@ -24,15 +24,15 @@ function Header() {
 
   return (
     <div className='Header'>
-        <Link to="/"><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
+        <Link to="/track-n-go/"><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
         <div className="Nav">
             <ul className="NavBar">
-              <li ><Link to="/">Home</Link></li>
+              <li ><Link to="/track-n-go/">Home</Link></li>
               <li onClick={() => scrollTo('our-product')}>Our Product</li>
               <li onClick={() => scrollTo('partners')}>Partners</li>
               <li onClick={() => scrollTo('about-us')}>About Us</li>
               <li onClick={() => scrollTo('contact')}>Contact</li>
-              <li><Link to="/DashboardPage">Dashboard</Link></li>
+              <li><Link to="/track-n-go/DashboardPage">Dashboard</Link></li>
               <li><button onClick={handleAdminButtonClick}>Admin</button></li>
             </ul>
             <ButtonStack />

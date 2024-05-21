@@ -63,7 +63,7 @@ function SettingsBody() {
         try {
           await auth.signOut();
           console.log('User signed out successfully');
-          window.location.href = '/';
+          window.location.href = '/track-n-go/';
 
         } catch (error) {
           console.error('Error signing out:', error);

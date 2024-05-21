@@ -75,7 +75,7 @@ function ParcelHistoryInfo({ parcels }) {
                       {inDelivery(parcel.status)}
                     </p>
                   </div>
-                  <Link to={"/ParcelTrackerPage"} state={parcel}>
+                  <Link to={"/track-n-go/ParcelTrackerPage"} state={parcel}>
                     <p className="details2">View Details &gt;</p>
                   </Link>
                 </div>

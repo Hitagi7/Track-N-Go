@@ -157,7 +157,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [SOC 5] Your parcel is in trasnit to [{parcel.deliveredTo} DC]
+            [SOC 5] Your parcel is in transit to [{parcel.deliveredTo} DC]
           </div>
         </div>
       </div>

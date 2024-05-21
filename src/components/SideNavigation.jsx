@@ -31,10 +31,10 @@ function SideNavigation() {
           <p className="loading-text">Loading...</p>
         ) : (
           <>
-          <Link to='/'><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
+          <Link to="/track-n-go/"><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
           <hr className="hr1"/>
           <div className="Frames">
-            <Link to="/DashboardPage">
+            <Link to="/track-n-go/DashboardPage">
               <div className="Frame1">
                 <img
                   src="/track-n-go/src/assets/icons/icon-dashboard.svg"
@@ -45,7 +45,7 @@ function SideNavigation() {
               </div>
             </Link>
 
-            <Link to="/ProfilePage">
+            <Link to="/track-n-go/ProfilePage">
               <div className="Frame2">
                 <img
                   src="/track-n-go/src/assets/icons/icon-profile.svg"
@@ -56,7 +56,7 @@ function SideNavigation() {
               </div>
             </Link>
 
-            <Link to="/SettingsPage">
+            <Link to="/track-n-go/SettingsPage">
               <div className="Frame3">
                 <img
                   src="/track-n-go/src/assets/icons/icon-settings.svg"

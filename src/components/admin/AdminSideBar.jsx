@@ -11,7 +11,7 @@ function AdminSideBar() {
       try {
         await signOut(auth);
         console.log("Admin logged out successfully!");
-        navigate('/'); // Redirect to homepage after logout
+        navigate('/track-n-go/'); // Redirect to homepage after logout
       } catch (error) {
         console.error("Error logging out:", error);
       }
@@ -19,7 +19,7 @@ function AdminSideBar() {
 
     return (
     <div className="a-side-navigation">
-      <Link to="/">
+      <Link to="/track-n-go/">
         <img
           src="/track-n-go/src/assets/TNG Logo V2.png"
           alt=""
@@ -29,7 +29,7 @@ function AdminSideBar() {
       </Link>
       <div className="a-navigation">
         
-        <Link to="/AdminHomePage">
+        <Link to="/track-n-go/AdminHomePage">
           <div className='sidenav-frame1'>
             <img src="/track-n-go/src/assets/icons/icon-profile.svg"
               alt="User Icon"
@@ -39,7 +39,7 @@ function AdminSideBar() {
           </div>
         </Link>
         
-        <Link to="/ParcelsAdmin">
+        <Link to="/track-n-go/ParcelsAdmin">
           <div className='sidenav-frame2'>
             <img src="/track-n-go/src/assets/icons/icon-parcel.svg"
               alt="Parcel Icon"
@@ -49,7 +49,7 @@ function AdminSideBar() {
           </div>
         </Link>
         
-        <Link to="/TrackingAdmin">
+        <Link to="/track-n-go/TrackingAdmin">
           <div className='sidenav-frame3'>
             <img src="/track-n-go/src/assets/icons/icon-pin.svg"
               alt="Tracking Icon"

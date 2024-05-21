@@ -36,7 +36,7 @@ function Container1() {
             />
             <Link
               key={parcels.find((parcel) => parcel.id === parcelSearch)?.id}
-              to={"/ParcelTrackerPage"}
+              to={"/track-n-go/ParcelTrackerPage"}
               state={parcels.find((parcel) => parcel.id === parcelSearch)}
             >
               <button

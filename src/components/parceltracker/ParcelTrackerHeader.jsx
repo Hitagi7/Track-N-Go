@@ -9,7 +9,7 @@ function ParcelTrackerHeader() {
 
   return (
     <div className="ParcelTrackerHeader">
-      <Link to={user ? "/DashboardPage" : "/"}>
+      <Link to={user ? "/track-n-go/DashboardPage" : "/track-n-go/"}>
         <img
           src="/track-n-go/src/assets/TNG Logo V2.png"
           alt="Logo Text"
