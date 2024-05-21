@@ -16,6 +16,7 @@
     line-height: 24px;
     letter-spacing: -0.16px;
     font-weight: 700;
+    background-color: #FAFAFA;
 }
 
 .Signup {
@@ -33,14 +34,11 @@
 }
 
 .Login:hover {
-    border: 2px solid hsl(220, 23%, 43%);
-    padding: 12px 20px;
-    color: hsl(220, 23%, 33%);
+    filter: brightness(0.95);
 }
 
 .Signup:hover {
-    background: hsl(1, 68%, 65%);
-    border: 2px solid hsl(1, 68%, 65%);
+    background-color: hsl(1, 68%, 65%);
 }
 
 .Login:active {

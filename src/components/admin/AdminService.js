@@ -50,6 +50,18 @@ import axios from "axios";
 //   }
 // };
 
+// Generate Parcel ID
+export const generateID = () => {
+  let result = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  for (var i = 0; i <= 13; i++) {
+    result += characters.charAt(
+      Math.floor(Math.random() * characters.length)
+    );
+  }
+  return result;
+};
+
 export const getParcels = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, "Parcels"));
@@ -62,14 +74,15 @@ export const getParcels = async () => {
 
 export const createParcel = async (newParcel) => {
   try {
-    const parcelDocRef = doc(collection(db, "Parcels"));
-    await setDoc(parcelDocRef, { ...newParcel, id: parcelDocRef.id });
+    const id = generateID();
+    await setDoc(doc(db, "Parcels", id), { ...newParcel, id });
     return getParcels();
   } catch (error) {
     console.error("Error creating parcel:", error);
     throw error;
   }
 };
+
 
 export const updateParcel = async (parcelId, updatedParcelData) => {
   try {
@@ -95,7 +108,7 @@ export const deleteParcel = async (parcelId) => {
 
 export const getUserParcels = async (userId) => {
   try {
-    const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
+    const userParcelsRef = collection(db, "Parcels");
     const querySnapshot = await getDocs(userParcelsRef);
     return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   } catch (error) {

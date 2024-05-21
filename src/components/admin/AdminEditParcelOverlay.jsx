@@ -92,7 +92,6 @@ function AdminEditParcelOverlay({
       deliveredFrom,
       deliveredTo,
     });
-
     toggleVisible();
   };
 

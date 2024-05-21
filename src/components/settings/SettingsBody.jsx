@@ -25,7 +25,7 @@ function SettingsBody() {
         if (!currentPassword || !newPassword) {
             setError('Please fill in all fields');
             return;
-          }
+          } 
         
           console.log('User logged in:', !!auth.currentUser, auth.currentUser?.uid, auth.currentUser?.email); // Checks if the user is logged in
           console.log(currentPassword, newPassword)
@@ -73,29 +73,6 @@ function SettingsBody() {
 
     return (
         <div className="settings-body">
-            <section className="notification-section">
-
-                <p className="notification-title font-30 font-medium">
-                    Notifications
-                </p>
-
-                <section className="notification-description">
-
-                    <section className="notification-text">
-                        <p className="settings-text-label">
-                            Enable in-app notifications
-                        </p>
-                        <p className="font-12 font-light">
-                            This setting enables notifications within the app.
-                        </p>
-                    </section>
-
-                    <img src="src/assets/icons/button-idle-toggle.svg" alt="" className="toggle-button" />
-                    
-                </section>
-
-            </section>
-
             <section className="account-settings">
                 <p className="account-title font-30 font-medium">
                     Account Settings

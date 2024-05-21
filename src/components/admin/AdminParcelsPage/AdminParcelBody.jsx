@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./AdminParcelBody.css";
 import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
+import { generateID } from "../AdminService";
 
 function AdminParcelBody({
   parcelDetails,
@@ -22,17 +23,7 @@ function AdminParcelBody({
     setEditOverlayVisible(!editOverlayVisible);
   };
 
-  // Generate Parcel ID
-  const generateID = () => {
-    let result = "";
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    for (var i = 0; i <= 13; i++) {
-      result += characters.charAt(
-        Math.floor(Math.random() * characters.length)
-      );
-    }
-    return result;
-  };
+  
 
   return (
     <div className="admin-body">

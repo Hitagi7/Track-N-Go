@@ -90,12 +90,11 @@
 }
 
 .SeeHistory:hover {
-    opacity: 90%;
+    filter: brightness(1.10);
 }
 
 .ManageSettings:hover {
-    border-color:hsl(1, 68%, 50%);
-    color: hsl(1, 68%, 50%);
+    filter: brightness(0.95);
 }
 
 button {
