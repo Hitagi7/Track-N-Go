@@ -2,13 +2,16 @@
   "name": "track-n-go",
   "private": true,
   "version": "0.0.0",
+  "homepage": "/Track-N-Go",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "json-server": "json-server --watch db.json --port 3001"
+    "json-server": "json-server --watch db.json --port 3001",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@firebase/firestore": "^4.6.3",
