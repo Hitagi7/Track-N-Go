@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getParcels } from "../admin/AdminService";
+import mapWithPin from "/src/assets/Map With Pin.png";
 import "./Container1.css";
 
 function Container1() {
@@ -54,7 +55,7 @@ function Container1() {
         </div>
       </div>
       <img
-        src="/track-n-go/src/assets/Map With Pin.png"
+        src={mapWithPin}
         alt="Map With Pin"
         className="Resize-image1"
       />

@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './Container2.css'
 import ButtonStack from '../ButtonStack';
+import deliveryMan from "/src/assets/Delivery Man.png";
 
 function Container2() {
 
   return (
     <div className="Container2">
       <img
-        src="/track-n-go/src/assets/Delivery Man.png"
+        src={deliveryMan}
         alt="Delivery Man"
         id="image"
         className="Resize-image2"

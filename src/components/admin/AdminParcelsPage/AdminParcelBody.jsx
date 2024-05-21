@@ -3,6 +3,10 @@ import "./AdminParcelBody.css";
 import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 import { generateID } from "../AdminService";
+import iconSearch  from "/src/assets/icons/icon-search.svg";
+import iconPlus from "/src/assets/icons/icon-plus.svg";
+import iconEdit from "/src/assets/icons/icon-edit.svg";
+import iconX from "/src/assets/icons/icon-x.svg";
 
 function AdminParcelBody({
   parcelDetails,
@@ -27,7 +31,7 @@ function AdminParcelBody({
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">
         <img
-          src="/track-n-go/src/assets/icons/icon-search.svg"
+          src={iconSearch}
           alt="icon-search"
           className="ParcelSearchIcon"
         />
@@ -44,7 +48,7 @@ function AdminParcelBody({
           style={{ cursor: "pointer", opacity: "90%" }}
         >
           <img
-            src="/track-n-go/src/assets/icons/icon-plus.svg"
+            src={iconPlus}
             alt="Plus Icon"
             className="ParcelPlusIcon"
           />
@@ -88,7 +92,7 @@ function AdminParcelBody({
                           }}
                         >
                           <img
-                            src="/track-n-go/src/assets/icons/icon-edit.svg"
+                            src={iconEdit}
                             alt="edit"
                             className="ParcelEditIcon"
                           />
@@ -108,13 +112,13 @@ function AdminParcelBody({
                       <td>
                         {parcelDetails.length}
                         <img
-                          src="/track-n-go/src/assets/icons/icon-x.svg"
+                          src={iconX}
                           className="x-icon"
                           alt=""
                         />
                         {parcelDetails.width}
                         <img
-                          src="/track-n-go/src/assets/icons/icon-x.svg"
+                          src={iconX}
                           className="x-icon"
                           alt=""
                         />
