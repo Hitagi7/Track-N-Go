@@ -95,7 +95,7 @@ export const deleteParcel = async (parcelId) => {
 
 export const getUserParcels = async (userId) => {
   try {
-    const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
+    const userParcelsRef = collection(db, "Parcels");
     const querySnapshot = await getDocs(userParcelsRef);
     return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   } catch (error) {

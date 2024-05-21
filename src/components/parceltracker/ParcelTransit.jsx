@@ -5,8 +5,25 @@ function ParcelTransit({ parcel }) {
   return (
     <div className="ParcelTransit">
       <div className="information">
-        <div className="status">
-          <img src="/src/assets/icons/box-in-transit.svg" alt="box-delivered" />
+        <div
+          className={
+            parcel.status === "[5] Delivered"
+              ? "status-delivered"
+              : "status-in-transit"
+          }
+        >
+          <img
+            src={
+              parcel.status === "[5] Delivered"
+                ? "/src/assets/icons/box-delivered.svg"
+                : "/src/assets/icons/box-in-transit.svg"
+            }
+            alt={
+              parcel.status === "[5] Delivered"
+                ? "box-delivered.svg"
+                : "box-in-transit.svg"
+            }
+          />
         </div>
         <div className="refnumber">#{parcel.id}</div>
       </div>

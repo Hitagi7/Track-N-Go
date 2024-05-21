@@ -18,12 +18,20 @@
     gap: 1.15rem;
 }
 
-.ParcelTransit .status {
+.ParcelTransit .status-in-transit {
     display: flex;
     padding: 0.0625rem 0.3125rem;
     width: fit-content;
     border-radius: 6px;
     background: #F2A74F;
+}
+
+.ParcelTransit .status-delivered {
+    display: flex;
+    padding: 0.0625rem 0.3125rem;
+    width: fit-content;
+    border-radius: 6px;
+    background: #75C768;
 }
 
 .refnumber {
