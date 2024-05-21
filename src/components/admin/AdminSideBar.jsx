@@ -21,7 +21,7 @@ function AdminSideBar() {
     <div className="a-side-navigation">
       <Link to="/">
         <img
-          src="src/assets/TNG Logo V2.png"
+          src="/track-n-go/src/assets/TNG Logo V2.png"
           alt=""
           className="a-tng-logo"
           style={{ cursor: "pointer" }}
@@ -31,7 +31,7 @@ function AdminSideBar() {
         
         <Link to="/AdminHomePage">
           <div className='sidenav-frame1'>
-            <img src="/src/assets/icons/icon-profile.svg"
+            <img src="/track-n-go/src/assets/icons/icon-profile.svg"
               alt="User Icon"
               className="a-icon-user"
             />
@@ -41,7 +41,7 @@ function AdminSideBar() {
         
         <Link to="/ParcelsAdmin">
           <div className='sidenav-frame2'>
-            <img src="/src/assets/icons/icon-parcel.svg"
+            <img src="/track-n-go/src/assets/icons/icon-parcel.svg"
               alt="Parcel Icon"
               className="a-icon-parcel"
             />
@@ -51,7 +51,7 @@ function AdminSideBar() {
         
         <Link to="/TrackingAdmin">
           <div className='sidenav-frame3'>
-            <img src="/src/assets/icons/icon-pin.svg"
+            <img src="/track-n-go/src/assets/icons/icon-pin.svg"
               alt="Tracking Icon"
               className="a-icon-tracking"
             />
@@ -65,7 +65,7 @@ function AdminSideBar() {
         </button>
         <div className="a-profile-button">
         <img
-          src="src/assets/icons/profile-placeholder.svg"
+          src="/track-n-go/src/assets/icons/profile-placeholder.svg"
           alt=""
           className="a-profile-placeholder"
         />

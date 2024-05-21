@@ -31,13 +31,13 @@ function SideNavigation() {
           <p className="loading-text">Loading...</p>
         ) : (
           <>
-          <Link to='/'><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
+          <Link to='/'><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
           <hr className="hr1"/>
           <div className="Frames">
             <Link to="/DashboardPage">
               <div className="Frame1">
                 <img
-                  src="/src/assets/icons/icon-dashboard.svg"
+                  src="/track-n-go/src/assets/icons/icon-dashboard.svg"
                   alt="Dashboard Icon"
                   className="icon1"
                 />
@@ -48,7 +48,7 @@ function SideNavigation() {
             <Link to="/ProfilePage">
               <div className="Frame2">
                 <img
-                  src="/src/assets/icons/icon-profile.svg"
+                  src="/track-n-go/src/assets/icons/icon-profile.svg"
                   alt="Profile Icon"
                   className="icon2"
                 />
@@ -59,7 +59,7 @@ function SideNavigation() {
             <Link to="/SettingsPage">
               <div className="Frame3">
                 <img
-                  src="/src/assets/icons/icon-settings.svg"
+                  src="/track-n-go/src/assets/icons/icon-settings.svg"
                   alt="Settings Icon"
                   className="icon3"
                 />
@@ -70,7 +70,7 @@ function SideNavigation() {
           <hr className="hr2" />
           <div className="Frame4">
             <img
-              src="/src/assets/icons/profile-placeholder.svg"
+              src="/track-n-go/src/assets/icons/profile-placeholder.svg"
               alt="Profile Placeholder Icon"
               className="icon4"
             />

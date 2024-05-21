@@ -20,7 +20,7 @@ function DashboardDeliveryDetails({ trackedParcels }) {
           <p className="delivery">in delivery today</p>
         </div>
         <img
-          src="/src/assets/icons/truck.svg"
+          src="/track-n-go/src/assets/icons/truck.svg"
           alt="Delivery Truck"
           className="truck"
         />

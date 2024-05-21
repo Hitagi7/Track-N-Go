@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <div className="Footer">
-      <img src="/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/>
+      <img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/>
       <p>
         Gov. M. Cuenco Ave., Talamban, Talamban,
         <br />

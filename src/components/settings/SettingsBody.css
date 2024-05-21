@@ -161,15 +161,15 @@
 }
 
 .fb-label {
-  background-image: url("src/assets/icons/icon-facebook.svg"); /* Specify the icon */
+  background-image: url("/track-n-go/src/assets/icons/icon-facebook.svg"); /* Specify the icon */
 }
 
 .insta-label {
-  background-image: url("src/assets/icons/icon-instagram.svg"); /* Specify the icon */
+  background-image: url("/track-n-go/src/assets/icons/icon-instagram.svg"); /* Specify the icon */
 }
 
 .linkedin-label {
-  background-image: url("src/assets/icons/icon-linkedin.svg"); /* Specify the icon */
+  background-image: url("/track-n-go/src/assets/icons/icon-linkedin.svg"); /* Specify the icon */
 }
 
 .sign-out-description {

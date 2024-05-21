@@ -24,7 +24,7 @@ function Container1() {
           <div className="InputTitle">Track your parcel below!</div>
           <div className="Wrapper">
             <img
-              src="/src/assets/icons/icon-search.svg"
+              src="/track-n-go/src/assets/icons/icon-search.svg"
               alt="icon-search"
               className="icon"
             />
@@ -54,7 +54,7 @@ function Container1() {
         </div>
       </div>
       <img
-        src="/src/assets/Map With Pin.png"
+        src="/track-n-go/src/assets/Map With Pin.png"
         alt="Map With Pin"
         className="Resize-image1"
       />

@@ -45,7 +45,7 @@
     width: 100%;
     height: 16.9375rem;
     flex-shrink: 0;
-    background: url(/src/assets/photo-profile-header.jpg) lightgray 50% / cover no-repeat;
+    background: url(/track-n-go/src/assets/photo-profile-header.jpg) lightgray 50% / cover no-repeat;
 }
 
 .Profile .SideNavigation .Frame2 {

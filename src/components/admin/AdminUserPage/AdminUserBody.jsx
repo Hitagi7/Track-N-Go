@@ -53,7 +53,7 @@ function AdminUserBody() {
     <div className="admin-body">
       <div className="a-text-field">
         <img
-          src="src/assets/icons/icon-search.svg"
+          src="/track-n-go/src/assets/icons/icon-search.svg"
           alt=""
           className="a-search-icon"
         />
@@ -93,7 +93,7 @@ function AdminUserBody() {
                 <td>
                   <button onClick={() => handleDeleteUser(user.id)}>
                     <img
-                      src="src/assets/icons/icon-trash.svg"
+                      src="/track-n-go/src/assets/icons/icon-trash.svg"
                       alt=""
                       className="a-icon-trash"
                     />

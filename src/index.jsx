@@ -17,7 +17,7 @@ import TrackingAdmin from './components/admin/AdminTrackingPage/TrackingAdmin.js
 
 const router = createBrowserRouter([
     { 
-        path: "/",
+        path: "/track-n-go",
         element: <App/>,
     },
     {

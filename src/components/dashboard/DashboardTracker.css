@@ -2,8 +2,8 @@
     width: 40.37869rem;
     height: 20.125rem;
     border-radius: 1.25rem;
-    background: url(./src/assets/SearchParcelBackground.png) lightgray 50% / cover no-repeat;
-    /* background: linear-gradient(180deg, #DE5654 0%, rgba(222, 86, 84, 0.00) 100%), url(./src/assets/others/pattern.png) lightgray 0% 0% / 100px 100px repeat, #DE5654;    */
+    background: url(./track-n-go/src/assets/SearchParcelBackground.png) lightgray 50% / cover no-repeat;
+    /* background: linear-gradient(180deg, #DE5654 0%, rgba(222, 86, 84, 0.00) 100%), url(./track-n-go/src/assets/others/pattern.png) lightgray 0% 0% / 100px 100px repeat, #DE5654;    */
     padding: 6.06rem 2.88rem;
     display: flex;
     flex-direction: column;

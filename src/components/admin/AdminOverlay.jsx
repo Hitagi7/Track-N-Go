@@ -196,7 +196,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       required
                     />
                     <img
-                      src="src/assets/icons/icon-x.svg"
+                      src="/track-n-go/src/assets/icons/icon-x.svg"
                       className="o-x-icon"
                       alt=""
                     />
@@ -211,7 +211,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       required
                     />
                     <img
-                      src="src/assets/icons/icon-x.svg"
+                      src="/track-n-go/src/assets/icons/icon-x.svg"
                       className="o-x-icon"
                       alt=""
                     />
@@ -339,7 +339,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{shippedMonth}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -512,7 +512,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{shippedDay}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -591,7 +591,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{shippedYear}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -694,7 +694,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{deliveryMonth}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -872,7 +872,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{deliveryDay}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -956,7 +956,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       <p className="o-dropdown-placeholder">{deliveryYear}</p>
                       <button className="o-dropdown-button">
                         <img
-                          src="src/assets/icons/icon-chevron-down.svg"
+                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                           alt=""
                         />
                       </button>
@@ -1026,7 +1026,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     <p className="o-dropdown-placeholder">{status}</p>
                     <button className="o-status-dropdown-trigger o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>

@@ -7,7 +7,7 @@ function Container2() {
   return (
     <div className="Container2">
       <img
-        src="/src/assets/Delivery Man.png"
+        src="/track-n-go/src/assets/Delivery Man.png"
         alt="Delivery Man"
         id="image"
         className="Resize-image2"

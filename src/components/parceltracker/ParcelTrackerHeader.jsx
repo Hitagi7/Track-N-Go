@@ -11,7 +11,7 @@ function ParcelTrackerHeader() {
     <div className="ParcelTrackerHeader">
       <Link to={user ? "/DashboardPage" : "/"}>
         <img
-          src="/src/assets/TNG Logo V2.png"
+          src="/track-n-go/src/assets/TNG Logo V2.png"
           alt="Logo Text"
           className="ParcelTrackerLogo"
         />

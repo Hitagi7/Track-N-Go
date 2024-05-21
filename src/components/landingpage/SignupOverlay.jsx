@@ -138,7 +138,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                               <section className="email-wrapper">
                                 <p>Email</p>
                                 <div className="input-field">
-                                  <img src="src/assets/icons/icon-mail.svg" alt="" className="field-icon" />
+                                  <img src="/track-n-go/src/assets/icons/icon-mail.svg" alt="" className="field-icon" />
                                   <input 
                                       type="email" 
                                       placeholder="john_doe@email.com" 
@@ -152,7 +152,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                               <section className="first-name-wrapper">
                                 <p>First Name</p>
                                 <div className="input-field">
-                                  <img src="src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
+                                  <img src="/track-n-go/src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
                                   <input
                                     type="text"
                                     placeholder="John"
@@ -166,7 +166,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                               <section className="last-name-wrapper">
                                 <p>Last Name</p>
                                 <div className="input-field">
-                                  <img src="src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
+                                  <img src="/track-n-go/src/assets/icons/icon-profile.svg" class="field-icon" alt="" />
                                   <input
                                     type="text"
                                     placeholder="Doe"
@@ -180,7 +180,7 @@ const SignupOverlay = ({ visible, toggleVisible, toggleLoginSignup }) => {
                               <section className="password-wrapper"> 
                                 <p>Password</p>
                                 <div className="input-field">
-                                  <img src="src/assets/icons/icon-password.svg" className="field-icon" alt="" />
+                                  <img src="/track-n-go/src/assets/icons/icon-password.svg" className="field-icon" alt="" />
                                   <input 
                                       type="password" 
                                       placeholder="Should be 8 characters and above" 

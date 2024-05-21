@@ -79,12 +79,12 @@ function PublicProfile({ user, updateUser }) {
         <div className="title">Public profile</div>
         <div className="profile-picture">
           <img
-            src="/src/assets/icons/profile-placeholder.svg"
+            src="/track-n-go/src/assets/icons/profile-placeholder.svg"
             alt="profile-placeholder"
             className="profile-placeholder"
           />
           <img
-            src="/src/assets/icons/button-camera.svg"
+            src="/track-n-go/src/assets/icons/button-camera.svg"
             alt="button-camera"
             className="button-camera"
           />

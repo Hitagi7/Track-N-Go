@@ -14,21 +14,21 @@
 //                     <div className="text-field">
 //                         <p>Email</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
+//                             <img src="/track-n-go/src/assets/icons/icon-mail.svg" alt="" className="mail-icon" />
 //                             <input type="email" placeholder="john_doe@email.com" className="email-field" />
 //                         </form>
 //                     </div>
 //                     <div className="text-field">
 //                         <p>Full Name</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-profile.svg" className="profile-icon" alt="" />
+//                             <img src="/track-n-go/src/assets/icons/icon-profile.svg" className="profile-icon" alt="" />
 //                             <input type="text" placeholder="John Doe" className="name-field" />
 //                         </form>
 //                     </div>
 //                     <div className="text-field">
 //                         <p>Password</p>
 //                         <form action="#">
-//                             <img src="src/assets/icons/icon-password.svg" className="password-icon" alt="" />
+//                             <img src="/track-n-go/src/assets/icons/icon-password.svg" className="password-icon" alt="" />
 //                             <input type="password" placeholder="Should be 8 characters and above" className="password-field" />
 //                         </form>
 //                     </div>

@@ -27,7 +27,7 @@ function AdminParcelBody({
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">
         <img
-          src="/src/assets/icons/icon-search.svg"
+          src="/track-n-go/src/assets/icons/icon-search.svg"
           alt="icon-search"
           className="ParcelSearchIcon"
         />
@@ -44,7 +44,7 @@ function AdminParcelBody({
           style={{ cursor: "pointer", opacity: "90%" }}
         >
           <img
-            src="/src/assets/icons/icon-plus.svg"
+            src="/track-n-go/src/assets/icons/icon-plus.svg"
             alt="Plus Icon"
             className="ParcelPlusIcon"
           />
@@ -88,7 +88,7 @@ function AdminParcelBody({
                           }}
                         >
                           <img
-                            src="src/assets/icons/icon-edit.svg"
+                            src="/track-n-go/src/assets/icons/icon-edit.svg"
                             alt="edit"
                             className="ParcelEditIcon"
                           />
@@ -108,13 +108,13 @@ function AdminParcelBody({
                       <td>
                         {parcelDetails.length}
                         <img
-                          src="src/assets/icons/icon-x.svg"
+                          src="/track-n-go/src/assets/icons/icon-x.svg"
                           className="x-icon"
                           alt=""
                         />
                         {parcelDetails.width}
                         <img
-                          src="src/assets/icons/icon-x.svg"
+                          src="/track-n-go/src/assets/icons/icon-x.svg"
                           className="x-icon"
                           alt=""
                         />

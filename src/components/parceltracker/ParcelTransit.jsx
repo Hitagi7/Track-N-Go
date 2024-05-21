@@ -15,8 +15,8 @@ function ParcelTransit({ parcel }) {
           <img
             src={
               parcel.status === "[5] Delivered"
-                ? "/src/assets/icons/box-delivered.svg"
-                : "/src/assets/icons/box-in-transit.svg"
+                ? "/track-n-go/src/assets/icons/box-delivered.svg"
+                : "/track-n-go/src/assets/icons/box-in-transit.svg"
             }
             alt={
               parcel.status === "[5] Delivered"

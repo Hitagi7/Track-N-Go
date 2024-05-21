@@ -41,7 +41,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
     <div className="admin-body">
       <div className="AdminTrackingSearchFrame">
         <img
-          src="/src/assets/icons/icon-search.svg"
+          src="/track-n-go/src/assets/icons/icon-search.svg"
           alt="icon-search"
           className="TrackingSearchIcon"
         />
@@ -83,7 +83,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                           }}
                         >
                           <img
-                            src="src/assets/icons/icon-edit.svg"
+                            src="/track-n-go/src/assets/icons/icon-edit.svg"
                             alt="edit"
                             className="ParcelEditIcon"
                           />

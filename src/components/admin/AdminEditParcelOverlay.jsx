@@ -113,7 +113,7 @@ function AdminEditParcelOverlay({
               style={{ cursor: "pointer" }}
             >
               <img
-                src="src/assets/icons/icon-trash.svg"
+                src="/track-n-go/src/assets/icons/icon-trash.svg"
                 className="o-trash-icon"
               />
               <p className="font-medium">Delete parcel</p>
@@ -180,7 +180,7 @@ function AdminEditParcelOverlay({
                     />
                   </form>
                   <img
-                    src="src/assets/icons/icon-x.svg"
+                    src="/track-n-go/src/assets/icons/icon-x.svg"
                     className="o-x-icon"
                     alt=""
                   />
@@ -197,7 +197,7 @@ function AdminEditParcelOverlay({
                     />
                   </form>
                   <img
-                    src="src/assets/icons/icon-x.svg"
+                    src="/track-n-go/src/assets/icons/icon-x.svg"
                     className="o-x-icon"
                     alt=""
                   />
@@ -316,7 +316,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{shippedMonth}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -489,7 +489,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{shippedDay}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -568,7 +568,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{shippedYear}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -662,7 +662,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{deliveryMonth}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -840,7 +840,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{deliveryDay}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -924,7 +924,7 @@ function AdminEditParcelOverlay({
                     <p className="o-dropdown-placeholder">{deliveryYear}</p>
                     <button className="o-dropdown-button">
                       <img
-                        src="src/assets/icons/icon-chevron-down.svg"
+                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
                         alt=""
                       />
                     </button>
@@ -995,7 +995,7 @@ function AdminEditParcelOverlay({
                   </ul>
                   <p className="o-dropdown-placeholder">{status}</p>
                   <button className="o-status-dropdown-trigger o-dropdown-button">
-                    <img src="src/assets/icons/icon-chevron-down.svg" alt="" />
+                    <img src="/track-n-go/src/assets/icons/icon-chevron-down.svg" alt="" />
                   </button>
                 </div>
               </div>

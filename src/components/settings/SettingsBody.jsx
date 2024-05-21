@@ -84,7 +84,7 @@ function SettingsBody() {
                         <p>Enter current password</p>
                         <form onSubmit={handleChangePassword}>
                             <img
-                                src="src/assets/icons/icon-password.svg"
+                                src="/track-n-go/src/assets/icons/icon-password.svg"
                                 alt=""
                                 className="settings-password-icon"
                             />
@@ -101,7 +101,7 @@ function SettingsBody() {
                         <p>Enter new password</p>
                         <form onSubmit={handleChangePassword}>
                             <img
-                                src="src/assets/icons/icon-password.svg"
+                                src="/track-n-go/src/assets/icons/icon-password.svg"
                                 alt=""
                                 className="settings-password-icon"
                             />

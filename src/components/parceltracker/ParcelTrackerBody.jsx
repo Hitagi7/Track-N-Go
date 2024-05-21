@@ -89,7 +89,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="middle">
           <img
-            src={"/src/assets/icons/icon-circle-check.svg"}
+            src={"/track-n-go/src/assets/icons/icon-circle-check.svg"}
             alt="icon-circle-check"
           />
           <div className="vertical-line"></div>
@@ -115,7 +115,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="middle">
           <img
-            src={"/src/assets/icons/icon-circle.svg"}
+            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
             alt="icon-circle-check"
           />
           <div className="vertical-line"></div>
@@ -148,8 +148,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting" &&
               parcel.status === "[4] Courier Delivery"
-                ? "/src/assets/icons/icon-circle-check.svg"
-                : "/src/assets/icons/icon-circle.svg"
+                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
+                : "/track-n-go/src/assets/icons/icon-circle.svg"
             }
             alt="icon-circle-check"
           />
@@ -178,7 +178,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="middle">
           <img
-            src={"/src/assets/icons/icon-circle.svg"}
+            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
             alt="icon-circle-check"
           />
           <div className="vertical-line"></div>
@@ -210,8 +210,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up" &&
               parcel.status === "[3] Sorting"
-                ? "/src/assets/icons/icon-circle-check.svg"
-                : "/src/assets/icons/icon-circle.svg"
+                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
+                : "/track-n-go/src/assets/icons/icon-circle.svg"
             }
             alt="icon-circle-check"
           />
@@ -240,7 +240,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="middle">
           <img
-            src={"/src/assets/icons/icon-circle.svg"}
+            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
             alt="icon-circle-check"
           />
           <div className="vertical-line"></div>
@@ -272,8 +272,8 @@ function ParcelTrackerBody({ parcel }) {
             src={
               parcel.status !== "[1] Order Created" &&
               parcel.status === "[2] Picked Up"
-                ? "/src/assets/icons/icon-circle-check.svg"
-                : "/src/assets/icons/icon-circle.svg"
+                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
+                : "/track-n-go/src/assets/icons/icon-circle.svg"
             }
             alt="icon-circle-check"
           />
@@ -303,7 +303,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="middle">
           <img
-            src={"/src/assets/icons/icon-circle.svg"}
+            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
             alt="icon-circle-check"
           />
           <div className="vertical-line"></div>
@@ -324,7 +324,7 @@ function ParcelTrackerBody({ parcel }) {
       <div className="frame1">
         <div className="city">
           <p>{parcel.deliveredFrom}</p>
-          <img src="/src/assets/icons/icon-arrow-right.svg" alt="Arrow" />
+          <img src="/track-n-go/src/assets/icons/icon-arrow-right.svg" alt="Arrow" />
           <p>{parcel.deliveredTo}</p>
         </div>
         <div className="refNumber">{parcel.id}</div>
@@ -334,7 +334,7 @@ function ParcelTrackerBody({ parcel }) {
       <div className="frame2">
         <div className="order">
           <img
-            src="/src/assets/icons/circle-active-order-created.svg"
+            src="/track-n-go/src/assets/icons/circle-active-order-created.svg"
             alt="circle-active-order-created"
             className="iconstatus"
           />
@@ -352,8 +352,8 @@ function ParcelTrackerBody({ parcel }) {
           <img
             src={
               parcel.status !== "[1] Order Created"
-                ? "/src/assets/icons/circle-active-picked-up.svg"
-                : "/src/assets/icons/circle-idle-picked-up.svg"
+                ? "/track-n-go/src/assets/icons/circle-active-picked-up.svg"
+                : "/track-n-go/src/assets/icons/circle-idle-picked-up.svg"
             }
             alt="circle-idle-order-created"
             className="iconstatus"
@@ -380,8 +380,8 @@ function ParcelTrackerBody({ parcel }) {
             src={
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up"
-                ? "/src/assets/icons/circle-active-sorting.svg"
-                : "/src/assets/icons/circle-idle-sorting.svg"
+                ? "/track-n-go/src/assets/icons/circle-active-sorting.svg"
+                : "/track-n-go/src/assets/icons/circle-idle-sorting.svg"
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -413,8 +413,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting"
-                ? "/src/assets/icons/circle-active-courier-delivery.svg"
-                : "/src/assets/icons/circle-idle-courier-delivery.svg"
+                ? "/track-n-go/src/assets/icons/circle-active-courier-delivery.svg"
+                : "/track-n-go/src/assets/icons/circle-idle-courier-delivery.svg"
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -449,8 +449,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting" &&
               parcel.status !== "[4] Courier Delivery"
-                ? "/src/assets/icons/circle-active-delivered.svg"
-                : "/src/assets/icons/circle-idle-delivered.svg"
+                ? "/track-n-go/src/assets/icons/circle-active-delivered.svg"
+                : "/track-n-go/src/assets/icons/circle-idle-delivered.svg"
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -529,8 +529,8 @@ function ParcelTrackerBody({ parcel }) {
             <img
               src={
                 parcel.status !== "[1] Order Created"
-                  ? "/src/assets/icons/icon-circle.svg"
-                  : "/src/assets/icons/icon-circle-check.svg"
+                  ? "/track-n-go/src/assets/icons/icon-circle.svg"
+                  : "/track-n-go/src/assets/icons/icon-circle-check.svg"
               }
               alt="icon-circle-check"
             />

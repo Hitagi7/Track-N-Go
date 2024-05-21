@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <div className='Header'>
-        <Link to="/"><img src="/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
+        <Link to="/"><img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/></Link>
         <div className="Nav">
             <ul className="NavBar">
               <li ><Link to="/">Home</Link></li>
@@ -37,7 +37,7 @@ function Header() {
             </ul>
             <ButtonStack />
             <hr />
-            <button className="scroll-to-top" onClick={scrollToTop}><img src="/src/assets/icons/up-arrow.svg" alt="up-arrow" /></button>
+            <button className="scroll-to-top" onClick={scrollToTop}><img src="/track-n-go/src/assets/icons/up-arrow.svg" alt="up-arrow" /></button>
         </div>
         {openLogin && (
         <LoginOverlay

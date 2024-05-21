@@ -75,7 +75,7 @@ const LoginOverlay = ({
                   <p>Email</p>
                   <div className="input-field">
                     <img
-                      src="src/assets/icons/icon-mail.svg"
+                      src="/track-n-go/src/assets/icons/icon-mail.svg"
                       alt=""
                       className="field-icon"
                     />
@@ -93,7 +93,7 @@ const LoginOverlay = ({
                   <p>Password</p>
                   <div className="input-field">
                     <img
-                      src="src/assets/icons/icon-password.svg"
+                      src="/track-n-go/src/assets/icons/icon-password.svg"
                       className="field-icon"
                       alt=""
                     />
