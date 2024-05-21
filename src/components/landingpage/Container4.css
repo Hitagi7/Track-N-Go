@@ -17,24 +17,23 @@
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    gap: 50px;
     max-width: 100%; 
     padding: 0 20px; 
     box-sizing: border-box;
     animation: fade-left 1.5s;
 }
 
-.header {
+.c4-header {
     width: 100%; 
     max-width: 80rem; 
 }
 
-.description {
+.c4-description {
     width: 100%; 
     max-width: 95rem; 
-    line-height: 211.766%; /* 2.11763rem */
+    line-height: 2.11763rem;
     font-weight: 400 !important;
-    
+    margin-top: 3.12rem;
 }
 
 @media screen and (max-width: 1536px){

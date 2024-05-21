@@ -188,7 +188,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [{parcel.deliveredFrom} DC] Your parcel has been picked up
+            [{parcel.deliveredFrom} DC] Your parcel is on its way to the sorting center. The courier is currently transporting your parcel to our local sorting center where it will be processed and prepared.
           </div>
         </div>
       </div>

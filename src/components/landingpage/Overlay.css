@@ -153,6 +153,7 @@ input[type="password"] {
   color: #fefefe;
   height: 4.625rem;
   margin-top: 2.62rem;
+  font-weight: 700;
 }
 
 .fbutton.primary:hover {
