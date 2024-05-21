@@ -28,37 +28,53 @@ function AdminSideBar() {
         />
       </Link>
       <div className="a-navigation">
+        
         <Link to="/AdminHomePage">
-          <button className="a-users a-navigation-item">
+          <div className='sidenav-frame1'>
+            <img src="/src/assets/icons/icon-profile.svg"
+              alt="User Icon"
+              className="a-icon-user"
+            />
             <p className="font-16 font-semibold">Users</p>
-          </button>
+          </div>
         </Link>
+        
         <Link to="/ParcelsAdmin">
-          <button className="a-parcels a-navigation-item">
+          <div className='sidenav-frame2'>
+            <img src="/src/assets/icons/icon-parcel.svg"
+              alt="Parcel Icon"
+              className="a-icon-parcel"
+            />
             <p className="font-16 font-semibold">Parcels</p>
-          </button>
+          </div>
         </Link>
+        
         <Link to="/TrackingAdmin">
-          <button className="a-tracking a-navigation-item">
+          <div className='sidenav-frame3'>
+            <img src="/src/assets/icons/icon-pin.svg"
+              alt="Tracking Icon"
+              className="a-icon-tracking"
+            />
             <p className="font-16 font-semibold">Tracking</p>
-          </button>
+          </div>
         </Link>
+        
         </div>
         <button className="a-logout a-navigation-item" onClick={handleLogout}>
           Log Out
         </button>
         <div className="a-profile-button">
-        <img
-          src="src/assets/icons/profile-placeholder.svg"
-          alt=""
-          className="a-profile-placeholder"
-        />
-        
-        <div className="a-profile-label">
-          <p className="font-16 font-semibold">Admin</p>
-          <p className="font-14 font-light">Admin Account</p>
+          <img
+            src="src/assets/icons/profile-placeholder.svg"
+            alt=""
+            className="a-profile-placeholder"
+          />
+          
+          <div className="a-profile-label">
+            <p className="font-16 font-semibold">Admin</p>
+            <p className="font-14 font-light">Admin Account</p>
+          </div>
         </div>
-      </div>
     </div>
   );
 }

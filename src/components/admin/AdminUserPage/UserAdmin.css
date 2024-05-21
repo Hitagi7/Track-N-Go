@@ -9,6 +9,11 @@
   align-self: stretch;
 }
 
+.UserAdmin .AdminSidebar {
+  position: fixed;
+  height: 100%;
+}
+
 .a-user-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -17,6 +22,6 @@
   letter-spacing: -0.01875rem;
 }
 
-.UserAdmin .AdminSidebar .a-users {
+.UserAdmin .AdminSideBar .side-frame1 {
   background: #fecdcd;
 }

@@ -1,6 +1,6 @@
 .a-side-navigation {
   width: 20.8125rem;
-  height: 61.9375rem;
+  height: 100%;
   flex-shrink: 0;
   background: #fefefe;
   display: flex;
@@ -15,22 +15,11 @@
   margin-top: 3.5rem;
 }
 
-.a-navigation-item {
-  padding: 1.5625rem 4.1875rem;
-  border-radius: 1.4375rem;
-}
-
-.a-navigation-item:hover {
-  cursor: pointer;
-  background-color: hsl(0, 0%, 90%);
-  width: 9.8rem;
-}
-
 .a-profile-button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 34.5rem;
+  margin-top: 28.5rem;
   padding-top: 2rem;
   padding-right: 4.5rem;
   padding-bottom: 2rem;
@@ -43,25 +32,67 @@
   margin-left: 1.06rem;
 }
 
-.a-users {
-  background-image: url("src/assets/icons/icon-profile.svg");
-  background-repeat: no-repeat;
-  background-position: 2.19rem;
-  background-size: 1.5rem 1.5rem;
+.sidenav-frame1 {
+  border-radius: 1.4375rem;
+  padding: 1.5625rem 4.1875rem;
+  display: flex;
+  height: 4.0625rem;
+  padding: 1.5625rem 2.1875rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
 }
 
-.a-parcels {
-  background-image: url("src/assets/icons/icon-parcel.svg");
-  background-repeat: no-repeat;
-  background-position: 2.19rem;
-  background-size: 1.5rem 1.5rem;
+.sidenav-frame1:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
 }
 
-.a-tracking {
-  background-image: url("src/assets/icons/icon-pin.svg");
-  background-repeat: no-repeat;
-  background-position: 2.19rem;
-  background-size: 1.5rem 1.5rem;
+.a-icon-user {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sidenav-frame2 {
+  border-radius: 1.4375rem;
+  padding: 1.5625rem 4.1875rem;
+  display: flex;
+  height: 4.0625rem;
+  padding: 1.5625rem 2.1875rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.sidenav-frame2:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.a-icon-parcel {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sidenav-frame3 {
+  border-radius: 1.4375rem;
+  padding: 1.5625rem 4.1875rem;
+  display: flex;
+  height: 4.0625rem;
+  padding: 1.5625rem 2.1875rem;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.sidenav-frame3:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.a-icon-tracking {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .a-tng-logo {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./UserAdmin.css";
 import "../AdminPage.css";
-import AdminSideBar from "../AdminSideBar.jsx";
+import AdminSideBar from "../AdminSideBar";
 import AdminOverlay from "../AdminOverlay.jsx";
 import AdminUserBody from "../AdminUserPage/AdminUserBody.jsx";
 

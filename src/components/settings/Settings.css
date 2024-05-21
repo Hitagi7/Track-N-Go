@@ -1,7 +1,11 @@
+.Settings {
+    overflow-x: hidden;
+}
+
 .side-navigation {
     display: flex;
     flex-direction: row;
-    height: 145.125rem;
+    height: 120rem;
     animation: fade-left 1s;
 }
 
