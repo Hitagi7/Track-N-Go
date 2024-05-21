@@ -118,6 +118,17 @@ export const deleteParcel = async (parcelId) => {
   try {
     const parcelDocRef = doc(db, "Parcels", parcelId);
     await deleteDoc(parcelDocRef);
+
+    // Fetch all users
+    const usersSnapshot = await getDocs(collection(db, "TNG Users"));
+
+    // Delete the parcel from each user's Tracked Parcels subcollection
+    for (const userDoc of usersSnapshot.docs) {
+      const userId = userDoc.id;
+      const trackedParcelDocRef = doc(db, "TNG Users", userId, "Tracked Parcels", parcelId);
+      await deleteDoc(trackedParcelDocRef);
+    }
+
     return getParcels();
   } catch (error) {
     console.error("Error deleting parcel:", error);
