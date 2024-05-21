@@ -1,12 +1,15 @@
-import { useRef } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
+import { auth } from "../../firebase";
 import "./ParcelTrackerHeader.css";
 import ButtonStack from "../ButtonStack";
-import { Link } from "react-router-dom";
 
 function ParcelTrackerHeader() {
+  const [user] = useAuthState(auth);
+
   return (
     <div className="ParcelTrackerHeader">
-      <Link to="/DashboardPage">
+      <Link to={user ? "/DashboardPage" : "/"}>
         <img
           src="/src/assets/TNG Logo V2.png"
           alt="Logo Text"
