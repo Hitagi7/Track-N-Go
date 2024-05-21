@@ -23,7 +23,7 @@ function ParcelTrackerBody({ parcel }) {
           <div className="vertical-line"></div>
         </div>
         <div className="right">
-          <div className="description">Your Parcel Has Been Delivered</div>
+          <div className="description">Your parcel has been delivered.</div>
         </div>
       </div>
     );
@@ -46,7 +46,7 @@ function ParcelTrackerBody({ parcel }) {
           <div className="vertical-line"></div>
         </div>
         <div className="right">
-          <div className="description">Your Parcel Is In Transit</div>
+          <div className="description">[{parcel.deliveredTo} DC] Your parcel out for delivery.</div>
         </div>
       </div>
     );
@@ -77,7 +77,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [SOC 4] Your parcel is being transported to [SOC 5]
+            [SOC 5] Your parcel is in trasnit to [{parcel.deliveredTo} DC]
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [SOC 4] Your parcel has been received by sorting center
+            [SOC 5] The parcel has been dispatched from our sorting center.
           </div>
         </div>
       </div>
@@ -158,7 +158,8 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [SOC 4] Your parcel has been received by sorting center
+            [SOC 4] Your parcel has been received by sorting center to determine the route for delivery.
+
           </div>
         </div>
       </div>
@@ -188,7 +189,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [{parcel.deliveredFrom} DC] Your parcel is on its way to the sorting center. The courier is currently transporting your parcel to our local sorting center where it will be processed and prepared.
+            [{parcel.deliveredFrom} DC] Your parcel is on its way to the sorting center.
           </div>
         </div>
       </div>
@@ -213,7 +214,7 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-              Your parcel has been picked up by our courier. The package has been collected from the sender's location by our designated courier and is en route to the first sorting facility.
+              Your parcel has been picked up by our courier. The package has been collected by our designated courier.
           </div>
         </div>
       </div>
@@ -439,7 +440,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
           <div className="right">
             <div className="description">
-              Order created successfully. Your order details are currently being reviewed. The parcel shipment will be prepared shortly.
+              Order created successfully.
             </div>
           </div>
         </div>

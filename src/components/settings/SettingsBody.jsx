@@ -25,7 +25,7 @@ function SettingsBody() {
         if (!currentPassword || !newPassword) {
             setError('Please fill in all fields');
             return;
-          }
+          } 
         
           console.log('User logged in:', !!auth.currentUser, auth.currentUser?.uid, auth.currentUser?.email); // Checks if the user is logged in
           console.log(currentPassword, newPassword)
