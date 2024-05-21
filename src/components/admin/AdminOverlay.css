@@ -179,6 +179,11 @@ input[type="text"],
   z-index: 11;
 }
 
+.overflow {
+  overflow: auto;
+  height: 500px;
+}
+
 .o-dropdown-content a {
   padding: 12px 16px;
   display: block;

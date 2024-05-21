@@ -346,7 +346,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     </div>
 
                     <div className="o-day-dropdown o-dropdown">
-                      <ul className="o-day-dropdown-content o-dropdown-content">
+                      <ul className="o-day-dropdown-content o-dropdown-content overflow">
                         <li>
                           <a href="#" onClick={() => setShippedDay("1")}>
                             1
@@ -519,7 +519,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     </div>
 
                     <div className="o-year-dropdown o-dropdown">
-                      <ul className="o-year-dropdown-content o-dropdown-content">
+                      <ul className="o-year-dropdown-content o-dropdown-content overflow">
                         <li>
                           <a href="#" onClick={() => setShippedYear("2015")}>
                             2015
@@ -701,7 +701,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     </div>
 
                     <div className="o-day-dropdown o-dropdown">
-                      <ul className="o-day-dropdown-content o-dropdown-content">
+                      <ul className="o-day-dropdown-content o-dropdown-content overflow">
                         <li>
                           <a href="#" onClick={() => setDeliveryDay("-")}>
                             -
@@ -879,7 +879,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     </div>
 
                     <div className="o-year-dropdown o-dropdown">
-                      <ul className="o-year-dropdown-content o-dropdown-content">
+                      <ul className="o-year-dropdown-content o-dropdown-content overflow">
                         <li>
                           <a href="#" onClick={() => setDeliveryYear("-")}>
                             -

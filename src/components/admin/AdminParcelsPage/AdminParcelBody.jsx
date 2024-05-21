@@ -23,8 +23,6 @@ function AdminParcelBody({
     setEditOverlayVisible(!editOverlayVisible);
   };
 
-  
-
   return (
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">

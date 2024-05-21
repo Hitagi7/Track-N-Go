@@ -2,8 +2,77 @@ import React from "react";
 import "./ParcelTrackerBody.css";
 
 function ParcelTrackerBody({ parcel }) {
-  const addLeadingZero = (number) => {
-    return number < 10 ? "0" + number : number.toString();
+  const adjustDate = (monthStr, dayStr, yearStr) => {
+    const monthNames = {
+      January: 1,
+      February: 2,
+      March: 3,
+      April: 4,
+      May: 5,
+      June: 6,
+      July: 7,
+      August: 8,
+      September: 9,
+      October: 10,
+      November: 11,
+      December: 12,
+    };
+
+    // Normalize month string
+    let normalizedMonthStr =
+      monthStr.charAt(0).toUpperCase() + monthStr.slice(1).toLowerCase();
+
+    let month = monthNames[normalizedMonthStr]; // Use normalized month string
+
+    if (month === undefined) {
+      throw new Error("Invalid month string provided.");
+    }
+
+    let day = parseInt(dayStr);
+    let year = parseInt(yearStr);
+
+    const monthDays = {
+      1: 31,
+      2: 28,
+      3: 31,
+      4: 30,
+      5: 31,
+      6: 30,
+      7: 31,
+      8: 31,
+      9: 30,
+      10: 31,
+      11: 30,
+      12: 31,
+    };
+
+    // Check for leap year and adjust February days
+    if (
+      month === 2 &&
+      year % 4 === 0 &&
+      (year % 100 !== 0 || year % 400 === 0)
+    ) {
+      monthDays[2] = 29;
+    }
+
+    // Handle cases where day exceeds the maximum days in the month
+    if (day > monthDays[month]) {
+      // Move to the next month
+      day -= monthDays[month]; // Limit day to the new month's max
+      month += 1;
+
+      // Handle year overflow (December to January)
+      if (month === 13) {
+        month = 1;
+        year += 1;
+      }
+    }
+
+    // Return adjusted date as a formatted string
+    const adjustedMonth = Object.keys(monthNames).find(
+      (key) => monthNames[key] === month
+    );
+    return `${day.toString().padStart(2, "0")} ${adjustedMonth} ${year}`;
   };
 
   const deliveredParcel2 = () => {
@@ -11,8 +80,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 8)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 8,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -34,8 +106,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 8)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 8,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -46,7 +121,9 @@ function ParcelTrackerBody({ parcel }) {
           <div className="vertical-line"></div>
         </div>
         <div className="right">
-          <div className="description">[{parcel.deliveredTo} DC] Your parcel out for delivery.</div>
+          <div className="description">
+            [{parcel.deliveredTo} DC] Your parcel out for delivery.
+          </div>
         </div>
       </div>
     );
@@ -57,8 +134,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 6)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 6,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -89,8 +169,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 6)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 6,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -114,8 +197,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 4)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 4,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -145,8 +231,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 4)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 4,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -158,8 +247,8 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [SOC 4] Your parcel has been received by sorting center to determine the route for delivery.
-
+            [SOC 4] Your parcel has been received by sorting center to determine
+            the route for delivery.
           </div>
         </div>
       </div>
@@ -171,8 +260,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 2)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 2,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -189,7 +281,8 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-            [{parcel.deliveredFrom} DC] Your parcel is on its way to the sorting center.
+            [{parcel.deliveredFrom} DC] Your parcel is on its way to the sorting
+            center.
           </div>
         </div>
       </div>
@@ -201,8 +294,11 @@ function ParcelTrackerBody({ parcel }) {
       <div className="container">
         <div className="left">
           <div className="date">
-            {addLeadingZero(parseInt(parcel.shippedDay) + 2)}{" "}
-            {parcel.shippedMonth} {parcel.shippedYear}
+            {adjustDate(
+              parcel.shippedMonth,
+              parseInt(parcel.shippedDay) + 2,
+              parcel.shippedYear
+            )}
           </div>
         </div>
         <div className="middle">
@@ -214,7 +310,8 @@ function ParcelTrackerBody({ parcel }) {
         </div>
         <div className="right">
           <div className="description">
-              Your parcel has been picked up by our courier. The package has been collected by our designated courier.
+            Your parcel has been picked up by our courier. The package has been
+            collected by our designated courier.
           </div>
         </div>
       </div>
@@ -424,7 +521,7 @@ function ParcelTrackerBody({ parcel }) {
         <div className="container">
           <div className="left">
             <div className="date">
-              {addLeadingZero(parcel.shippedDay)} {parcel.shippedMonth}{" "}
+              {parcel.shippedDay.padStart(2, "0")} {parcel.shippedMonth}{" "}
               {parcel.shippedYear}
             </div>
           </div>
@@ -439,9 +536,7 @@ function ParcelTrackerBody({ parcel }) {
             />
           </div>
           <div className="right">
-            <div className="description">
-              Order created successfully.
-            </div>
+            <div className="description">Order created successfully.</div>
           </div>
         </div>
       </div>
