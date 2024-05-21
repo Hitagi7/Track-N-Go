@@ -87,7 +87,26 @@ export const createParcel = async (newParcel) => {
 export const updateParcel = async (parcelId, updatedParcelData) => {
   try {
     const parcelDocRef = doc(db, "Parcels", parcelId);
+
+    // Update the parcel in the Parcels collection
     await updateDoc(parcelDocRef, updatedParcelData);
+
+    // Fetch all users
+    const usersSnapshot = await getDocs(collection(db, "TNG Users"));
+
+    // Update the parcel in each user's Tracked Parcels subcollection
+    for (const userDoc of usersSnapshot.docs) {
+      const userId = userDoc.id;
+      const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
+      const trackedParcelDocRef = doc(userParcelsRef, parcelId);
+
+      // Check if the parcel exists in the user's Tracked Parcels subcollection
+      const trackedParcelSnapshot = await getDocs(userParcelsRef);
+      if (trackedParcelSnapshot.docs.some(doc => doc.id === parcelId)) {
+        await updateDoc(trackedParcelDocRef, updatedParcelData);
+      }
+    }
+
     return getParcels();
   } catch (error) {
     console.error("Error updating parcel:", error);
@@ -108,7 +127,7 @@ export const deleteParcel = async (parcelId) => {
 
 export const getUserParcels = async (userId) => {
   try {
-    const userParcelsRef = collection(db, "Parcels");
+    const userParcelsRef = collection(db, "TNG Users", userId, "Tracked Parcels");
     const querySnapshot = await getDocs(userParcelsRef);
     return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
   } catch (error) {
