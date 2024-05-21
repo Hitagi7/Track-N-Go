@@ -124,7 +124,6 @@
     color: #FEFEFE;
     font-size: 1rem;
     font-weight: 600;
-    transition: transform 0.3s ease-in-out;
     }
 
 .cancel-profile {
@@ -139,13 +138,11 @@
     color: #2D3648;
     font-size: 1rem;
     font-weight: 600;
-    transition: transform 0.3s ease-in-out;
 }
 
 .save-changes-profile:hover,
 .cancel-profile:hover {
-    transform: scale(1.03);
-    filter: brightness(0.96);
+    filter: brightness(0.95);
     cursor: pointer;
 }
 

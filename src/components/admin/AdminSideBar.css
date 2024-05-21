@@ -80,10 +80,10 @@
     background-repeat: no-repeat;
     background-position: 2.19rem;
     background-size: 1.5rem 1.5rem;
+    margin-top: 34.5rem;
 }
 
 .a-logout:hover {
-    color: #f43939; /* Change text color on hover */
-    text-align: center; /* Center text horizontally on hover */
-  }
-
+    color: #f43939; 
+    text-align: center;
+}

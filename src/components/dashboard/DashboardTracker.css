@@ -30,7 +30,6 @@
     background: #FDFDFD;
     border: #FDFDFD;
     width: 100%;
-    /* height: 2.6875rem; */
 }
 
 .SearchBar {
@@ -43,14 +42,13 @@
     border-radius: 0.625rem;
     background: #8D2F2D;
     width: 5.375rem;
-    /* padding: 0.5rem 0.9375rem; */
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FDFDFD;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 700;   
     line-height: normal;
     gap: 0.625rem;
     height: 100%;
@@ -58,5 +56,5 @@
 }
 
 .Submit:hover {
-    opacity: 90%;
+    filter: brightness(1.10);
 }

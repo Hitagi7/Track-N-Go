@@ -47,18 +47,6 @@ function AdminSideBar() {
         <button className="a-logout a-navigation-item" onClick={handleLogout}>
           Log Out
         </button>
-        <div className="a-profile-button">
-        <img
-          src="src/assets/icons/profile-placeholder.svg"
-          alt=""
-          className="a-profile-placeholder"
-        />
-        
-        <div className="a-profile-label">
-          <p className="font-16 font-semibold">Admin</p>
-          <p className="font-14 font-light">Admin Account</p>
-        </div>
-      </div>
     </div>
   );
 }
