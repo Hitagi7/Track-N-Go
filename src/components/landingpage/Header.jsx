@@ -4,16 +4,11 @@ import ButtonStack from "../ButtonStack";
 import { Link } from "react-router-dom";
 import LoginOverlay from "./LoginOverlay";
 import logo from "/src/assets/TNG Logo V2.png";
-import upArrow from "/src/assets/icons/up-arrow.svg";
 
 function scrollTo(sectionId) {
   const element = document.getElementById(sectionId);
   element.scrollIntoView({ behavior: "smooth" });
 }
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
 function Header() {
   const [openLogin, setOpenLogin] = useState(false);
@@ -28,9 +23,7 @@ function Header() {
       <img src={logo} alt="Logo Text" className="logo" />
       <div className="Nav">
         <ul className="NavBar">
-          <li>
-            <Link to="/track-n-go/">Home</Link>
-          </li>
+          <li onClick={() => scrollTo("home")}>Home</li>
           <li onClick={() => scrollTo("our-product")}>Our Product</li>
           <li onClick={() => scrollTo("partners")}>Partners</li>
           <li onClick={() => scrollTo("about-us")}>About Us</li>
@@ -38,9 +31,6 @@ function Header() {
         </ul>
         <ButtonStack />
         <hr />
-        <button className="scroll-to-top" onClick={scrollToTop}>
-          <img src={upArrow} alt="up-arrow" />
-        </button>
       </div>
       {openLogin && (
         <LoginOverlay
