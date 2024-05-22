@@ -3,6 +3,8 @@ import "./AdminUserBody.css";
 import { auth, db } from "./../../../firebase.js";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { deleteUser } from "firebase/auth";
+import iconTrash from "/track-n-go/src/assets/icons/icon-trash.svg";
+import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
 
 function AdminUserBody() {
   const [users, setUsers] = useState([]);
@@ -52,11 +54,7 @@ function AdminUserBody() {
   return (
     <div className="admin-body">
       <div className="a-text-field">
-        <img
-          src="/track-n-go/src/assets/icons/icon-search.svg"
-          alt=""
-          className="a-search-icon"
-        />
+        <img src={iconSearch} alt="" className="a-search-icon" />
         <input
           type="text"
           placeholder="Search users"
@@ -92,11 +90,7 @@ function AdminUserBody() {
                 <td>*******</td> {/* Hide password */}
                 <td>
                   <button onClick={() => handleDeleteUser(user.id)}>
-                    <img
-                      src="/track-n-go/src/assets/icons/icon-trash.svg"
-                      alt=""
-                      className="a-icon-trash"
-                    />
+                    <img src={iconTrash} alt="" className="a-icon-trash" />
                   </button>
                 </td>
               </tr>

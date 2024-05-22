@@ -1,5 +1,17 @@
 import React from "react";
 import "./ParcelTrackerBody.css";
+import iconCircleCheck from "/track-n-go/src/assets/icons/icon-circle-check.svg";
+import iconCircle from "/track-n-go/src/assets/icons/icon-circle.svg";
+import arrowRightIcon from "/track-n-go/src/assets/icons/icon-arrow-right.svg";
+import circleActiveOrderCreated from "/track-n-go/src/assets/icons/circle-active-order-created.svg";
+import circleActivePickedUp from "/track-n-go/src/assets/icons/circle-active-picked-up.svg";
+import circleIdlePickedUp from "/track-n-go/src/assets/icons/circle-idle-picked-up.svg";
+import circleActiveSorting from "/track-n-go/src/assets/icons/circle-active-sorting.svg";
+import circleIdleSorting from "/track-n-go/src/assets/icons/circle-idle-sorting.svg";
+import circleActiveCourierDelivery from "/track-n-go/src/assets/icons/circle-active-courier-delivery.svg";
+import circleIdleCourierDelivery from "/track-n-go/src/assets/icons/circle-idle-courier-delivery.svg";
+import circleActiveDelivered from "/track-n-go/src/assets/icons/circle-active-delivered.svg";
+import circleIdleDelivered from "/track-n-go/src/assets/icons/circle-idle-delivered.svg";
 
 function ParcelTrackerBody({ parcel }) {
   const adjustDate = (monthStr, dayStr, yearStr) => {
@@ -88,10 +100,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
         </div>
         <div className="middle">
-          <img
-            src={"/track-n-go/src/assets/icons/icon-circle-check.svg"}
-            alt="icon-circle-check"
-          />
+          <img src={iconCircleCheck} alt="icon-circle-check" />
           <div className="vertical-line"></div>
         </div>
         <div className="right">
@@ -114,10 +123,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
         </div>
         <div className="middle">
-          <img
-            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
-            alt="icon-circle-check"
-          />
+          <img src={iconCircle} alt="icon-circle" />
           <div className="vertical-line"></div>
         </div>
         <div className="right">
@@ -148,8 +154,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting" &&
               parcel.status === "[4] Courier Delivery"
-                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
-                : "/track-n-go/src/assets/icons/icon-circle.svg"
+                ? iconCircleCheck
+                : iconCircle
             }
             alt="icon-circle-check"
           />
@@ -177,10 +183,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
         </div>
         <div className="middle">
-          <img
-            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
-            alt="icon-circle-check"
-          />
+          <img src={iconCircle} alt="icon-circle" />
           <div className="vertical-line"></div>
         </div>
         <div className="right">
@@ -210,8 +213,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up" &&
               parcel.status === "[3] Sorting"
-                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
-                : "/track-n-go/src/assets/icons/icon-circle.svg"
+                ? iconCircleCheck
+                : iconCircle
             }
             alt="icon-circle-check"
           />
@@ -239,10 +242,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
         </div>
         <div className="middle">
-          <img
-            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
-            alt="icon-circle-check"
-          />
+          <img src={iconCircle} alt="icon-circle" />
           <div className="vertical-line"></div>
         </div>
         <div className="right">
@@ -272,8 +272,8 @@ function ParcelTrackerBody({ parcel }) {
             src={
               parcel.status !== "[1] Order Created" &&
               parcel.status === "[2] Picked Up"
-                ? "/track-n-go/src/assets/icons/icon-circle-check.svg"
-                : "/track-n-go/src/assets/icons/icon-circle.svg"
+                ? iconCircleCheck
+                : iconCircle
             }
             alt="icon-circle-check"
           />
@@ -302,10 +302,7 @@ function ParcelTrackerBody({ parcel }) {
           </div>
         </div>
         <div className="middle">
-          <img
-            src={"/track-n-go/src/assets/icons/icon-circle.svg"}
-            alt="icon-circle-check"
-          />
+          <img src={iconCircle} alt="icon-circle" />
           <div className="vertical-line"></div>
         </div>
         <div className="right">
@@ -324,7 +321,7 @@ function ParcelTrackerBody({ parcel }) {
       <div className="frame1">
         <div className="city">
           <p>{parcel.deliveredFrom}</p>
-          <img src="/track-n-go/src/assets/icons/icon-arrow-right.svg" alt="Arrow" />
+          <img src={arrowRightIcon} alt="Arrow" />
           <p>{parcel.deliveredTo}</p>
         </div>
         <div className="refNumber">{parcel.id}</div>
@@ -334,7 +331,7 @@ function ParcelTrackerBody({ parcel }) {
       <div className="frame2">
         <div className="order">
           <img
-            src="/track-n-go/src/assets/icons/circle-active-order-created.svg"
+            src={circleActiveOrderCreated}
             alt="circle-active-order-created"
             className="iconstatus"
           />
@@ -352,8 +349,8 @@ function ParcelTrackerBody({ parcel }) {
           <img
             src={
               parcel.status !== "[1] Order Created"
-                ? "/track-n-go/src/assets/icons/circle-active-picked-up.svg"
-                : "/track-n-go/src/assets/icons/circle-idle-picked-up.svg"
+                ? circleActivePickedUp
+                : circleIdlePickedUp
             }
             alt="circle-idle-order-created"
             className="iconstatus"
@@ -380,8 +377,8 @@ function ParcelTrackerBody({ parcel }) {
             src={
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up"
-                ? "/track-n-go/src/assets/icons/circle-active-sorting.svg"
-                : "/track-n-go/src/assets/icons/circle-idle-sorting.svg"
+                ? circleActiveSorting
+                : circleIdleSorting
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -413,8 +410,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[1] Order Created" &&
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting"
-                ? "/track-n-go/src/assets/icons/circle-active-courier-delivery.svg"
-                : "/track-n-go/src/assets/icons/circle-idle-courier-delivery.svg"
+                ? circleActiveCourierDelivery
+                : circleIdleCourierDelivery
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -449,8 +446,8 @@ function ParcelTrackerBody({ parcel }) {
               parcel.status !== "[2] Picked Up" &&
               parcel.status !== "[3] Sorting" &&
               parcel.status !== "[4] Courier Delivery"
-                ? "/track-n-go/src/assets/icons/circle-active-delivered.svg"
-                : "/track-n-go/src/assets/icons/circle-idle-delivered.svg"
+                ? circleActiveDelivered
+                : circleIdleDelivered
             }
             alt="circle-active-order-created"
             className="iconstatus"
@@ -529,8 +526,8 @@ function ParcelTrackerBody({ parcel }) {
             <img
               src={
                 parcel.status !== "[1] Order Created"
-                  ? "/track-n-go/src/assets/icons/icon-circle.svg"
-                  : "/track-n-go/src/assets/icons/icon-circle-check.svg"
+                  ? iconCircle
+                  : iconCircleCheck
               }
               alt="icon-circle-check"
             />

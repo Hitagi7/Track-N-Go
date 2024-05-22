@@ -3,6 +3,8 @@ import "./AdminOverlay.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { onSnapshot } from "firebase/firestore";
+import iconX from "/track-n-go/src/assets/icons/icon-x.svg";
+import iconChevronDown from "/track-n-go/src/assets/icons/icon-chevron-down.svg";
 
 function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
   // const [parcel, setParcel] = useState({
@@ -195,11 +197,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       }}
                       required
                     />
-                    <img
-                      src="/track-n-go/src/assets/icons/icon-x.svg"
-                      className="o-x-icon"
-                      alt=""
-                    />
+                    <img src={iconX} className="o-x-icon" alt="" />
                     <input
                       type="number"
                       placeholder="Width"
@@ -210,11 +208,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       }}
                       required
                     />
-                    <img
-                      src="/track-n-go/src/assets/icons/icon-x.svg"
-                      className="o-x-icon"
-                      alt=""
-                    />
+                    <img src={iconX} className="o-x-icon" alt="" />
                     <input
                       type="number"
                       placeholder="Height"
@@ -338,10 +332,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{shippedMonth}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
 
@@ -511,10 +502,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{shippedDay}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
 
@@ -590,10 +578,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{shippedYear}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
                   </div>
@@ -693,10 +678,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{deliveryMonth}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
 
@@ -871,10 +853,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{deliveryDay}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
 
@@ -955,10 +934,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                       </ul>
                       <p className="o-dropdown-placeholder">{deliveryYear}</p>
                       <button className="o-dropdown-button">
-                        <img
-                          src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                          alt=""
-                        />
+                        <img src={iconChevronDown} alt="" />
                       </button>
                     </div>
                   </div>
@@ -1025,10 +1001,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                     </ul>
                     <p className="o-dropdown-placeholder">{status}</p>
                     <button className="o-status-dropdown-trigger o-dropdown-button">
-                      <img
-                        src="/track-n-go/src/assets/icons/icon-chevron-down.svg"
-                        alt=""
-                      />
+                      <img src={iconChevronDown} alt="" />
                     </button>
                   </div>
                 </div>

@@ -3,6 +3,8 @@ import { auth } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import "./Overlay.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import mailIcon from "/track-n-go/src/assets/icons/icon-mail.svg";
+import passwordIcon from "/track-n-go/src/assets/icons/icon-password.svg";
 
 const LoginOverlay = ({
   visible,
@@ -74,11 +76,7 @@ const LoginOverlay = ({
                 <section className="email-wrapper">
                   <p>Email</p>
                   <div className="input-field">
-                    <img
-                      src="/track-n-go/src/assets/icons/icon-mail.svg"
-                      alt=""
-                      className="field-icon"
-                    />
+                    <img src={mailIcon} alt="" className="field-icon" />
                     <input
                       type="email"
                       placeholder="john_doe@email.com"
@@ -92,11 +90,7 @@ const LoginOverlay = ({
                 <section className="password-wrapper">
                   <p>Password</p>
                   <div className="input-field">
-                    <img
-                      src="/track-n-go/src/assets/icons/icon-password.svg"
-                      className="field-icon"
-                      alt=""
-                    />
+                    <img src={passwordIcon} className="field-icon" alt="" />
                     <input
                       type="password"
                       placeholder="Should be 8 characters and above"

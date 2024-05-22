@@ -1,6 +1,7 @@
 import React from "react";
 import "./DashboardDeliveryDetails.css";
 import { Link } from "react-router-dom";
+import truck from "/track-n-go/src/assets/icons/truck.svg";
 
 function DashboardDeliveryDetails({ trackedParcels }) {
   const inDelivery = () => {
@@ -19,11 +20,7 @@ function DashboardDeliveryDetails({ trackedParcels }) {
           <p className="font-bold">{inDelivery()}</p>
           <p className="delivery">in delivery today</p>
         </div>
-        <img
-          src="/track-n-go/src/assets/icons/truck.svg"
-          alt="Delivery Truck"
-          className="truck"
-        />
+        <img src={truck} alt="Delivery Truck" className="truck" />
       </div>
       <div className="Frame7">
         <p className="DeliveryNumber">

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getParcels } from "../admin/AdminService";
 import mapWithPin from "/src/assets/Map With Pin.png";
+import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
 import "./Container1.css";
 
 function Container1() {
@@ -24,11 +25,7 @@ function Container1() {
         <div className="Input">
           <div className="InputTitle">Track your parcel below!</div>
           <div className="Wrapper">
-            <img
-              src="/track-n-go/src/assets/icons/icon-search.svg"
-              alt="icon-search"
-              className="icon"
-            />
+            <img src={iconSearch} alt="icon-search" className="icon" />
             <input
               type="text"
               className="InputBox"
@@ -54,11 +51,7 @@ function Container1() {
           </div>
         </div>
       </div>
-      <img
-        src={mapWithPin}
-        alt="Map With Pin"
-        className="Resize-image1"
-      />
+      <img src={mapWithPin} alt="Map With Pin" className="Resize-image1" />
     </div>
   );
 }

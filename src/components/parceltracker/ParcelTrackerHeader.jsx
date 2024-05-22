@@ -11,15 +11,8 @@ function ParcelTrackerHeader() {
   return (
     <div className="ParcelTrackerHeader">
       <Link to={user ? "/track-n-go/DashboardPage" : "/track-n-go/"}>
-        <img
-          src={tngLogo2}
-          alt="Logo Text"
-          className="ParcelTrackerLogo"
-        />
+        <img src={tngLogo2} alt="Logo Text" className="ParcelTrackerLogo" />
       </Link>
-      <div className="Navi">
-        <ButtonStack />
-      </div>
     </div>
   );
 }

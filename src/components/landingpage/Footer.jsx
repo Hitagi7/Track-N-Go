@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import './Footer.css'
+import { useState } from "react";
+import "./Footer.css";
+import logo from "/src/assets/TNG Logo V2.png";
 
 function Footer() {
-
   return (
     <div className="Footer">
-      <img src="/track-n-go/src/assets/TNG Logo V2.png" alt="Logo Text" className="logo"/>
+      <img src={logo} alt="Logo Text" className="logo" />
       <p>
         Gov. M. Cuenco Ave., Talamban, Talamban,
         <br />
@@ -29,4 +29,4 @@ function Footer() {
   );
 }
 
-export default Footer
+export default Footer;

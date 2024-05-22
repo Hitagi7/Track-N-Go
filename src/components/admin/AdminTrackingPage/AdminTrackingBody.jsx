@@ -4,6 +4,8 @@ import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 import ParcelsAdmin from "../AdminParcelsPage/ParcelsAdmin";
 import { getParcels } from "../AdminService";
+import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
+import iconEdit from "/track-n-go/src/assets/icons/icon-edit.svg";
 
 function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);
@@ -41,7 +43,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
     <div className="admin-body">
       <div className="AdminTrackingSearchFrame">
         <img
-          src="/track-n-go/src/assets/icons/icon-search.svg"
+          src={iconSearch}
           alt="icon-search"
           className="TrackingSearchIcon"
         />
@@ -83,7 +85,7 @@ function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
                           }}
                         >
                           <img
-                            src="/track-n-go/src/assets/icons/icon-edit.svg"
+                            src={iconEdit}
                             alt="edit"
                             className="ParcelEditIcon"
                           />

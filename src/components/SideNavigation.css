@@ -1,25 +1,21 @@
 .SideNavigation {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 20.2rem;
-    min-height: 58rem;
-    height: 100%;
-    background: #FEFEFE;
-    gap: 0.62rem;
-    padding: 1.5rem 1.25rem;
-    animation: fade-left 0.5s;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 20.2rem;
+  min-height: 58rem;
+  height: 100%;
+  background: #fefefe;
+  gap: 0.62rem;
+  padding: 1.5rem 1.25rem;
+  animation: fade-left 0.5s;
 }
 
 .SideNavigation .logo {
   width: 17.75rem;
   height: 3.4375rem;
-}
-
-.SideNavigation .logo:hover {
-  cursor: pointer;
 }
 
 .hr1 {
@@ -108,12 +104,12 @@
 }
 
 .loading-text {
-    font-size: 18px; 
-    font-weight: 600; 
-    color: #ccc; 
-    text-align: center;
-    animation: pop-up 0.2s;
-  }
+  font-size: 18px;
+  font-weight: 600;
+  color: #ccc;
+  text-align: center;
+  animation: pop-up 0.2s;
+}
 
 .Frame1:hover,
 .Frame2:hover,
@@ -123,30 +119,29 @@
 }
 
 @keyframes pop-up {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px) scale(1);
   }
 
-  @keyframes fade-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-40px) scale(1);
-    }
+  20% {
+    opacity: 0;
+    transform: translateX(-20px) scale(1);
+  }
 
-    20% {
-        opacity: 0;
-        transform: translateX(-20px) scale(1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0px) scale(1);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
 }
-  

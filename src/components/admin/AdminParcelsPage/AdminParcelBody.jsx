@@ -3,7 +3,7 @@ import "./AdminParcelBody.css";
 import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 import { generateID } from "../AdminService";
-import iconSearch  from "/src/assets/icons/icon-search.svg";
+import iconSearch from "/src/assets/icons/icon-search.svg";
 import iconPlus from "/src/assets/icons/icon-plus.svg";
 import iconEdit from "/src/assets/icons/icon-edit.svg";
 import iconX from "/src/assets/icons/icon-x.svg";
@@ -30,11 +30,7 @@ function AdminParcelBody({
   return (
     <div className="admin-body">
       <div className="AdminParcelSearchFrame">
-        <img
-          src={iconSearch}
-          alt="icon-search"
-          className="ParcelSearchIcon"
-        />
+        <img src={iconSearch} alt="icon-search" className="ParcelSearchIcon" />
         <input
           type="text"
           className="AdminParcelSearchInput"
@@ -47,11 +43,7 @@ function AdminParcelBody({
           onClick={toggleOverlay}
           style={{ cursor: "pointer", opacity: "90%" }}
         >
-          <img
-            src={iconPlus}
-            alt="Plus Icon"
-            className="ParcelPlusIcon"
-          />
+          <img src={iconPlus} alt="Plus Icon" className="ParcelPlusIcon" />
           <p className="AddParcelText">Add new Parcel</p>
         </div>
         <AdminOverlay
@@ -111,17 +103,9 @@ function AdminParcelBody({
                       <td>{parcelDetails.weight} kg</td>
                       <td>
                         {parcelDetails.length}
-                        <img
-                          src={iconX}
-                          className="x-icon"
-                          alt=""
-                        />
+                        <img src={iconX} className="x-icon" alt="" />
                         {parcelDetails.width}
-                        <img
-                          src={iconX}
-                          className="x-icon"
-                          alt=""
-                        />
+                        <img src={iconX} className="x-icon" alt="" />
                         {parcelDetails.height} cm
                       </td>
                       <td>₱{parcelDetails.price}</td>

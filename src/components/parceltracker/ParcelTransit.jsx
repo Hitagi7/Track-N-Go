@@ -1,5 +1,7 @@
 import React from "react";
 import "./ParcelTransit.css";
+import boxDelivered from "/track-n-go/src/assets/icons/box-delivered.svg";
+import boxTransit from "/track-n-go/src/assets/icons/box-in-transit.svg";
 
 function ParcelTransit({ parcel }) {
   return (
@@ -13,11 +15,7 @@ function ParcelTransit({ parcel }) {
           }
         >
           <img
-            src={
-              parcel.status === "[5] Delivered"
-                ? "/track-n-go/src/assets/icons/box-delivered.svg"
-                : "/track-n-go/src/assets/icons/box-in-transit.svg"
-            }
+            src={parcel.status === "[5] Delivered" ? boxDelivered : boxTransit}
             alt={
               parcel.status === "[5] Delivered"
                 ? "box-delivered.svg"
