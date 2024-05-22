@@ -11,7 +11,7 @@ function Settings() {
             <div className = "SideNavSpace3"></div>
             <SideNavigation />
             <div className="settings-pane">
-                <div className="settings-title">
+                <div className="settings-title-space">
                     <SettingsTitle />
                 </div>
                 <div className="settings-body">

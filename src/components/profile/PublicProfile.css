@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 77.5rem;
-    height: 64.9375rem;
+    height: auto;
     flex-shrink: 0;
     border-radius: 1.25rem;
     background: #FEFEFE;
@@ -35,7 +35,8 @@
     flex-direction: column;
     align-items: center;
     width: 69.25rem;
-    height: 58.688rem;
+    height: 52rem;
+    margin-top: 3.12rem;
 }
 
 .title {
@@ -151,5 +152,5 @@
 }
 
 .save-changes-profile:hover {
-    background: hsl(1, 68%, 50%);
+    opacity: 90%;
 }

@@ -9,6 +9,18 @@
     animation: fade-left 1s;
 }
 
+.settings-title-space {
+    width: 100%;
+    height: 3.75rem;
+    margin-bottom: 2.94rem;
+}
+
+.Settings .SettingsTitle {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 .Settings .SideNavigation {
     height: 81rem;
     position: fixed;
@@ -50,7 +62,7 @@
 }
 
 .SideNavSpace3 {
-    width: 24.4rem;
+    width: 24rem;
     background-color: #F5F5F5;
 
 }

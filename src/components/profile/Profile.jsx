@@ -44,7 +44,9 @@ function Profile() {
         <SideNavigation />
       </div>
       <div className="Profile2">
-        <ProfileTitle />
+        <div className="ProfileTitleSpace">
+          <ProfileTitle />
+        </div>
         <div className="profile-header" /> {/* To be changed */}
         <div className="Profile3">
           {/* Main content/container */}

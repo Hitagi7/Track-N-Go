@@ -1,14 +1,23 @@
 .Dashboard {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #F5F5F5;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    animation: fade-left 1s;
-    overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #F5F5F5;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  animation: fade-left 1s;
+  overflow-x: hidden;
+}
+
+.DashboardTitleSpace {
+  width: 100%;
+  height: 3.75rem;
+}
+
+.Dashboard .DashboardTitle {
+  position: fixed;
+  width: 100%;
 }
 
 .Dashboard .SideNavigation {
