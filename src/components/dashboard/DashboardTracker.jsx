@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import "./DashboardTracker.css";
 import { Link } from "react-router-dom";
+import searchParcelBackground from "/src/assets/SearchParcelBackground.png";
 
 function DashboardTracker({ parcels, addTrackedParcels, trackedParcels }) {
   const [searchParcel, setSearchParcel] = useState("");
+
+  const backgroundSearch = {
+    background: `url(${searchParcelBackground}) lightgray 50% / cover no-repeat`,
+  };
 
   const onSubmit = () => {
     let flag = true;
@@ -32,7 +37,7 @@ function DashboardTracker({ parcels, addTrackedParcels, trackedParcels }) {
     }
   };
   return (
-    <div className="DashboardTracker">
+    <div className="DashboardTracker" style={backgroundSearch}>
       <p className="tracknum">
         Enter your parcel number to track your deliveries
       </p>
