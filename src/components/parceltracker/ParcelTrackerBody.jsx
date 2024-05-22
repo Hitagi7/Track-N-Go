@@ -1,17 +1,17 @@
 import React from "react";
 import "./ParcelTrackerBody.css";
-import iconCircleCheck from "/track-n-go/src/assets/icons/icon-circle-check.svg";
-import iconCircle from "/track-n-go/src/assets/icons/icon-circle.svg";
-import arrowRightIcon from "/track-n-go/src/assets/icons/icon-arrow-right.svg";
-import circleActiveOrderCreated from "/track-n-go/src/assets/icons/circle-active-order-created.svg";
-import circleActivePickedUp from "/track-n-go/src/assets/icons/circle-active-picked-up.svg";
-import circleIdlePickedUp from "/track-n-go/src/assets/icons/circle-idle-picked-up.svg";
-import circleActiveSorting from "/track-n-go/src/assets/icons/circle-active-sorting.svg";
-import circleIdleSorting from "/track-n-go/src/assets/icons/circle-idle-sorting.svg";
-import circleActiveCourierDelivery from "/track-n-go/src/assets/icons/circle-active-courier-delivery.svg";
-import circleIdleCourierDelivery from "/track-n-go/src/assets/icons/circle-idle-courier-delivery.svg";
-import circleActiveDelivered from "/track-n-go/src/assets/icons/circle-active-delivered.svg";
-import circleIdleDelivered from "/track-n-go/src/assets/icons/circle-idle-delivered.svg";
+import iconCircleCheck from "/src/assets/icons/icon-circle-check.svg";
+import iconCircle from "/src/assets/icons/icon-circle.svg";
+import arrowRightIcon from "/src/assets/icons/icon-arrow-right.svg";
+import circleActiveOrderCreated from "/src/assets/icons/circle-active-order-created.svg";
+import circleActivePickedUp from "/src/assets/icons/circle-active-picked-up.svg";
+import circleIdlePickedUp from "/src/assets/icons/circle-idle-picked-up.svg";
+import circleActiveSorting from "/src/assets/icons/circle-active-sorting.svg";
+import circleIdleSorting from "/src/assets/icons/circle-idle-sorting.svg";
+import circleActiveCourierDelivery from "/src/assets/icons/circle-active-courier-delivery.svg";
+import circleIdleCourierDelivery from "/src/assets/icons/circle-idle-courier-delivery.svg";
+import circleActiveDelivered from "/src/assets/icons/circle-active-delivered.svg";
+import circleIdleDelivered from "/src/assets/icons/circle-idle-delivered.svg";
 
 function ParcelTrackerBody({ parcel }) {
   const adjustDate = (monthStr, dayStr, yearStr) => {

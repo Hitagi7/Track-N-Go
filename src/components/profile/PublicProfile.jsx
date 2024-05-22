@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./PublicProfile.css";
 import { auth, db } from "../../firebase";
 import { doc, updateDoc } from "firebase/firestore";
-import profilePlaceholder from "/track-n-go/src/assets/icons/profile-placeholder.svg";
-import buttonCamera from "/track-n-go/src/assets/icons/button-camera.svg";
+import profilePlaceholder from "/src/assets/icons/profile-placeholder.svg";
+import buttonCamera from "/src/assets/icons/button-camera.svg";
 
 function PublicProfile({ user, updateUser }) {
   const [firstNameBuffer, setFirstNameBuffer] = useState("");

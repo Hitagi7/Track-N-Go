@@ -3,8 +3,8 @@ import "./Header.css";
 import ButtonStack from "../ButtonStack";
 import { Link } from "react-router-dom";
 import LoginOverlay from "./LoginOverlay";
-import logo from "/track-n-go/src/assets/TNG Logo V2.png";
-import upArrow from "/track-n-go/src/assets/icons/up-arrow.svg";
+import logo from "/src/assets/TNG Logo V2.png";
+import upArrow from "/src/assets/icons/up-arrow.svg";
 
 function scrollTo(sectionId) {
   const element = document.getElementById(sectionId);

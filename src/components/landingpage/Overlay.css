@@ -20,7 +20,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(/track-n-go/src/assets/Blurred\ TNG\ Icon.png);
+  background-image: url(/src/assets/Blurred\ TNG\ Icon.png);
   background-position: bottom right;
   background-size: 510px;
   background-repeat: no-repeat;
@@ -31,13 +31,13 @@ body {
 }
 
 .success-message-container {
-    color: green !important;
-    font-size: 13px;
-    border-radius: 5px;
-    margin-top: -15px; /* Adjust margin as needed */
-    margin-bottom: 10px;
-    animation: pop-up 0.5s;
-  }
+  color: green !important;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-top: -15px; /* Adjust margin as needed */
+  margin-bottom: 10px;
+  animation: pop-up 0.5s;
+}
 
 .error-message-container {
   position: absolute;
@@ -118,7 +118,7 @@ body {
   transform: translateY(-50%);
   pointer-events: none;
   width: 1.25rem;
-  height: 1.25rem;  
+  height: 1.25rem;
 }
 
 .text-field::placeholder {
@@ -157,7 +157,7 @@ input[type="password"] {
 }
 
 .fbutton.primary:hover {
-  filter: brightness(1.10);  
+  filter: brightness(1.1);
 }
 
 .fbutton.secondary {
@@ -169,7 +169,7 @@ input[type="password"] {
 }
 
 .fbutton.secondary:hover {
-  filter: brightness(0.95);  
+  filter: brightness(0.95);
 }
 
 .hyperlink p {

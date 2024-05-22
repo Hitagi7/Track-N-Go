@@ -1,7 +1,7 @@
 import React from "react";
 import "./DashboardDeliveryDetails.css";
 import { Link } from "react-router-dom";
-import truck from "/track-n-go/src/assets/icons/truck.svg";
+import truck from "/src/assets/icons/truck.svg";
 
 function DashboardDeliveryDetails({ trackedParcels }) {
   const inDelivery = () => {

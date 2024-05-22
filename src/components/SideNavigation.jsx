@@ -3,11 +3,11 @@ import { auth, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import "./SideNavigation.css";
 import { Link } from "react-router-dom";
-import logo from "/track-n-go/src/assets/TNG Logo V2.png";
-import dashboardIcon from "/track-n-go/src/assets/icons/icon-dashboard.svg";
-import profileIcon from "/track-n-go/src/assets/icons/icon-profile.svg";
-import settingsIcon from "/track-n-go/src/assets/icons/icon-settings.svg";
-import profilePlaceholder from "/track-n-go/src/assets/icons/profile-placeholder.svg";
+import logo from "/src/assets/TNG Logo V2.png";
+import dashboardIcon from "/src/assets/icons/icon-dashboard.svg";
+import profileIcon from "/src/assets/icons/icon-profile.svg";
+import settingsIcon from "/src/assets/icons/icon-settings.svg";
+import profilePlaceholder from "/src/assets/icons/profile-placeholder.svg";
 
 function SideNavigation() {
   const [userDetails, setUserDetails] = useState({});

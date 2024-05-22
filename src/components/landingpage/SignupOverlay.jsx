@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import "./Overlay.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
-import mailIcon from "/track-n-go/src/assets/icons/icon-mail.svg";
-import profileIcon from "/track-n-go/src/assets/icons/icon-profile.svg";
-import passwordIcon from "/track-n-go/src/assets/icons/icon-password.svg";
+import mailIcon from "/src/assets/icons/icon-mail.svg";
+import profileIcon from "/src/assets/icons/icon-profile.svg";
+import passwordIcon from "/src/assets/icons/icon-password.svg";
 
 const generateUserId = () => {
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

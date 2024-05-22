@@ -6,7 +6,7 @@ import {
   EmailAuthProvider,
   updatePassword,
 } from "firebase/auth";
-import passwordIcon from "/track-n-go/src/assets/icons/icon-password.svg";
+import passwordIcon from "/src/assets/icons/icon-password.svg";
 
 function SettingsBody() {
   const [currentPassword, setCurrentPassword] = useState("");

@@ -3,9 +3,9 @@ import "./AdminOverlay.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { onSnapshot } from "firebase/firestore";
-import iconTrash from "/track-n-go/src/assets/icons/icon-trash.svg";
-import iconX from "/track-n-go/src/assets/icons/icon-x.svg";
-import iconChevronDown from "/track-n-go/src/assets/icons/icon-chevron-down.svg";
+import iconTrash from "/src/assets/icons/icon-trash.svg";
+import iconX from "/src/assets/icons/icon-x.svg";
+import iconChevronDown from "/src/assets/icons/icon-chevron-down.svg";
 
 function AdminEditParcelOverlay({
   visible,

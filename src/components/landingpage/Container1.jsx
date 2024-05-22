@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getParcels } from "../admin/AdminService";
 import mapWithPin from "/src/assets/Map With Pin.png";
-import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
+import iconSearch from "/src/assets/icons/icon-search.svg";
 import "./Container1.css";
 
 function Container1() {

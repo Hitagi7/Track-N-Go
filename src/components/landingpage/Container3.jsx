@@ -1,16 +1,16 @@
 import { useState } from "react";
 import "./Container3.css";
-import SPX from "/track-n-go/src/assets/SPX.png";
-import LZD from "/track-n-go/src/assets/LZD.png";
-import JNT from "/track-n-go/src/assets/JNT.png";
-import DHL from "/track-n-go/src/assets/DHL.png";
-import GRB from "/track-n-go/src/assets/GRB.png";
-import NJV from "/track-n-go/src/assets/NJV.png";
-import LMV from "/track-n-go/src/assets/LMV.png";
-import LBC from "/track-n-go/src/assets/LBC.png";
-import ENT from "/track-n-go/src/assets/ENT.png";
-import UPS from "/track-n-go/src/assets/UPS.png";
-import JRS from "/track-n-go/src/assets/JRS.png";
+import SPX from "/src/assets/SPX.png";
+import LZD from "/src/assets/LZD.png";
+import JNT from "/src/assets/JNT.png";
+import DHL from "/src/assets/DHL.png";
+import GRB from "/src/assets/GRB.png";
+import NJV from "/src/assets/NJV.png";
+import LMV from "/src/assets/LMV.png";
+import LBC from "/src/assets/LBC.png";
+import ENT from "/src/assets/ENT.png";
+import UPS from "/src/assets/UPS.png";
+import JRS from "/src/assets/JRS.png";
 
 function Container3() {
   return (

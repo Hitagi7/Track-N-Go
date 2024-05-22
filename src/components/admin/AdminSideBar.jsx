@@ -3,11 +3,11 @@ import "./AdminSideBar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
-import logo from "/track-n-go/src/assets/TNG Logo V2.png";
-import iconProfile from "/track-n-go/src/assets/icons/icon-profile.svg";
-import iconParcel from "/track-n-go/src/assets/icons/icon-parcel.svg";
-import iconPin from "/track-n-go/src/assets/icons/icon-pin.svg";
-import profilePlaceholder from "/track-n-go/src/assets/icons/profile-placeholder.svg";
+import logo from "/src/assets/TNG Logo V2.png";
+import iconProfile from "/src/assets/icons/icon-profile.svg";
+import iconParcel from "/src/assets/icons/icon-parcel.svg";
+import iconPin from "/src/assets/icons/icon-pin.svg";
+import profilePlaceholder from "/src/assets/icons/profile-placeholder.svg";
 
 function AdminSideBar() {
   const navigate = useNavigate();

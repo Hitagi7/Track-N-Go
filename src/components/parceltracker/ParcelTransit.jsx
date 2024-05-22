@@ -1,7 +1,7 @@
 import React from "react";
 import "./ParcelTransit.css";
-import boxDelivered from "/track-n-go/src/assets/icons/box-delivered.svg";
-import boxTransit from "/track-n-go/src/assets/icons/box-in-transit.svg";
+import boxDelivered from "/src/assets/icons/box-delivered.svg";
+import boxTransit from "/src/assets/icons/box-in-transit.svg";
 
 function ParcelTransit({ parcel }) {
   return (

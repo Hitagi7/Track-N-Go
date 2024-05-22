@@ -1,5 +1,5 @@
 import { useState } from "react";
-import bunzelBuilding from "/track-n-go/src/assets/Bunzel Building.png";
+import bunzelBuilding from "/src/assets/Bunzel Building.png";
 import "./Container4.css";
 
 function Container4() {

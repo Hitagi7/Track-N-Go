@@ -4,8 +4,8 @@ import AdminOverlay from "../AdminOverlay";
 import AdminEditParcelOverlay from "../AdminEditParcelOverlay";
 import ParcelsAdmin from "../AdminParcelsPage/ParcelsAdmin";
 import { getParcels } from "../AdminService";
-import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
-import iconEdit from "/track-n-go/src/assets/icons/icon-edit.svg";
+import iconSearch from "/src/assets/icons/icon-search.svg";
+import iconEdit from "/src/assets/icons/icon-edit.svg";
 
 function AdminTrackingBody({ parcelDetails, editParcel, deleteParcel }) {
   const [editOverlayVisible, setEditOverlayVisible] = useState(false);

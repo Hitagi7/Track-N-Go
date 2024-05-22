@@ -3,8 +3,8 @@ import "./AdminUserBody.css";
 import { auth, db } from "./../../../firebase.js";
 import { collection, onSnapshot, doc, deleteDoc } from "firebase/firestore";
 import { deleteUser } from "firebase/auth";
-import iconTrash from "/track-n-go/src/assets/icons/icon-trash.svg";
-import iconSearch from "/track-n-go/src/assets/icons/icon-search.svg";
+import iconTrash from "/src/assets/icons/icon-trash.svg";
+import iconSearch from "/src/assets/icons/icon-search.svg";
 
 function AdminUserBody() {
   const [users, setUsers] = useState([]);

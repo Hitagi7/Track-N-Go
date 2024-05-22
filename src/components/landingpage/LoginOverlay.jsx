@@ -3,8 +3,8 @@ import { auth } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
 import "./Overlay.css";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import mailIcon from "/track-n-go/src/assets/icons/icon-mail.svg";
-import passwordIcon from "/track-n-go/src/assets/icons/icon-password.svg";
+import mailIcon from "/src/assets/icons/icon-mail.svg";
+import passwordIcon from "/src/assets/icons/icon-password.svg";
 
 const LoginOverlay = ({
   visible,
