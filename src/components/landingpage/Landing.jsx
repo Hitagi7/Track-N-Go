@@ -13,8 +13,11 @@ function Landing() {
 
   return (
     <div className="Landing">
-      <Header />
-      <hr />
+      <div className='HeaderPage'>
+        <Header />
+        <hr />
+      </div>
+      <div className='HeaderEmptySpace'></div>
       <section className='home' id="home">
         <Container1 />
       </section>

@@ -26,12 +26,6 @@
   height: 2.75rem;
 }
 
-.a-profile-label {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1.06rem;
-}
-
 .sidenav-frame1 {
   border-radius: 1.4375rem;
   padding: 1.5625rem 4.1875rem;

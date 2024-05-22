@@ -140,7 +140,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
   };
   return (
     visible && (
-      <div className="admin-overlay">
+      <div className="admin-overlay" data-simplebar>
         <div className="a-dimmed-background"></div>
         <div className="a-overlay">
           <p className="a-overlay-title">Add new parcel</p>

@@ -1,3 +1,7 @@
+.AdminOverlay {
+  overflow: overlay;
+}
+
 .admin-overlay {
   position: fixed;
   top: 0;
