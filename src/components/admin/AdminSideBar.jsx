@@ -50,30 +50,11 @@ function AdminSideBar() {
             <p className="font-16 font-semibold">Tracking</p>
           </div>
         </Link>
-<<<<<<< Updated upstream
-      </div>
-      <button className="a-logout a-navigation-item" onClick={handleLogout}>
-        Log Out
-      </button>
-      <div className="a-profile-button">
-        <img
-          src={profilePlaceholder}
-          alt=""
-          className="a-profile-placeholder"
-        />
-
-        <div className="a-profile-label">
-          <p className="font-16 font-semibold">Admin</p>
-          <p className="font-14 font-light">Admin Account</p>
-        </div>
-      </div>
-=======
         
         </div>
         <button className="a-logout a-navigation-item" onClick={handleLogout}>
           Log Out
         </button>
->>>>>>> Stashed changes
     </div>
   );
 }
