@@ -5,7 +5,7 @@
 .side-navigation {
     display: flex;
     flex-direction: row;
-    height: 120rem;
+    height: 112rem;
     animation: fade-left 1s;
 }
 
