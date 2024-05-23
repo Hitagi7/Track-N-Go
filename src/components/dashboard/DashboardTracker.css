@@ -37,6 +37,10 @@
   width: 100%;
 }
 
+.InputTrackNum::placeholder {
+  color: var(--color-idle-gray);
+}
+
 .SearchBar {
   display: flex;
   gap: 1.19rem;

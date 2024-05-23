@@ -113,12 +113,13 @@ function PublicProfile({ user, updateUser }) {
             />
             <div className="username">
               <div className="input-title">Username</div>
+              <p className="p-icon">@</p>
               <input
                 type="text"
                 value={usernameBuffer}
-                placeholder={`@${user.username}`}
+                placeholder={`${user.username}`}
                 onChange={(e) => setUsernameBuffer(e.target.value)}
-                className="input-box"
+                className="input-box-username input-box"
               />
             </div>
           </div>

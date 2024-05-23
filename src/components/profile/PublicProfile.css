@@ -95,15 +95,29 @@
 }
 
 .input-box {
-    display: flex;
+    position: relative;
+    display: inline-block;
     padding: 0.625rem 1.3125rem;
-    align-items: flex-start;
-    gap: 0.625rem;
-    align-self: stretch;
     border-radius: 0.625rem;
     border: 1px solid #CBD2E0;
-    background: #FEFEFE;
     width: 100%;
+}
+
+.input-box-username {
+    padding-left: 3.19rem;
+}
+
+.p-icon {
+    z-index: 2;
+    position: absolute;
+    top: 44.1rem;
+    left: 49rem;
+    pointer-events: none;
+    color: var(--color-idle-gray);
+}
+
+.input-box::placeholder {
+    color: var(--color-idle-gray);
 }
 
 .profile-buttons {

@@ -41,6 +41,10 @@
   background: #fdfdfd;
 }
 
+.AdminTrackingSearchInput::placeholder {
+  color: var(--color-idle-gray);
+}
+
 .AdminTrackingSearchBtn {
   display: flex;
   height: 2.9375rem;

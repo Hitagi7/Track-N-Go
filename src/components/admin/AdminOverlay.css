@@ -116,6 +116,10 @@ input[type="text"],
   margin-bottom: 2.5rem;
 }
 
+.o-text-field::placeholder {
+  color: var(--color-idle-gray);
+}
+
 .o-weight-price-field {
   display: flex;
   flex-direction: row;

@@ -36,6 +36,10 @@
   gap: 0.5rem;
 }
 
+.InputBox::placeholder {
+  color: var(--color-idle-gray);
+}
+
 .Wrapper {
   display: flex;
   gap: 1.1rem;
@@ -90,7 +94,7 @@ button {
 
 .Search-Unselect {
   border-radius: 6px;
-  background-color: hsl(1, 68%, 80%);
+  background-color: hsl(1, 68%, 60%);
   color: #fafafa;
   font-weight: 700;
   line-height: 24px;
@@ -100,16 +104,11 @@ button {
   justify-content: center;
 }
 
-.Search:hover {
+.Search:hover,
+.Search-Unselect:hover {
   cursor: pointer;
-  border-color: hsl(1, 68%, 65%);
-  background-color: hsl(1, 68%, 65%);
-  transition: all 0.1s;
-}
-
-.Search:active {
-  border-color: hsl(1, 68%, 715%);
   background-color: hsl(1, 68%, 75%);
+  transition: all 0.1s;
 }
 
 @media screen and (max-width: 1536px) {
