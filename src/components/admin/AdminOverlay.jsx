@@ -178,12 +178,15 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
 
                   <div className="o-price-field">
                     <p className="o-form-label">Price</p>
-                    <input
-                      type="number"
-                      placeholder={price}
-                      className="o-text-field"
-                      disabled
-                    />
+                    <div className="o-input-label-field">
+                      <input
+                        type="number" 
+                        placeholder={price}
+                        className="o-text-field"
+                        disabled
+                      />
+                      <p className="o-p-icon">₱</p>
+                    </div>
                   </div>
                 </div>
 

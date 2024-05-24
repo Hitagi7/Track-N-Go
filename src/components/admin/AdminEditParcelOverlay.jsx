@@ -156,14 +156,17 @@ function AdminEditParcelOverlay({
 
                 <div className="o-price-field">
                   <p className="o-form-label">Price</p>
-                  <form className="o-form" action="#">
-                    <input
-                      type="number"
-                      placeholder={price}
-                      className="o-text-field"
-                      disabled
-                    />
-                  </form>
+                  <div className="o-input-label-field">
+                    <form className="o-form" action="#">
+                      <input
+                        type="number"
+                        placeholder={price}
+                        className="o-text-field"
+                        disabled
+                      />
+                    </form>
+                    <p className="o-p-icon">₱ </p>
+                  </div>
                 </div>
               </div>
 

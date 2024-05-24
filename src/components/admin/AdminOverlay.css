@@ -138,6 +138,14 @@ input[type="text"],
   left: 18.75rem;
 }
 
+.o-price-field .o-p-icon {
+  left: 24.65rem;
+}
+
+.o-price-field input {
+  padding-left: 2.9rem;
+}
+
 .o-size-individual-field {
   display: flex;
   flex-direction: row;
