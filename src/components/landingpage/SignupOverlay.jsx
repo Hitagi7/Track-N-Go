@@ -7,6 +7,7 @@ import { setDoc, doc } from "firebase/firestore";
 import mailIcon from "/src/assets/icons/icon-mail.svg";
 import profileIcon from "/src/assets/icons/icon-profile.svg";
 import passwordIcon from "/src/assets/icons/icon-password.svg";
+// import backgroundImage from "/src/assets/"
 
 const generateUserId = () => {
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
