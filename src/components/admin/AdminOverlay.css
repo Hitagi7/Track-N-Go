@@ -97,8 +97,7 @@ input[type="text"],
 }
 
 .o-text-field {
-  position: relative;
-  display: inline-block;
+  display: flex;
   padding: 0.625rem 1.3125rem;
   align-self: stretch;
   border-radius: 0.625rem;
@@ -170,10 +169,11 @@ input[type="text"],
 }
 
 .o-sublabel {
+  color: var(--color-black);
   position: absolute;
   font-size: 10px;
   top: 27.3rem;
-  margin-left: -6.3rem;
+  margin-left: 1.38rem;
 }
 
 .o-x-icon {
@@ -290,7 +290,10 @@ input[type="text"],
 }
 
 .o-delete-parcel-button {
+  position: absolute;
   display: inline-flex;
+  left: 56.69rem;
+  top: 3.56rem;
   padding: 0.75rem;
   justify-content: center;
   align-items: center;

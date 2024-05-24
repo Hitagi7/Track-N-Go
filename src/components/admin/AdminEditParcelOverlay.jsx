@@ -137,18 +137,21 @@ function AdminEditParcelOverlay({
               <div className="o-weight-price-field o-field">
                 <div className="o-weight-field">
                   <p className="o-form-label">Weight</p>
-                  <form className="o-form" action="#">
-                    <input
-                      type="number"
-                      placeholder="2.1"
-                      value={weight}
-                      className="o-text-field"
-                      onChange={(e) => {
-                        setWeight(e.target.value);
-                        calculatePrice();
-                      }}
-                    />
-                  </form>
+                  <div className="o-input-label-field">
+                    <form className="o-form" action="#">
+                      <input
+                        type="number"
+                        placeholder="0.0"
+                        value={weight}
+                        className="o-text-field"
+                        onChange={(e) => {
+                          setWeight(e.target.value);
+                          calculatePrice();
+                        }}
+                      />
+                    </form>
+                    <p className="o-p-icon">kg</p>
+                  </div>
                 </div>
 
                 <div className="o-price-field">
@@ -167,6 +170,8 @@ function AdminEditParcelOverlay({
               <div className="o-size-field o-field">
                 <p className="o-form-label">Size</p>
                 <div className="o-size-individual-field">
+
+                <div className="o-length-field o-lwh-field">
                   <form className="o-form" action="#">
                     <input
                       type="number"
@@ -179,7 +184,13 @@ function AdminEditParcelOverlay({
                       }}
                     />
                   </form>
-                  <img src={iconX} className="o-x-icon" alt="" />
+                  <p className="o-p-icon-cm o-length-icon">cm</p>
+                  <p className="o-sublabel">Length</p>
+                </div>
+
+                <img src={iconX} className="o-x-icon" alt="" />
+
+                <div className="o-width-field o-lwh-field">
                   <form className="o-form" action="#">
                     <input
                       type="number"
@@ -192,7 +203,13 @@ function AdminEditParcelOverlay({
                       }}
                     />
                   </form>
-                  <img src={iconX} className="o-x-icon" alt="" />
+                  <p className="o-p-icon-cm o-width-icon">cm</p>
+                  <p className="o-sublabel">Width</p>
+                </div>
+
+                <img src={iconX} className="o-x-icon" alt="" />
+
+                <div className="o-height-field o-lwh-field">
                   <form className="o-form" action="#">
                     <input
                       type="number"
@@ -205,6 +222,9 @@ function AdminEditParcelOverlay({
                       }}
                     />
                   </form>
+                  <p className="o-p-icon-cm o-height-icon">cm</p>
+                  <p className="o-sublabel">Height</p>
+                </div>
                 </div>
               </div>
 
