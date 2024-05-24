@@ -11,16 +11,18 @@
     width: 100%;
     height: auto;
     animation: fade-left 1.5s;
+    z-index: 0;
 }
 
 .text {
-    margin-top: 8rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     max-width: 100%; 
     padding: 0 20px; 
     box-sizing: border-box;
     animation: fade-left 1.5s;
+    z-index: 1;
 }
 
 .c4-header {
