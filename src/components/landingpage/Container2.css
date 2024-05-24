@@ -1,18 +1,41 @@
-.Container2 {
+/* .Container2 {
     min-height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
-}
+} */
 
-.Resize-image2 {
+/* .Resize-image2 {
     width: 54%;
     max-width: 100%;
     height: 80vh;
     margin-right: 1.5rem;
     animation: fade-left 1.5s;
+} */
+
+/* .Text2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
+    max-width: 600px;
+    margin-right: 17rem;
+    animation: fade-left 2s;
+} */
+
+.Container2 {
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
+
+.Resize-image2 {
+    width: 62.29256rem;
+    height: 36.4375rem;
+}
+
 
 .Text2 {
     display: flex;
