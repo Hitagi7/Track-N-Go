@@ -25,6 +25,7 @@ function AdminSideBar() {
   return (
     <div className="a-side-navigation">
       <img src={logo} alt="" className="a-tng-logo" />
+
       <div className="a-navigation">
         <Link to="/track-n-go/AdminHomePage">
           <div className="sidenav-frame1">
@@ -51,10 +52,10 @@ function AdminSideBar() {
           </div>
         </Link>
         
-        </div>
-        <button className="a-logout a-navigation-item" onClick={handleLogout}>
+        <button className="a-logout" onClick={handleLogout}>
           Log Out
         </button>
+      </div>
     </div>
   );
 }

@@ -70,7 +70,6 @@
 
 .sidenav-frame3 {
   border-radius: 1.4375rem;
-  padding: 1.5625rem 4.1875rem;
   display: flex;
   height: 4.0625rem;
   padding: 1.5625rem 2.1875rem;
@@ -80,6 +79,21 @@
 }
 
 .sidenav-frame3:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
+}
+
+.a-logout {
+  border-radius: 1.4375rem;
+  display: flex;
+  padding: 1.5625rem 2.1875rem;
+  font-weight: 600;
+  margin-top: 30rem;
+  justify-content: center;
+}
+
+.a-logout:hover {
+  color: #ff3333;
   cursor: pointer;
   background-color: hsl(0, 0%, 90%);
 }
@@ -98,17 +112,4 @@
 .a-profile-placeholder {
     width: 3rem;
     height: 3rem;
-}
-
-.a-logout {
-    font-weight: bold;
-    background-repeat: no-repeat;
-    background-position: 2.19rem;
-    background-size: 1.5rem 1.5rem;
-    margin-top: 34.5rem;
-}
-
-.a-logout:hover {
-    color: #f43939; 
-    text-align: center;
 }

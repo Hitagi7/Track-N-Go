@@ -185,7 +185,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                         className="o-text-field"
                         disabled
                       />
-                      <p className="o-p-icon">₱</p>
+                      <p className="o-p-icon">₱ </p>
                     </div>
                   </div>
                 </div>
