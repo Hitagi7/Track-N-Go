@@ -80,12 +80,12 @@
 .o-tracking-id-field input,
 .o-price-field input {
   background-color: #f5f5f5;
-  border-color: #CBD2E0 ;
+  border-color: #cbd2e0;
 }
 
 .o-tracking-id-field input::placeholder,
 .o-price-field input::placeholder {
-  color: #717D96;
+  color: #717d96;
   font-weight: 500;
 }
 
@@ -97,6 +97,7 @@ input[type="text"],
 }
 
 .o-text-field {
+  background: #fefefe;
   display: flex;
   padding: 0.625rem 1.3125rem;
   align-self: stretch;
@@ -126,7 +127,7 @@ input[type="text"],
   flex: 1;
 }
 
-.o-weight-field input{
+.o-weight-field input {
   padding-right: 2.9rem;
 }
 
