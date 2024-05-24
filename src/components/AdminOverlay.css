@@ -1,4 +1,4 @@
-.admin-overlay {
+/* .admin-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -72,14 +72,6 @@
   font-size: 16px;
   font-weight: 600;
 }
-
-/* Temporarily closed
-.o-form input::placeholder {
-    color: #717D96;
-    font-feature-settings: 'calt' off;
-    font-size: 16px;
-    font-weight: 400;
-} */
 
 .o-tracking-id-field .o-form input::placeholder,
 .o-price-field .o-form input::placeholder {
@@ -257,4 +249,4 @@ input[type="text"],
 .o-trash-icon {
   width: 20px;
   height: 20px;
-}
+} */

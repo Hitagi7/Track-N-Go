@@ -161,16 +161,19 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                 <div className="o-weight-price-field o-field">
                   <div className="o-weight-field">
                     <p className="o-form-label">Weight</p>
-                    <input
-                      type="number"
-                      placeholder="2.1"
-                      className="o-text-field"
-                      onChange={(e) => {
-                        setWeight(e.target.value);
-                        calculatePrice();
-                      }}
-                      required
-                    />
+                    <div className="o-input-label-field">
+                      <input
+                        type="number"
+                        placeholder="0.0"
+                        className="o-text-field"
+                        onChange={(e) => {
+                          setWeight(e.target.value);
+                          calculatePrice();
+                        }}
+                        required
+                      />
+                      <p className="o-p-icon">kg</p>
+                    </div>
                   </div>
 
                   <div className="o-price-field">
@@ -187,38 +190,55 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                 <div className="o-size-field o-field">
                   <p className="o-form-label">Size</p>
                   <div className="o-size-individual-field">
-                    <input
-                      type="number"
-                      placeholder="Length"
-                      className="o-text-field"
-                      onChange={(e) => {
-                        setLength(e.target.value);
-                        calculatePrice();
-                      }}
-                      required
-                    />
+                    
+                    <div className="o-length-field o-lwh-field">
+                      <input
+                        type="number"
+                        placeholder="0.0"
+                        className="o-text-field"
+                        onChange={(e) => {
+                          setLength(e.target.value);
+                          calculatePrice();
+                        }}
+                        required
+                      />
+                      <p className="o-p-icon-cm o-length-icon">cm</p>
+                      <p className="o-sublabel">Length</p>
+                    </div>
+                    
                     <img src={iconX} className="o-x-icon" alt="" />
-                    <input
-                      type="number"
-                      placeholder="Width"
-                      className="o-text-field"
-                      onChange={(e) => {
-                        setWidth(e.target.value);
-                        calculatePrice();
-                      }}
-                      required
-                    />
+                    
+                    <div className="o-width-field o-lwh-field">
+                      <input
+                        type="number"
+                        placeholder="0.0"
+                        className="o-text-field"
+                        onChange={(e) => {
+                          setWidth(e.target.value);
+                          calculatePrice();
+                        }}
+                        required
+                      />
+                      <p className="o-p-icon-cm o-width-icon">cm</p>
+                      <p className="o-sublabel">Width</p>
+                    </div>
+                    
                     <img src={iconX} className="o-x-icon" alt="" />
-                    <input
-                      type="number"
-                      placeholder="Height"
-                      className="o-text-field"
-                      onChange={(e) => {
-                        setHeight(e.target.value);
-                        calculatePrice();
-                      }}
-                      required
-                    />
+
+                    <div className="o-height-field o-lwh-field">
+                      <input
+                        type="number"
+                        placeholder="0.0"
+                        className="o-text-field"
+                        onChange={(e) => {
+                          setHeight(e.target.value);
+                          calculatePrice();
+                        }}
+                        required
+                      />
+                      <p className="o-p-icon-cm o-height-icon">cm</p>
+                      <p className="o-sublabel">Height</p>
+                    </div>
                   </div>
                 </div>
 
@@ -226,7 +246,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <p className="o-form-label">Shipper</p>
                   <input
                     type="text"
-                    placeholder="Nat'l Bookstore"
+                    placeholder="Enter parcel shipper"
                     className="o-text-field"
                     onChange={(e) => setShipper(e.target.value)}
                     required
@@ -237,7 +257,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <p className="o-form-label">Courier</p>
                   <input
                     type="text"
-                    placeholder="J&T"
+                    placeholder="Enter parcel courier"
                     className="o-text-field"
                     onChange={(e) => setCourier(e.target.value)}
                     required
@@ -944,7 +964,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <p className="o-form-label">Delivered From</p>
                   <input
                     type="text"
-                    placeholder="Laguna Del Norte, PH"
+                    placeholder="Address of seller's location"
                     className="o-text-field"
                     onChange={(e) => setDeliveredFrom(e.target.value)}
                     required
@@ -955,7 +975,7 @@ function AdminOverlay({ visible, toggleVisible, addParcel, generateID }) {
                   <p className="o-form-label">Delivered To</p>
                   <input
                     type="text"
-                    placeholder="Cebu City, PH"
+                    placeholder="Address of buyer's location"
                     className="o-text-field"
                     onChange={(e) => setDeliveredTo(e.target.value)}
                     required

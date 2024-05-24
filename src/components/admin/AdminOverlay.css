@@ -77,17 +77,15 @@
   font-weight: 600;
 }
 
-/* Temporarily closed
-.o-form input::placeholder {
-    color: #717D96;
-    font-feature-settings: 'calt' off;
-    font-size: 16px;
-    font-weight: 400;
-} */
+.o-tracking-id-field input,
+.o-price-field input {
+  background-color: #f5f5f5;
+  border-color: #CBD2E0 ;
+}
 
-.o-tracking-id-field .o-form input::placeholder,
-.o-price-field .o-form input::placeholder {
-  color: #2d3648;
+.o-tracking-id-field input::placeholder,
+.o-price-field input::placeholder {
+  color: #717D96;
   font-weight: 500;
 }
 
@@ -99,14 +97,12 @@ input[type="text"],
 }
 
 .o-text-field {
-  display: flex;
+  position: relative;
+  display: inline-block;
   padding: 0.625rem 1.3125rem;
-  align-items: flex-start;
-  gap: 0.625rem;
   align-self: stretch;
   border-radius: 0.625rem;
   border: 1px solid #cbd2e0;
-  background: #fefefe;
   margin-top: 0.62rem;
   width: 100%;
   height: 2.4375rem;
@@ -131,11 +127,53 @@ input[type="text"],
   flex: 1;
 }
 
+.o-weight-field input{
+  padding-right: 2.9rem;
+}
+
+.o-p-icon {
+  position: absolute;
+  pointer-events: none;
+  color: var(--color-idle-gray);
+  top: 18.19rem;
+  left: 18.75rem;
+}
+
 .o-size-individual-field {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   gap: 0.56rem;
+}
+
+.o-lwh-field input {
+  padding-right: 2.9rem;
+}
+
+.o-p-icon-cm {
+  position: absolute;
+  pointer-events: none;
+  color: var(--color-idle-gray);
+  top: 24.94rem;
+}
+
+.o-length-icon {
+  left: 13.75rem;
+}
+
+.o-width-icon {
+  left: 23.35rem;
+}
+
+.o-height-icon {
+  left: 32.96rem;
+}
+
+.o-sublabel {
+  position: absolute;
+  font-size: 10px;
+  top: 27.3rem;
+  margin-left: -6.3rem;
 }
 
 .o-x-icon {
