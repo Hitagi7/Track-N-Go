@@ -59,6 +59,7 @@ function AdminUserBody() {
           type="text"
           placeholder="Search users"
           className="a-search-field"
+          onChange={(e) => setSearchUsers(e.target.value)}
         />
         <button className="a-search-button">
           <p className="a-search-label">Search</p>
@@ -79,22 +80,35 @@ function AdminUserBody() {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-              <tr key={user.id}>
-                <td></td>
-                <td>{user.userId}</td>
-                <td>{user.username}</td>
-                <td>{user.firstName}</td>
-                <td>{user.lastName}</td>
-                <td>{user.email}</td>
-                <td>*******</td> {/* Hide password */}
-                <td>
-                  <button onClick={() => handleDeleteUser(user.id)}>
-                    <img src={iconTrash} alt="" className="a-icon-trash" />
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {users && ( // Check if users exists
+              <>
+                {users
+                  .filter((user) => {
+                    const searchText = searchUsers.toLowerCase();
+                    return user.username.toLowerCase().includes(searchText);
+                  })
+                  .map((user) => (
+                    <tr key={user.id}>
+                      <td></td>
+                      <td>{user.userId}</td>
+                      <td>{user.username}</td>
+                      <td>{user.firstName}</td>
+                      <td>{user.lastName}</td>
+                      <td>{user.email}</td>
+                      <td>*******</td> {/* Hide password */}
+                      <td>
+                        <button onClick={() => handleDeleteUser(user.id)}>
+                          <img
+                            src={iconTrash}
+                            alt=""
+                            className="a-icon-trash"
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+              </>
+            )}
           </tbody>
         </table>
       </div>
